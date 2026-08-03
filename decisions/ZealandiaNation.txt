@@ -1,0 +1,89 @@
+country_decisions = {
+
+	zealandia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_arabia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ARB }
+			NOT = { tag = AUS }
+			NOT = { tag = NZL }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = no
+					ai = no
+				}
+			}
+			culture_group = aboriginal #Arabic
+			NOT = { primary_culture = turkish }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1109			#Medina
+				province_id = 1246		    #Mecca
+				province_id = 2738		    #Aden
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			if = {
+				limit = {
+					not = { has_country_flag = free_arabia_forming_flag }
+				}
+				adm_tech = 10
+			}
+			owns_core_province = 1109			#Medina
+			owns_core_province = 1246		    #Mecca
+			owns_core_province = 2738			#Aden
+		}
+		effect = {
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_Zealandia_flag
+			change_tag = NZL
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = {
+				id = flavor_ARB.10
+			}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				not = { adm_tech = 19 }
+			}
+		}
+		ai_importance = 400
+	}
+}
+}

@@ -1,0 +1,107 @@
+eng_heir = {
+	potential = {
+	ai = no
+	tag = ENG
+		}
+	
+
+	trigger = {
+		NOT  = { is_year = 1449}
+		tag = ENG
+	
+	}
+	heir_chance = -2
+}
+jpn_siege = {
+	potential = {
+	OR = {
+	tag = UES
+	tag = ODA
+	tag = SMZ
+	}
+		}
+	
+
+	trigger = {
+		NOT  = { is_year = 1480}
+	OR = {
+	tag = UES
+	tag = ODA
+	tag = SMZ
+	}
+	
+	}
+	siege_ability = 0.33
+}
+
+tns_siege = {
+	potential = {
+	OR = {
+	tag = TUN
+	}
+		}
+	
+
+	trigger = {
+		NOT  = { total_development = 150}
+	OR = {
+	tag = TUN
+	}
+	
+	}
+	siege_ability = 0.33
+	defensiveness = 0.33
+}
+
+cas_estate = {
+potential = {
+	OR = {
+	tag = SPA
+	tag = CAS
+	}
+		}
+		
+		trigger = {
+		OR = {
+		tag = SPA
+	    tag = CAS
+	}
+		OR = {
+		has_opinion = {
+	who = POR
+	value = 50
+}
+		marriage_with = POR
+		is_revolutionary = yes
+	
+	}
+	}
+	all_estate_loyalty_equilibrium = 0.1
+	}
+	
+	por_estate = {
+potential = {
+	OR = {
+	tag = POR
+	}
+		}
+		
+		trigger = {
+		tag = POR
+		OR = {
+		marriage_with = SPA
+		marriage_with = CAS
+		is_revolutionary = yes
+		has_opinion = {
+	who = CAS
+	value = 50
+}
+has_opinion = {
+	who = SPA
+	value = 50
+}
+	
+	}
+	}
+	all_estate_loyalty_equilibrium = 0.1
+	}

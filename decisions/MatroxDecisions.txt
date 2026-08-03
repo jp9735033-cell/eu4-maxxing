@@ -1,0 +1,112 @@
+country_decisions = {
+	
+	sm_hire_recruitmaster = {
+			potential = {
+				ai = no
+				NOT = { has_country_flag = sm_hire_recruitmaster }
+			}
+			allow = {
+				ai = no
+			}
+			effect = {
+				add_years_of_income = -0.25
+				define_advisor  = { 
+				type = recruitmaster
+				skill = 2
+				discount = yes
+			}	
+				set_country_flag = sm_hire_recruitmaster
+			}
+		}	
+		sea_state_edicts_decision = {
+		major = yes
+		provinces_to_highlight = {
+			has_state_edict_enabled = yes
+			owned_by = ROOT
+		}
+		potential = {
+			ai = no
+			NOT = { has_country_flag = sea_state_edicts_flag }
+			OR = {
+				NOT = { has_country_flag = sea_state_edicts_clear_flag }
+				had_country_flag = {
+					flag = sea_state_edicts_clear_flag
+					days = 33
+				}
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = sea_state_edicts_decision_ttt
+				always = yes
+			}
+		}
+		effect = {
+			set_country_flag = sea_state_edicts_flag
+			country_event = { id = sealand_events.28 }
+			custom_tooltip = sea_state_edicts_decision_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+		development_counter = {
+		color = { 166  0  0 }
+		potential = { ai = no }
+		allow = {
+			if = {
+				limit = {
+					has_country_flag = has_development_counter_cflag
+				}
+				custom_trigger_tooltip = {
+					tooltip = development_counter_tt
+				}
+			}
+			hidden_trigger = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = has_development_counter_cflag }
+					}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = has_development_counter_cflag }
+				}
+				custom_tooltip = development_counter_update_tt
+				hidden_effect = { development_counter = { on_startup = yes } }
+			}
+		}
+	}
+		one_v_one_get_specific_advisor = {
+		major = yes
+		potential = { one_v_one_starting_nation = no NOT = { has_country_flag = one_v_one_get_specific_advisor_flag } }
+		allow = { treasury = 33 }
+		effect = {
+			set_country_flag = one_v_one_get_specific_advisor_flag
+			country_event = { id = one_v_one_mod.30 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+		one_v_one_parliament_on_all_provinces = {
+		potential = { one_v_one_starting_nation = no has_parliament = yes any_owned_province = { has_seat_in_parliament = no } }
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_parliament_on_all_provinces_tt
+				any_owned_province = { has_seat_in_parliament = no } 
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_parliament_on_all_provinces_ttt
+			hidden_effect = { every_owned_province = { set_seat_in_parliament = yes } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
+

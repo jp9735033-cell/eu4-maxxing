@@ -1,0 +1,60 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+elector = yes
+primary_culture = dutch
+capital = 4383 #Haag
+
+1389.1.1 = {
+	monarch = {
+		name = "Albert"
+		dynasty = "von Wittelsbach"
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1443.1.1 = {
+	heir = {
+		name = "Willem"
+		monarch_name = "Willem VI"
+		dynasty = "Orange-Nassau"
+		birth_date = 1429.4.5
+		death_date = 1460.5.31
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1443.1.1 = {
+	monarch = {
+		name = "Willem VI"
+		birth_date = 1414.8.16
+		dynasty = "Orange-Nassau"
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+	heir = {
+		name = "Jacoba"
+		monarch_name = "Jacoba"
+		dynasty = "von Wittelsbach"
+		birth_date = 1443.8.16
+		death_date = 1436.10.8
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+		female = yes
+	}
+}
+
+
+}
+
+1580.1.1 = { set_legacy_government = administrative_republic } # Constitutionalism and the General Estates

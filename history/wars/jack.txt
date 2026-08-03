@@ -1,0 +1,72 @@
+name = "Rossonunaminakoydumsavasi"
+war_goal = {
+    type = superiority_punitive
+    casus_belli = cb_super_badboy
+}
+
+1444.1.1 = {
+    add_attacker = TUR
+    add_defender = MAM
+}
+1444.1.1 = {
+    rem_attacker = TUR
+    rem_defender = MAM
+}
+
+name = "Rossonunaminakoydumsavasi2"
+war_goal = {
+    type = superiority_punitive
+    casus_belli = cb_super_badboy
+}
+
+1444.1.1 = {
+    add_attacker = DUL
+    add_defender = MAM
+}
+1444.1.1 = {
+    rem_attacker = DUL
+    rem_defender = MAM
+}
+name = "Rossonunaminakoydumsavasi3"
+war_goal = {
+    type = superiority_punitive
+    casus_belli = cb_super_badboy
+}
+
+1444.1.1 = {
+    add_attacker = AKK
+    add_defender = MAM
+}
+1444.1.1 = {
+    rem_attacker = AKK
+    rem_defender = MAM
+}
+name = "Rossonunaminakoydumsavasi3"
+war_goal = {
+    type = superiority_punitive
+    casus_belli = cb_super_badboy
+}
+
+1444.1.1 = {
+    add_attacker = RAM
+    add_defender = MAM
+}
+
+1444.1.1 = {
+    rem_attacker = RAM
+    rem_defender = MAM
+}
+name = "Rossonunaminakoydumsavasi34"
+war_goal = {
+    type = superiority_punitive
+    casus_belli = cb_super_badboy
+}
+
+1444.1.1 = {
+    add_attacker = KAR
+    add_defender = MAM
+}
+1444.1.1 = {
+    rem_attacker = KAR
+    rem_defender = MAM
+}

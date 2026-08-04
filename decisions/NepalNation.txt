@@ -16,6 +16,7 @@ country_decisions = {
 			}
 			OR = {
 				primary_culture = nepali
+                primary_culture = bengali
 				primary_culture = pahari
 			}
 			OR = {

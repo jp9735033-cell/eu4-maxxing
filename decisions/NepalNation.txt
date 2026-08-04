@@ -30,6 +30,9 @@ country_decisions = {
 					is_year = 1700
 				}
 			}
+            else = {
+				adm_tech = 10
+			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no

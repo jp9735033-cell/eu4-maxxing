@@ -9679,9 +9679,8 @@ jap_domineering_naval_focus_modifier = {
 }
 
 jap_naval_academy_of_japan_modifier = {
-	ship_durability = 0.05 
 	naval_tradition_from_battle = 1 
-	number_of_cannons_modifier = 0.2
+	number_of_cannons_modifier = 0.1
 }
 
 jap_tekkosen_modifier = {

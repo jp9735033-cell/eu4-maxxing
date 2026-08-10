@@ -8,7 +8,7 @@ religion = catholic
 hre = no
 base_tax = 1 
 base_production = 1
-trade_goods = naval_supplies
+trade_goods = grain
 base_manpower = 1
 capital = "Hamar"
 is_city = yes
@@ -24,7 +24,7 @@ discovered_by = ottoman
 	controller = DAN
 	add_core = DAN
 	religion = protestant
-} # 'Handf‰stningen'(Unknown date)
+} # 'Handf√§stningen'(Unknown date)
 1630.1.1 = { trade_goods = copper } # Approximate date
 1814.1.14 = {
 	owner = SWE

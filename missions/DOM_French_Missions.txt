@@ -35,7 +35,15 @@ french_missions_1 = {
 					estate = all
 					share = -5
 				}
-			} 
+			}
+			lower_brittany_area = { 
+				limit = { 	
+					NOT = { is_core = ROOT } 
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { owned_by = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}			
 			brittany_area = { 
 				limit = { 	
 					NOT = { is_core = ROOT } 
@@ -1496,16 +1504,16 @@ french_missions_2 = {
 		required_missions = { fra_chateux_loire_valley fra_liberate_norm }
 		position = 2 
 		provinces_to_highlight = { 
-			area = brittany_area 
+			area = normandy_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = { 
-			brittany_area = {
+			normandy_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
 				NOT = { devastation = 1 } 
 			}
-			169 = { num_of_times_improved = 4 } 
+			167 = { num_of_times_improved = 4 } 
 		}
 		effect = { 
 			country_event = { id = flavor_fra.104 }
@@ -2088,7 +2096,7 @@ french_missions_2_Continuation_b = {
 					tooltip = fra_jean_bureau_tt
 					check_variable = { 
 						which = jean_bureau_battles_won
-						value = 4 
+						value = 2
 					}
 				}
 				artillery_fraction = 0.1 
@@ -2157,18 +2165,7 @@ french_missions_2_Continuation_b = {
 		required_missions = { fra_form_gendarmes fra_crown_seat_capital } 
 		position = 16
 		trigger = {
-			NOT = { has_estate_privilege = estate_nobles_french_strong_duchies }
-			custom_trigger_tooltip = {
-				tooltip = centralize_fra_tt
-				NOT = {
-					any_subject_country = {
-						capital_scope = {
-							region = france_region
-						}
-					}
-				}
-			}
-			total_development = 500 
+			total_development = 400
 			crown_land_share = 30 
 		}
 		effect = { 
@@ -3370,8 +3367,8 @@ french_missions_3_normal_continued = {
 		position = 17
 		trigger = {
 			OR = { 
-				crown_land_share = 50 
-				monthly_mil = 14
+				crown_land_share = 40 
+				monthly_mil = 12
 				if = {
 					limit = { has_dlc = "Cradle of Civilization" }
 					army_professionalism = 0.5
@@ -3380,9 +3377,9 @@ french_missions_3_normal_continued = {
 			}
 			num_of_owned_provinces_with = {
 				has_manpower_building_trigger = yes 
-				value = 25 
+				value = 15
 			}
-			army_size = 100
+			army_size = 75
 		}
 		effect = { 
 			custom_tooltip = fra_enable_musketeer_reform_tt

@@ -2046,7 +2046,6 @@ tercio_regiment = {
 }
 
 musketeer_regiment = {
-	fire_damage = 0.2
 	discipline = 0.025
 }
 

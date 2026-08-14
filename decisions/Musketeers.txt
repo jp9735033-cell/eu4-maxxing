@@ -1,0 +1,74 @@
+country_decisions = {
+
+first_musketeer_decision = {
+major = yes
+color = { 4 24 61 }
+potential = { 
+NOT = { has_country_flag = musketeer_choosing_fire }
+tag = FRA
+}
+allow = {
+	stability = 1
+	mil_tech = 9
+}
+effect = { 
+country_event = { id = musketter_event.1 }
+set_country_flag = musketeer_choosing_fire
+}
+}
+
+second_musketeer_decision = {
+major = yes
+color = { 4 24 61 }
+potential = { 
+NOT = { has_country_flag = musketeer_choosing_defance }
+has_country_flag = musketeer_choosing_fire
+tag = FRA
+}
+allow = {
+	stability = 1
+	mil_tech = 12
+}
+effect = { 
+country_event = { id = musketter_event.2 }
+set_country_flag = musketeer_choosing_defance
+}
+}
+
+third_musketeer_decision = {
+major = yes
+color = { 4 24 61 }
+potential = { 
+NOT = { has_country_flag = musketeer_choosing_line }
+has_country_flag = musketeer_choosing_defance
+tag = FRA
+}
+allow = {
+	stability = 1
+	mil_tech = 15
+}
+effect = { 
+country_event = { id = musketter_event.3 }
+set_country_flag = musketeer_choosing_line
+}
+}
+
+forth_musketeer_decision = {
+major = yes
+color = { 4 24 61 }
+potential = { 
+NOT = { has_country_flag = musketeer_choosing_elite }
+has_country_flag = musketeer_choosing_line
+tag = FRA
+}
+allow = {
+	stability = 1
+	mil_tech = 19
+}
+effect = { 
+country_event = { id = musketter_event.4 }
+set_country_flag = musketeer_choosing_elite
+}
+}
+
+}

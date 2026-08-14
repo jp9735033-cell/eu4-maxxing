@@ -1,0 +1,121 @@
+namespace = musketeer
+
+country_event = {
+	id = musketeer_event.1
+	title = musketeer_event.1.t
+	desc = musketeer_event.1.d
+	picture  = LAND_MILITARY_eventPicture
+	fire_only_once = yes
+option = {
+	name = musketeer_event.1.a
+	add_country_modifier = { 
+    name = fire_drilling
+    duration = -1  
+}
+	}
+	option = {
+	name = musketeer_event.1.b
+	add_country_modifier = { 
+    name = charge_drilling
+    duration = -1  
+}
+	}
+option = {
+	name = musketeer_event.1.c
+	add_country_modifier = { 
+    name = more_musketeers
+    duration = -1  
+	
+}
+}
+}
+
+country_event = {
+	id = musketeer_event.2
+	title = musketeer_event.2.t
+	desc = musketeer_event.2.d
+	picture  = LAND_MILITARY_eventPicture
+	fire_only_once = yes
+option = {
+	name = musketeer_event.2.a
+	add_country_modifier = { 
+    name = receive_fire_drilling
+    duration = -1  
+}
+	}
+	option = {
+	name = musketeer_event.2.b
+	add_country_modifier = { 
+    name = charge_defance_drilling
+    duration = -1  
+}
+	}
+option = {
+	name = musketeer_event.2.c
+	add_country_modifier = { 
+    name = organized_musketeers
+    duration = -1  
+	
+}
+}
+}
+
+country_event = {
+	id = musketeer_event.3
+	title = musketeer_event.3.t
+	desc = musketeer_event.3.d
+	picture  = LAND_MILITARY_eventPicture
+	fire_only_once = yes
+option = {
+	name = musketeer_event.3.a
+	add_country_modifier = { 
+    name = hold_the_line_musketeers
+    duration = -1  
+}
+	}
+	option = {
+	name = musketeer_event.3.b
+	add_country_modifier = { 
+    name = fast_drilling_musketeers
+    duration = -1  
+}
+	}
+option = {
+	name = musketeer_event.3.c
+	add_country_modifier = { 
+    name = even_more_musketeers
+    duration = -1  
+	
+}
+}
+}
+
+country_event = {
+	id = musketeer_event.4
+	title = musketeer_event.4.t
+	desc = musketeer_event.4.d
+	picture  = LAND_MILITARY_eventPicture
+	fire_only_once = yes
+option = {
+	name = musketeer_event.4.a
+	add_country_modifier = { 
+    name = elite_infantry_musketeer
+    duration = -1  
+}
+	}
+	option = {
+	name = musketeer_event.4.b
+	add_country_modifier = { 
+    name = unbreakable_musketeer
+    duration = -1  
+}
+	}
+option = {
+	name = musketeer_event.4.c
+	add_country_modifier = { 
+    name = line_breaker_musketeer
+    duration = -1  
+	}
+}
+}
+	

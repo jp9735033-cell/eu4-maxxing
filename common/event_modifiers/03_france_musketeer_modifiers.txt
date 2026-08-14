@@ -1,0 +1,70 @@
+fire_drilling = {
+	fire_damage = 0.10
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+
+charge_drilling = {
+	shock_damage = 0.10
+	is_musketeer_modifier = yes
+}
+
+more_musketeers = {
+	special_unit_forcelimit = 0.15
+	picture = "Amount_of_musketeers"
+}
+
+receive_fire_drilling = {
+	fire_damage_received = -0.10
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+
+charge_defance_drilling = {
+	shock_damage_received = -0.10
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+
+organized_musketeers = {
+	reinforce_cost_modifier = -0.50
+	reinforce_speed = 0.25
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+
+hold_the_line_musketeers = {
+	land_morale = 0.05
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+
+fast_drilling_musketeers = {
+	drill_gain_modifier = 0.50
+	drill_decay_modifier = -0.25
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+even_more_musketeers = {
+	allowed_musketeer_fraction = 0.10
+	picture = "Amount_of_musketeers"
+}
+
+elite_infantry_musketeer = {
+	infantry_power = 0.10
+	reinforce_cost_modifier = 0.50
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+
+unbreakable_musketeer = {
+	morale_damage_received = -0.15
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}
+
+line_breaker_musketeer = {
+	morale_damage = 0.15
+	is_musketeer_modifier = yes
+	picture = "Amount_of_musketeers"
+}

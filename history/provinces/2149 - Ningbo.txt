@@ -1,8 +1,8 @@
 # 2149 - Ningbo
 
-owner = MNG
-controller = MNG
-add_core = MNG
+owner = WUU
+controller = WUU
+remove_core = MNG
 culture = wu
 religion = confucianism
 capital = "Ningbo"
@@ -19,8 +19,8 @@ extra_cost = 8
 center_of_trade = 1
 
 1519.1.1 = { discovered_by = POR } # Tome Pires
-1646.2.1 = {
-	owner = QNG
-	controller = QNG
-	add_core = QNG
-}
+#1646.2.1 = {
+#	owner = QNG
+#	controller = QNG
+#	add_core = QNG
+#}

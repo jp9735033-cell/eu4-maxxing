@@ -1,8 +1,8 @@
 #1824 - Wenzhou
 
-owner = MNG
-controller = MNG
-add_core = MNG
+owner = WUU
+controller = WUU
+remove_core = MNG
 culture = wu
 religion = confucianism
 capital = "Wenzhou"
@@ -20,10 +20,10 @@ discovered_by = nomad_group
 
 
 1519.1.1 = { discovered_by = POR } # Tome Pires
-1646.8.28 = {
-	owner = QNG
-	controller = QNG
-	add_core = QNG
-}
-1675.1.1 = { controller = MNG }
-1680.1.1 = { controller = QNG }
+#1646.8.28 = {
+#	owner = QNG
+#	controller = QNG
+#	add_core = QNG
+#}
+#1675.1.1 = { controller = MNG }
+#1680.1.1 = { controller = QNG }

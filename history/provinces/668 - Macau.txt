@@ -1,8 +1,8 @@
 #668 - Macau
 
-owner = MNG
-controller = MNG
-add_core = MNG
+owner = YUE
+controller = YUE
+remove_core = MNG
 culture = cantonese
 religion = confucianism
 capital = "Macau"
@@ -23,13 +23,13 @@ center_of_trade = 1
 
 1514.1.1 = { discovered_by = POR }
 
-1662.1.1 = {
-	owner = CZH
-	controller = CZH
-	add_core = CZH
-	remove_core = MNG
-} # The Three Feudatories
-1670.1.1 = {	owner = POR
-	controller = POR
-	add_core = POR
-} # Leased by Portugal
+#1662.1.1 = {
+#	owner = CZH
+#	controller = CZH
+#	add_core = CZH
+#	remove_core = MNG
+#} # The Three Feudatories
+#1670.1.1 = {	owner = POR
+#	controller = POR
+#	add_core = POR
+#} # Leased by Portugal

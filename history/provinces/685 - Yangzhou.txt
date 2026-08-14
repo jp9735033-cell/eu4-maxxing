@@ -1,8 +1,9 @@
 #685 - Huai'an (can't change file name)
 
-owner = MNG
-controller = MNG
-add_core = MNG
+owner = TNG
+controller = TNG
+add_core = TNG
+remove_core = MNG
 culture = jianghuai
 religion = confucianism
 capital = "Yangzhou"
@@ -19,9 +20,9 @@ discovered_by = nomad_group
 
 
 1519.1.1 = { discovered_by = POR } # Tome Pires
-1645.6.1 = {
-	owner = QNG
-	controller = QNG
-	add_core = QNG
-}
-1683.1.1 = { remove_core = MNG } # The government in Taiwan surrendered
+#1645.6.1 = {
+#	owner = QNG
+#	controller = QNG
+#	add_core = QNG
+#}
+#1683.1.1 = { remove_core = MNG } # The government in Taiwan surrendered

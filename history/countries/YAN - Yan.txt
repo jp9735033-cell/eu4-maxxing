@@ -1,0 +1,10 @@
+# eu4-maxxing: Yan inherits the Mandate of Heaven from the destroyed Ming.
+# Revert add_government_reform to chinese_warlord and drop government_rank
+# if you move the throne elsewhere or leave it vacant.
+government = monarchy
+add_government_reform = celestial_empire
+government_rank = 3
+technology_group = chinese
+religion = confucianism
+primary_culture = chihan
+capital = 1816	#Beijing

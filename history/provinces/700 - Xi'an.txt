@@ -1,8 +1,8 @@
 #700 - Shaanxi
 
-owner = MNG
-controller = MNG
-add_core = MNG
+owner = QIN
+controller = QIN
+remove_core = MNG
 culture = xibei
 religion = confucianism
 capital = "Xi'an"
@@ -21,15 +21,15 @@ extra_cost = 16
 center_of_trade = 2
 
 1628.1.1 = { unrest = 6 } # Li Zicheng rebellion
-1644.1.1 = {
-	unrest = 0
-	owner = CSH
-	controller = CSH
-} # Li Zicheng's Shun empire
-1645.2.1 = {
-	owner = QNG
-	controller = QNG
-	add_core = QNG
-}
+#1644.1.1 = {
+#	unrest = 0
+#	owner = CSH
+#	controller = CSH
+#} # Li Zicheng's Shun empire
+#1645.2.1 = {
+#	owner = QNG
+#	controller = QNG
+#	add_core = QNG
+#}
 1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis
-1662.1.1 = { remove_core = MNG }
+#1662.1.1 = { remove_core = MNG }

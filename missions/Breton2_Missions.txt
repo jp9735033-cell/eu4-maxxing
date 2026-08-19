@@ -1,0 +1,419 @@
+
+emp_gen_missions_general = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = BRI
+	#	NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	entrance_channel = {
+		icon = purely_for_commerce
+		required_missions = { }
+		trigger = {
+		170 = {
+		province_has_center_of_trade_of_level = 3
+		}
+		}
+		effect = {
+			add_country_modifier = {
+				name = bri_trade_power
+				duration = 3650
+			}
+		}
+	}
+	learning_the_sea_lines = {
+		icon = secure_the_republic
+		required_missions = { entrance_channel }
+		trigger = {
+1269 = { 
+	trade_share = {
+		country = BRI
+		share = 10
+	}
+}
+		}
+		effect = {
+			1177 = {
+    add_permanent_claim = ROOT
+}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+	
+emp_gen_missions_general_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = BRI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	bri_reinvigoration = {
+		icon = mission_dominate_genoa
+		position = 3
+		required_missions = { learning_the_sea_lines }
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 170
+					NOT = { is_capital_of = ROOT }
+				}
+				AND = {
+					province_id = 236
+					170 = { NOT = { higher_development_than = prev } }
+				}
+				AND = {
+					province_id = 97
+					170 = { NOT = { higher_development_than = prev } }
+				}
+				AND = {
+					province_id = 227
+					170 = { NOT = { higher_development_than = prev } }
+				}
+				owner = {
+					root = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				OR = {
+					in_golden_age = yes
+					has_had_golden_age = yes
+				}
+			}
+			else = {
+				prestige = 80
+			}
+			is_subject = no
+			170 = {
+				higher_development_than = 97 #amsterdam
+				higher_development_than = 227 #lisboa
+				higher_development_than = 236 #london
+			}
+		}
+		effect = {
+			170 = { add_base_tax = 2 }
+			add_country_modifier = {
+				name = trade_cities_of_bri
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+	
+	bri_indian_trade_mission = {
+		icon = mission_delhi_resurgent
+		position = 5
+		required_missions = { bri_reinvigoration }
+		trigger = {
+			lanka_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			south_lanka_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = bri_indian_trade
+				duration = -1
+			}
+			coromandel_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			deccan_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+		}
+	}
+}
+}
+
+
+emp_gen_missions_western_med = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = BRI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	for_the_lady = {
+		icon = mission_teutonic_knights
+		required_missions = { breton_trade_node_power }
+		position = 2
+		trigger = {
+			cavalry_fraction = 0.5
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bretonian_charge"
+				duration = 1825
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+	
+	bri_invade_italy = {
+		icon = mission_aragonese_navy
+		required_missions = { for_the_lady }
+
+		trigger = {
+			navy_size = POR
+		}
+		effect = {
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+				}
+				western_sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			}
+		}
+	
+	bri_continue_italy = {
+		icon = seize_sardinia
+		required_missions = { bri_invade_italy }
+		provinces_to_highlight = {
+			area = corsica_sardinia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			area = sicily_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			area = western_sicily_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+
+			calabria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			naples_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			apulia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+	
+	control_over_naples = {
+		icon = mission_aragonese_navy
+		required_missions = { bri_continue_italy }
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = italy_region
+					OR = {
+						country_or_non_sovereign_subject_holds = ARA
+						AND = {
+							NOT = { exists = ARA }
+							country_or_non_sovereign_subject_holds = SPA
+						}
+					}
+				}
+				AND = {
+					province_id = 220
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 1295
+					NOT = { is_strongest_trade_power = ROOT }
+				}
+			}
+		}
+		trigger = {
+			naples_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			apulia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			calabria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = inland_domination_bri
+				duration = -1
+				}
+				italy_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+emp_gen_missions_western_med_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = BRI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	bri_preparation_for_invasion = {
+		icon = overshadow_venice
+		required_missions = { bri_army }
+		position = 3
+		trigger = {
+				navy_size = 100
+				army_size = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = preparation_for_invasion_bri
+				duration = 7300
+			}
+			
+		}
+	}
+	
+	invasion_begins = {
+		icon = army_reforms
+		required_missions = { bri_preparation_for_invasion bri_navy }
+		
+		trigger = {
+				wessex_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			}
+		effect = {
+		british_isles_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = invasion_starts_bri
+				duration = 7300
+			}
+			
+		}
+	}
+	
+	the_great_brittany = {
+		icon = fra_great_britain
+		required_missions = { invasion_begins }
+		 trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 31
+	region = british_isles_region
+	is_city = yes
+}
+		}
+		effect = {
+			add_country_modifier = {
+				name = the_great_brittany_bri
+				duration = -1	
+			}
+		}
+	}
+}

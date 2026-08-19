@@ -1,0 +1,224 @@
+
+genoa_missions_africa = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	breton_trade_node_power = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 172
+			province_id = 170
+			}
+			
+		trigger = {
+			172 = {
+					development = 20
+			}
+			170 = {
+					development = 20
+			}
+		}
+		effect = {
+			define_advisor = {
+    type = treasurer
+    skill = 2
+    discount = yes
+    culture = variable:new_ruler_culture
+}
+			
+		}
+	}
+	conquer_britsh_bri = {
+		icon = mission_sea_battles
+		required_missions = { breton_trade_node_power }
+		position = 3
+		trigger = {
+			navy_size = 30
+		}
+		effect = {
+			add_sailors = 1500
+		}
+	}
+	
+	tradenode_caribbean1 = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { conquer_britsh_bri }
+		position = 5
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 5
+	colonial_region = colonial_the_carribean
+	is_city = yes
+}
+		}
+		effect = {
+			add_country_modifier = {
+				name = bry_breton_colony
+				duration = 7300
+			}
+		}
+	}
+	tradenode_canada = {
+		icon = mission_galleys_in_port
+		required_missions = { tradenode_caribbean1 }
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 5
+	colonial_region = colonial_canada
+	is_city = yes
+		}
+		}
+		effect = {
+			add_mercantilism = 2
+		create_conquistador = { tradition = 75 }
+		}
+	}
+	
+	tradenode_cheespake = {
+		icon = mission_invade_island
+		required_missions = { tradenode_canada }
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 5
+	colonial_region = colonial_eastern_america
+	is_city = yes
+	}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = bry_breton_dominance
+				duration = -1
+			}
+		}
+	}
+}
+
+genoa_africa_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	tradenode_ivory1 = {
+		icon = mission_kon_greatest_power_kongo
+		required_missions = { tradenode_caribbean1}
+		position = 6
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 5
+	region = guinea_region
+	is_city = yes
+}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bry_breton_africa"
+				duration = 7300
+				}
+				niger_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+genoa_europe_slot = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRI
+	}
+	has_country_shield = yes
+
+	Bri_france_relation = {
+		icon = mission_empire
+		required_missions = { }
+		trigger = {
+			FRA = { 
+					alliance_with = ROOT 
+					has_opinion = {
+						who = ROOT 
+						value = 150
+					}
+		}
+		}
+		effect = {
+			add_dip_power = 100
+		}
+	}
+	bri_army = {
+		icon = mission_italian_condottiere
+		required_missions = { Bri_france_relation }
+		trigger = {
+			army_professionalism = 0.75
+			army_size = 75
+		}
+		effect = {
+			wessex_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	bri_navy = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { }
+		trigger = {
+			navy_size = 75
+			navy_tradition = 65
+		}
+		effect = {
+			beieras_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			alentejo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ship_durability_bri = {
+		icon = indonesian_trade
+		required_missions = { bri_navy }
+		trigger = {
+		full_idea_group = naval_ideas
+		full_idea_group = exploration_ideas
+		navy_size = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bri_durability"
+				duration = -1
+			}
+		}
+	}
+}

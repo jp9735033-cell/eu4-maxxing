@@ -1,0 +1,58 @@
+# ============================================================
+# BRITTANY MISSION MODIFIERS
+# Dosya: common/event_modifiers/brittany_modifiers.txt
+# ============================================================
+
+bry_breton_colony = {
+    global_colonial_growth = 20
+	native_uprising_chance = -0.50
+}
+bry_breton_dominance = {
+    envoy_travel_time = -0.25
+	reduced_liberty_desire_on_other_continent = 33
+	diplomatic_reputation = 1
+}
+bry_breton_africa = {
+  land_morale = 0.1
+  land_attrition = -0.15
+  reinforce_speed = 0.15
+}
+bri_durability = {
+  ship_durability = 0.05
+  naval_morale_damage = 0.10
+}
+invasion_starts_bri = {
+  land_morale = 0.10
+  shock_damage_received = -0.10
+  is_marine_modifier = yes
+}
+preparation_for_invasion_bri = {
+  global_ship_cost = -0.1
+  global_regiment_cost = -0.10
+}
+the_great_brittany_bri = {
+  naval_morale = 0.1
+  heavy_ship_power = 0.1
+  prestige = 1
+  allowed_marine_fraction = 0.25
+}
+bretonian_charge = {
+  cavalry_power = 0.10
+}
+inland_domination_bri = {
+  galley_power = 0.2
+  navy_tradition = 0.5
+  trade_efficiency = 0.1
+}
+bri_trade_power = {
+  ship_trade_power_modifier = 0.33
+  global_foreign_trade_power = 0.15
+}
+trade_cities_of_bri  = {
+  trade_range_modifier = 0.25
+  global_foreign_trade_power = 0.1
+}
+bri_indian_trade = {
+  trade_steering = 0.15
+  global_trade_power = 0.1
+}

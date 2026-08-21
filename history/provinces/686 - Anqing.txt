@@ -1,8 +1,8 @@
 #686 - Anqing (can't change file name)
 
-owner = WUU
-controller = WUU
-add_core = WUU
+owner = CHC
+controller = CHC
+add_core = CHC
 remove_core = MNG
 culture = jianghuai
 religion = confucianism

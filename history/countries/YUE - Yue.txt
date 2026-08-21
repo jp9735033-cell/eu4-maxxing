@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = chinese
+religion = confucianism
+primary_culture = cantonese
+capital = 667	#Canton
+
+1444.11.11 = {
+    monarch = {
+        country_of_origin = YUE
+        name = "Jaeger"
+         dynasty = "Yue"
+         birth_date = 1420.1.1
+         adm = 3
+         dip = 5
+         mil = 4
+    }

@@ -8,3 +8,14 @@ technology_group = chinese
 religion = confucianism
 primary_culture = chihan
 capital = 1816	#Beijing
+
+1444.11.11 = {
+    monarch = {
+        country_of_origin = YAN
+        name = "Sac"
+         dynasty = "Yan"
+         birth_date = 1420.1.1
+         adm = 4
+         dip = 4
+         mil = 4
+    }

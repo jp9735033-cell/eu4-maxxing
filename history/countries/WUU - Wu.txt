@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = chinese
+religion = confucianism
+primary_culture = wu
+capital = 684	#Hangzhou
+
+1444.11.11 = {
+    monarch = {
+        country_of_origin = WUU
+        name = "Of"
+         dynasty = "Wu"
+         birth_date = 1420.1.1
+         adm = 5
+         dip = 4
+         mil = 3
+    }

@@ -4,6 +4,171 @@
 
 # This one is the first for the case that some country manages to become fully Norse.
 
+YAN_ideas = {
+	start = {
+		defensiveness = 0.20
+		core_creation = -0.1
+	}
+	
+	bonus = {
+		yearly_army_professionalism = 0.001
+		drill_gain_modifier = 0.10
+	}
+	
+	trigger = {
+		tag = YAN
+	}
+	free = yes
+	
+	
+	expand_the_banners4 = {
+		global_tax_modifier = 0.1
+	}
+	the_green_standard_army4 = {
+        interest = -0.5
+	}
+	pigtail_or_death4 = {
+        cavalry_power = 0.20
+		cav_to_inf_ratio = 0.25
+	}
+	qng_bogda_khan4 = {
+        female_advisor_chance = 0.1
+		advisor_cost = -0.10
+	}
+	the_chinese_rules4 = {
+        land_morale = 0.05
+		may_recruit_female_generals = yes
+	}
+	qing_viceroyalties4 = {
+        production_efficiency = 0.1
+	}
+	the_ten_great_campaigns4 = {
+		land_forcelimit_modifier = 0.10
+	}
+}
+
+WUU_ideas = {
+	start = {
+		development_cost = -0.1
+		build_cost = -0.1
+	}
+	
+	bonus = {
+		land_forcelimit_modifier = 0.20
+	}
+	
+	trigger = {
+		tag = WUU
+	}
+	free = yes
+	
+	
+	expand_the_banners1 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	the_green_standard_army1 = {
+        monthly_reform_progress_modifier = 0.1
+		centralize_state_cost = -0.1
+	}
+	pigtail_or_death1 = {
+        land_morale = 0.15
+	}
+	qng_bogda_khan1 = {
+        reinforce_speed = 0.15
+		recover_army_morale_speed = 0.15
+	}
+	the_chinese_rules1 = {
+		trade_efficiency = 0.1
+	}
+	qing_viceroyalties1 = {
+        global_manpower_modifier = 0.20
+		manpower_recovery_speed = 0.15
+	}
+	the_ten_great_campaigns1 = {
+		global_allowed_num_of_buildings = 1
+	}
+}
+
+YUE_ideas = {
+	start = {
+		fire_damage = 0.10
+		advisor_cost = -0.15
+	}
+	
+	bonus = {
+		artillery_power = 0.10
+	}
+	
+	trigger = {
+		tag = YUE
+	}
+	free = yes
+	
+	
+	expand_the_banners2 = {
+		development_cost = -0.1
+	}
+	the_green_standard_army2 = {
+        trade_efficiency = 0.1
+	}
+	pigtail_or_death2 = {
+        free_dip_policy = 1
+	}
+	qng_bogda_khan2 = {
+        discipline = 0.05
+	}
+	the_chinese_rules2 = {
+		ship_trade_power_modifier = 0.15
+	}
+	qing_viceroyalties2 = {
+        global_unrest = -2
+	}
+	the_ten_great_campaigns2 = {
+		artillery_fire = 1
+	}
+}
+
+SHU_ideas = {
+	start = {
+		land_morale = 0.10
+		core_creation = -0.1
+	}
+	
+	bonus = {
+		advisor_cost = -0.15
+	}
+	
+	trigger = {
+		tag = SHU
+	}
+	free = yes
+	
+	
+	expand_the_banners3 = {
+		infantry_power = 0.10
+	}
+	the_green_standard_army3 = {
+		manpower_recovery_speed = 0.15
+		global_manpower_modifier = 0.15
+	}
+	pigtail_or_death3 = {
+		production_efficiency = 0.1
+	}
+	qng_bogda_khan3 = {
+        discipline = 0.05
+	}
+	the_chinese_rules3 = {
+		prestige_from_land = 1
+	}
+	qing_viceroyalties3 = {
+		state_maintenance_modifier = -0.15
+		global_autonomy = -0.05
+	}
+	the_ten_great_campaigns3 = {
+		fire_damage_received = -0.10
+	}
+}
+
 norse_ideas = {
 	start = {
 		land_morale = 0.15	
@@ -324,31 +489,25 @@ SWE_ideas = {
 	free = yes		#will be added at load.
 
 	kung_och_riksdag = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1	#For completion's sake
-		horde_unity = 1
-		possible_policy = 1
+                development_cost = -0.05
 	}
 	swedish_steel = {
 		discipline = 0.05
 	}
 	hakkapelitta = {
-		cavalry_cost = -0.1
+		global_manpower_modifier = 0.20
 	}
 	indelningsverket = {
 		manpower_recovery_speed = 0.2
 	}
 	swedish_absolutism = {
-		stability_cost_modifier = -0.1
-		yearly_absolutism = 1
+		production_efficiency = 0.1
 	}
 	produktplakatet = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	union_and_security_act = {
-		global_manpower_modifier = 0.20
+		land_forcelimit_modifier = 0.10
 	}
 }
 
@@ -865,7 +1024,7 @@ FRA_ideas = {
 	}
 	
 	bonus = {
-		development_cost = -0.1
+		production_efficiency = 0.1
 	}	
 
 	trigger = {
@@ -888,9 +1047,7 @@ FRA_ideas = {
 		global_unrest = -1 
 	}
 	native_trading_principles = {
-		colonists = 1
-		may_explore = yes
-		range = 0.5
+                development_cost = -0.1
 	}
 	divine_right_to_rule = {
 		core_creation = -0.1
@@ -4226,7 +4383,7 @@ SON_ideas = {
 
 BRI_ideas = {
 	start = {
-		navy_tradition = 1
+		infantry_power = 0.10
 		trade_steering = 0.10
 	}
 	
@@ -4240,30 +4397,27 @@ BRI_ideas = {
 	free = yes
 	
 	legacy_of_breton_independence = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
+		heavy_ship_power = 0.1
+                range = 0.65
 	}
 	estates_of_brittany = {
-		global_unrest = -1		
+		development_cost = -0.1		
 	}
 	breton_march = {
-		defensiveness = 0.2
+		global_colonial_growth = 15
 	}
 	breton_catholicism = {
-		papal_influence = 2
-		global_missionary_strength = 0.01
+		fire_damage = 0.10
 	}
 	protect_the_coastline = {
-		global_ship_cost = -0.1
+		has_marines = yes
+                allowed_marine_fraction = 0.25
 	}
 	league_of_the_public_weal = {
-		diplomatic_reputation = 1
+		global_trade_goods_size_modifier = 0.1
 	}
 	catholicon = {
-		prestige = 1
+		naval_morale = 0.1
  	}
 }
 
@@ -15580,7 +15734,7 @@ AUS_ideas = {
                 allowed_marine_fraction = 0.33
 	}
 	AUS_sandpaper_and_cheating = {
-		trade_goods_size_modifier = 0.15
+		global_trade_goods_size_modifier = 0.15
 		trade_efficiency = 0.1
 	}
 	AUS_royal_navy = {

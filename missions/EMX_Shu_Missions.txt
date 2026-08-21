@@ -1,0 +1,771 @@
+# eu4-maxxing: the Shu warring-states mission tree.
+# Same five-slot layout as Yan, Wu and Yue. See EMX_Yan_Missions.txt for the map.
+#
+# Shu looks west. Its national branch is seven steps of road building across
+# Tibet, the Hexi Corridor and the Tarim oases, and each step cancels the
+# development penalty of the terrain it crosses: desert +50%, mountain +35%,
+# highlands and steppe +20%. Ground nobody else can afford to settle becomes
+# Shu territory worth holding.
+
+emx_shu_s1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = SHU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_shu_seize_beijing = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			province_id = 1816
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1816
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = emx_spoils_of_yan
+				duration = -1
+			}
+			hebei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_shu_secure_hanzhong = {
+		icon = mission_chinese_general_riding
+		required_missions = { }
+		position = 9
+		provinces_to_highlight = {
+			province_id = 689
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 689
+		}
+		effect = {
+			add_army_tradition = 10
+			689 = { add_permanent_province_modifier = { name = emx_home_garrison_town duration = -1 } }
+			add_country_modifier = {
+				name = emx_shu_hanzhong_gate
+				duration = -1
+			}
+		}
+	}
+
+	emx_shu_silk_road_1 = {
+		icon = mission_asian_trader
+		required_missions = { emx_shu_unify_china }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 697
+				province_id = 701
+				province_id = 709
+				province_id = 707
+				province_id = 708
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 1816
+			owns = 695
+			owns = 696
+			owns = 697
+			owns = 701
+			owns = 709
+			owns = 707
+			owns = 708
+		}
+		effect = {
+			emx_silk_road_gansu_effect = yes
+		}
+	}
+
+	emx_shu_silk_road_2 = {
+		icon = mission_asian_trader
+		required_missions = { emx_shu_silk_road_1 }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				province_id = 713
+				province_id = 1786
+				province_id = 739
+				province_id = 1785
+				province_id = 452
+				province_id = 1967
+				province_id = 454
+				province_id = 442
+				province_id = 441
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 739
+			owns = 454
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+					province_id = 713
+					province_id = 1786
+					province_id = 739
+					province_id = 1785
+					province_id = 452
+					province_id = 1967
+					province_id = 454
+					province_id = 442
+					province_id = 441
+				}
+			}
+		}
+		effect = {
+			emx_silk_road_samarkand_effect = yes
+		}
+	}
+
+	emx_shu_silk_road_3 = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_shu_silk_road_2 }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				province_id = 426
+				province_id = 2313
+				province_id = 151
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 426
+			owns = 2313
+			owns = 151
+		}
+		effect = {
+			emx_silk_road_constantinople_effect = yes
+			add_country_modifier = {
+				name = emx_silk_road_trade
+				duration = -1
+			}
+		}
+	}
+}
+
+emx_shu_s2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = SHU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_shu_seize_hangzhou = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			province_id = 684
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 684
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = emx_spoils_of_wu
+				duration = -1
+			}
+			zhejiang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_shu_southern_campaign = {
+		icon = mission_indian_soldier_elephant
+		required_missions = { emx_shu_secure_hanzhong }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				province_id = 674
+				province_id = 675
+				province_id = 673
+				province_id = 2168
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 674
+			owns = 675
+			owns = 673
+			owns = 2168
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_shu_southern_campaign
+				duration = -1
+			}
+		}
+	}
+
+	emx_shu_army_1 = {
+		icon = mission_asian_cannon
+		required_missions = { emx_shu_unify_china }
+		position = 12
+		trigger = {
+			mil_tech = 20
+			num_of_artillery = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_divine_engine_division
+				duration = -1
+			}
+		}
+	}
+
+	emx_shu_army_2 = {
+		icon = mission_chinese_general_riding
+		required_missions = { emx_shu_army_1 }
+		position = 13
+		trigger = {
+			army_professionalism = 0.5
+			army_tradition = 60
+		}
+		effect = {
+			add_army_professionalism = 0.05
+			add_country_modifier = {
+				name = emx_green_standard_drill
+				duration = -1
+			}
+		}
+	}
+
+	emx_shu_army_3 = {
+		icon = mission_manchu_warrior
+		required_missions = { emx_shu_army_2 }
+		position = 14
+		trigger = {
+			mil_tech = 26
+			army_professionalism = 0.8
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_new_model_army
+				duration = -1
+			}
+		}
+	}
+}
+
+emx_shu_s3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = SHU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_shu_seize_canton = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			province_id = 667
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 667
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = emx_spoils_of_yue
+				duration = -1
+			}
+			guangdong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_shu_northern_expeditions = {
+		icon = mission_steppe_warriors
+		required_missions = { emx_shu_southern_campaign }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				province_id = 700
+				province_id = 4198
+				province_id = 2180
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 700
+			owns_core_province = 4198
+			owns_core_province = 2180
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_shu_northern_expeditions
+				duration = -1
+			}
+		}
+	}
+
+	emx_shu_unify_china = {
+		icon = mission_cornerstone_empire
+		required_missions = {
+			emx_shu_seize_beijing
+			emx_shu_seize_hangzhou
+			emx_shu_seize_canton
+			emx_shu_home_7
+			emx_shu_west_7
+			emx_shu_tea_horse_road
+		}
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 684
+				province_id = 679
+				province_id = 667
+				province_id = 726
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1816
+			owns_core_province = 684
+			owns_core_province = 679
+			owns_core_province = 667
+			owns_core_province = 726
+		}
+		effect = {
+			emx_unify_china_effect = yes
+		}
+	}
+
+	emx_shu_industry_1 = {
+		icon = mission_have_manufactories
+		required_missions = { emx_shu_unify_china }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2151
+				province_id = 683
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 2151
+			owns = 683
+		}
+		effect = { emx_industry_kilns_effect = yes }
+	}
+
+	emx_shu_industry_2 = {
+		icon = mission_state_manufactories
+		required_missions = { emx_shu_industry_1 }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1822
+				province_id = 684
+				province_id = 2145
+				province_id = 2148
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 1822
+			owns = 684
+			owns = 2145
+			owns = 2148
+		}
+		effect = { emx_industry_looms_effect = yes }
+	}
+
+	emx_shu_industry_3 = {
+		icon = mng_expand_bogue
+		required_missions = { emx_shu_industry_2 }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				province_id = 667
+				province_id = 665
+				province_id = 668
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 667
+			owns = 665
+			owns = 668
+		}
+		effect = { emx_industry_ironworks_effect = yes }
+	}
+}
+
+emx_shu_s4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = SHU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_shu_home_1 = {
+		icon = mission_rice_field
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = { province_id = 679 }
+		trigger = {
+			679 = { development = 27 }
+		}
+		effect = {
+			679 = { add_permanent_province_modifier = { name = emx_shu_capital_works duration = -1 } }
+		}
+	}
+
+	emx_shu_home_2 = {
+		icon = mission_asian_trader
+		required_missions = { emx_shu_home_1 }
+		position = 2
+		provinces_to_highlight = { province_id = 680 }
+		trigger = { 680 = { development = 24 } }
+		effect = {
+			680 = { add_permanent_province_modifier = { name = emx_home_market_town duration = -1 } }
+		}
+	}
+
+	emx_shu_home_3 = {
+		icon = mission_rice_field
+		required_missions = { emx_shu_home_2 }
+		position = 3
+		provinces_to_highlight = { province_id = 2169 }
+		trigger = { 2169 = { development = 9 } }
+		effect = {
+			2169 = { add_permanent_province_modifier = { name = emx_home_farmlands duration = -1 } }
+		}
+	}
+
+	emx_shu_home_4 = {
+		icon = mission_chinese_general_riding
+		required_missions = { emx_shu_home_3 }
+		position = 4
+		provinces_to_highlight = { province_id = 2170 }
+		trigger = { 2170 = { development = 7 } }
+		effect = {
+			2170 = { add_permanent_province_modifier = { name = emx_home_garrison_town duration = -1 } }
+		}
+	}
+
+	emx_shu_home_5 = {
+		icon = mission_rice_field
+		required_missions = { emx_shu_home_4 }
+		position = 5
+		provinces_to_highlight = { province_id = 4211 }
+		trigger = { 4211 = { development = 9 } }
+		effect = {
+			4211 = { add_permanent_province_modifier = { name = emx_home_farmlands duration = -1 } }
+		}
+	}
+
+	emx_shu_home_6 = {
+		icon = mng_form_depots
+		required_missions = { emx_shu_home_5 }
+		position = 6
+		provinces_to_highlight = { province_id = 4212 }
+		trigger = { 4212 = { development = 11 } }
+		effect = {
+			4212 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
+		}
+	}
+
+	emx_shu_home_7 = {
+		icon = mission_asian_trader
+		required_missions = { emx_shu_home_6 }
+		position = 7
+		provinces_to_highlight = { province_id = 4213 }
+		trigger = { 4213 = { development = 10 } }
+		effect = {
+			4213 = { add_permanent_province_modifier = { name = emx_home_market_town duration = -1 } }
+			add_adm_power = 100
+		}
+	}
+
+	emx_shu_tea_horse_road = {
+		icon = mission_kowtow
+		required_missions = { emx_shu_northern_expeditions }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2183
+				province_id = 2184
+				province_id = 705
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 2183
+			owns = 2184
+			owns = 705
+			num_of_cavalry = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_shu_horse_trade
+				duration = -1
+			}
+		}
+	}
+
+	emx_shu_industry_4 = {
+		icon = mission_war_chest
+		required_missions = { emx_shu_industry_1 }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 685
+				province_id = 679
+				province_id = 680
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 685
+			owns = 679
+			owns = 680
+		}
+		effect = { emx_industry_monopolies_effect = yes }
+	}
+
+	emx_shu_industry_5 = {
+		icon = mission_scholar_officials
+		required_missions = { emx_shu_industry_4 }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 691
+				province_id = 688
+				province_id = 700
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 1816
+			owns = 691
+			owns = 688
+			owns = 700
+		}
+		effect = { emx_industry_northern_workshops_effect = yes }
+	}
+}
+
+emx_shu_s5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = SHU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	# Utsang, Tsang and Ngari. Mountain, +35% development cost, cancelled.
+	emx_shu_west_1 = {
+		icon = mission_buddhist_monk_praying
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = utsang_area
+				area = tsang_area
+				area = ngari_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 676
+			owns = 677
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = utsang_area
+					area = tsang_area
+					area = ngari_area
+				}
+			}
+		}
+		effect = { emx_shu_tibet_effect = yes }
+	}
+
+	# Kham and Amdo. Highlands and desert.
+	emx_shu_west_2 = {
+		icon = mission_hands_praying
+		required_missions = { emx_shu_west_1 }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = kham_area
+				area = amdo_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 678
+			owns = 705
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+					area = kham_area
+					area = amdo_area
+				}
+			}
+		}
+		effect = { emx_shu_kham_effect = yes }
+	}
+
+	# The rest of the Lhasa trade node, Nepal excluded.
+	emx_shu_west_3 = {
+		icon = mission_asian_trader
+		required_missions = { emx_shu_west_2 }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2129
+				province_id = 2128
+				province_id = 565
+				province_id = 4481
+				province_id = 4482
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 2129
+			owns = 2128
+			owns = 565
+		}
+		effect = { emx_shu_lhasa_node_effect = yes }
+	}
+
+	# West Gansu, the Hexi Corridor. Desert, +50% development cost, cancelled.
+	emx_shu_west_4 = {
+		icon = mission_great_wall
+		required_missions = { emx_shu_west_3 }
+		position = 4
+		provinces_to_highlight = {
+			area = west_gansu_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 707
+			owns = 708
+			owns = 2182
+			owns = 2184
+		}
+		effect = { emx_shu_hexi_effect = yes }
+	}
+
+	# Shanshan and the Turpan-Kumul oases.
+	emx_shu_west_5 = {
+		icon = mission_raid_the_berbers
+		required_missions = { emx_shu_west_4 }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = shanshan_area
+				area = turpan_kumul_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					area = shanshan_area
+					area = turpan_kumul_area
+				}
+			}
+		}
+		effect = { emx_shu_lopnor_effect = yes }
+	}
+
+	# Central Altishahr and Kashgaria.
+	emx_shu_west_6 = {
+		icon = mission_dominate_gujarati_trade
+		required_missions = { emx_shu_west_5 }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = tarim_basin_area
+				area = kashgaria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 739
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = tarim_basin_area
+					area = kashgaria_area
+				}
+			}
+		}
+		effect = { emx_shu_altishahr_effect = yes }
+	}
+
+	# South Dzungaria. North Zungaria is deliberately left out.
+	emx_shu_west_7 = {
+		icon = mission_steppe_warriors
+		required_missions = { emx_shu_west_6 }
+		position = 7
+		provinces_to_highlight = {
+			area = zungaria_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 4
+				area = zungaria_area
+			}
+		}
+		effect = {
+			emx_shu_dzungaria_effect = yes
+			add_country_modifier = {
+				name = emx_shu_roof_of_the_world
+				duration = -1
+			}
+		}
+	}
+}

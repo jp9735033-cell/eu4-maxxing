@@ -1,0 +1,408 @@
+# eu4-maxxing: modifiers for the Yan / Wu / Shu / Yue warring-states mission trees.
+# New file, folder merges with vanilla - nothing here overrides a vanilla modifier.
+# Every name is prefixed emx_ and is unique against vanilla and against the rest of the mod.
+
+##################################################
+# 1. Spoils of a rival capital (row 1 of every tree)
+# Each is half of the first national tradition of that rival, taken by force.
+##################################################
+
+emx_spoils_of_yan = {
+	defensiveness = 0.10
+	core_creation = -0.05
+}
+
+emx_spoils_of_wu = {
+	development_cost = -0.05
+	build_cost = -0.05
+}
+
+emx_spoils_of_shu = {
+	land_morale = 0.05
+	core_creation = -0.05
+}
+
+emx_spoils_of_yue = {
+	fire_damage = 0.05
+	advisor_cost = -0.07
+}
+
+##################################################
+# 2. Shared home-province vocabulary (branch 2)
+# Every one of these carries flat trade power so the home core becomes
+# visible in the trade node map mode as the tree is completed.
+##################################################
+
+emx_home_farmlands = {
+	local_development_cost = -0.05
+	province_trade_power_value = 2
+	local_tax_modifier = 0.25
+}
+
+emx_home_garrison_town = {
+	local_development_cost = -0.05
+	province_trade_power_value = 2
+	local_manpower_modifier = 0.25
+	local_defensiveness = 0.10
+}
+
+emx_home_market_town = {
+	local_development_cost = -0.05
+	province_trade_power_value = 3
+	local_production_efficiency = 0.20
+}
+
+emx_home_river_port = {
+	local_development_cost = -0.05
+	province_trade_power_value = 3
+	local_build_cost = -0.15
+}
+
+##################################################
+# 3. Yan
+##################################################
+
+# Beijing. The first course of the Great Wall.
+emx_start_of_the_great_wall = {
+	local_development_cost = -0.10
+	province_trade_power_value = 5
+	fort_level = 1
+	local_hostile_attrition = 1
+	supply_limit_modifier = 0.25
+}
+
+emx_yan_frontier_garrison = {
+	local_development_cost = -0.05
+	province_trade_power_value = 2
+	fort_level = 1
+	local_hostile_attrition = 1
+	local_defensiveness = 0.15
+}
+
+emx_yan_nine_garrisons = {
+	defensiveness = 0.10
+	land_forcelimit_modifier = 0.05
+}
+
+emx_yan_steppe_tribute = {
+	cavalry_power = 0.10
+	global_manpower_modifier = 0.10
+}
+
+emx_yan_grand_canal = {
+	trade_efficiency = 0.10
+	global_trade_goods_size_modifier = 0.05
+}
+
+emx_yan_yongle_dadian = {
+	global_institution_spread = 0.15
+	advisor_cost = -0.10
+	prestige = 1
+}
+
+emx_yan_northern_wall = {
+	defensiveness = 0.15
+	manpower_recovery_speed = 0.15
+	land_attrition = -0.10
+}
+
+##################################################
+# 4. Wu
+# Wu fortifies everything it touches: 25% local fort defence on every province
+# it develops, and a force limit that climbs 3% a mission to +20% total.
+# Development cost is the standard -5%; only Beijing, Chengdu, Canton and
+# Shu's western roads go beyond that.
+##################################################
+
+emx_wu_capital_works = {
+	local_development_cost = -0.05
+	province_trade_power_value = 5
+	local_defensiveness = 0.25
+	local_institution_spread = 0.20
+}
+
+emx_wu_delta_town = {
+	local_development_cost = -0.05
+	province_trade_power_value = 3
+	local_defensiveness = 0.25
+}
+
+emx_wu_fort_hangzhou = { land_forcelimit_modifier = 0.03 }
+emx_wu_fort_shanghai = { land_forcelimit_modifier = 0.03 }
+emx_wu_fort_ningbo = { land_forcelimit_modifier = 0.03 }
+emx_wu_fort_zhenjiang = { land_forcelimit_modifier = 0.03 }
+emx_wu_fort_wenzhou = { land_forcelimit_modifier = 0.03 }
+
+emx_wu_grand_levy = {
+	land_forcelimit_modifier = 0.05
+	manpower_recovery_speed = 0.10
+}
+
+emx_wu_lower_yangtze = {
+	production_efficiency = 0.10
+	global_trade_goods_size_modifier = 0.05
+}
+
+emx_wu_break_the_wokou = {
+	naval_forcelimit_modifier = 0.20
+	global_ship_trade_power = 0.15
+}
+
+emx_wu_suzhou_looms = {
+	trade_efficiency = 0.10
+	global_trade_goods_size_modifier = 0.05
+}
+
+emx_wu_jiangnan_army = {
+	discipline = 0.025
+	manpower_recovery_speed = 0.10
+}
+
+##################################################
+# 5. Shu
+# The western sets are sized to cancel the terrain dev-cost penalty they sit on:
+# desert +0.50, mountain +0.35, highlands +0.20, steppe +0.20, drylands +0.05.
+##################################################
+
+emx_shu_capital_works = {
+	local_development_cost = -0.10
+	province_trade_power_value = 5
+	local_institution_spread = 0.20
+}
+
+# Utsang, Tsang, Ngari - mountain
+emx_shu_tibetan_roads = {
+	local_development_cost = -0.35
+	province_trade_power_value = 2
+}
+
+# Kham, Amdo - highlands and desert
+emx_shu_kham_roads = {
+	local_development_cost = -0.30
+	province_trade_power_value = 2
+}
+
+# The Lhasa trade node outside Nepal
+emx_shu_tea_horse_road = {
+	local_development_cost = -0.15
+	province_trade_power_value = 3
+	trade_goods_size_modifier = 0.05
+}
+
+# West Gansu - desert
+emx_shu_hexi_corridor = {
+	local_development_cost = -0.50
+	province_trade_power_value = 3
+}
+
+# Shanshan and Turpan-Kumul
+emx_shu_lop_nor_oases = {
+	local_development_cost = -0.45
+	province_trade_power_value = 3
+}
+
+# Central Altishahr and Kashgaria
+emx_shu_altishahr_oases = {
+	local_development_cost = -0.40
+	province_trade_power_value = 3
+}
+
+# South Dzungaria
+emx_shu_dzungarian_steppe = {
+	local_development_cost = -0.40
+	province_trade_power_value = 3
+}
+
+emx_shu_hanzhong_gate = {
+	land_morale = 0.05
+	defensiveness = 0.10
+}
+
+emx_shu_southern_campaign = {
+	global_manpower_modifier = 0.15
+	global_unrest = -1
+}
+
+emx_shu_northern_expeditions = {
+	discipline = 0.025
+	siege_ability = 0.10
+}
+
+emx_shu_horse_trade = {
+	trade_efficiency = 0.10
+	cavalry_power = 0.10
+}
+
+emx_shu_roof_of_the_world = {
+	caravan_power = 0.25
+	development_cost = -0.05
+	land_attrition = -0.20
+}
+
+##################################################
+# 6. Yue
+# Every coastal step adds naval force limit locally and morale nationally,
+# ending at +20% naval morale and +10% land morale.
+##################################################
+
+emx_yue_capital_works = {
+	local_development_cost = -0.10
+	province_trade_power_value = 5
+	local_institution_spread = 0.20
+}
+
+emx_yue_pearl_river_ports = {
+	naval_forcelimit = 1
+	province_trade_power_value = 3
+	local_development_cost = -0.05
+}
+
+emx_yue_hainan_stations = {
+	naval_forcelimit = 1
+	province_trade_power_value = 2
+	local_development_cost = -0.05
+}
+
+emx_yue_western_coast = {
+	naval_forcelimit = 1
+	province_trade_power_value = 2
+	local_development_cost = -0.05
+}
+
+emx_yue_chaozhou_yards = {
+	naval_forcelimit = 1
+	province_trade_power_value = 3
+	local_development_cost = -0.05
+}
+
+emx_yue_south_sea_stations = {
+	naval_forcelimit = 1
+	province_trade_power_value = 3
+	local_development_cost = -0.05
+}
+
+emx_yue_pearl_fleet = { naval_morale = 0.04 land_morale = 0.02 }
+emx_yue_hainan_fleet = { naval_morale = 0.04 land_morale = 0.02 }
+emx_yue_western_fleet = { naval_morale = 0.04 land_morale = 0.02 }
+emx_yue_chaozhou_fleet = { naval_morale = 0.04 land_morale = 0.02 }
+emx_yue_treasure_fleet = { naval_morale = 0.04 land_morale = 0.02 }
+
+emx_yue_two_guangs = {
+	land_forcelimit_modifier = 0.10
+	global_manpower_modifier = 0.10
+}
+
+emx_yue_pearl_estuary = {
+	trade_efficiency = 0.10
+	production_efficiency = 0.10
+}
+
+emx_yue_jiaozhi = {
+	land_morale = 0.05
+	core_creation = -0.10
+}
+
+emx_yue_nanyang_trade = {
+	global_ship_trade_power = 0.20
+	trade_steering = 0.20
+	merchants = 1
+}
+
+##################################################
+# 7. Unify China and the three roads that follow it
+##################################################
+
+emx_unified_china = {
+	land_forcelimit_modifier = 0.30
+	global_manpower_modifier = 0.50
+	land_maintenance_modifier = 0.10
+}
+
+emx_silk_road_station = {
+	trade_goods_size_modifier = 0.05
+	province_trade_power_value = 10
+}
+
+emx_silk_road_trade = {
+	trade_efficiency = 0.10
+	caravan_power = 0.20
+}
+
+emx_divine_engine_division = {
+	artillery_power = 0.10
+	siege_ability = 0.10
+}
+
+emx_green_standard_drill = {
+	drill_gain_modifier = 0.25
+	yearly_army_professionalism = 0.002
+}
+
+emx_new_model_army = {
+	discipline = 0.02
+	land_morale = 0.05
+	fire_damage = 0.05
+}
+
+emx_ind_kilns = {
+	local_production_efficiency = 0.25
+	province_trade_power_value = 5
+	trade_goods_size_modifier = 0.10
+}
+
+emx_ind_looms = {
+	local_production_efficiency = 0.20
+	province_trade_power_value = 5
+	local_development_cost = -0.05
+}
+
+emx_ind_ironworks = {
+	local_production_efficiency = 0.20
+	province_trade_power_value = 4
+	local_regiment_cost = -0.10
+}
+
+emx_ind_monopolies = {
+	local_tax_modifier = 0.33
+	province_trade_power_value = 4
+	trade_goods_size_modifier = 0.05
+}
+
+emx_ind_northern_workshops = {
+	local_production_efficiency = 0.20
+	province_trade_power_value = 3
+	local_build_cost = -0.20
+	local_development_cost = -0.05
+}
+
+##################################################
+# 8. The Great Wall
+# One province modifier per section, each buildable exactly once in a game.
+##################################################
+
+emx_gw_shanhaiguan_wall = {
+	fort_level = 1
+	province_trade_power_value = 5
+}
+
+emx_gw_juyongguan_wall = {
+	fort_level = 1
+	province_trade_power_value = 5
+}
+
+emx_gw_datong_wall = {
+	fort_level = 1
+	province_trade_power_value = 5
+}
+
+emx_gw_jiayuguan_wall = {
+	fort_level = 1
+	province_trade_power_value = 5
+}
+
+# One country modifier per section, so a nation that builds several sections
+# stacks the morale. A single shared name would only refresh itself.
+emx_great_wall_shanhaiguan = { land_morale = 0.03 }
+emx_great_wall_juyongguan = { land_morale = 0.03 }
+emx_great_wall_datong = { land_morale = 0.03 }
+emx_great_wall_jiayuguan = { land_morale = 0.03 }

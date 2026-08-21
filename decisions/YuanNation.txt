@@ -21,8 +21,7 @@ country_decisions = {
 			OR = {
 				primary_culture = altaic_new
 				culture_group = altaic
-				tag = YAN
-				tag = SHU
+				# eu4-maxxing: tag = YAN and tag = SHU removed. Chinese nations form Qing, not Yuan.
 			}
 			OR = {
 				ai = no
@@ -73,8 +72,6 @@ country_decisions = {
 			OR = {
 				primary_culture = altaic_new
 				culture_group = altaic
-				tag = YAN
-				tag = SHU
 			}
 			is_at_war = no
 			stability = 2

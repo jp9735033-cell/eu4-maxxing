@@ -190,8 +190,12 @@ country_decisions = {
 		potential = {
 			OR = {
 				tag = MCH
+				# eu4-maxxing: Qing is the only formable open to the four Chinese
+				# players, and it now demands every rival capital.
 				tag = YUE
 				tag = WUU
+				tag = YAN
+				tag = SHU
 			}
 			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
@@ -221,6 +225,9 @@ country_decisions = {
 				province_id = 723		# Xilin Gol
 				province_id = 726		# Liaodong
 				province_id = 1816		# Beijing
+				province_id = 684		# Hangzhou, the Wu capital
+				province_id = 679		# Chengdu, the Shu capital
+				province_id = 667		# Guangzhou, the Yue capital
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -229,6 +236,10 @@ country_decisions = {
 			owns = 723		# Xilin Gol
 			owns = 726		# Liaodong
 			owns = 1816		# Beijing
+			# eu4-maxxing: every player capital, not just the northern one.
+			owns = 684		# Hangzhou
+			owns = 679		# Chengdu
+			owns = 667		# Guangzhou
 			1816 = {		# Beijing
 				is_state = yes
 			}

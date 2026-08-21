@@ -1,0 +1,173 @@
+# eu4-maxxing: the Great Wall, split into its four historical sections.
+#
+# Each section can be built exactly once in a game, by exactly one nation.
+# A global flag records that the section exists, so once Yan has walled
+# Juyongguan neither Yan nor Jin nor anybody else can build it again - they
+# have to take the province instead. The province modifier is permanent and
+# stays with the tile through every conquest; the morale bonus stays with
+# whoever paid for it.
+#
+# Sections, west to east, with their 1444 owners in the mod:
+#   Jiayuguan   708 Gansu      Shun     the western terminus
+#   Datong      697 Datong     Jin      the Shanxi frontier
+#   Juyongguan 1816 Beijing    Yan      the pass above the capital
+#   Shanhaiguan 4194 Yongping  Yan      where the wall meets the sea
+
+country_decisions = {
+
+	emx_great_wall_jiayuguan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			NOT = { has_global_flag = emx_gw_jiayuguan_built }
+			owns = 708
+		}
+		provinces_to_highlight = {
+			province_id = 708
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns = 708
+			is_at_war = no
+			adm_power = 100
+			treasury = 200
+			708 = { NOT = { has_province_modifier = emx_gw_jiayuguan_wall } }
+		}
+		effect = {
+			set_global_flag = emx_gw_jiayuguan_built
+			add_adm_power = -100
+			add_treasury = -200
+			add_prestige = 5
+			708 = {
+				add_permanent_province_modifier = {
+					name = emx_gw_jiayuguan_wall
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = emx_great_wall_jiayuguan
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	emx_great_wall_datong = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			NOT = { has_global_flag = emx_gw_datong_built }
+			owns = 697
+		}
+		provinces_to_highlight = {
+			province_id = 697
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns = 697
+			is_at_war = no
+			adm_power = 100
+			treasury = 200
+			697 = { NOT = { has_province_modifier = emx_gw_datong_wall } }
+		}
+		effect = {
+			set_global_flag = emx_gw_datong_built
+			add_adm_power = -100
+			add_treasury = -200
+			add_prestige = 5
+			697 = {
+				add_permanent_province_modifier = {
+					name = emx_gw_datong_wall
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = emx_great_wall_datong
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	emx_great_wall_juyongguan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			NOT = { has_global_flag = emx_gw_juyongguan_built }
+			owns = 1816
+		}
+		provinces_to_highlight = {
+			province_id = 1816
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns = 1816
+			is_at_war = no
+			adm_power = 100
+			treasury = 200
+			1816 = { NOT = { has_province_modifier = emx_gw_juyongguan_wall } }
+		}
+		effect = {
+			set_global_flag = emx_gw_juyongguan_built
+			add_adm_power = -100
+			add_treasury = -200
+			add_prestige = 5
+			1816 = {
+				add_permanent_province_modifier = {
+					name = emx_gw_juyongguan_wall
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = emx_great_wall_juyongguan
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	emx_great_wall_shanhaiguan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			NOT = { has_global_flag = emx_gw_shanhaiguan_built }
+			owns = 4194
+		}
+		provinces_to_highlight = {
+			province_id = 4194
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns = 4194
+			is_at_war = no
+			adm_power = 100
+			treasury = 200
+			4194 = { NOT = { has_province_modifier = emx_gw_shanhaiguan_wall } }
+		}
+		effect = {
+			set_global_flag = emx_gw_shanhaiguan_built
+			add_adm_power = -100
+			add_treasury = -200
+			add_prestige = 5
+			4194 = {
+				add_permanent_province_modifier = {
+					name = emx_gw_shanhaiguan_wall
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = emx_great_wall_shanhaiguan
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

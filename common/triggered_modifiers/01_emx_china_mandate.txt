@@ -1,0 +1,28 @@
+# eu4-maxxing: Mandate of Heaven rework for the shattered-China setup.
+#
+# Vanilla docks the Emperor 0.05 mandate a month for each of Beijing, Nanjing
+# and Canton it does not own and control. With China permanently split between
+# four warring players that is a guaranteed 0.10 to 0.15 monthly bleed that no
+# emperor can ever fix, so the three penalties are switched off in
+# 00_triggered_modifiers.txt and replaced by the single positive modifier below.
+#
+# Holding the northern capital is now a reward rather than the absence of a
+# punishment: own AND control Beijing and the throne gains mandate.
+
+emx_emperor_holds_beijing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		owns = 1816
+		controls = 1816
+	}
+
+	ai_weight = {
+		factor = 1000 # the AI should want Beijing badly
+	}
+
+	imperial_mandate = 0.05
+}

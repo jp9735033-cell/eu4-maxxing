@@ -339,7 +339,7 @@ emx_green_standard_drill = {
 }
 
 emx_new_model_army = {
-	discipline = 0.02
+	discipline = 0.025
 	land_morale = 0.05
 	fire_damage = 0.05
 }
@@ -406,3 +406,33 @@ emx_great_wall_shanhaiguan = { land_morale = 0.03 }
 emx_great_wall_juyongguan = { land_morale = 0.03 }
 emx_great_wall_datong = { land_morale = 0.03 }
 emx_great_wall_jiayuguan = { land_morale = 0.03 }
+
+##################################################
+# 9. Starting land quality
+# These three are written into province history, not granted by a mission, so
+# they are on the map from 1444 and stay on the tile through every conquest.
+#
+# Fertile Soil marks the ten best provinces in China: the four player capitals
+# plus six more spread across the Chinese trade nodes.
+#
+# River Delta marks China's alluvial farmland. It covers the provinces the game
+# itself classifies as farmlands inside china_superregion, minus nine that are
+# farmland but not river land - the Jiaodong peninsula, the Leizhou peninsula,
+# the Guangxi karst, and a few inland basins and lake shores.
+##################################################
+
+emx_fertile_soil = {
+	local_manpower_modifier = 0.20
+	province_trade_power_value = 3
+}
+
+emx_river_delta = {
+	local_manpower_modifier = 0.10
+	local_development_cost = -0.02
+	province_trade_power_value = 3
+}
+
+# Ganggye, one of the Four Forts on the upper Yalu, facing the Jurchens.
+emx_tatar_dune = {
+	local_defensiveness = 0.25
+}

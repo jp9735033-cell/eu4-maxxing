@@ -352,3 +352,8 @@
  emx_great_wall_datong_desc:0 "Datong has been the anchor of the Shanxi frontier since the Northern Wei. Give it the wall it has always needed.\n\nOnly one nation will ever build this section. Once it stands, it stands for the rest of the age, for whoever holds the province."
  emx_great_wall_jiayuguan_title:0 "Construct the Great Wall: Jiayuguan"
  emx_great_wall_jiayuguan_desc:0 "The last gate before the desert, at the western end of the Hexi Corridor. Beyond it there is no China.\n\nOnly one nation will ever build this section. Once it stands, it stands for the rest of the age, for whoever holds the province."
+
+ ### Starting land quality ###
+ emx_fertile_soil:0 "Fertile Soil"
+ emx_river_delta:0 "River Delta"
+ emx_tatar_dune:0 "Tatar Dune"

@@ -1,12 +1,22 @@
 # eu4-maxxing: the Yan warring-states mission tree.
 #
 # Layout, shared by Yan, Wu, Shu and Yue:
-#   pos 1      slots 1-3   seize the three rival player capitals
-#   pos 1-7    slot 4      rebuild the home provinces
-#   pos 1-5    slot 5      national flavour branch
-#   pos 9      slots 1-4   the historic line, four linked objectives
-#   pos 11     slot 3      Unify China
-#   pos 12-14  slots 1-4   the Silk Road, army reform and industry
+#
+#   pos  slot 1      slot 2        slot 3        slot 4        slot 5
+#   1    Capital 1   Home 1     -> Home 5        National 1 -> National 4
+#   2    Capital 2   Home 2        Home 6        National 2    National 5
+#   3    Capital 3   Home 3        Home 7        National 3    [Shu only]
+#   4                Home 4                                    [Shu only]
+#   5                Historic 1 -> Historic 2 -> Historic 3 -> Historic 4
+#   6                              Unify China
+#   7    Silk 1      Army 1        Industry 1    Industry 4
+#   8    Silk 2      Army 2        Industry 2    Industry 5
+#   9    Silk 3      Army 3        Industry 3
+#
+# The three rival capitals are one chained column on the left. The home
+# provinces and the national branch each fork across two columns, so no
+# column runs deeper than four rows and every column starts at row 1.
+# Everything converges on Unify China at row 6.
 #
 # Yan holds Beijing and the Mandate of Heaven. Its tree is about the northern
 # frontier: the wall, the garrisons and the steppe beyond them.
@@ -48,30 +58,56 @@ emx_yan_s1 = {
 		}
 	}
 
-	emx_yan_avenge_tumu = {
-		icon = mission_steppe_warriors
-		required_missions = { }
-		position = 9
+	emx_yan_seize_chengdu = {
+		icon = mission_conquer_50_development
+		required_missions = { emx_yan_seize_hangzhou }
+		position = 2
 		provinces_to_highlight = {
-			OR = {
-				province_id = 723
-				province_id = 701
-				province_id = 702
-				province_id = 4223
-			}
+			province_id = 679
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns = 723
-			owns = 701
-			owns = 702
-			owns = 4223
+			owns_core_province = 679
 		}
 		effect = {
-			add_army_tradition = 10
+			add_prestige = 10
 			add_country_modifier = {
-				name = emx_yan_steppe_tribute
+				name = emx_spoils_of_shu
 				duration = -1
+			}
+			sichuan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_yan_seize_canton = {
+		icon = mission_conquer_50_development
+		required_missions = { emx_yan_seize_chengdu }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 667
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 667
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = emx_spoils_of_yue
+				duration = -1
+			}
+			guangdong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -79,7 +115,7 @@ emx_yan_s1 = {
 	emx_yan_silk_road_1 = {
 		icon = mission_asian_trader
 		required_missions = { emx_yan_unify_china }
-		position = 12
+		position = 7
 		provinces_to_highlight = {
 			OR = {
 				province_id = 697
@@ -108,7 +144,7 @@ emx_yan_s1 = {
 	emx_yan_silk_road_2 = {
 		icon = mission_asian_trader
 		required_missions = { emx_yan_silk_road_1 }
-		position = 13
+		position = 8
 		provinces_to_highlight = {
 			OR = {
 				province_id = 713
@@ -149,7 +185,7 @@ emx_yan_s1 = {
 	emx_yan_silk_road_3 = {
 		icon = mission_dominate_persian_gulf
 		required_missions = { emx_yan_silk_road_2 }
-		position = 14
+		position = 9
 		provinces_to_highlight = {
 			OR = {
 				province_id = 426
@@ -175,275 +211,6 @@ emx_yan_s1 = {
 
 emx_yan_s2 = {
 	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		emx_is_yan_trigger = yes
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-
-	emx_yan_seize_chengdu = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = {
-			province_id = 679
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 679
-		}
-		effect = {
-			add_prestige = 10
-			add_country_modifier = {
-				name = emx_spoils_of_shu
-				duration = -1
-			}
-			sichuan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	emx_yan_grand_canal = {
-		icon = mng_jing_hang_grand_canal
-		required_missions = { emx_yan_avenge_tumu }
-		position = 9
-		provinces_to_highlight = {
-			OR = {
-				province_id = 691
-				province_id = 2140
-				province_id = 685
-				province_id = 1821
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 1816
-			owns = 691
-			owns = 2140
-			owns = 685
-			owns = 1821
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_yan_grand_canal
-				duration = -1
-			}
-			1816 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
-			691 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
-			2140 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
-			685 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
-			1821 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
-		}
-	}
-
-	emx_yan_army_1 = {
-		icon = mission_asian_cannon
-		required_missions = { emx_yan_unify_china }
-		position = 12
-		trigger = {
-			mil_tech = 20
-			num_of_artillery = 20
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_divine_engine_division
-				duration = -1
-			}
-		}
-	}
-
-	emx_yan_army_2 = {
-		icon = mission_chinese_general_riding
-		required_missions = { emx_yan_army_1 }
-		position = 13
-		trigger = {
-			army_professionalism = 0.5
-			army_tradition = 60
-		}
-		effect = {
-			add_army_professionalism = 0.05
-			add_country_modifier = {
-				name = emx_green_standard_drill
-				duration = -1
-			}
-		}
-	}
-
-	emx_yan_army_3 = {
-		icon = mission_manchu_warrior
-		required_missions = { emx_yan_army_2 }
-		position = 14
-		trigger = {
-			mil_tech = 26
-			army_professionalism = 0.8
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_new_model_army
-				duration = -1
-			}
-		}
-	}
-}
-
-emx_yan_s3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		emx_is_yan_trigger = yes
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-
-	emx_yan_seize_canton = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = {
-			province_id = 667
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 667
-		}
-		effect = {
-			add_prestige = 10
-			add_country_modifier = {
-				name = emx_spoils_of_yue
-				duration = -1
-			}
-			guangdong_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	emx_yan_yongle_dadian = {
-		icon = mng_expand_yongle_dadian
-		required_missions = { emx_yan_grand_canal }
-		position = 9
-		trigger = {
-			adm_tech = 12
-			total_development = 400
-			1816 = { development = 40 }
-		}
-		effect = {
-			add_prestige = 15
-			add_country_modifier = {
-				name = emx_yan_yongle_dadian
-				duration = -1
-			}
-		}
-	}
-
-	emx_yan_unify_china = {
-		icon = mission_cornerstone_empire
-		required_missions = {
-			emx_yan_seize_hangzhou
-			emx_yan_seize_chengdu
-			emx_yan_seize_canton
-			emx_yan_home_7
-			emx_yan_garrison_5
-			emx_yan_northern_frontier
-		}
-		position = 11
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1816
-				province_id = 684
-				province_id = 679
-				province_id = 667
-				province_id = 726
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 1816
-			owns_core_province = 684
-			owns_core_province = 679
-			owns_core_province = 667
-			owns_core_province = 726
-		}
-		effect = {
-			emx_unify_china_effect = yes
-		}
-	}
-
-	emx_yan_industry_1 = {
-		icon = mission_have_manufactories
-		required_missions = { emx_yan_unify_china }
-		position = 12
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2151
-				province_id = 683
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 2151
-			owns = 683
-		}
-		effect = { emx_industry_kilns_effect = yes }
-	}
-
-	emx_yan_industry_2 = {
-		icon = mission_state_manufactories
-		required_missions = { emx_yan_industry_1 }
-		position = 13
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1822
-				province_id = 684
-				province_id = 2145
-				province_id = 2148
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 1822
-			owns = 684
-			owns = 2145
-			owns = 2148
-		}
-		effect = { emx_industry_looms_effect = yes }
-	}
-
-	emx_yan_industry_3 = {
-		icon = mng_expand_bogue
-		required_missions = { emx_yan_industry_2 }
-		position = 14
-		provinces_to_highlight = {
-			OR = {
-				province_id = 667
-				province_id = 665
-				province_id = 668
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 667
-			owns = 665
-			owns = 668
-		}
-		effect = { emx_industry_ironworks_effect = yes }
-	}
-}
-
-emx_yan_s4 = {
-	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -509,10 +276,98 @@ emx_yan_s4 = {
 		}
 	}
 
+	emx_yan_avenge_tumu = {
+		icon = mission_steppe_warriors
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 723
+				province_id = 701
+				province_id = 702
+				province_id = 4223
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 723
+			owns = 701
+			owns = 702
+			owns = 4223
+		}
+		effect = {
+			add_army_tradition = 10
+			add_country_modifier = {
+				name = emx_yan_steppe_tribute
+				duration = -1
+			}
+		}
+	}
+
+	emx_yan_army_1 = {
+		icon = mission_asian_cannon
+		required_missions = { emx_yan_unify_china }
+		position = 7
+		trigger = {
+			mil_tech = 20
+			num_of_artillery = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_divine_engine_division
+				duration = -1
+			}
+		}
+	}
+
+	emx_yan_army_2 = {
+		icon = mission_chinese_general_riding
+		required_missions = { emx_yan_army_1 }
+		position = 8
+		trigger = {
+			army_professionalism = 0.5
+			army_tradition = 60
+		}
+		effect = {
+			add_army_professionalism = 0.05
+			add_country_modifier = {
+				name = emx_green_standard_drill
+				duration = -1
+			}
+		}
+	}
+
+	emx_yan_army_3 = {
+		icon = mission_manchu_warrior
+		required_missions = { emx_yan_army_2 }
+		position = 9
+		trigger = {
+			mil_tech = 26
+			army_professionalism = 0.8
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_new_model_army
+				duration = -1
+			}
+		}
+	}
+}
+
+emx_yan_s3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		emx_is_yan_trigger = yes
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
 	emx_yan_home_5 = {
 		icon = mission_asian_trader
-		required_missions = { emx_yan_home_4 }
-		position = 5
+		required_missions = { emx_yan_home_1 }
+		position = 1
 		provinces_to_highlight = { province_id = 4195 }
 		trigger = { 4195 = { development = 10 } }
 		effect = {
@@ -523,7 +378,7 @@ emx_yan_s4 = {
 	emx_yan_home_6 = {
 		icon = mission_expand_great_wall
 		required_missions = { emx_yan_home_5 }
-		position = 6
+		position = 2
 		provinces_to_highlight = { province_id = 4194 }
 		trigger = { 4194 = { development = 12 } }
 		effect = {
@@ -534,7 +389,7 @@ emx_yan_s4 = {
 	emx_yan_home_7 = {
 		icon = mission_kowtow
 		required_missions = { emx_yan_home_6 }
-		position = 7
+		position = 3
 		provinces_to_highlight = { province_id = 704 }
 		trigger = { 704 = { development = 20 } }
 		effect = {
@@ -543,82 +398,135 @@ emx_yan_s4 = {
 		}
 	}
 
-	emx_yan_northern_frontier = {
-		icon = mch_bypass_great_wall
-		required_missions = { emx_yan_yongle_dadian }
-		position = 9
+	emx_yan_grand_canal = {
+		icon = mng_jing_hang_grand_canal
+		required_missions = { emx_yan_avenge_tumu }
+		position = 5
 		provinces_to_highlight = {
 			OR = {
-				province_id = 726
-				province_id = 2112
-				province_id = 2136
-				province_id = 697
-				province_id = 4194
-				province_id = 704
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 726
-			owns = 2112
-			owns = 2136
-			owns = 697
-			owns = 4194
-			owns = 704
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_yan_northern_wall
-				duration = -1
-			}
-		}
-	}
-
-	emx_yan_industry_4 = {
-		icon = mission_war_chest
-		required_missions = { emx_yan_industry_1 }
-		position = 12
-		provinces_to_highlight = {
-			OR = {
-				province_id = 685
-				province_id = 679
-				province_id = 680
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 685
-			owns = 679
-			owns = 680
-		}
-		effect = { emx_industry_monopolies_effect = yes }
-	}
-
-	emx_yan_industry_5 = {
-		icon = mission_scholar_officials
-		required_missions = { emx_yan_industry_4 }
-		position = 13
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1816
 				province_id = 691
-				province_id = 688
-				province_id = 700
+				province_id = 2140
+				province_id = 685
+				province_id = 1821
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			owns = 1816
 			owns = 691
-			owns = 688
-			owns = 700
+			owns = 2140
+			owns = 685
+			owns = 1821
 		}
-		effect = { emx_industry_northern_workshops_effect = yes }
+		effect = {
+			add_country_modifier = {
+				name = emx_yan_grand_canal
+				duration = -1
+			}
+			1816 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
+			691 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
+			2140 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
+			685 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
+			1821 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
+		}
+	}
+
+	emx_yan_unify_china = {
+		icon = mission_cornerstone_empire
+		required_missions = {
+			emx_yan_seize_canton
+			emx_yan_home_4
+			emx_yan_home_7
+			emx_yan_garrison_3
+			emx_yan_garrison_5
+			emx_yan_northern_frontier
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 684
+				province_id = 679
+				province_id = 667
+				province_id = 726
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1816
+			owns_core_province = 684
+			owns_core_province = 679
+			owns_core_province = 667
+			owns_core_province = 726
+		}
+		effect = {
+			emx_unify_china_effect = yes
+		}
+	}
+
+	emx_yan_industry_1 = {
+		icon = mission_have_manufactories
+		required_missions = { emx_yan_unify_china }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2151
+				province_id = 683
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 2151
+			owns = 683
+		}
+		effect = { emx_industry_kilns_effect = yes }
+	}
+
+	emx_yan_industry_2 = {
+		icon = mission_state_manufactories
+		required_missions = { emx_yan_industry_1 }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1822
+				province_id = 684
+				province_id = 2145
+				province_id = 2148
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 1822
+			owns = 684
+			owns = 2145
+			owns = 2148
+		}
+		effect = { emx_industry_looms_effect = yes }
+	}
+
+	emx_yan_industry_3 = {
+		icon = mng_expand_bogue
+		required_missions = { emx_yan_industry_2 }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				province_id = 667
+				province_id = 665
+				province_id = 668
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 667
+			owns = 665
+			owns = 668
+		}
+		effect = { emx_industry_ironworks_effect = yes }
 	}
 }
 
-emx_yan_s5 = {
-	slot = 5
+emx_yan_s4 = {
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -675,10 +583,81 @@ emx_yan_s5 = {
 		}
 	}
 
+	emx_yan_yongle_dadian = {
+		icon = mng_expand_yongle_dadian
+		required_missions = { emx_yan_grand_canal }
+		position = 5
+		trigger = {
+			adm_tech = 12
+			total_development = 400
+			1816 = { development = 40 }
+		}
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = emx_yan_yongle_dadian
+				duration = -1
+			}
+		}
+	}
+
+	emx_yan_industry_4 = {
+		icon = mission_war_chest
+		required_missions = { emx_yan_industry_1 }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 685
+				province_id = 679
+				province_id = 680
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 685
+			owns = 679
+			owns = 680
+		}
+		effect = { emx_industry_monopolies_effect = yes }
+	}
+
+	emx_yan_industry_5 = {
+		icon = mission_scholar_officials
+		required_missions = { emx_yan_industry_4 }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 691
+				province_id = 688
+				province_id = 700
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 1816
+			owns = 691
+			owns = 688
+			owns = 700
+		}
+		effect = { emx_industry_northern_workshops_effect = yes }
+	}
+}
+
+emx_yan_s5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		emx_is_yan_trigger = yes
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
 	emx_yan_garrison_4 = {
 		icon = mission_expand_great_wall
-		required_missions = { emx_yan_garrison_3 }
-		position = 4
+		required_missions = { emx_yan_garrison_1 }
+		position = 1
 		provinces_to_highlight = { province_id = 704 }
 		trigger = {
 			704 = { has_building = fort_15th }
@@ -692,7 +671,7 @@ emx_yan_s5 = {
 	emx_yan_garrison_5 = {
 		icon = mission_manchu_warrior
 		required_missions = { emx_yan_garrison_4 }
-		position = 5
+		position = 2
 		provinces_to_highlight = {
 			province_id = 726
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -704,6 +683,37 @@ emx_yan_s5 = {
 			726 = { add_permanent_province_modifier = { name = emx_yan_frontier_garrison duration = -1 } }
 			add_country_modifier = {
 				name = emx_yan_nine_garrisons
+				duration = -1
+			}
+		}
+	}
+
+	emx_yan_northern_frontier = {
+		icon = mch_bypass_great_wall
+		required_missions = { emx_yan_yongle_dadian }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 726
+				province_id = 2112
+				province_id = 2136
+				province_id = 697
+				province_id = 4194
+				province_id = 704
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 726
+			owns = 2112
+			owns = 2136
+			owns = 697
+			owns = 4194
+			owns = 704
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_yan_northern_wall
 				duration = -1
 			}
 		}

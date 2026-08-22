@@ -42,28 +42,56 @@ emx_wu_s1 = {
 		}
 	}
 
-	emx_wu_the_wu_fleet = {
-		icon = mission_junk_boat
-		required_missions = { }
-		position = 9
+	emx_wu_seize_chengdu = {
+		icon = mission_conquer_50_development
+		required_missions = { emx_wu_seize_beijing }
+		position = 2
 		provinces_to_highlight = {
-			OR = {
-				province_id = 2149
-				province_id = 1824
-			}
+			province_id = 679
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns = 2149
-			owns = 1824
-			navy_size = 30
-			2149 = { has_building = shipyard }
+			owns_core_province = 679
 		}
 		effect = {
-			add_navy_tradition = 10
+			add_prestige = 10
 			add_country_modifier = {
-				name = emx_wu_break_the_wokou
+				name = emx_spoils_of_shu
 				duration = -1
+			}
+			sichuan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_wu_seize_canton = {
+		icon = mission_conquer_50_development
+		required_missions = { emx_wu_seize_chengdu }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 667
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 667
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = emx_spoils_of_yue
+				duration = -1
+			}
+			guangdong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -71,7 +99,7 @@ emx_wu_s1 = {
 	emx_wu_silk_road_1 = {
 		icon = mission_asian_trader
 		required_missions = { emx_wu_unify_china }
-		position = 12
+		position = 7
 		provinces_to_highlight = {
 			OR = {
 				province_id = 697
@@ -100,7 +128,7 @@ emx_wu_s1 = {
 	emx_wu_silk_road_2 = {
 		icon = mission_asian_trader
 		required_missions = { emx_wu_silk_road_1 }
-		position = 13
+		position = 8
 		provinces_to_highlight = {
 			OR = {
 				province_id = 713
@@ -141,7 +169,7 @@ emx_wu_s1 = {
 	emx_wu_silk_road_3 = {
 		icon = mission_dominate_persian_gulf
 		required_missions = { emx_wu_silk_road_2 }
-		position = 14
+		position = 9
 		provinces_to_highlight = {
 			OR = {
 				province_id = 426
@@ -167,278 +195,6 @@ emx_wu_s1 = {
 
 emx_wu_s2 = {
 	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		emx_is_wu_trigger = yes
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-
-	emx_wu_seize_chengdu = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = {
-			province_id = 679
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 679
-		}
-		effect = {
-			add_prestige = 10
-			add_country_modifier = {
-				name = emx_spoils_of_shu
-				duration = -1
-			}
-			sichuan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	emx_wu_suzhou_looms = {
-		icon = mission_state_manufactories
-		required_missions = { emx_wu_the_wu_fleet }
-		position = 9
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1822
-				province_id = 684
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			1822 = {
-				development = 30
-				has_building = workshop
-			}
-			684 = {
-				development = 40
-				has_building = workshop
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_wu_suzhou_looms
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_army_1 = {
-		icon = mission_asian_cannon
-		required_missions = { emx_wu_unify_china }
-		position = 12
-		trigger = {
-			mil_tech = 20
-			num_of_artillery = 20
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_divine_engine_division
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_army_2 = {
-		icon = mission_chinese_general_riding
-		required_missions = { emx_wu_army_1 }
-		position = 13
-		trigger = {
-			army_professionalism = 0.5
-			army_tradition = 60
-		}
-		effect = {
-			add_army_professionalism = 0.05
-			add_country_modifier = {
-				name = emx_green_standard_drill
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_army_3 = {
-		icon = mission_manchu_warrior
-		required_missions = { emx_wu_army_2 }
-		position = 14
-		trigger = {
-			mil_tech = 26
-			army_professionalism = 0.8
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_new_model_army
-				duration = -1
-			}
-		}
-	}
-}
-
-emx_wu_s3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		emx_is_wu_trigger = yes
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-
-	emx_wu_seize_canton = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = {
-			province_id = 667
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 667
-		}
-		effect = {
-			add_prestige = 10
-			add_country_modifier = {
-				name = emx_spoils_of_yue
-				duration = -1
-			}
-			guangdong_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	emx_wu_jiangxi_and_fujian = {
-		icon = mission_unite_home_region
-		required_missions = { emx_wu_suzhou_looms }
-		position = 9
-		provinces_to_highlight = {
-			OR = {
-				province_id = 683
-				province_id = 669
-				province_id = 1829
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 683
-			owns_core_province = 669
-			owns_core_province = 1829
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_wu_lower_yangtze
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_unify_china = {
-		icon = mission_cornerstone_empire
-		required_missions = {
-			emx_wu_seize_beijing
-			emx_wu_seize_chengdu
-			emx_wu_seize_canton
-			emx_wu_home_7
-			emx_wu_fort_5
-			emx_wu_jiangnan_levy
-		}
-		position = 11
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1816
-				province_id = 684
-				province_id = 679
-				province_id = 667
-				province_id = 726
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 1816
-			owns_core_province = 684
-			owns_core_province = 679
-			owns_core_province = 667
-			owns_core_province = 726
-		}
-		effect = {
-			emx_unify_china_effect = yes
-		}
-	}
-
-	emx_wu_industry_1 = {
-		icon = mission_have_manufactories
-		required_missions = { emx_wu_unify_china }
-		position = 12
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2151
-				province_id = 683
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 2151
-			owns = 683
-		}
-		effect = { emx_industry_kilns_effect = yes }
-	}
-
-	emx_wu_industry_2 = {
-		icon = mission_state_manufactories
-		required_missions = { emx_wu_industry_1 }
-		position = 13
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1822
-				province_id = 684
-				province_id = 2145
-				province_id = 2148
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 1822
-			owns = 684
-			owns = 2145
-			owns = 2148
-		}
-		effect = { emx_industry_looms_effect = yes }
-	}
-
-	emx_wu_industry_3 = {
-		icon = mng_expand_bogue
-		required_missions = { emx_wu_industry_2 }
-		position = 14
-		provinces_to_highlight = {
-			OR = {
-				province_id = 667
-				province_id = 665
-				province_id = 668
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 667
-			owns = 665
-			owns = 668
-		}
-		effect = { emx_industry_ironworks_effect = yes }
-	}
-}
-
-emx_wu_s4 = {
-	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -493,10 +249,96 @@ emx_wu_s4 = {
 		}
 	}
 
+	emx_wu_the_wu_fleet = {
+		icon = mission_junk_boat
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2149
+				province_id = 1824
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 2149
+			owns = 1824
+			navy_size = 30
+			2149 = { has_building = shipyard }
+		}
+		effect = {
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = emx_wu_break_the_wokou
+				duration = -1
+			}
+		}
+	}
+
+	emx_wu_army_1 = {
+		icon = mission_asian_cannon
+		required_missions = { emx_wu_unify_china }
+		position = 7
+		trigger = {
+			mil_tech = 20
+			num_of_artillery = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_divine_engine_division
+				duration = -1
+			}
+		}
+	}
+
+	emx_wu_army_2 = {
+		icon = mission_chinese_general_riding
+		required_missions = { emx_wu_army_1 }
+		position = 8
+		trigger = {
+			army_professionalism = 0.5
+			army_tradition = 60
+		}
+		effect = {
+			add_army_professionalism = 0.05
+			add_country_modifier = {
+				name = emx_green_standard_drill
+				duration = -1
+			}
+		}
+	}
+
+	emx_wu_army_3 = {
+		icon = mission_manchu_warrior
+		required_missions = { emx_wu_army_2 }
+		position = 9
+		trigger = {
+			mil_tech = 26
+			army_professionalism = 0.8
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_new_model_army
+				duration = -1
+			}
+		}
+	}
+}
+
+emx_wu_s3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		emx_is_wu_trigger = yes
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
 	emx_wu_home_5 = {
 		icon = mission_rice_field
-		required_missions = { emx_wu_home_4 }
-		position = 5
+		required_missions = { emx_wu_home_1 }
+		position = 1
 		provinces_to_highlight = { province_id = 2148 }
 		trigger = { 2148 = { development = 18 } }
 		effect = {
@@ -507,7 +349,7 @@ emx_wu_s4 = {
 	emx_wu_home_6 = {
 		icon = mission_rice_field
 		required_missions = { emx_wu_home_5 }
-		position = 6
+		position = 2
 		provinces_to_highlight = { province_id = 2146 }
 		trigger = { 2146 = { development = 13 } }
 		effect = {
@@ -518,7 +360,7 @@ emx_wu_s4 = {
 	emx_wu_home_7 = {
 		icon = mission_junk_boat
 		required_missions = { emx_wu_home_6 }
-		position = 7
+		position = 3
 		provinces_to_highlight = { province_id = 1824 }
 		trigger = { 1824 = { development = 12 } }
 		effect = {
@@ -530,67 +372,131 @@ emx_wu_s4 = {
 		}
 	}
 
-	emx_wu_jiangnan_levy = {
-		icon = mission_chinese_general_riding
-		required_missions = { emx_wu_jiangxi_and_fujian }
-		position = 9
+	emx_wu_suzhou_looms = {
+		icon = mission_state_manufactories
+		required_missions = { emx_wu_the_wu_fleet }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1822
+				province_id = 684
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
-			army_size = 60
-			army_professionalism = 0.4
+			1822 = {
+				development = 30
+				has_building = workshop
+			}
+			684 = {
+				development = 40
+				has_building = workshop
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = emx_wu_jiangnan_army
+				name = emx_wu_suzhou_looms
 				duration = -1
 			}
 		}
 	}
 
-	emx_wu_industry_4 = {
-		icon = mission_war_chest
-		required_missions = { emx_wu_industry_1 }
-		position = 12
-		provinces_to_highlight = {
-			OR = {
-				province_id = 685
-				province_id = 679
-				province_id = 680
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+	emx_wu_unify_china = {
+		icon = mission_cornerstone_empire
+		required_missions = {
+			emx_wu_seize_canton
+			emx_wu_home_4
+			emx_wu_home_7
+			emx_wu_fort_3
+			emx_wu_fort_5
+			emx_wu_jiangnan_levy
 		}
-		trigger = {
-			owns = 685
-			owns = 679
-			owns = 680
-		}
-		effect = { emx_industry_monopolies_effect = yes }
-	}
-
-	emx_wu_industry_5 = {
-		icon = mission_scholar_officials
-		required_missions = { emx_wu_industry_4 }
-		position = 13
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1816
-				province_id = 691
-				province_id = 688
-				province_id = 700
+				province_id = 684
+				province_id = 679
+				province_id = 667
+				province_id = 726
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns = 1816
-			owns = 691
-			owns = 688
-			owns = 700
+			owns_core_province = 1816
+			owns_core_province = 684
+			owns_core_province = 679
+			owns_core_province = 667
+			owns_core_province = 726
 		}
-		effect = { emx_industry_northern_workshops_effect = yes }
+		effect = {
+			emx_unify_china_effect = yes
+		}
+	}
+
+	emx_wu_industry_1 = {
+		icon = mission_have_manufactories
+		required_missions = { emx_wu_unify_china }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2151
+				province_id = 683
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 2151
+			owns = 683
+		}
+		effect = { emx_industry_kilns_effect = yes }
+	}
+
+	emx_wu_industry_2 = {
+		icon = mission_state_manufactories
+		required_missions = { emx_wu_industry_1 }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1822
+				province_id = 684
+				province_id = 2145
+				province_id = 2148
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 1822
+			owns = 684
+			owns = 2145
+			owns = 2148
+		}
+		effect = { emx_industry_looms_effect = yes }
+	}
+
+	emx_wu_industry_3 = {
+		icon = mng_expand_bogue
+		required_missions = { emx_wu_industry_2 }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				province_id = 667
+				province_id = 665
+				province_id = 668
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 667
+			owns = 665
+			owns = 668
+		}
+		effect = { emx_industry_ironworks_effect = yes }
 	}
 }
 
-emx_wu_s5 = {
-	slot = 5
+emx_wu_s4 = {
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -650,10 +556,88 @@ emx_wu_s5 = {
 		}
 	}
 
+	emx_wu_jiangxi_and_fujian = {
+		icon = mission_unite_home_region
+		required_missions = { emx_wu_suzhou_looms }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 683
+				province_id = 669
+				province_id = 1829
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 683
+			owns_core_province = 669
+			owns_core_province = 1829
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_wu_lower_yangtze
+				duration = -1
+			}
+		}
+	}
+
+	emx_wu_industry_4 = {
+		icon = mission_war_chest
+		required_missions = { emx_wu_industry_1 }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 685
+				province_id = 679
+				province_id = 680
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 685
+			owns = 679
+			owns = 680
+		}
+		effect = { emx_industry_monopolies_effect = yes }
+	}
+
+	emx_wu_industry_5 = {
+		icon = mission_scholar_officials
+		required_missions = { emx_wu_industry_4 }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 691
+				province_id = 688
+				province_id = 700
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 1816
+			owns = 691
+			owns = 688
+			owns = 700
+		}
+		effect = { emx_industry_northern_workshops_effect = yes }
+	}
+}
+
+emx_wu_s5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		emx_is_wu_trigger = yes
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
 	emx_wu_fort_4 = {
 		icon = mission_cornerstone_empire
-		required_missions = { emx_wu_fort_3 }
-		position = 4
+		required_missions = { emx_wu_fort_1 }
+		position = 1
 		provinces_to_highlight = { province_id = 2145 }
 		trigger = {
 			2145 = { development = 40 }
@@ -670,7 +654,7 @@ emx_wu_s5 = {
 	emx_wu_fort_5 = {
 		icon = mission_cornerstone_empire
 		required_missions = { emx_wu_fort_4 }
-		position = 5
+		position = 2
 		provinces_to_highlight = { province_id = 1824 }
 		trigger = {
 			1824 = { development = 40 }
@@ -679,6 +663,22 @@ emx_wu_s5 = {
 			add_army_tradition = 10
 			add_country_modifier = {
 				name = emx_wu_fort_wenzhou
+				duration = -1
+			}
+		}
+	}
+
+	emx_wu_jiangnan_levy = {
+		icon = mission_chinese_general_riding
+		required_missions = { emx_wu_jiangxi_and_fujian }
+		position = 5
+		trigger = {
+			army_size = 60
+			army_professionalism = 0.4
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_wu_jiangnan_army
 				duration = -1
 			}
 		}

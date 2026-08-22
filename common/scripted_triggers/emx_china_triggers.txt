@@ -28,14 +28,10 @@ emx_is_wu_trigger = {
 	}
 }
 
+# Shu forms Yuan, not Qing, and the Yuan formation deliberately swaps its
+# missions out - so there is no post-formation tag to recognise here.
 emx_is_shu_trigger = {
-	OR = {
-		tag = SHU
-		AND = {
-			tag = QNG
-			has_country_flag = emx_origin_shu
-		}
-	}
+	tag = SHU
 }
 
 emx_is_yue_trigger = {

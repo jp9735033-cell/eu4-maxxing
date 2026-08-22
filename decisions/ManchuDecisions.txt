@@ -190,12 +190,11 @@ country_decisions = {
 		potential = {
 			OR = {
 				tag = MCH
-				# eu4-maxxing: Qing is the only formable open to the four Chinese
-				# players, and it now demands every rival capital.
+				# eu4-maxxing: Yan, Wu and Yue form Qing, and it demands every
+				# rival capital. Shu forms Yuan instead - see YuanNation.txt.
 				tag = YUE
 				tag = WUU
 				tag = YAN
-				tag = SHU
 			}
 			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
@@ -270,7 +269,6 @@ country_decisions = {
 			# See common/scripted_triggers/emx_china_triggers.txt.
 			if = { limit = { tag = YAN } set_country_flag = emx_origin_yan }
 			if = { limit = { tag = WUU } set_country_flag = emx_origin_wu }
-			if = { limit = { tag = SHU } set_country_flag = emx_origin_shu }
 			if = { limit = { tag = YUE } set_country_flag = emx_origin_yue }
 			change_tag = QNG
 			# Manchu and everyone else still swap to the Qing tree; the four

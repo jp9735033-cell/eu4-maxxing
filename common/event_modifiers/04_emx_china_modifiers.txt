@@ -229,7 +229,7 @@ emx_shu_northern_expeditions = {
 
 emx_shu_horse_trade = {
 	trade_efficiency = 0.10
-	cavalry_power = 0.10
+	infantry_power = 0.05
 }
 
 emx_shu_roof_of_the_world = {
@@ -240,8 +240,9 @@ emx_shu_roof_of_the_world = {
 
 ##################################################
 # 6. Yue
-# Every coastal step adds naval force limit locally and morale nationally,
-# ending at +20% naval morale and +10% land morale.
+# Every coastal step adds trade power and cheaper development to the ports
+# themselves, and nationally 2% fire damage and -2% development cost,
+# ending at +10% fire damage and -10% development cost.
 ##################################################
 
 emx_yue_capital_works = {
@@ -251,40 +252,35 @@ emx_yue_capital_works = {
 }
 
 emx_yue_pearl_river_ports = {
-	naval_forcelimit = 1
 	province_trade_power_value = 3
 	local_development_cost = -0.05
 }
 
 emx_yue_hainan_stations = {
-	naval_forcelimit = 1
 	province_trade_power_value = 2
 	local_development_cost = -0.05
 }
 
 emx_yue_western_coast = {
-	naval_forcelimit = 1
 	province_trade_power_value = 2
 	local_development_cost = -0.05
 }
 
 emx_yue_chaozhou_yards = {
-	naval_forcelimit = 1
 	province_trade_power_value = 3
 	local_development_cost = -0.05
 }
 
 emx_yue_south_sea_stations = {
-	naval_forcelimit = 1
 	province_trade_power_value = 3
 	local_development_cost = -0.05
 }
 
-emx_yue_pearl_fleet = { naval_morale = 0.04 land_morale = 0.02 }
-emx_yue_hainan_fleet = { naval_morale = 0.04 land_morale = 0.02 }
-emx_yue_western_fleet = { naval_morale = 0.04 land_morale = 0.02 }
-emx_yue_chaozhou_fleet = { naval_morale = 0.04 land_morale = 0.02 }
-emx_yue_treasure_fleet = { naval_morale = 0.04 land_morale = 0.02 }
+emx_yue_pearl_fleet = { fire_damage = 0.02 development_cost = -0.02 }
+emx_yue_hainan_fleet = { fire_damage = 0.02 development_cost = -0.02 }
+emx_yue_western_fleet = { fire_damage = 0.02 development_cost = -0.02 }
+emx_yue_chaozhou_fleet = { fire_damage = 0.02 development_cost = -0.02 }
+emx_yue_treasure_fleet = { fire_damage = 0.02 development_cost = -0.02 }
 
 emx_yue_two_guangs = {
 	land_forcelimit_modifier = 0.10

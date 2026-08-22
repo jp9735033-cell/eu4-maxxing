@@ -65,18 +65,23 @@ emx_home_river_port = {
 emx_start_of_the_great_wall = {
 	local_development_cost = -0.10
 	province_trade_power_value = 5
-	fort_level = 1
-	local_hostile_attrition = 1
 	supply_limit_modifier = 0.25
 }
 
 emx_yan_frontier_garrison = {
 	local_development_cost = -0.05
 	province_trade_power_value = 2
-	fort_level = 1
-	local_hostile_attrition = 1
 	local_defensiveness = 0.15
 }
+
+# One per garrison, so the wall accumulates: five of these is +5% land
+# morale and +5% infantry combat ability. A single shared name would only
+# refresh itself instead of stacking.
+emx_yan_garrison_xuanhua = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_datong = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_shanhaiguan = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_ningyuan = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_shenyang = { land_morale = 0.01 infantry_power = 0.01 }
 
 emx_yan_nine_garrisons = {
 	defensiveness = 0.10

@@ -4,7 +4,7 @@
 
 # This one is the first for the case that some country manages to become fully Norse.
 
-YAN_ideas = {
+SHU_ideas = {
 	start = {
 		defensiveness = 0.20
 		core_creation = -0.1
@@ -16,7 +16,7 @@ YAN_ideas = {
 	}
 	
 	trigger = {
-		tag = YAN
+		tag = SHU
 	}
 	free = yes
 	
@@ -128,7 +128,7 @@ YUE_ideas = {
 	}
 }
 
-SHU_ideas = {
+YAN_ideas = {
 	start = {
 		manpower_recovery_speed = 0.15
 		core_creation = -0.1
@@ -139,7 +139,7 @@ SHU_ideas = {
 	}
 	
 	trigger = {
-		tag = SHU
+		tag = YAN
 	}
 	free = yes
 	

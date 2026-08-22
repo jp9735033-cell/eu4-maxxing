@@ -11,7 +11,7 @@ emx_yue_s1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YUE
+		emx_is_yue_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -174,7 +174,7 @@ emx_yue_s2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YUE
+		emx_is_yue_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -285,7 +285,7 @@ emx_yue_s3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YUE
+		emx_is_yue_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -439,7 +439,7 @@ emx_yue_s4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YUE
+		emx_is_yue_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -595,7 +595,7 @@ emx_yue_s5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YUE
+		emx_is_yue_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

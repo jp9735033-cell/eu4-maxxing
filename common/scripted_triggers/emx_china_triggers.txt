@@ -1,0 +1,60 @@
+# eu4-maxxing: identity triggers for the four Chinese player nations.
+#
+# Forming Qing changes the tag to QNG, which would normally throw away the
+# EMX mission tree and hand the player the vanilla Qing tree instead. To stop
+# that, the Qing formation decision stamps an origin flag before change_tag,
+# and every EMX mission series asks these triggers rather than a bare tag check.
+#
+# The flags are set in decisions/ManchuDecisions.txt, in form_manchu_dynasty,
+# immediately before change_tag = QNG. Country flags survive change_tag.
+
+emx_is_yan_trigger = {
+	OR = {
+		tag = YAN
+		AND = {
+			tag = QNG
+			has_country_flag = emx_origin_yan
+		}
+	}
+}
+
+emx_is_wu_trigger = {
+	OR = {
+		tag = WUU
+		AND = {
+			tag = QNG
+			has_country_flag = emx_origin_wu
+		}
+	}
+}
+
+emx_is_shu_trigger = {
+	OR = {
+		tag = SHU
+		AND = {
+			tag = QNG
+			has_country_flag = emx_origin_shu
+		}
+	}
+}
+
+emx_is_yue_trigger = {
+	OR = {
+		tag = YUE
+		AND = {
+			tag = QNG
+			has_country_flag = emx_origin_yue
+		}
+	}
+}
+
+# Any of the four, before or after forming Qing. Used to keep the vanilla
+# Chinese, Ming, Qing, Manchu, Asian and generic mission series away from them.
+emx_chinese_player_trigger = {
+	OR = {
+		emx_is_yan_trigger = yes
+		emx_is_wu_trigger = yes
+		emx_is_shu_trigger = yes
+		emx_is_yue_trigger = yes
+	}
+}

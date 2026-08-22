@@ -23,7 +23,6 @@ emx_spoils_of_shu = {
 }
 
 emx_spoils_of_yue = {
-	fire_damage = 0.05
 	advisor_cost = -0.07
 }
 
@@ -330,7 +329,6 @@ emx_silk_road_trade = {
 
 emx_divine_engine_division = {
 	artillery_power = 0.10
-	siege_ability = 0.10
 }
 
 emx_green_standard_drill = {
@@ -402,10 +400,10 @@ emx_gw_jiayuguan_wall = {
 
 # One country modifier per section, so a nation that builds several sections
 # stacks the morale. A single shared name would only refresh itself.
-emx_great_wall_shanhaiguan = { land_morale = 0.03 }
-emx_great_wall_juyongguan = { land_morale = 0.03 }
-emx_great_wall_datong = { land_morale = 0.03 }
-emx_great_wall_jiayuguan = { land_morale = 0.03 }
+emx_great_wall_shanhaiguan = { land_morale = 0.025 }
+emx_great_wall_juyongguan = { land_morale = 0.025 }
+emx_great_wall_datong = { land_morale = 0.025 }
+emx_great_wall_jiayuguan = { land_morale = 0.025 }
 
 ##################################################
 # 9. Starting land quality

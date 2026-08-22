@@ -16,7 +16,7 @@ emx_yan_s1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YAN
+		emx_is_yan_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -178,7 +178,7 @@ emx_yan_s2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YAN
+		emx_is_yan_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -298,7 +298,7 @@ emx_yan_s3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YAN
+		emx_is_yan_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -447,7 +447,7 @@ emx_yan_s4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YAN
+		emx_is_yan_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -622,7 +622,7 @@ emx_yan_s5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = YAN
+		emx_is_yan_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

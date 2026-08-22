@@ -12,7 +12,7 @@ emx_shu_s1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = SHU
+		emx_is_shu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -167,7 +167,7 @@ emx_shu_s2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = SHU
+		emx_is_shu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -281,7 +281,7 @@ emx_shu_s3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = SHU
+		emx_is_shu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -437,7 +437,7 @@ emx_shu_s4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = SHU
+		emx_is_shu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -596,16 +596,42 @@ emx_shu_s5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = SHU
+		emx_is_shu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
+	# Kham and Amdo. Highlands and desert.
+	emx_shu_west_2 = {
+		icon = mission_hands_praying
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = kham_area
+				area = amdo_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 678
+			owns = 705
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+					area = kham_area
+					area = amdo_area
+				}
+			}
+		}
+		effect = { emx_shu_kham_effect = yes }
+	}
+
 	# Utsang, Tsang and Ngari. Mountain, +35% development cost, cancelled.
 	emx_shu_west_1 = {
 		icon = mission_buddhist_monk_praying
-		required_missions = { }
-		position = 1
+		required_missions = { emx_shu_west_2 }
+		position = 2
 		provinces_to_highlight = {
 			OR = {
 				area = utsang_area
@@ -629,36 +655,10 @@ emx_shu_s5 = {
 		effect = { emx_shu_tibet_effect = yes }
 	}
 
-	# Kham and Amdo. Highlands and desert.
-	emx_shu_west_2 = {
-		icon = mission_hands_praying
-		required_missions = { emx_shu_west_1 }
-		position = 2
-		provinces_to_highlight = {
-			OR = {
-				area = kham_area
-				area = amdo_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 678
-			owns = 705
-			num_of_owned_provinces_with = {
-				value = 7
-				OR = {
-					area = kham_area
-					area = amdo_area
-				}
-			}
-		}
-		effect = { emx_shu_kham_effect = yes }
-	}
-
 	# The rest of the Lhasa trade node, Nepal excluded.
 	emx_shu_west_3 = {
 		icon = mission_asian_trader
-		required_missions = { emx_shu_west_2 }
+		required_missions = { emx_shu_west_1 }
 		position = 3
 		provinces_to_highlight = {
 			OR = {

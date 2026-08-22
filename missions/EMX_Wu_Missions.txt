@@ -2,15 +2,15 @@
 # Same five-slot layout as Yan, Shu and Yue. See EMX_Yan_Missions.txt for the map.
 #
 # Wu is the builder. Every province it develops gains 25% fort defence on top
-# of the standard -5% development cost, and its force limit climbs 3% a step
-# through the Fortified Delta branch to +20% when the tree is done.
+# of the standard -5% development cost, and its force limit climbs 3% for each
+# delta city raised to 40 development, reaching +20% when the tree is done.
 
 emx_wu_s1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	potential = {
-		tag = WUU
+		emx_is_wu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -170,7 +170,7 @@ emx_wu_s2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WUU
+		emx_is_wu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -286,7 +286,7 @@ emx_wu_s3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WUU
+		emx_is_wu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -442,7 +442,7 @@ emx_wu_s4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WUU
+		emx_is_wu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -594,7 +594,7 @@ emx_wu_s5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WUU
+		emx_is_wu_trigger = yes
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -605,7 +605,7 @@ emx_wu_s5 = {
 		position = 1
 		provinces_to_highlight = { province_id = 684 }
 		trigger = {
-			684 = { has_building = fort_15th }
+			684 = { development = 40 }
 		}
 		effect = {
 			add_mil_power = 50
@@ -622,7 +622,7 @@ emx_wu_s5 = {
 		position = 2
 		provinces_to_highlight = { province_id = 1822 }
 		trigger = {
-			1822 = { has_building = fort_15th }
+			1822 = { development = 40 }
 		}
 		effect = {
 			add_mil_power = 50
@@ -639,7 +639,7 @@ emx_wu_s5 = {
 		position = 3
 		provinces_to_highlight = { province_id = 2149 }
 		trigger = {
-			2149 = { has_building = fort_15th }
+			2149 = { development = 40 }
 		}
 		effect = {
 			add_mil_power = 50
@@ -656,7 +656,7 @@ emx_wu_s5 = {
 		position = 4
 		provinces_to_highlight = { province_id = 2145 }
 		trigger = {
-			2145 = { has_building = fort_15th }
+			2145 = { development = 40 }
 		}
 		effect = {
 			add_mil_power = 50
@@ -673,7 +673,7 @@ emx_wu_s5 = {
 		position = 5
 		provinces_to_highlight = { province_id = 1824 }
 		trigger = {
-			1824 = { has_building = fort_15th }
+			1824 = { development = 40 }
 		}
 		effect = {
 			add_army_tradition = 10

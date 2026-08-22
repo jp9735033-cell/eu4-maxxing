@@ -264,8 +264,21 @@ country_decisions = {
 				change_culture = ROOT
 				add_core = QNG
 			}
+			# eu4-maxxing: stamp where this Qing came from BEFORE the tag changes.
+			# Country flags survive change_tag, so the EMX mission series can keep
+			# recognising the country afterwards and the tree is not swapped out.
+			# See common/scripted_triggers/emx_china_triggers.txt.
+			if = { limit = { tag = YAN } set_country_flag = emx_origin_yan }
+			if = { limit = { tag = WUU } set_country_flag = emx_origin_wu }
+			if = { limit = { tag = SHU } set_country_flag = emx_origin_shu }
+			if = { limit = { tag = YUE } set_country_flag = emx_origin_yue }
 			change_tag = QNG
-			swap_non_generic_missions = yes
+			# Manchu and everyone else still swap to the Qing tree; the four
+			# Chinese players keep the tree they have been working on.
+			if = {
+				limit = { NOT = { emx_chinese_player_trigger = yes } }
+				swap_non_generic_missions = yes
+			}
 			on_change_tag_effect = yes
 			set_government_rank = 3
 			south_china_region = {

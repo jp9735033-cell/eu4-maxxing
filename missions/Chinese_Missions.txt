@@ -3,7 +3,7 @@ chinese_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: the four Chinese players use the EMX_*_Missions trees only
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		NOT = { primary_culture = manchu_new }
 		NOT = { primary_culture = tibetan_new }
 		NOT = { primary_culture = altaic_new }
@@ -142,7 +142,7 @@ chinese_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: the four Chinese players use the EMX_*_Missions trees only
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		NOT = { primary_culture = manchu_new }
 		NOT = { primary_culture = tibetan_new }
 		NOT = { primary_culture = altaic_new }

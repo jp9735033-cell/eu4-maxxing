@@ -7,7 +7,7 @@ military_missions = { #Series name is displayed over the slot?
 	generic = yes #if a mission without generic = yes wants this slot then it overrides this.
 	ai = no #Can exist under the series itself or within individual missions.
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: the four Chinese players use the EMX_*_Missions trees only
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		always = yes
 	} #These are triggers for the entire series
 	
@@ -197,7 +197,7 @@ diplomatic_missions = {
 	generic = yes
 	
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: the four Chinese players use the EMX_*_Missions trees only
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 	   always = yes
 	}
 	
@@ -435,7 +435,7 @@ administrative_missions = {
 	generic = yes
 	
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: the four Chinese players use the EMX_*_Missions trees only
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 	   always = yes
 	}
 	high_income_mission = {

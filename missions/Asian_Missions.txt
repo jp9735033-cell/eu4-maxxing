@@ -3,7 +3,7 @@ asian_missions = {
 	generic = yes
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: the four Chinese players use the EMX_*_Missions trees only
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		capital_scope = {
 			continent = asia
 		}

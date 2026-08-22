@@ -280,6 +280,7 @@ DOM_Qing_Related_Missions_1 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -448,7 +449,7 @@ chinese_kingdoms_1 = {
 			tag = SHU 
 			tag = FRM
 		}
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -638,7 +639,7 @@ ming_missions_1_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		is_emperor_of_china = yes 
 		#OR = { 
@@ -911,6 +912,7 @@ DOM_Qing_Missions_1_b_formable = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -1353,6 +1355,7 @@ DOM_Qing_Missions_2 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -1681,7 +1684,7 @@ chinese_kingdoms_2 = {
 			tag = SHU 
 			tag = FRM
 		}
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -1845,7 +1848,7 @@ ming_missions_2_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		is_emperor_of_china = yes 
 		#OR = {
@@ -2276,6 +2279,7 @@ DOM_Qing_Missions_2_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -2479,7 +2483,7 @@ chinese_kingdoms_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = YAN
@@ -3422,6 +3426,7 @@ DOM_Qing_Missions_3 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -3804,7 +3809,7 @@ ming_missions_3_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		is_emperor_of_china = yes 
 		#OR = {
@@ -4145,6 +4150,7 @@ DOM_Qing_Missions_3_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -4451,7 +4457,7 @@ chinese_kingdoms_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = YAN
@@ -5013,6 +5019,7 @@ DOM_Qing_Missions_4 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -5105,7 +5112,7 @@ ming_missions_4_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		is_emperor_of_china = yes 
 		#OR = {
@@ -5429,7 +5436,7 @@ ming_missions_4_moh = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		has_dlc = "Mandate of Heaven"
 		is_emperor_of_china = yes 
@@ -5502,6 +5509,7 @@ DOM_Qing_Missions_4_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -5619,7 +5627,7 @@ chinese_kingdoms_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = YAN
@@ -6194,6 +6202,7 @@ DOM_Qing_Missions_5 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -6369,7 +6378,7 @@ ming_missions_5_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { OR = { tag = YAN tag = WUU tag = SHU tag = YUE } } # eu4-maxxing: these four use the EMX_*_Missions trees
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		is_emperor_of_china = yes 
 		#OR = {  
@@ -6664,6 +6673,7 @@ DOM_Qing_Missions_5_dynamic_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -6769,6 +6779,7 @@ DOM_Qing_Missions_5_intial = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -6894,6 +6905,7 @@ DOM_Qing_Missions_5_a = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -6984,6 +6996,7 @@ DOM_Qing_Missions_5_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
+		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }

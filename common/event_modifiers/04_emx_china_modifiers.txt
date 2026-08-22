@@ -108,7 +108,8 @@ emx_yan_northern_wall = {
 ##################################################
 # 4. Wu
 # Wu fortifies everything it touches: 25% local fort defence on every province
-# it develops, and a force limit that climbs 3% a mission to +20% total.
+# it develops, and a force limit that climbs 3% for each of the five delta
+# cities raised to 40 development, plus 5% for breaking the wokou - +20% all in.
 # Development cost is the standard -5%; only Beijing, Chengdu, Canton and
 # Shu's western roads go beyond that.
 ##################################################
@@ -133,7 +134,6 @@ emx_wu_fort_zhenjiang = { land_forcelimit_modifier = 0.03 }
 emx_wu_fort_wenzhou = { land_forcelimit_modifier = 0.03 }
 
 emx_wu_grand_levy = {
-	land_forcelimit_modifier = 0.05
 	manpower_recovery_speed = 0.10
 }
 
@@ -142,9 +142,9 @@ emx_wu_lower_yangtze = {
 	global_trade_goods_size_modifier = 0.05
 }
 
+# With the raids over, the coastal levies are free to march inland.
 emx_wu_break_the_wokou = {
-	naval_forcelimit_modifier = 0.20
-	global_ship_trade_power = 0.15
+	land_forcelimit_modifier = 0.05
 }
 
 emx_wu_suzhou_looms = {

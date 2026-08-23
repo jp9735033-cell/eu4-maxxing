@@ -288,18 +288,18 @@ reform_the_military_branch_decision = {
 
 modernize_the_banners_decision = {
 	empire = celestial_empire 
-	trigger = { 
-		OR = {
-			num_of_banners = 25 
-			has_global_modifier_value = {
-				which = cavalry_power 
-				value = 0.15
-			}
+	# eu4-maxxing: was OR = { num_of_banners = 25  cavalry_power 0.15 }.
+	# The banner requirement is gone, and the unlock now matches the reward:
+	# 15% infantry combat ability instead of 15% cavalry.
+	trigger = {
+		has_global_modifier_value = {
+			which = infantry_power
+			value = 0.15
 		}
 	}
 	member = {
 		cavalry_cost = -0.1
-	} 
+	}
 	emperor = { cav_to_inf_ratio = 0.1 infantry_power = 0.10 } # eu4-maxxing: was cavalry_power = 0.05
 }
 

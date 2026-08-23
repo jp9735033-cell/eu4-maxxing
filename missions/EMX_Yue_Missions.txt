@@ -210,7 +210,7 @@ emx_yue_s2 = {
 		position = 1
 		provinces_to_highlight = { province_id = 667 }
 		trigger = {
-			667 = { development = 33 }
+			667 = { development = 30 }
 		}
 		effect = {
 			667 = { add_permanent_province_modifier = { name = emx_yue_capital_works duration = -1 } }
@@ -684,7 +684,6 @@ emx_yue_s5 = {
 		position = 2
 		trigger = {
 			navy_size = 60
-			navy_tradition = 60
 		}
 		effect = {
 			emx_yue_south_sea_effect = yes

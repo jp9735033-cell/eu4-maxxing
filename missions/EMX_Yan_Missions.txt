@@ -17,7 +17,9 @@
 # directly above it, so the arrows are all straight. The three rival capitals
 # are free of each other and can be taken in any order. The four historic
 # missions at row 5 all hang off Home 4 and none require each other.
-# Everything converges on Unify China at row 6.
+# Unify China at row 6 has no mission prerequisites at all - it is gated
+# purely by its own trigger, owning and coring the four player capitals and
+# Shenyang. The three lines below it still branch from it.
 #
 # Yan holds Beijing and the Mandate of Heaven. Its tree is about the northern
 # frontier: the wall, the garrisons and the steppe beyond them.
@@ -434,18 +436,7 @@ emx_yan_s3 = {
 
 	emx_yan_unify_china = {
 		icon = mission_cornerstone_empire
-		required_missions = {
-			emx_yan_seize_hangzhou
-			emx_yan_seize_chengdu
-			emx_yan_seize_canton
-			emx_yan_home_7
-			emx_yan_garrison_3
-			emx_yan_garrison_5
-			emx_yan_avenge_tumu
-			emx_yan_grand_canal
-			emx_yan_yongle_dadian
-			emx_yan_northern_frontier
-		}
+		required_missions = { }
 		position = 6
 		provinces_to_highlight = {
 			OR = {

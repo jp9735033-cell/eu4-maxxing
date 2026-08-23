@@ -399,18 +399,7 @@ emx_yue_s3 = {
 
 	emx_yue_unify_china = {
 		icon = mission_cornerstone_empire
-		required_missions = {
-			emx_yue_seize_beijing
-			emx_yue_seize_hangzhou
-			emx_yue_seize_chengdu
-			emx_yue_home_7
-			emx_yue_sea_3
-			emx_yue_sea_5
-			emx_yue_two_guangs
-			emx_yue_bogue_forts
-			emx_yue_jiaozhi
-			emx_yue_nanyang_trade
-		}
+		required_missions = { }
 		position = 6
 		provinces_to_highlight = {
 			OR = {

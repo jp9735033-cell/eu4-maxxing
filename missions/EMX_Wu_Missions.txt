@@ -403,18 +403,7 @@ emx_wu_s3 = {
 
 	emx_wu_unify_china = {
 		icon = mission_cornerstone_empire
-		required_missions = {
-			emx_wu_seize_beijing
-			emx_wu_seize_chengdu
-			emx_wu_seize_canton
-			emx_wu_home_7
-			emx_wu_fort_3
-			emx_wu_fort_5
-			emx_wu_the_wu_fleet
-			emx_wu_suzhou_looms
-			emx_wu_jiangxi_and_fujian
-			emx_wu_jiangnan_levy
-		}
+		required_missions = { }
 		position = 6
 		provinces_to_highlight = {
 			OR = {

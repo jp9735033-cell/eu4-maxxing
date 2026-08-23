@@ -45,7 +45,7 @@ emx_yue_s1 = {
 
 	emx_yue_seize_hangzhou = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_yue_seize_beijing }
+		required_missions = { }
 		position = 2
 		provinces_to_highlight = {
 			province_id = 684
@@ -72,7 +72,7 @@ emx_yue_s1 = {
 
 	emx_yue_seize_chengdu = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_yue_seize_hangzhou }
+		required_missions = { }
 		position = 3
 		provinces_to_highlight = {
 			province_id = 679
@@ -252,7 +252,7 @@ emx_yue_s2 = {
 
 	emx_yue_two_guangs = {
 		icon = mission_unite_home_region
-		required_missions = { }
+		required_missions = { emx_yue_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -341,7 +341,7 @@ emx_yue_s3 = {
 
 	emx_yue_home_5 = {
 		icon = mission_rice_field
-		required_missions = { emx_yue_home_1 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 2161 }
 		trigger = { 2161 = { development = 11 } }
@@ -375,7 +375,7 @@ emx_yue_s3 = {
 
 	emx_yue_bogue_forts = {
 		icon = mng_expand_bogue
-		required_missions = { emx_yue_two_guangs }
+		required_missions = { emx_yue_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -400,11 +400,15 @@ emx_yue_s3 = {
 	emx_yue_unify_china = {
 		icon = mission_cornerstone_empire
 		required_missions = {
+			emx_yue_seize_beijing
+			emx_yue_seize_hangzhou
 			emx_yue_seize_chengdu
-			emx_yue_home_4
 			emx_yue_home_7
 			emx_yue_sea_3
 			emx_yue_sea_5
+			emx_yue_two_guangs
+			emx_yue_bogue_forts
+			emx_yue_jiaozhi
 			emx_yue_nanyang_trade
 		}
 		position = 6
@@ -585,7 +589,7 @@ emx_yue_s4 = {
 
 	emx_yue_jiaozhi = {
 		icon = mission_invade_island
-		required_missions = { emx_yue_bogue_forts }
+		required_missions = { emx_yue_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -661,7 +665,7 @@ emx_yue_s5 = {
 
 	emx_yue_sea_4 = {
 		icon = mission_junk_boat
-		required_missions = { emx_yue_sea_1 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = {
 			OR = {
@@ -704,7 +708,7 @@ emx_yue_s5 = {
 
 	emx_yue_nanyang_trade = {
 		icon = mission_portuguese_malacca
-		required_missions = { emx_yue_jiaozhi }
+		required_missions = { emx_yue_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			region = malaya_region

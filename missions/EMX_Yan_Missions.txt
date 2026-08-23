@@ -3,19 +3,20 @@
 # Layout, shared by Yan, Wu, Shu and Yue:
 #
 #   pos  slot 1      slot 2        slot 3        slot 4        slot 5
-#   1    Capital 1   Home 1     -> Home 5        National 1 -> National 4
+#   1    Capital 1   Home 1        Home 5        National 1    National 4
 #   2    Capital 2   Home 2        Home 6        National 2    National 5
 #   3    Capital 3   Home 3        Home 7        National 3    [Shu only]
 #   4                Home 4                                    [Shu only]
-#   5                Historic 1 -> Historic 2 -> Historic 3 -> Historic 4
+#   5                Historic 1    Historic 2    Historic 3    Historic 4
 #   6                              Unify China
 #   7    Silk 1      Army 1        Industry 1    Industry 4
 #   8    Silk 2      Army 2        Industry 2    Industry 5
 #   9    Silk 3      Army 3        Industry 3
 #
-# The three rival capitals are one chained column on the left. The home
-# provinces and the national branch each fork across two columns, so no
-# column runs deeper than four rows and every column starts at row 1.
+# Every column is a plain vertical chain: each mission requires only the one
+# directly above it, so the arrows are all straight. The three rival capitals
+# are free of each other and can be taken in any order. The four historic
+# missions at row 5 all hang off Home 4 and none require each other.
 # Everything converges on Unify China at row 6.
 #
 # Yan holds Beijing and the Mandate of Heaven. Its tree is about the northern
@@ -60,7 +61,7 @@ emx_yan_s1 = {
 
 	emx_yan_seize_chengdu = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_yan_seize_hangzhou }
+		required_missions = { }
 		position = 2
 		provinces_to_highlight = {
 			province_id = 679
@@ -87,7 +88,7 @@ emx_yan_s1 = {
 
 	emx_yan_seize_canton = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_yan_seize_chengdu }
+		required_missions = { }
 		position = 3
 		provinces_to_highlight = {
 			province_id = 667
@@ -278,7 +279,7 @@ emx_yan_s2 = {
 
 	emx_yan_avenge_tumu = {
 		icon = mission_steppe_warriors
-		required_missions = { }
+		required_missions = { emx_yan_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -366,7 +367,7 @@ emx_yan_s3 = {
 
 	emx_yan_home_5 = {
 		icon = mission_asian_trader
-		required_missions = { emx_yan_home_1 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 4195 }
 		trigger = { 4195 = { development = 32 } }
@@ -400,7 +401,7 @@ emx_yan_s3 = {
 
 	emx_yan_grand_canal = {
 		icon = mng_jing_hang_grand_canal
-		required_missions = { emx_yan_avenge_tumu }
+		required_missions = { emx_yan_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -434,11 +435,15 @@ emx_yan_s3 = {
 	emx_yan_unify_china = {
 		icon = mission_cornerstone_empire
 		required_missions = {
+			emx_yan_seize_hangzhou
+			emx_yan_seize_chengdu
 			emx_yan_seize_canton
-			emx_yan_home_4
 			emx_yan_home_7
 			emx_yan_garrison_3
 			emx_yan_garrison_5
+			emx_yan_avenge_tumu
+			emx_yan_grand_canal
+			emx_yan_yongle_dadian
 			emx_yan_northern_frontier
 		}
 		position = 6
@@ -597,7 +602,7 @@ emx_yan_s4 = {
 
 	emx_yan_yongle_dadian = {
 		icon = mng_expand_yongle_dadian
-		required_missions = { emx_yan_grand_canal }
+		required_missions = { emx_yan_home_4 }
 		position = 5
 		trigger = {
 			adm_tech = 12
@@ -668,7 +673,7 @@ emx_yan_s5 = {
 
 	emx_yan_garrison_4 = {
 		icon = mission_expand_great_wall
-		required_missions = { emx_yan_garrison_1 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 704 }
 		trigger = {
@@ -710,7 +715,7 @@ emx_yan_s5 = {
 
 	emx_yan_northern_frontier = {
 		icon = mch_bypass_great_wall
-		required_missions = { emx_yan_yongle_dadian }
+		required_missions = { emx_yan_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {

@@ -46,7 +46,7 @@ emx_shu_s1 = {
 
 	emx_shu_seize_hangzhou = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_shu_seize_beijing }
+		required_missions = { }
 		position = 2
 		provinces_to_highlight = {
 			province_id = 684
@@ -73,7 +73,7 @@ emx_shu_s1 = {
 
 	emx_shu_seize_canton = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_shu_seize_hangzhou }
+		required_missions = { }
 		position = 3
 		provinces_to_highlight = {
 			province_id = 667
@@ -157,7 +157,7 @@ emx_shu_s2 = {
 
 	emx_shu_secure_hanzhong = {
 		icon = mission_chinese_general_riding
-		required_missions = { }
+		required_missions = { emx_shu_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			province_id = 689
@@ -189,7 +189,7 @@ emx_shu_s3 = {
 
 	emx_shu_home_5 = {
 		icon = mission_rice_field
-		required_missions = { emx_shu_home_1 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 4211 }
 		trigger = { 4211 = { development = 9 } }
@@ -223,7 +223,7 @@ emx_shu_s3 = {
 
 	emx_shu_southern_campaign = {
 		icon = mission_indian_soldier_elephant
-		required_missions = { emx_shu_secure_hanzhong }
+		required_missions = { emx_shu_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -338,7 +338,7 @@ emx_shu_s4 = {
 
 	emx_shu_northern_expeditions = {
 		icon = mission_steppe_warriors
-		required_missions = { emx_shu_southern_campaign }
+		required_missions = { emx_shu_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -375,7 +375,7 @@ emx_shu_s5 = {
 	# West Gansu, the Hexi Corridor. Desert, +50% development cost, cancelled.
 	emx_shu_west_4 = {
 		icon = mission_great_wall
-		required_missions = { emx_shu_west_2 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = {
 			area = west_gansu_area
@@ -465,7 +465,7 @@ emx_shu_s5 = {
 
 	emx_shu_tea_horse_road = {
 		icon = mission_kowtow
-		required_missions = { emx_shu_northern_expeditions }
+		required_missions = { emx_shu_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {

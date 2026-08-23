@@ -44,7 +44,7 @@ emx_wu_s1 = {
 
 	emx_wu_seize_chengdu = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_wu_seize_beijing }
+		required_missions = { }
 		position = 2
 		provinces_to_highlight = {
 			province_id = 679
@@ -71,7 +71,7 @@ emx_wu_s1 = {
 
 	emx_wu_seize_canton = {
 		icon = mission_conquer_50_development
-		required_missions = { emx_wu_seize_chengdu }
+		required_missions = { }
 		position = 3
 		provinces_to_highlight = {
 			province_id = 667
@@ -251,7 +251,7 @@ emx_wu_s2 = {
 
 	emx_wu_the_wu_fleet = {
 		icon = mission_junk_boat
-		required_missions = { }
+		required_missions = { emx_wu_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -337,7 +337,7 @@ emx_wu_s3 = {
 
 	emx_wu_home_5 = {
 		icon = mission_rice_field
-		required_missions = { emx_wu_home_1 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 2148 }
 		trigger = { 2148 = { development = 34 } }
@@ -374,7 +374,7 @@ emx_wu_s3 = {
 
 	emx_wu_suzhou_looms = {
 		icon = mission_state_manufactories
-		required_missions = { emx_wu_the_wu_fleet }
+		required_missions = { emx_wu_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -404,11 +404,15 @@ emx_wu_s3 = {
 	emx_wu_unify_china = {
 		icon = mission_cornerstone_empire
 		required_missions = {
+			emx_wu_seize_beijing
+			emx_wu_seize_chengdu
 			emx_wu_seize_canton
-			emx_wu_home_4
 			emx_wu_home_7
 			emx_wu_fort_3
 			emx_wu_fort_5
+			emx_wu_the_wu_fleet
+			emx_wu_suzhou_looms
+			emx_wu_jiangxi_and_fujian
 			emx_wu_jiangnan_levy
 		}
 		position = 6
@@ -558,7 +562,7 @@ emx_wu_s4 = {
 
 	emx_wu_jiangxi_and_fujian = {
 		icon = mission_unite_home_region
-		required_missions = { emx_wu_suzhou_looms }
+		required_missions = { emx_wu_home_4 }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -636,7 +640,7 @@ emx_wu_s5 = {
 
 	emx_wu_fort_4 = {
 		icon = mission_cornerstone_empire
-		required_missions = { emx_wu_fort_1 }
+		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 2145 }
 		trigger = {
@@ -670,7 +674,7 @@ emx_wu_s5 = {
 
 	emx_wu_jiangnan_levy = {
 		icon = mission_chinese_general_riding
-		required_missions = { emx_wu_jiangxi_and_fujian }
+		required_missions = { emx_wu_home_4 }
 		position = 5
 		trigger = {
 			army_size = 60

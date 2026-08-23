@@ -210,7 +210,7 @@ emx_yue_s2 = {
 		position = 1
 		provinces_to_highlight = { province_id = 667 }
 		trigger = {
-			667 = { development = 33 }
+			667 = { development = 30 }
 		}
 		effect = {
 			667 = { add_permanent_province_modifier = { name = emx_yue_capital_works duration = -1 } }
@@ -222,7 +222,7 @@ emx_yue_s2 = {
 		required_missions = { emx_yue_home_1 }
 		position = 2
 		provinces_to_highlight = { province_id = 668 }
-		trigger = { 668 = { development = 11 } }
+		trigger = { 668 = { development = 30 } }
 		effect = {
 			668 = { add_permanent_province_modifier = { name = emx_home_market_town duration = -1 } }
 		}
@@ -233,7 +233,7 @@ emx_yue_s2 = {
 		required_missions = { emx_yue_home_2 }
 		position = 3
 		provinces_to_highlight = { province_id = 665 }
-		trigger = { 665 = { development = 15 } }
+		trigger = { 665 = { development = 30 } }
 		effect = {
 			665 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
 		}
@@ -244,7 +244,7 @@ emx_yue_s2 = {
 		required_missions = { emx_yue_home_3 }
 		position = 4
 		provinces_to_highlight = { province_id = 2159 }
-		trigger = { 2159 = { development = 12 } }
+		trigger = { 2159 = { development = 30 } }
 		effect = {
 			2159 = { add_permanent_province_modifier = { name = emx_home_farmlands duration = -1 } }
 		}
@@ -344,7 +344,7 @@ emx_yue_s3 = {
 		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 2161 }
-		trigger = { 2161 = { development = 11 } }
+		trigger = { 2161 = { development = 30 } }
 		effect = {
 			2161 = { add_permanent_province_modifier = { name = emx_home_farmlands duration = -1 } }
 		}
@@ -355,7 +355,7 @@ emx_yue_s3 = {
 		required_missions = { emx_yue_home_5 }
 		position = 2
 		provinces_to_highlight = { province_id = 666 }
-		trigger = { 666 = { development = 7 } }
+		trigger = { 666 = { development = 30 } }
 		effect = {
 			666 = { add_permanent_province_modifier = { name = emx_home_market_town duration = -1 } }
 		}
@@ -366,7 +366,7 @@ emx_yue_s3 = {
 		required_missions = { emx_yue_home_6 }
 		position = 3
 		provinces_to_highlight = { province_id = 2160 }
-		trigger = { 2160 = { development = 7 } }
+		trigger = { 2160 = { development = 30 } }
 		effect = {
 			2160 = { add_permanent_province_modifier = { name = emx_home_garrison_town duration = -1 } }
 			add_adm_power = 100
@@ -684,7 +684,6 @@ emx_yue_s5 = {
 		position = 2
 		trigger = {
 			navy_size = 60
-			navy_tradition = 60
 		}
 		effect = {
 			emx_yue_south_sea_effect = yes

@@ -611,7 +611,7 @@ emx_yan_s4 = {
 
 	emx_yan_industry_4 = {
 		icon = mission_war_chest
-		required_missions = { emx_yan_industry_1 }
+		required_missions = { emx_yan_unify_china }
 		position = 7
 		provinces_to_highlight = {
 			OR = {

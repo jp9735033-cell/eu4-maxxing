@@ -786,14 +786,15 @@ SCA_ideas = {
 		naval_morale = 0.2
 	}
 	sca_finnish_hakkapeliita = {
-		land_morale = 0.10
+		cavalry_fire = 0.5
 		cavalry_cost = -0.15
 	}
 	sca_swedish_carolean = {
-		infantry_shock = 0.25
+		infantry_power = 0.2
 	}
 	sca_empire_of_the_north = {
-		infantry_power = 0.2
+		max_absolutism = 10
+		yearly_absolutism = 1
 	}
 }
 

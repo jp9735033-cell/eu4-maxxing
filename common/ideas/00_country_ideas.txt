@@ -32,12 +32,10 @@ SHU_ideas = {
 		cav_to_inf_ratio = 0.25
 	}
 	qng_bogda_khan4 = {
-        female_advisor_chance = 0.1
 		advisor_cost = -0.10
 	}
 	the_chinese_rules4 = {
-        land_morale = 0.05
-		may_recruit_female_generals = yes
+                land_morale = 0.05
 	}
 	qing_viceroyalties4 = {
         production_efficiency = 0.1
@@ -135,6 +133,7 @@ YAN_ideas = {
 	}
 	
 	bonus = {
+                female_advisor_chance = 0.1
 		advisor_cost = -0.15
 	}
 	
@@ -146,6 +145,7 @@ YAN_ideas = {
 	
 	expand_the_banners3 = {
 		infantry_power = 0.10
+                may_recruit_female_generals = yes
 	}
 	the_green_standard_army3 = {
 		state_maintenance_modifier = -0.15

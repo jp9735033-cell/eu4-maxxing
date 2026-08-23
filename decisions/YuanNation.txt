@@ -18,12 +18,7 @@ country_decisions = {
 			NOT = { tag = QNG }
 			NOT = { tag = MNG }
 			NOT = { tag = MCH }
-			OR = {
-				primary_culture = altaic_new
-				culture_group = altaic
-				# eu4-maxxing: Shu forms Yuan rather than Qing. Yan, Wu and Yue form Qing.
-				tag = SHU
-			}
+			# eu4-maxxing: no culture or tag gate - see the allow block.
 			OR = {
 				ai = no
 				AND = {
@@ -42,84 +37,29 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 723 #Xilin Gol
-				province_id = 1816 #Beijing
-				province_id = 4678 #Qaraqorum
-				province_id = 2136 #Xuanha
-				AND = {
-					culture = mongol
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					culture = oirats
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					culture = khalkha
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					culture = chahar
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
+				province_id = 715	#Urumqi
+				province_id = 2122	#Hami
+				province_id = 2189	#Tsetserleg
+				province_id = 2134	#Rebgong
+				province_id = 4676	#West Alxa
+				province_id = 4205	#Nagchu
+				province_id = 4221	#Dundgovi
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
-			OR = {
-				primary_culture = altaic_new
-				culture_group = altaic
-				tag = SHU
-			}
-			is_at_war = no
-			stability = 2
-			owns_core_province = 723 	#Xilin Gol
-			owns_core_province = 4678 	#Qaraqorum
-			owns_core_province = 2136 	#Xuanha
-			owns_core_province = 1816 	#Beijing
-			1816 = {					#Beijing
-				is_state = yes
-			}
-			custom_trigger_tooltip = {
-				tooltip = subject_all_mongols
-				NOT = {
-					any_province = {
-						culture = mongol
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
-				}
-				NOT = {
-					any_province = {
-						culture = oirats
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
-				}
-				NOT = {
-					any_province = {
-						culture = khalkha
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
-				}
-				NOT = {
-					any_province = {
-						culture = chahar
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
-				government_rank = 3
-			}
-			else = {
-				total_development = 1000
-			}
+			# eu4-maxxing: forming Yuan asks for administrative technology 10 and
+			# seven provinces across the steppe and the plateau - nothing else.
+			# No culture, no Beijing, no Mongol-provinces sweep, no stability or
+			# peace requirement.
+			adm_tech = 10
+			owns = 715		#Urumqi
+			owns = 2122		#Hami
+			owns = 2189		#Tsetserleg
+			owns = 2134		#Rebgong
+			owns = 4676		#West Alxa
+			owns = 4205		#Nagchu
+			owns = 4221		#Dundgovi
 		}
 		effect = {
 			if = {

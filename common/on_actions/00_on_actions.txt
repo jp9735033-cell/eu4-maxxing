@@ -1045,32 +1045,8 @@ on_siege_won_province = {
 		}
 		owner = { country_event = { id = center_of_revolution.1600 } }
 	}
-	if = {
-		limit = {
-			superregion = china_superregion
-			controller = {
-				has_government_attribute = has_unify_china_cb
-				OR = {
-					is_in_war = {
-						attacker_leader = this
-						casus_belli = cb_chinese_unification
-					}
-					is_in_war = {
-						defender_leader = this
-						casus_belli = cb_chinese_unification
-					}
-				}
-				NOT = { is_core = ROOT }
-			}
-		}
-		controller = { 
-			add_territorial_core = ROOT
-			if = {
-				limit = { is_claim = ROOT}
-				remove_claim = ROOT
-			}
-		}
-	}
+	# eu4-maxxing: the block that granted territorial cores during a
+	# cb_chinese_unification war is gone with that casus belli.
 }
 
 # province

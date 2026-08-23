@@ -676,22 +676,6 @@ lost_control_of_canton = {
 	imperial_mandate = -0.05
 }
 
-waging_war_for_china = {
-	potential = {
-		has_reform = celestial_empire
-		has_dlc = "Mandate of Heaven"
-	}
-
-	trigger = {
-		is_in_war = {
-			attacker_leader = root
-			casus_belli = cb_chinese_unification
-		}
-	}
-	
-	imperial_mandate = 0.05
-}
-
 ##################################################
 # HRE modifiers
 ##################################################

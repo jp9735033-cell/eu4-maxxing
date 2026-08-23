@@ -577,9 +577,12 @@ emx_yan_s4 = {
 		icon = mission_expand_great_wall
 		required_missions = { emx_yan_garrison_2 }
 		position = 3
-		provinces_to_highlight = { province_id = 4194 }
+		provinces_to_highlight = {
+			province_id = 4194
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
-			4194 = { has_building = fort_15th }
+			owns_core_province = 4194
 		}
 		effect = {
 			add_mil_power = 100

@@ -338,3 +338,9 @@
  emx_fertile_soil:0 "Fertile Soil"
  emx_river_delta:0 "River Delta"
  emx_tatar_dune:0 "Tatar Dune"
+
+ ### Shu decisions ###
+ emx_shu_highland_looms_title:0 "The Highland Looms"
+ emx_shu_highland_looms_desc:0 "The plateau and the oases ship their wool west as raw fleece and buy it back as cloth. Set up fulling and weaving in our own highland towns instead, and the same flocks are worth several times as much.
+
+Converts every wool province we hold between Kham, Kashgaria and Bhutan to cloth. Costs 200 ducats, and can be taken again as we take more of them."

@@ -54,3 +54,28 @@ emx_chinese_player_trigger = {
 		emx_is_yue_trigger = yes
 	}
 }
+
+# Shu's weaving decision: is there anything left to convert? True while Shu
+# owns at least one of the seventeen highland wool provinces that still
+# produces wool. Keeps the decision visible until the last one is woven.
+emx_shu_has_wool_to_weave = {
+	OR = {
+		2133  = { owned_by = ROOT trade_goods = wool }	# Dege
+		705   = { owned_by = ROOT trade_goods = wool }	# Gyegu
+		4519  = { owned_by = ROOT trade_goods = wool }	# Damxung
+		4516  = { owned_by = ROOT trade_goods = wool }	# Purang
+		4520  = { owned_by = ROOT trade_goods = wool }	# Rutog
+		4693  = { owned_by = ROOT trade_goods = wool }	# Keriya
+		2124  = { owned_by = ROOT trade_goods = wool }	# Yarkand
+		4210  = { owned_by = ROOT trade_goods = wool }	# Yangi Hissar
+		4209  = { owned_by = ROOT trade_goods = wool }	# Maralbexi
+		739   = { owned_by = ROOT trade_goods = wool }	# Kashgar
+		719   = { owned_by = ROOT trade_goods = wool }	# Uliastai
+		2074  = { owned_by = ROOT trade_goods = wool }	# Ladakh
+		4521  = { owned_by = ROOT trade_goods = wool }	# Skardu
+		2073  = { owned_by = ROOT trade_goods = wool }	# Baltistan
+		4481  = { owned_by = ROOT trade_goods = wool }	# Punakah
+		565   = { owned_by = ROOT trade_goods = wool }	# Bhutan
+		4482  = { owned_by = ROOT trade_goods = wool }	# Sikkim
+	}
+}

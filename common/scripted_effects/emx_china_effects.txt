@@ -272,3 +272,31 @@ emx_yue_south_sea_effect = {
 		}
 	}
 }
+
+##################################################
+# Shu: the highland looms.
+# Every one of these seventeen provinces produces wool at game start. The
+# limit means only the ones Shu actually owns, and that have not been
+# converted already, change - so the decision can be taken again as Shu
+# expands west without re-converting anything.
+##################################################
+
+emx_shu_weave_wool_effect = {
+	2133  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Dege
+	705   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Gyegu
+	4519  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Damxung
+	4516  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Purang
+	4520  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Rutog
+	4693  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Keriya
+	2124  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Yarkand
+	4210  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Yangi Hissar
+	4209  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Maralbexi
+	739   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Kashgar
+	719   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Uliastai
+	2074  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Ladakh
+	4521  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Skardu
+	2073  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Baltistan
+	4481  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Punakah
+	565   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Bhutan
+	4482  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Sikkim
+}

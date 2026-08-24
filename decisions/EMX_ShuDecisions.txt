@@ -1,0 +1,58 @@
+# eu4-maxxing: Shu decisions.
+#
+# The Highland Looms turns raw wool into cloth across the Tibetan plateau,
+# the Tarim oases and the Himalayan foothills - the seventeen provinces that
+# ship wool at game start and that Shu's western mission branch reaches.
+#
+# Repeatable by design: the decision stays available while Shu still owns an
+# unconverted wool province from the list, so pushing further west and taking
+# it again converts only the newly acquired ones. Each pass costs 200 ducats.
+#
+# Province list and the conversion itself live in:
+#   common/scripted_triggers/emx_china_triggers.txt  (emx_shu_has_wool_to_weave)
+#   common/scripted_effects/emx_china_effects.txt    (emx_shu_weave_wool_effect)
+
+country_decisions = {
+
+	emx_shu_highland_looms = {
+		major = no
+		potential = {
+			tag = SHU
+			emx_shu_has_wool_to_weave = yes
+		}
+		provinces_to_highlight = {
+			trade_goods = wool
+			OR = {
+				province_id = 2133
+				province_id = 705
+				province_id = 4519
+				province_id = 4516
+				province_id = 4520
+				province_id = 4693
+				province_id = 2124
+				province_id = 4210
+				province_id = 4209
+				province_id = 739
+				province_id = 719
+				province_id = 2074
+				province_id = 4521
+				province_id = 2073
+				province_id = 4481
+				province_id = 565
+				province_id = 4482
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			treasury = 200
+			emx_shu_has_wool_to_weave = yes
+		}
+		effect = {
+			add_treasury = -200
+			emx_shu_weave_wool_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

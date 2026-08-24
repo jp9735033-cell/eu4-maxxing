@@ -16,9 +16,12 @@ country_decisions = {
 
 	emx_shu_highland_looms = {
 		major = no
+		# Visible to Shu from the first day. Shu owns none of the seventeen wool
+		# provinces at game start, so gating visibility on owning one would hide
+		# the decision until it had already conquered the plateau. The ownership
+		# check belongs in allow, where it greys the decision out instead.
 		potential = {
 			tag = SHU
-			emx_shu_has_wool_to_weave = yes
 		}
 		provinces_to_highlight = {
 			trade_goods = wool
@@ -44,8 +47,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			custom_trigger_tooltip = {
+				tooltip = emx_shu_has_wool_to_weave_tt
+				emx_shu_has_wool_to_weave = yes
+			}
 			treasury = 200
-			emx_shu_has_wool_to_weave = yes
 		}
 		effect = {
 			add_treasury = -200

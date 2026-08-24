@@ -18,7 +18,9 @@ country_decisions = {
 			NOT = { tag = QNG }
 			NOT = { tag = MNG }
 			NOT = { tag = MCH }
-			# eu4-maxxing: no culture or tag gate - see the allow block.
+			# eu4-maxxing: Shu is the only nation that may form Yuan, and the only
+			# one the decision is visible to. Yan, Wu and Yue form Qing instead.
+			tag = SHU
 			OR = {
 				ai = no
 				AND = {

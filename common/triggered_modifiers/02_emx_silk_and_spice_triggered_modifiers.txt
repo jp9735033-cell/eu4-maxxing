@@ -27,6 +27,7 @@ emx_silk_road_tier_1_gansu = {
 			}
 			owns_core_province = 708 # Lanzhou
 			owns_core_province = 707 # Dunhuang
+			708 = { is_in_capital_area = yes }
 			707 = { is_in_capital_area = yes }
 		}
 	}
@@ -60,6 +61,9 @@ emx_silk_road_tier_2_kashgar = {
 			owns_core_province = 707
 			owns_core_province = 710 # Hotan / Tarim Oasis
 			owns_core_province = 739 # Kashgar
+			708 = { is_in_capital_area = yes }
+			707 = { is_in_capital_area = yes }
+			710 = { is_in_capital_area = yes }
 			739 = { is_in_capital_area = yes }
 		}
 	}
@@ -95,7 +99,12 @@ emx_silk_road_tier_3_samarkand = {
 			owns_core_province = 739
 			owns_core_province = 454 # Samarkand
 			owns_core_province = 442 # Bukhara
+			708 = { is_in_capital_area = yes }
+			707 = { is_in_capital_area = yes }
+			710 = { is_in_capital_area = yes }
+			739 = { is_in_capital_area = yes }
 			454 = { is_in_capital_area = yes }
+			442 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -132,6 +141,13 @@ emx_silk_road_tier_4_persia = {
 			owns_core_province = 442
 			owns_core_province = 429 # Isfahan
 			owns_core_province = 416 # Tabriz
+			708 = { is_in_capital_area = yes }
+			707 = { is_in_capital_area = yes }
+			710 = { is_in_capital_area = yes }
+			739 = { is_in_capital_area = yes }
+			454 = { is_in_capital_area = yes }
+			442 = { is_in_capital_area = yes }
+			429 = { is_in_capital_area = yes }
 			416 = { is_in_capital_area = yes }
 		}
 	}
@@ -168,6 +184,12 @@ emx_silk_road_tier_5_crimea = {
 			owns_core_province = 454
 			owns_core_province = 442
 			owns_core_province = 285 # Kaffa / Crimea
+			708 = { is_in_capital_area = yes }
+			707 = { is_in_capital_area = yes }
+			710 = { is_in_capital_area = yes }
+			739 = { is_in_capital_area = yes }
+			454 = { is_in_capital_area = yes }
+			442 = { is_in_capital_area = yes }
 			285 = { is_in_capital_area = yes }
 		}
 	}
@@ -206,6 +228,14 @@ emx_silk_road_tier_5_trabzon = {
 			owns_core_province = 429
 			owns_core_province = 416
 			owns_core_province = 330 # Trabzon
+			708 = { is_in_capital_area = yes }
+			707 = { is_in_capital_area = yes }
+			710 = { is_in_capital_area = yes }
+			739 = { is_in_capital_area = yes }
+			454 = { is_in_capital_area = yes }
+			442 = { is_in_capital_area = yes }
+			429 = { is_in_capital_area = yes }
+			416 = { is_in_capital_area = yes }
 			330 = { is_in_capital_area = yes }
 		}
 	}
@@ -245,7 +275,16 @@ emx_silk_road_tier_5_halep_sham = {
 			owns_core_province = 416
 			owns_core_province = 379 # Aleppo
 			owns_core_province = 382 # Damascus
+			708 = { is_in_capital_area = yes }
+			707 = { is_in_capital_area = yes }
+			710 = { is_in_capital_area = yes }
+			739 = { is_in_capital_area = yes }
+			454 = { is_in_capital_area = yes }
+			442 = { is_in_capital_area = yes }
+			429 = { is_in_capital_area = yes }
+			416 = { is_in_capital_area = yes }
 			379 = { is_in_capital_area = yes }
+			382 = { is_in_capital_area = yes }
 		}
 	}
 

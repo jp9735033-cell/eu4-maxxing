@@ -26,13 +26,11 @@ emx_silk_road_s1 = {
 		trigger = {
 			west_gansu_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			gansu_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -46,25 +44,39 @@ emx_silk_road_s1 = {
 		position = 8
 		provinces_to_highlight = {
 			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
 				area = kashgaria_area
+				area = ferghana_area
 				area = transoxiana_area
-				province_id = 739
-				province_id = 454
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 739
-			owns_core_province = 454
+			west_gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			kashgaria_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ferghana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			transoxiana_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -78,23 +90,69 @@ emx_silk_road_s1 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				area = crimea_area
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = khiva_area
+				area = nogai_area
+				area = lower_yik_area
+				area = astrakhan_area
 				area = azov_area
-				province_id = 285
+				area = crimea_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 285
-			crimea_area = {
+			west_gansu_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ferghana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khiva_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nogai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_yik_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			astrakhan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			azov_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -122,25 +180,69 @@ emx_silk_road_s2 = {
 		position = 9
 		provinces_to_highlight = {
 			OR = {
-				area = isfahan_area
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
 				area = tabriz_area
-				province_id = 429
-				province_id = 416
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 429
-			owns_core_province = 416
-			isfahan_area = {
+			west_gansu_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ferghana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			merv_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			herat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mashhad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabarestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			tabriz_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -154,19 +256,79 @@ emx_silk_road_s2 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				area = armenia_area
 				area = erzurum_area
-				province_id = 330
-				province_id = 416
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 330
-			owns_core_province = 416
+			west_gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ferghana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			merv_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			herat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mashhad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabarestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabriz_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			armenia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			erzurum_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -180,26 +342,135 @@ emx_silk_road_s2 = {
 		position = 11
 		provinces_to_highlight = {
 			OR = {
-				province_id = 285
-				province_id = 330
-				province_id = 379
-				province_id = 382
-				province_id = 454
-				province_id = 739
-				province_id = 707
-				province_id = 1816
+				area = al_jazira_area
+				area = aleppo_area
+				area = armenia_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+				area = erzurum_area
+				area = ferghana_area
+				area = gansu_area
+				area = herat_area
+				area = iraq_arabi_area
+				area = kashgaria_area
+				area = khiva_area
+				area = lower_yik_area
+				area = mashhad_area
+				area = merv_area
+				area = nogai_area
+				area = shahrizor_area
+				area = shanshan_area
+				area = shirvan_area
+				area = syria_area
+				area = tabarestan_area
+				area = tabriz_area
+				area = transoxiana_area
+				area = west_gansu_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 285
-			owns_core_province = 330
-			owns_core_province = 379
-			owns_core_province = 382
-			owns_core_province = 454
-			owns_core_province = 739
-			owns_core_province = 707
-			owns_core_province = 1816
+			al_jazira_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aleppo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			armenia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			astrakhan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			azov_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			erzurum_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ferghana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			herat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khiva_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_yik_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mashhad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			merv_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nogai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shahrizor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			syria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabarestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabriz_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			emx_silk_road_capstone_effect = yes
@@ -226,25 +497,94 @@ emx_silk_road_s3 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				area = shahrizor_area
+				area = al_jazira_area
+				area = iraq_arabi_area
 				area = aleppo_area
 				area = syria_area
-				province_id = 379
-				province_id = 382
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 379
-			owns_core_province = 382
+			west_gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ferghana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			merv_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			herat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mashhad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabarestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabriz_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shahrizor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			al_jazira_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			aleppo_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			syria_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -270,11 +610,34 @@ emx_spice_route_s4 = {
 		required_missions = { emx_spice_route_coromandel }
 		position = 10
 		provinces_to_highlight = {
-			province_id = 517
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			517 = { # Surat / Gujarat Node
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1343 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1340 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			504 = {
 				trade_share = {
 					country = ROOT
 					share = 50
@@ -291,11 +654,41 @@ emx_spice_route_s4 = {
 		required_missions = { emx_spice_route_gujarat }
 		position = 11
 		provinces_to_highlight = {
-			province_id = 434
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+				province_id = 1334
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			434 = { # Hormuz Node
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1343 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1340 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			504 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1334 = {
 				trade_share = {
 					country = ROOT
 					share = 50
@@ -325,11 +718,11 @@ emx_spice_route_s5 = {
 		required_missions = { }
 		position = 7
 		provinces_to_highlight = {
-			province_id = 596
+			province_id = 1361
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			596 = { # Malacca Node
+			1361 = {
 				trade_share = {
 					country = ROOT
 					share = 50
@@ -346,11 +739,20 @@ emx_spice_route_s5 = {
 		required_missions = { emx_spice_route_malacca }
 		position = 8
 		provinces_to_highlight = {
-			province_id = 561
+			OR = {
+				province_id = 1361
+				province_id = 1343
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			561 = { # Bengal Node
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1343 = {
 				trade_share = {
 					country = ROOT
 					share = 50
@@ -367,11 +769,27 @@ emx_spice_route_s5 = {
 		required_missions = { emx_spice_route_bengal }
 		position = 9
 		provinces_to_highlight = {
-			province_id = 540
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			540 = { # Coromandel Node
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1343 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1340 = {
 				trade_share = {
 					country = ROOT
 					share = 50
@@ -388,11 +806,34 @@ emx_spice_route_s5 = {
 		required_missions = { emx_spice_route_coromandel }
 		position = 10
 		provinces_to_highlight = {
-			province_id = 388
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 4346
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			388 = { # Gulf of Aden Node
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1343 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1340 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			4346 = {
 				trade_share = {
 					country = ROOT
 					share = 50
@@ -409,11 +850,41 @@ emx_spice_route_s5 = {
 		required_missions = { emx_spice_route_aden }
 		position = 11
 		provinces_to_highlight = {
-			province_id = 358
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 4346
+				province_id = 358
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			358 = { # Alexandria Node
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1343 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1340 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			4346 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			358 = {
 				trade_share = {
 					country = ROOT
 					share = 50
@@ -431,24 +902,59 @@ emx_spice_route_s5 = {
 		position = 12
 		provinces_to_highlight = {
 			OR = {
-				province_id = 596
-				province_id = 561
-				province_id = 540
-				province_id = 517
-				province_id = 434
-				province_id = 388
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+				province_id = 1334
+				province_id = 4346
 				province_id = 358
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			596 = { trade_share = { country = ROOT share = 50 } }
-			561 = { trade_share = { country = ROOT share = 50 } }
-			540 = { trade_share = { country = ROOT share = 50 } }
-			517 = { trade_share = { country = ROOT share = 50 } }
-			434 = { trade_share = { country = ROOT share = 50 } }
-			388 = { trade_share = { country = ROOT share = 50 } }
-			358 = { trade_share = { country = ROOT share = 50 } }
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1343 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1340 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			504 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1334 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			4346 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			358 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
 		}
 		effect = {
 			emx_spice_route_capstone_effect = yes

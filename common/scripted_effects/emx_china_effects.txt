@@ -15,20 +15,24 @@ emx_unify_china_effect = {
 	}
 }
 
+# =============================================================================
+# Overland Silk Road Scripted Effects
+# =============================================================================
+
+# 1. Gansu Mission Effect
 emx_silk_road_gansu_effect = {
 	add_country_modifier = {
 		name = emx_silk_road_gansu_caravan
 		duration = -1
 	}
-	central_asia_region = {
+	every_province = {
 		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	khorasan_region = {
-		limit = {
+			OR = {
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+			}
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
 		}
@@ -36,6 +40,7 @@ emx_silk_road_gansu_effect = {
 	}
 }
 
+# 2. Samarkand Mission Effect
 emx_silk_road_samarkand_effect = {
 	if = {
 		limit = { has_country_modifier = emx_silk_road_gansu_caravan }
@@ -45,15 +50,24 @@ emx_silk_road_samarkand_effect = {
 		name = emx_silk_road_samarkand_caravan
 		duration = -1
 	}
-	crimea_region = {
+	every_province = {
 		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	persia_region = {
-		limit = {
+			OR = {
+				# Persia Route
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				# Crimea Steppe Route
+				area = khiva_area
+				area = nogai_area
+				area = lower_yik_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+			}
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
 		}
@@ -61,6 +75,7 @@ emx_silk_road_samarkand_effect = {
 	}
 }
 
+# 3. Persia Mission Effect
 emx_silk_road_persia_effect = {
 	if = {
 		limit = { has_country_modifier = emx_silk_road_samarkand_caravan }
@@ -74,36 +89,19 @@ emx_silk_road_persia_effect = {
 		name = emx_silk_road_persia_caravan
 		duration = -1
 	}
-	caucasia_region = {
+	every_province = {
 		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	anatolia_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	mashriq_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	arabia_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	egypt_region = {
-		limit = {
+			OR = {
+				# Trabzon Route
+				area = armenia_area
+				area = erzurum_area
+				# Levant Route
+				area = shahrizor_area
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = aleppo_area
+				area = syria_area
+			}
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
 		}
@@ -111,6 +109,7 @@ emx_silk_road_persia_effect = {
 	}
 }
 
+# 4. Crimea Terminus Effect
 emx_silk_road_crimea_effect = {
 	if = {
 		limit = { has_country_modifier = emx_silk_road_persia_caravan }
@@ -128,27 +127,6 @@ emx_silk_road_crimea_effect = {
 		name = emx_silk_road_crimea_caravan
 		duration = -1
 	}
-	crimea_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	ruthenia_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	russia_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
 	change_price = {
 		trade_goods = chinaware
 		key = EMX_CRIMEA_CHINAWARE_PRICE
@@ -163,6 +141,7 @@ emx_silk_road_crimea_effect = {
 	}
 }
 
+# 5. Trabzon Terminus Effect
 emx_silk_road_trabzon_effect = {
 	if = {
 		limit = { has_country_modifier = emx_silk_road_persia_caravan }
@@ -180,27 +159,6 @@ emx_silk_road_trabzon_effect = {
 		name = emx_silk_road_trabzon_caravan
 		duration = -1
 	}
-	anatolia_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	caucasia_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	balkan_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
 	change_price = {
 		trade_goods = chinaware
 		key = EMX_TRABZON_CHINAWARE_PRICE
@@ -215,6 +173,7 @@ emx_silk_road_trabzon_effect = {
 	}
 }
 
+# 6. Levant Terminus Effect
 emx_silk_road_levant_effect = {
 	if = {
 		limit = { has_country_modifier = emx_silk_road_persia_caravan }
@@ -232,20 +191,6 @@ emx_silk_road_levant_effect = {
 		name = emx_silk_road_levant_caravan
 		duration = -1
 	}
-	egypt_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	maghreb_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
 	change_price = {
 		trade_goods = chinaware
 		key = EMX_LEVANT_CHINAWARE_PRICE
@@ -260,6 +205,7 @@ emx_silk_road_levant_effect = {
 	}
 }
 
+# 7. Silk Road Capstone Effect
 emx_silk_road_capstone_effect = {
 	if = { limit = { has_country_modifier = emx_silk_road_crimea_caravan } remove_country_modifier = emx_silk_road_crimea_caravan }
 	if = { limit = { has_country_modifier = emx_silk_road_trabzon_caravan } remove_country_modifier = emx_silk_road_trabzon_caravan }
@@ -273,7 +219,9 @@ emx_silk_road_capstone_effect = {
 	}
 }
 
-# Spice Route Scripted Effects (Strictly 1 target node's coastal CoTs per mission)
+# =============================================================================
+# Maritime Spice Route Scripted Effects
+# =============================================================================
 
 # 1. Malacca Mission -> Claims on Bengal coastal CoTs/Estuaries
 emx_spice_route_malacca_effect = {
@@ -309,7 +257,7 @@ emx_spice_route_bengal_effect = {
 	}
 }
 
-# 3. Coromandel Mission -> Claims on Gujarat (West India) & Aden (Horn of Africa / Arabia) coastal CoTs/Estuaries
+# 3. Coromandel Mission -> Claims on Gujarat & Aden
 emx_spice_route_coromandel_effect = {
 	every_province = {
 		limit = {
@@ -330,7 +278,7 @@ emx_spice_route_coromandel_effect = {
 	}
 }
 
-# 4. Gujarat Mission -> Claims on Hormuz (Persia / Persian Gulf) coastal CoTs/Estuaries
+# 4. Gujarat Mission -> Claims on Hormuz
 emx_spice_route_gujarat_effect = {
 	every_province = {
 		limit = {
@@ -347,7 +295,7 @@ emx_spice_route_gujarat_effect = {
 	}
 }
 
-# 5. Hormuz Mission -> Persian Gulf Spice & Tea Price Rewards
+# 5. Hormuz Mission -> Price Rewards
 emx_spice_route_hormuz_effect = {
 	change_price = {
 		trade_goods = spices
@@ -363,7 +311,7 @@ emx_spice_route_hormuz_effect = {
 	}
 }
 
-# 6. Aden Mission -> Claims on Alexandria (Egypt) coastal CoTs/Estuaries
+# 6. Aden Mission -> Claims on Alexandria
 emx_spice_route_aden_effect = {
 	every_province = {
 		limit = {
@@ -380,7 +328,7 @@ emx_spice_route_aden_effect = {
 	}
 }
 
-# 7. Alexandria Mission -> Alexandria Spice & Tea Price Rewards
+# 7. Alexandria Mission -> Price Rewards
 emx_spice_route_alexandria_effect = {
 	change_price = {
 		trade_goods = spices

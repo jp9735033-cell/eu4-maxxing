@@ -2,9 +2,12 @@
 
 ###############################################################################
 # OVERLAND SILK ROAD TRIGGERED MODIFIERS (+5% flat per stage)
+# Activates for all Chinese nations when entire Silk Road Areas (Eyaletler)
+# are secured by countries with capital in China!
+# When lost, bonuses are automatically removed from all Chinese nations!
 ###############################################################################
 
-# Stage 1: Gansu Corridor
+# Stage 1: Gansu Corridor Areas
 emx_silk_road_tier_1_gansu = {
 	potential = {
 		capital_scope = {
@@ -17,18 +20,29 @@ emx_silk_road_tier_1_gansu = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		west_gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			owns_core_province = 708 # Lanzhou
-			owns_core_province = 707 # Dunhuang
-			708 = { is_in_capital_area = yes }
-			707 = { is_in_capital_area = yes }
+		}
+		gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -36,7 +50,7 @@ emx_silk_road_tier_1_gansu = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Stage 2: Tarim Basin & Kashgar
+# Stage 2: Tarim Basin & Kashgar Areas
 emx_silk_road_tier_2_kashgar = {
 	potential = {
 		capital_scope = {
@@ -49,22 +63,53 @@ emx_silk_road_tier_2_kashgar = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		west_gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			owns_core_province = 708
-			owns_core_province = 707
-			owns_core_province = 710 # Hotan / Tarim Oasis
-			owns_core_province = 739 # Kashgar
-			708 = { is_in_capital_area = yes }
-			707 = { is_in_capital_area = yes }
-			710 = { is_in_capital_area = yes }
-			739 = { is_in_capital_area = yes }
+		}
+		gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shanshan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		kashgaria_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -72,7 +117,7 @@ emx_silk_road_tier_2_kashgar = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Stage 3: Transoxiana & Samarkand
+# Stage 3: Transoxiana & Samarkand Areas
 emx_silk_road_tier_3_samarkand = {
 	potential = {
 		capital_scope = {
@@ -85,26 +130,77 @@ emx_silk_road_tier_3_samarkand = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		west_gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			owns_core_province = 708
-			owns_core_province = 707
-			owns_core_province = 710
-			owns_core_province = 739
-			owns_core_province = 454 # Samarkand
-			owns_core_province = 442 # Bukhara
-			708 = { is_in_capital_area = yes }
-			707 = { is_in_capital_area = yes }
-			710 = { is_in_capital_area = yes }
-			739 = { is_in_capital_area = yes }
-			454 = { is_in_capital_area = yes }
-			442 = { is_in_capital_area = yes }
+		}
+		gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shanshan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		kashgaria_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		ferghana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		transoxiana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -112,7 +208,7 @@ emx_silk_road_tier_3_samarkand = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Stage 4: Persia & Isfahan
+# Stage 4: Persia & Iranian Plateau Areas (Includes Merv, Herat, Mashhad, Tabarestan, Shirvan, Tabriz)
 emx_silk_road_tier_4_persia = {
 	potential = {
 		capital_scope = {
@@ -125,30 +221,149 @@ emx_silk_road_tier_4_persia = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		west_gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			owns_core_province = 708
-			owns_core_province = 707
-			owns_core_province = 710
-			owns_core_province = 739
-			owns_core_province = 454
-			owns_core_province = 442
-			owns_core_province = 429 # Isfahan
-			owns_core_province = 416 # Tabriz
-			708 = { is_in_capital_area = yes }
-			707 = { is_in_capital_area = yes }
-			710 = { is_in_capital_area = yes }
-			739 = { is_in_capital_area = yes }
-			454 = { is_in_capital_area = yes }
-			442 = { is_in_capital_area = yes }
-			429 = { is_in_capital_area = yes }
-			416 = { is_in_capital_area = yes }
+		}
+		gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shanshan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		kashgaria_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		ferghana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		transoxiana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		merv_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		herat_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		mashhad_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		tabarestan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shirvan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		tabriz_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -156,7 +371,7 @@ emx_silk_road_tier_4_persia = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Stage 5A: Silk Road End: Crimea
+# Stage 5A: Silk Road End: Crimea Areas (Includes Lower Yik)
 emx_silk_road_tier_5_crimea = {
 	potential = {
 		capital_scope = {
@@ -169,28 +384,149 @@ emx_silk_road_tier_5_crimea = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		west_gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			owns_core_province = 708
-			owns_core_province = 707
-			owns_core_province = 710
-			owns_core_province = 739
-			owns_core_province = 454
-			owns_core_province = 442
-			owns_core_province = 285 # Kaffa / Crimea
-			708 = { is_in_capital_area = yes }
-			707 = { is_in_capital_area = yes }
-			710 = { is_in_capital_area = yes }
-			739 = { is_in_capital_area = yes }
-			454 = { is_in_capital_area = yes }
-			442 = { is_in_capital_area = yes }
-			285 = { is_in_capital_area = yes }
+		}
+		gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shanshan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		kashgaria_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		ferghana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		transoxiana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		khiva_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		nogai_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		lower_yik_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		astrakhan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		azov_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		crimea_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -198,7 +534,7 @@ emx_silk_road_tier_5_crimea = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Stage 5B: Silk Road End: Trabzon
+# Stage 5B: Silk Road End: Trabzon Areas (Includes Merv, Armenia/Yerevan, Erzurum)
 emx_silk_road_tier_5_trabzon = {
 	potential = {
 		capital_scope = {
@@ -211,32 +547,173 @@ emx_silk_road_tier_5_trabzon = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		west_gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			owns_core_province = 708
-			owns_core_province = 707
-			owns_core_province = 710
-			owns_core_province = 739
-			owns_core_province = 454
-			owns_core_province = 442
-			owns_core_province = 429
-			owns_core_province = 416
-			owns_core_province = 330 # Trabzon
-			708 = { is_in_capital_area = yes }
-			707 = { is_in_capital_area = yes }
-			710 = { is_in_capital_area = yes }
-			739 = { is_in_capital_area = yes }
-			454 = { is_in_capital_area = yes }
-			442 = { is_in_capital_area = yes }
-			429 = { is_in_capital_area = yes }
-			416 = { is_in_capital_area = yes }
-			330 = { is_in_capital_area = yes }
+		}
+		gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shanshan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		kashgaria_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		ferghana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		transoxiana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		merv_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		herat_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		mashhad_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		tabarestan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shirvan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		tabriz_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		armenia_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		erzurum_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -244,7 +721,7 @@ emx_silk_road_tier_5_trabzon = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Stage 5C: Silk Road End: Aleppo & Damascus
+# Stage 5C: Silk Road End: Aleppo & Damascus Areas (Includes Merv, Shahrizor, Al Jazira)
 emx_silk_road_tier_5_halep_sham = {
 	potential = {
 		capital_scope = {
@@ -257,34 +734,209 @@ emx_silk_road_tier_5_halep_sham = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		west_gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			owns_core_province = 708
-			owns_core_province = 707
-			owns_core_province = 710
-			owns_core_province = 739
-			owns_core_province = 454
-			owns_core_province = 442
-			owns_core_province = 429
-			owns_core_province = 416
-			owns_core_province = 379 # Aleppo
-			owns_core_province = 382 # Damascus
-			708 = { is_in_capital_area = yes }
-			707 = { is_in_capital_area = yes }
-			710 = { is_in_capital_area = yes }
-			739 = { is_in_capital_area = yes }
-			454 = { is_in_capital_area = yes }
-			442 = { is_in_capital_area = yes }
-			429 = { is_in_capital_area = yes }
-			416 = { is_in_capital_area = yes }
-			379 = { is_in_capital_area = yes }
-			382 = { is_in_capital_area = yes }
+		}
+		gansu_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shanshan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		kashgaria_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		ferghana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		transoxiana_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		merv_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		herat_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		mashhad_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		tabarestan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shirvan_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		tabriz_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		shahrizor_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		al_jazira_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		iraq_arabi_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		aleppo_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		syria_area = {
+			type = all
+			owner = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -294,9 +946,11 @@ emx_silk_road_tier_5_halep_sham = {
 
 ###############################################################################
 # MARITIME SPICE ROUTE TRIGGERED MODIFIERS (+5% flat per stage)
+# Option 2: Activates when strongest trade power in the node is a Chinese realm!
+# When trade dominance is lost, bonuses are automatically removed!
 ###############################################################################
 
-# Stage 1: Malacca
+# Stage 1: Malacca (Node 1361)
 emx_spice_route_tier_1_malacca = {
 	potential = {
 		capital_scope = {
@@ -309,18 +963,14 @@ emx_spice_route_tier_1_malacca = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
-				}
-			}
-			596 = { # Malacca Node
-				trade_share = {
-					country = PREV
-					share = 50
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
 		}
@@ -330,7 +980,7 @@ emx_spice_route_tier_1_malacca = {
 	trade_efficiency = 0.05
 }
 
-# Stage 2: Bengal
+# Stage 2: Bengal (Node 1343)
 emx_spice_route_tier_2_bengal = {
 	potential = {
 		capital_scope = {
@@ -343,16 +993,27 @@ emx_spice_route_tier_2_bengal = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
+		}
+		1343 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -360,7 +1021,7 @@ emx_spice_route_tier_2_bengal = {
 	trade_efficiency = 0.05
 }
 
-# Stage 3: Coromandel
+# Stage 3: Coromandel (Node 1340)
 emx_spice_route_tier_3_coromandel = {
 	potential = {
 		capital_scope = {
@@ -373,17 +1034,38 @@ emx_spice_route_tier_3_coromandel = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { trade_share = { country = PREV share = 50 } }
+		}
+		1343 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1340 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -391,7 +1073,7 @@ emx_spice_route_tier_3_coromandel = {
 	trade_efficiency = 0.05
 }
 
-# Stage 4A: Gujarat
+# Stage 4A: Gujarat (Node 504)
 emx_spice_route_tier_4_gujarat = {
 	potential = {
 		capital_scope = {
@@ -404,18 +1086,49 @@ emx_spice_route_tier_4_gujarat = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { trade_share = { country = PREV share = 50 } }
-			517 = { trade_share = { country = PREV share = 50 } }
+		}
+		1343 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1340 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		504 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -423,7 +1136,7 @@ emx_spice_route_tier_4_gujarat = {
 	trade_efficiency = 0.05
 }
 
-# Stage 4B: Gulf of Aden (Does NOT require Gujarat or Hormuz)
+# Stage 4B: Gulf of Aden (Node 4346 - Does NOT require Gujarat or Hormuz)
 emx_spice_route_tier_4_aden = {
 	potential = {
 		capital_scope = {
@@ -436,18 +1149,49 @@ emx_spice_route_tier_4_aden = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { trade_share = { country = PREV share = 50 } }
-			388 = { trade_share = { country = PREV share = 50 } }
+		}
+		1343 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1340 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		4346 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -455,7 +1199,7 @@ emx_spice_route_tier_4_aden = {
 	trade_efficiency = 0.05
 }
 
-# Stage 5A: Spice Route End: Hormuz
+# Stage 5A: Spice Route End: Hormuz (Node 1334)
 emx_spice_route_tier_5_hormuz = {
 	potential = {
 		capital_scope = {
@@ -468,19 +1212,60 @@ emx_spice_route_tier_5_hormuz = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { trade_share = { country = PREV share = 50 } }
-			517 = { trade_share = { country = PREV share = 50 } }
-			434 = { trade_share = { country = PREV share = 50 } }
+		}
+		1343 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1340 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		504 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1334 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -488,7 +1273,7 @@ emx_spice_route_tier_5_hormuz = {
 	trade_efficiency = 0.05
 }
 
-# Stage 5B: Spice Route End: Alexandria (Does NOT require Gujarat or Hormuz)
+# Stage 5B: Spice Route End: Alexandria (Node 358 - Does NOT require Gujarat or Hormuz)
 emx_spice_route_tier_5_alexandria = {
 	potential = {
 		capital_scope = {
@@ -501,19 +1286,60 @@ emx_spice_route_tier_5_alexandria = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { trade_share = { country = PREV share = 50 } }
-			388 = { trade_share = { country = PREV share = 50 } }
-			358 = { trade_share = { country = PREV share = 50 } }
+		}
+		1343 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1340 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		4346 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		358 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 
@@ -534,21 +1360,82 @@ emx_spice_route_tier_6_master = {
 	}
 
 	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
+		1361 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
 				}
 			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { trade_share = { country = PREV share = 50 } }
-			517 = { trade_share = { country = PREV share = 50 } }
-			434 = { trade_share = { country = PREV share = 50 } }
-			388 = { trade_share = { country = PREV share = 50 } }
-			358 = { trade_share = { country = PREV share = 50 } }
+		}
+		1343 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1340 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		504 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		1334 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		4346 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+		}
+		358 = {
+			strongest_trade_power = {
+				capital_scope = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
 		}
 	}
 

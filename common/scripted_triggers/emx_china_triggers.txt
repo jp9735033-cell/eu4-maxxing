@@ -55,6 +55,24 @@ emx_chinese_player_trigger = {
 	}
 }
 
+emx_any_chinese_warlord_trigger = {
+	OR = {
+		emx_chinese_player_trigger = yes
+		has_reform = chinese_warlord
+		AND = {
+			culture_group = east_asian
+			capital_scope = {
+				OR = {
+					region = north_china_region
+					region = south_china_region
+					region = xinan_region
+				}
+			}
+		}
+	}
+}
+
+
 # Shu's weaving decision: is there anything left to convert? True while Shu
 # owns at least one of the seventeen highland wool provinces that still
 # produces wool. Keeps the decision visible until the last one is woven.

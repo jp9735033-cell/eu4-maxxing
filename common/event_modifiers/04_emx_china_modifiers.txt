@@ -435,3 +435,34 @@ emx_river_delta = {
 emx_tatar_dune = {
 	local_defensiveness = 0.25
 }
+
+
+emx_lord_of_the_silk_road = {
+	trade_steering = 0.25
+	trade_efficiency = 0.25
+	caravan_power = 2.0
+}
+
+emx_silk_road_gansu_caravan = {
+	caravan_power = 0.25
+}
+
+emx_silk_road_samarkand_caravan = {
+	caravan_power = 0.50
+}
+
+emx_silk_road_persia_caravan = {
+	caravan_power = 0.75
+}
+
+emx_silk_road_crimea_caravan = {
+	caravan_power = 1.00
+}
+
+emx_silk_road_trabzon_caravan = {
+	caravan_power = 1.00
+}
+
+emx_silk_road_levant_caravan = {
+	caravan_power = 1.00
+}

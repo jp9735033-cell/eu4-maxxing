@@ -97,7 +97,100 @@ emx_shu_s1 = {
 			}
 		}
 	}
+
+	emx_shu_silk_road_1 = {
+		icon = mission_asian_trader
+		required_missions = { }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			west_gansu_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			gansu_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			emx_silk_road_gansu_effect = yes
+		}
+	}
+
+	emx_shu_silk_road_2 = {
+		icon = mission_asian_trader
+		required_missions = { emx_shu_silk_road_1 }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = kashgaria_area
+				area = transoxiana_area
+				province_id = 739
+				province_id = 454
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 739
+			owns_core_province = 454
+			kashgaria_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			transoxiana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			emx_silk_road_samarkand_effect = yes
+		}
+	}
+
+	emx_shu_silk_road_crimea = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_shu_silk_road_2 }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = crimea_area
+				area = azov_area
+				province_id = 285
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 285
+			crimea_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			azov_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			emx_silk_road_crimea_effect = yes
+		}
+	}
+
 }
+
+
 
 emx_shu_s2 = {
 	slot = 2
@@ -175,6 +268,97 @@ emx_shu_s2 = {
 			}
 		}
 	}
+
+	emx_shu_silk_road_persia = {
+		icon = mission_into_persia_1
+		required_missions = { emx_shu_silk_road_2 }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = isfahan_area
+				area = tabriz_area
+				province_id = 429
+				province_id = 416
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 429
+			owns_core_province = 416
+			isfahan_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			tabriz_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			emx_silk_road_persia_effect = yes
+		}
+	}
+
+	emx_shu_silk_road_trabzon = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_shu_silk_road_persia }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = erzurum_area
+				province_id = 330
+				province_id = 416
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 330
+			owns_core_province = 416
+			erzurum_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			emx_silk_road_trabzon_effect = yes
+		}
+	}
+
+	emx_shu_silk_road_capstone = {
+		icon = mission_asian_trader
+		required_missions = { emx_shu_silk_road_crimea emx_shu_silk_road_trabzon emx_shu_silk_road_halep_sham }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				province_id = 285
+				province_id = 330
+				province_id = 379
+				province_id = 382
+				province_id = 454
+				province_id = 739
+				province_id = 707
+				province_id = 1816
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 285
+			owns_core_province = 330
+			owns_core_province = 379
+			owns_core_province = 382
+			owns_core_province = 454
+			owns_core_province = 739
+			owns_core_province = 707
+			owns_core_province = 1816
+		}
+		effect = {
+			emx_silk_road_capstone_effect = yes
+		}
+	}
+
 }
 
 emx_shu_s3 = {
@@ -247,7 +431,67 @@ emx_shu_s3 = {
 			}
 		}
 	}
+
+	emx_shu_unify_china = {
+		icon = mission_cornerstone_empire
+		required_missions = { }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 684
+				province_id = 679
+				province_id = 667
+				province_id = 726
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1816
+			owns_core_province = 684
+			owns_core_province = 679
+			owns_core_province = 667
+			owns_core_province = 726
+		}
+		effect = {
+			emx_unify_china_effect = yes
+		}
+	}
+
+	emx_shu_silk_road_halep_sham = {
+		icon = mission_egyptian_mamluk_soldier
+		required_missions = { emx_shu_silk_road_persia }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = syria_area
+				province_id = 379
+				province_id = 382
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 379
+			owns_core_province = 382
+			aleppo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			syria_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			emx_silk_road_levant_effect = yes
+		}
+	}
+
 }
+
 
 emx_shu_s4 = {
 	slot = 4
@@ -360,6 +604,49 @@ emx_shu_s4 = {
 			}
 		}
 	}
+
+	emx_shu_spice_route_gujarat = {
+		icon = mission_dominate_gujarati_trade
+		required_missions = { emx_shu_spice_route_coromandel }
+		position = 10
+		provinces_to_highlight = {
+			province_id = 517
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			517 = { # Surat / Gujarat Node
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			emx_spice_route_gujarat_effect = yes
+		}
+	}
+
+	emx_shu_spice_route_hormuz = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_shu_spice_route_gujarat }
+		position = 11
+		provinces_to_highlight = {
+			province_id = 434
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			434 = { # Hormuz Node
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			emx_spice_route_hormuz_effect = yes
+		}
+	}
+
 }
 
 emx_shu_s5 = {
@@ -488,4 +775,142 @@ emx_shu_s5 = {
 			}
 		}
 	}
+
+	emx_shu_spice_route_malacca = {
+		icon = mission_asian_trader
+		required_missions = { }
+		position = 7
+		provinces_to_highlight = {
+			province_id = 596
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			596 = { # Malacca Node
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			emx_spice_route_malacca_effect = yes
+		}
+	}
+
+	emx_shu_spice_route_bengal = {
+		icon = mission_coromandel_trade
+		required_missions = { emx_shu_spice_route_malacca }
+		position = 8
+		provinces_to_highlight = {
+			province_id = 561
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			561 = { # Bengal Node
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			emx_spice_route_bengal_effect = yes
+		}
+	}
+
+	emx_shu_spice_route_coromandel = {
+		icon = mission_coromandel_trade
+		required_missions = { emx_shu_spice_route_bengal }
+		position = 9
+		provinces_to_highlight = {
+			province_id = 540
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			540 = { # Coromandel Node
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			emx_spice_route_coromandel_effect = yes
+		}
+	}
+
+	emx_shu_spice_route_aden = {
+		icon = mission_galleys_in_port
+		required_missions = { emx_shu_spice_route_coromandel }
+		position = 10
+		provinces_to_highlight = {
+			province_id = 388
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			388 = { # Gulf of Aden Node
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			emx_spice_route_aden_effect = yes
+		}
+	}
+
+	emx_shu_spice_route_alexandria = {
+		icon = mission_restore_trade_superiority
+		required_missions = { emx_shu_spice_route_aden }
+		position = 11
+		provinces_to_highlight = {
+			province_id = 358
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			358 = { # Alexandria Node
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			emx_spice_route_alexandria_effect = yes
+		}
+	}
+
+	emx_shu_spice_route_capstone = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { emx_shu_spice_route_hormuz emx_shu_spice_route_alexandria }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 596
+				province_id = 561
+				province_id = 540
+				province_id = 517
+				province_id = 434
+				province_id = 388
+				province_id = 358
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			596 = { trade_share = { country = ROOT share = 50 } }
+			561 = { trade_share = { country = ROOT share = 50 } }
+			540 = { trade_share = { country = ROOT share = 50 } }
+			517 = { trade_share = { country = ROOT share = 50 } }
+			434 = { trade_share = { country = ROOT share = 50 } }
+			388 = { trade_share = { country = ROOT share = 50 } }
+			358 = { trade_share = { country = ROOT share = 50 } }
+		}
+		effect = {
+			emx_spice_route_capstone_effect = yes
+		}
+	}
+
 }
+
+

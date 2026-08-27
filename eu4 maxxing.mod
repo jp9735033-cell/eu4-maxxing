@@ -6,8 +6,7 @@ tags={
 	"Loading Screen"
 	"Converted From CKII"
 }
-name="eu4 maxxing"
+name="eu4 maxxing - Local"
 picture="thumbnail.png"
 supported_version="v1.37.5.0"
-path="C:/Users/ahmet/OneDrive/Belgeler/Paradox Interactive/Europa Universalis IV/mod/eu4 maxxing"
-remote_file_id="3749739423"
+path="C:/Users/user/Documents/antigravity/bold-borg"

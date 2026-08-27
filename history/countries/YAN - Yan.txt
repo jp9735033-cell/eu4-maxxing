@@ -19,3 +19,4 @@ capital = 1816	#Beijing
          dip = 4
          mil = 4
     }
+}

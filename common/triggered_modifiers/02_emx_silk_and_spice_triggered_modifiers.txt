@@ -1,9 +1,8 @@
-# eu4-maxxing: Tiered Triggered Modifiers for the Silk Road & Spice Route
-# Each active modifier grants +5% bonuses to all nations with their capital in China.
+# eu4-maxxing: Silk Road and Spice Route triggered modifiers
 
-##################################################
-# Silk Road Tiers (+5% Production Efficiency, +5% Goods Produced per active modifier)
-##################################################
+###############################################################################
+# OVERLAND SILK ROAD TRIGGERED MODIFIERS (+5% flat per stage)
+###############################################################################
 
 # Stage 1: Gansu Corridor
 emx_silk_road_tier_1_gansu = {
@@ -26,8 +25,9 @@ emx_silk_road_tier_1_gansu = {
 					region = xinan_region
 				}
 			}
-			owns_core_province = 708 # Gansu / Lanzhou
-			owns_core_province = 707 # Yumen / Dunhuang
+			owns_core_province = 708 # Lanzhou
+			owns_core_province = 707 # Dunhuang
+			707 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -58,8 +58,9 @@ emx_silk_road_tier_2_kashgar = {
 			}
 			owns_core_province = 708
 			owns_core_province = 707
-			owns_core_province = 1786 # Takla Makan
+			owns_core_province = 710 # Hotan / Tarim Oasis
 			owns_core_province = 739 # Kashgar
+			739 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -90,9 +91,11 @@ emx_silk_road_tier_3_samarkand = {
 			}
 			owns_core_province = 708
 			owns_core_province = 707
+			owns_core_province = 710
 			owns_core_province = 739
 			owns_core_province = 454 # Samarkand
 			owns_core_province = 442 # Bukhara
+			454 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -100,7 +103,7 @@ emx_silk_road_tier_3_samarkand = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Stage 4: Iranian Plateau & Persia (Does not require Hormuz)
+# Stage 4: Persia & Isfahan
 emx_silk_road_tier_4_persia = {
 	potential = {
 		capital_scope = {
@@ -123,10 +126,13 @@ emx_silk_road_tier_4_persia = {
 			}
 			owns_core_province = 708
 			owns_core_province = 707
+			owns_core_province = 710
 			owns_core_province = 739
 			owns_core_province = 454
+			owns_core_province = 442
 			owns_core_province = 429 # Isfahan
 			owns_core_province = 416 # Tabriz
+			416 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -134,7 +140,7 @@ emx_silk_road_tier_4_persia = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Silk Road End: Northern Terminus: Crimea (Independent End)
+# Stage 5A: Silk Road End: Crimea
 emx_silk_road_tier_5_crimea = {
 	potential = {
 		capital_scope = {
@@ -157,9 +163,12 @@ emx_silk_road_tier_5_crimea = {
 			}
 			owns_core_province = 708
 			owns_core_province = 707
+			owns_core_province = 710
 			owns_core_province = 739
 			owns_core_province = 454
+			owns_core_province = 442
 			owns_core_province = 285 # Kaffa / Crimea
+			285 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -167,7 +176,7 @@ emx_silk_road_tier_5_crimea = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Silk Road End: Pontic Terminus: Trabzon (Independent End)
+# Stage 5B: Silk Road End: Trabzon
 emx_silk_road_tier_5_trabzon = {
 	potential = {
 		capital_scope = {
@@ -190,11 +199,14 @@ emx_silk_road_tier_5_trabzon = {
 			}
 			owns_core_province = 708
 			owns_core_province = 707
+			owns_core_province = 710
 			owns_core_province = 739
 			owns_core_province = 454
+			owns_core_province = 442
 			owns_core_province = 429
 			owns_core_province = 416
 			owns_core_province = 330 # Trabzon
+			330 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -202,8 +214,8 @@ emx_silk_road_tier_5_trabzon = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-# Silk Road End: Levantine Terminus: Aleppo & Damascus (Independent End)
-emx_silk_road_tier_5_aleppo = {
+# Stage 5C: Silk Road End: Aleppo & Damascus
+emx_silk_road_tier_5_halep_sham = {
 	potential = {
 		capital_scope = {
 			OR = {
@@ -225,14 +237,15 @@ emx_silk_road_tier_5_aleppo = {
 			}
 			owns_core_province = 708
 			owns_core_province = 707
+			owns_core_province = 710
 			owns_core_province = 739
 			owns_core_province = 454
+			owns_core_province = 442
 			owns_core_province = 429
 			owns_core_province = 416
-			OR = {
-				owns_core_province = 379 # Aleppo
-				owns_core_province = 382 # Damascus
-			}
+			owns_core_province = 379 # Aleppo
+			owns_core_province = 382 # Damascus
+			379 = { is_in_capital_area = yes }
 		}
 	}
 
@@ -240,11 +253,11 @@ emx_silk_road_tier_5_aleppo = {
 	global_trade_goods_size_modifier = 0.05
 }
 
-##################################################
-# Spice Route Tiers (+5% Goods Produced, +5% Trade Efficiency per active modifier)
-##################################################
+###############################################################################
+# MARITIME SPICE ROUTE TRIGGERED MODIFIERS (+5% flat per stage)
+###############################################################################
 
-# Stage 1: Strait of Malacca
+# Stage 1: Malacca
 emx_spice_route_tier_1_malacca = {
 	potential = {
 		capital_scope = {
@@ -278,7 +291,7 @@ emx_spice_route_tier_1_malacca = {
 	trade_efficiency = 0.05
 }
 
-# Stage 2: Bay of Bengal
+# Stage 2: Bengal
 emx_spice_route_tier_2_bengal = {
 	potential = {
 		capital_scope = {
@@ -300,9 +313,7 @@ emx_spice_route_tier_2_bengal = {
 				}
 			}
 			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { # Bengal Node
-				trade_share = { country = PREV share = 50 }
-			}
+			561 = { trade_share = { country = PREV share = 50 } }
 		}
 	}
 
@@ -310,7 +321,7 @@ emx_spice_route_tier_2_bengal = {
 	trade_efficiency = 0.05
 }
 
-# Stage 3: Coromandel Coast (Trunk before branch)
+# Stage 3: Coromandel
 emx_spice_route_tier_3_coromandel = {
 	potential = {
 		capital_scope = {
@@ -333,9 +344,7 @@ emx_spice_route_tier_3_coromandel = {
 			}
 			596 = { trade_share = { country = PREV share = 50 } }
 			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { # Coromandel Node
-				trade_share = { country = PREV share = 50 }
-			}
+			540 = { trade_share = { country = PREV share = 50 } }
 		}
 	}
 
@@ -343,7 +352,7 @@ emx_spice_route_tier_3_coromandel = {
 	trade_efficiency = 0.05
 }
 
-# Branch A - Stage 4: Gujarat (Does NOT require Aden or Alexandria)
+# Stage 4A: Gujarat
 emx_spice_route_tier_4_gujarat = {
 	potential = {
 		capital_scope = {
@@ -367,9 +376,7 @@ emx_spice_route_tier_4_gujarat = {
 			596 = { trade_share = { country = PREV share = 50 } }
 			561 = { trade_share = { country = PREV share = 50 } }
 			540 = { trade_share = { country = PREV share = 50 } }
-			517 = { # Surat / Gujarat Node
-				trade_share = { country = PREV share = 50 }
-			}
+			517 = { trade_share = { country = PREV share = 50 } }
 		}
 	}
 
@@ -377,7 +384,39 @@ emx_spice_route_tier_4_gujarat = {
 	trade_efficiency = 0.05
 }
 
-# Branch A - Stage 5: Spice Route End: Hormuz (Does NOT require Aden or Alexandria)
+# Stage 4B: Gulf of Aden (Does NOT require Gujarat or Hormuz)
+emx_spice_route_tier_4_aden = {
+	potential = {
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = south_china_region
+				region = xinan_region
+			}
+		}
+	}
+
+	trigger = {
+		any_country = {
+			capital_scope = {
+				OR = {
+					region = north_china_region
+					region = south_china_region
+					region = xinan_region
+				}
+			}
+			596 = { trade_share = { country = PREV share = 50 } }
+			561 = { trade_share = { country = PREV share = 50 } }
+			540 = { trade_share = { country = PREV share = 50 } }
+			388 = { trade_share = { country = PREV share = 50 } }
+		}
+	}
+
+	global_trade_goods_size_modifier = 0.05
+	trade_efficiency = 0.05
+}
+
+# Stage 5A: Spice Route End: Hormuz
 emx_spice_route_tier_5_hormuz = {
 	potential = {
 		capital_scope = {
@@ -402,9 +441,7 @@ emx_spice_route_tier_5_hormuz = {
 			561 = { trade_share = { country = PREV share = 50 } }
 			540 = { trade_share = { country = PREV share = 50 } }
 			517 = { trade_share = { country = PREV share = 50 } }
-			434 = { # Hormuz Node
-				trade_share = { country = PREV share = 50 }
-			}
+			434 = { trade_share = { country = PREV share = 50 } }
 		}
 	}
 
@@ -412,42 +449,8 @@ emx_spice_route_tier_5_hormuz = {
 	trade_efficiency = 0.05
 }
 
-# Branch B - Stage 6: Gulf of Aden (Does NOT require Gujarat or Hormuz)
-emx_spice_route_tier_6_aden = {
-	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
-	}
-
-	trigger = {
-		any_country = {
-			capital_scope = {
-				OR = {
-					region = north_china_region
-					region = south_china_region
-					region = xinan_region
-				}
-			}
-			596 = { trade_share = { country = PREV share = 50 } }
-			561 = { trade_share = { country = PREV share = 50 } }
-			540 = { trade_share = { country = PREV share = 50 } }
-			388 = { # Gulf of Aden Node
-				trade_share = { country = PREV share = 50 }
-			}
-		}
-	}
-
-	global_trade_goods_size_modifier = 0.05
-	trade_efficiency = 0.05
-}
-
-# Branch B - Stage 7: Spice Route End: Alexandria (Does NOT require Gujarat or Hormuz)
-emx_spice_route_tier_7_alexandria = {
+# Stage 5B: Spice Route End: Alexandria (Does NOT require Gujarat or Hormuz)
+emx_spice_route_tier_5_alexandria = {
 	potential = {
 		capital_scope = {
 			OR = {
@@ -471,9 +474,7 @@ emx_spice_route_tier_7_alexandria = {
 			561 = { trade_share = { country = PREV share = 50 } }
 			540 = { trade_share = { country = PREV share = 50 } }
 			388 = { trade_share = { country = PREV share = 50 } }
-			358 = { # Alexandria Node
-				trade_share = { country = PREV share = 50 }
-			}
+			358 = { trade_share = { country = PREV share = 50 } }
 		}
 	}
 
@@ -481,8 +482,8 @@ emx_spice_route_tier_7_alexandria = {
 	trade_efficiency = 0.05
 }
 
-# Master Capstone: Spice Route Master: All 7 Sea Lanes Controlled
-emx_spice_route_tier_8_master = {
+# Final Capstone: Master of the Spice Routes (Requires both Hormuz and Alexandria)
+emx_spice_route_tier_6_master = {
 	potential = {
 		capital_scope = {
 			OR = {

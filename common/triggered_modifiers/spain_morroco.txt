@@ -6,8 +6,8 @@ spa_two_front_war_buff = {
     }
 
     trigger = {
-        has_war_with = FRA
-        has_war_with = FEZ
+        war_with = FRA
+        war_with = MOR
     }
 
     

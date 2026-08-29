@@ -2,7 +2,7 @@ spa_two_front_war_buff = {
     icon = being_in_debt
 
     potential = {
-        tag = SPA
+        tag = CAS
     }
 
     trigger = {

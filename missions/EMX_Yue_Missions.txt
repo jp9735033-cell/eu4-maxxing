@@ -262,12 +262,19 @@ emx_yue_s2 = {
 		icon = mission_rice_field
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = { province_id = 667 }
 		trigger = {
-			667 = { development = 30 }
+			army_size_percentage = 1
 		}
 		effect = {
-			667 = { add_permanent_province_modifier = { name = emx_yue_capital_works duration = -1 } }
+			guangxi_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -275,21 +282,75 @@ emx_yue_s2 = {
 		icon = mission_asian_trader
 		required_missions = { emx_yue_home_1 }
 		position = 2
-		provinces_to_highlight = { province_id = 668 }
-		trigger = { 668 = { development = 30 } }
+		trigger = { guangxi_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			} }
 		effect = {
-			668 = { add_permanent_province_modifier = { name = emx_home_market_town duration = -1 } }
-		}
+			red_river_delta_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		yun_gui_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+guangdong_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}						
+			}
 	}
+		
 
 	emx_yue_home_3 = {
 		icon = mng_form_depots
 		required_missions = { emx_yue_home_2 }
 		position = 3
-		provinces_to_highlight = { province_id = 665 }
-		trigger = { 665 = { development = 30 } }
+		trigger = { red_river_delta_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			}
+		yun_gui_area  = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
 		effect = {
-			665 = { add_permanent_province_modifier = { name = emx_home_river_port duration = -1 } }
+			vietnam_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}						
+yun_gui_borderland_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}						
 		}
 	}
 
@@ -297,10 +358,19 @@ emx_yue_s2 = {
 		icon = mission_rice_field
 		required_missions = { emx_yue_home_3 }
 		position = 4
-		provinces_to_highlight = { province_id = 2159 }
-		trigger = { 2159 = { development = 30 } }
+		provinces_to_highlight = { province_id = 610
+province_id = 2165
+province_id = 661		}
+		trigger = { owns_core_province = 610
+ owns_core_province = 2165
+  owns_core_province = 661
+		}
 		effect = {
-			2159 = { add_permanent_province_modifier = { name = emx_home_farmlands duration = -1 } }
+			2165 = { add_permanent_province_modifier = { name = chinese_border = -1 } }
+			661 = { add_permanent_province_modifier = { name = chinese_border = -1 } }
+			610 = { add_permanent_province_modifier = { name = chinese_border = -1 } }
+			4820 = { add_permanent_province_modifier = { name = chinese_border = -1 } }
+			663 = { add_permanent_province_modifier = { name = chinese_border = -1 } }
 		}
 	}
 
@@ -310,25 +380,25 @@ emx_yue_s2 = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1840
-				province_id = 2163
-				province_id = 2164
-				province_id = 664
-				province_id = 2162
+				province_id = 610
+				province_id = 2165
+				province_id = 661
+				province_id = 4820
+				province_id = 663
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 1840
-			owns_core_province = 2163
-			owns_core_province = 2164
-			owns_core_province = 664
-			owns_core_province = 2162
+			owns_core_province = 610
+			owns_core_province = 2165
+			owns_core_province = 661
+			owns_core_province = 663
+			owns_core_province = 4820
 		}
 		effect = {
 			add_country_modifier = {
-				name = emx_yue_two_guangs
-				duration = -1
+				name = siam_defend_yue
+				duration = 3650
 			}
 		}
 	}
@@ -635,7 +705,6 @@ emx_yue_s2 = {
 			emx_silk_road_capstone_effect = yes
 		}
 	}
-
 }
 
 emx_yue_s3 = {
@@ -652,10 +721,42 @@ emx_yue_s3 = {
 		icon = mission_rice_field
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = { province_id = 2161 }
-		trigger = { 2161 = { development = 30 } }
+		provinces_to_highlight = {
+		province_id = 2156
+		province_id = 2157
+		province_id = 2158 
+}
+		trigger = { owns_core_province = 2156
+owns_core_province = 2157
+owns_core_province = 2158 }
 		effect = {
-			2161 = { add_permanent_province_modifier = { name = emx_home_farmlands duration = -1 } }
+			fujian_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			jiangxi_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			hunan_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -663,10 +764,28 @@ emx_yue_s3 = {
 		icon = mission_invade_island
 		required_missions = { emx_yue_home_5 }
 		position = 2
-		provinces_to_highlight = { province_id = 666 }
-		trigger = { 666 = { development = 30 } }
+		trigger = { fujian_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+jiangxi_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			} 
+hunan_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			} 			}
 		effect = {
-			666 = { add_permanent_province_modifier = { name = emx_home_market_town duration = -1 } }
+			south_china_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -675,10 +794,24 @@ emx_yue_s3 = {
 		required_missions = { emx_yue_home_6 }
 		position = 3
 		provinces_to_highlight = { province_id = 2160 }
-		trigger = { 2160 = { development = 30 } }
+		trigger = { south_china_region = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}  }
 		effect = {
-			2160 = { add_permanent_province_modifier = { name = emx_home_garrison_town duration = -1 } }
-			add_adm_power = 100
+			north_china_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = conquest_north_yue
+				duration = 7300
+			}
 		}
 	}
 
@@ -688,19 +821,19 @@ emx_yue_s3 = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-				province_id = 667
-				province_id = 668
+				province_id = 600
+				province_id = 2380
 			}
 		}
 		trigger = {
-			667 = { has_building = fort_15th }
-			668 = { has_building = shipyard }
-			navy_size = 30
+			indo_china_region = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
 		}
 		effect = {
-			add_navy_tradition = 10
 			add_country_modifier = {
-				name = emx_yue_pearl_estuary
+				name = conquest_of_siam
 				duration = -1
 			}
 		}
@@ -861,13 +994,12 @@ emx_yue_s4 = {
 			owns = 667
 			owns = 668
 			owns = 665
-			navy_size = 15
+			navy_size = 20
 		}
 		effect = {
-			emx_yue_pearl_ports_effect = yes
 			add_country_modifier = {
-				name = emx_yue_pearl_fleet
-				duration = -1
+				name = settle_islands
+				duration = 3650
 			}
 		}
 	}
@@ -878,22 +1010,20 @@ emx_yue_s4 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				province_id = 666
-				province_id = 2159
-				province_id = 2161
+				province_id = 738
+				province_id = 2155
+				province_id = 2154
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns = 666
-			owns = 2159
-			owns = 2161
-			navy_size = 25
+			owns = 2154
+			owns = 2155
+			owns = 738
 		}
 		effect = {
-			emx_yue_hainan_effect = yes
 			add_country_modifier = {
-				name = emx_yue_hainan_fleet
+				name = control_islands
 				duration = -1
 			}
 		}
@@ -905,24 +1035,47 @@ emx_yue_s4 = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2160
-				province_id = 2162
-				province_id = 2157
-				province_id = 2158
+				province_id = 2155
+				province_id = 2154
+				province_id = 2161
+				province_id = 666
+				province_id = 738
+				
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns = 2160
-			owns = 2162
-			owns = 2157
-			owns = 2158
+			2155 = { development = 15 }
+			2154 = { development = 15 }
+			2161 = { development = 15 }
+			666 = { development = 15 }
+			738 = { development = 15 }
 		}
 		effect = {
-			emx_yue_western_coast_effect = yes
-			add_country_modifier = {
-				name = emx_yue_western_fleet
-				duration = -1
+			2155 = { add_province_modifier = { 
+    name = island_prosper
+    duration = -1  
+}
+			}
+			2154 = { add_province_modifier = { 
+    name = island_prosper
+    duration = -1  
+}
+			}
+			2161 = { add_province_modifier = { 
+    name = island_prosper
+    duration = -1  
+}
+			}
+			2166 = { add_province_modifier = { 
+    name = island_prosper
+    duration = -1  
+}
+			}
+			738 = { add_province_modifier = { 
+    name = island_prosper
+    duration = -1  
+}
 			}
 		}
 	}
@@ -931,20 +1084,23 @@ emx_yue_s4 = {
 		icon = mission_invade_island
 		required_missions = { emx_yue_home_4 }
 		position = 5
-		provinces_to_highlight = {
-			OR = {
-				province_id = 613
-				province_id = 616
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
 		trigger = {
-			owns_core_province = 613
-			owns_core_province = 616
+		xinan_region = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			south_china_region = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			north_china_region = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = emx_yue_jiaozhi
+				name = conquest_of_china
 				duration = -1
 			}
 		}
@@ -1063,23 +1219,27 @@ emx_yue_s5 = {
 		position = 1
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2156
-				province_id = 1829
-				province_id = 669
+				province_id = 657
+				province_id = 438
+				province_id = 658
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 2156
-			owns_core_province = 1829
-			owns_core_province = 669
+			owns_core_province = 657
+			owns_core_province = 438
+			owns_core_province = 658
 		}
 		effect = {
-			emx_yue_chaozhou_effect = yes
-			add_country_modifier = {
-				name = emx_yue_chaozhou_fleet
-				duration = -1
-			}
+			moluccas_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			} 
 		}
 	}
 
@@ -1088,12 +1248,15 @@ emx_yue_s5 = {
 		required_missions = { emx_yue_sea_4 }
 		position = 2
 		trigger = {
-			navy_size = 60
+			 moluccas_region= { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
 		}
 		effect = {
 			emx_yue_south_sea_effect = yes
 			add_country_modifier = {
-				name = emx_yue_treasure_fleet
+				name = moluccas_trade
 				duration = -1
 			}
 		}
@@ -1116,7 +1279,7 @@ emx_yue_s5 = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = emx_yue_nanyang_trade
+				name = nanyang_trade_yue
 				duration = -1
 			}
 		}

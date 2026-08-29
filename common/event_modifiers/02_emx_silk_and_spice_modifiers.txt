@@ -1,0 +1,86 @@
+# eu4-maxxing: Silk Road and Spice Route Event Modifiers
+
+# =============================================================================
+# Overland Silk Road Stage Modifiers (Caravan Power)
+# =============================================================================
+
+# Tier 1: Gansu Corridor
+emx_silk_road_gansu_caravan = {
+	caravan_power = 0.25
+}
+
+# Tier 2: Samarkand & Central Asia
+emx_silk_road_samarkand_caravan = {
+	caravan_power = 0.50
+}
+
+# Tier 3: Persia / Tabriz Branch
+emx_silk_road_persia_caravan = {
+	caravan_power = 0.75
+}
+
+# Tier 3: Crimea & Pontic Steppe Branch
+emx_silk_road_crimea_caravan = {
+	caravan_power = 0.75
+}
+
+# Tier 4: Trabzon & Anatolian Gateway
+emx_silk_road_trabzon_caravan = {
+	caravan_power = 1.00
+}
+
+# Tier 4: Aleppo / Damascus & Levant Terminal
+emx_silk_road_levant_caravan = {
+	caravan_power = 1.00
+}
+
+# Capstone: Lord of the Silk Road
+emx_lord_of_the_silk_road = {
+	caravan_power = 1.00
+	trade_efficiency = 0.25
+}
+
+# =============================================================================
+# Maritime Spice Route Stage Modifiers (Trade Steering)
+# =============================================================================
+
+# Tier 1: Malacca Strait
+emx_spice_route_malacca_steering = {
+	trade_steering = 0.25
+}
+
+# Tier 2: Bay of Bengal
+emx_spice_route_bengal_steering = {
+	trade_steering = 0.50
+}
+
+# Tier 3: Coromandel Coast
+emx_spice_route_coromandel_steering = {
+	trade_steering = 0.75
+}
+
+# Tier 4: Gujarat / Arabian Sea
+emx_spice_route_gujarat_steering = {
+	trade_steering = 0.75
+}
+
+# Tier 5: Hormuz / Persian Gulf Terminal
+emx_spice_route_hormuz_steering = {
+	trade_steering = 1.00
+}
+
+# Tier 4: Gulf of Aden
+emx_spice_route_aden_steering = {
+	trade_steering = 0.75
+}
+
+# Tier 5: Alexandria / Mediterranean Terminal
+emx_spice_route_alexandria_steering = {
+	trade_steering = 1.00
+}
+
+# Capstone: Master of the Spice Route
+emx_master_of_the_spice_route = {
+	trade_steering = 1.00
+	trade_efficiency = 0.25
+}

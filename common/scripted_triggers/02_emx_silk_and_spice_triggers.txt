@@ -1,0 +1,228 @@
+# eu4-maxxing: Centralized Scripted Triggers for Silk Road and Spice Route Missions
+
+# =============================================================================
+# Overland Silk Road Triggers
+# =============================================================================
+
+# 1. Gansu Trigger
+emx_silk_road_1_trigger = {
+	west_gansu_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	gansu_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# 2. Samarkand Trigger
+emx_silk_road_2_trigger = {
+	emx_silk_road_1_trigger = yes
+	shanshan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	kashgaria_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ferghana_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	transoxiana_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# 3. Crimea Branch Trigger
+emx_silk_road_crimea_trigger = {
+	emx_silk_road_2_trigger = yes
+	khiva_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	nogai_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	lower_yik_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	astrakhan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	azov_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	crimea_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# 4. Persia Branch Trigger
+emx_silk_road_persia_trigger = {
+	emx_silk_road_2_trigger = yes
+	merv_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	herat_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	mashhad_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	tabarestan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	shirvan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	tabriz_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# 5. Trabzon Branch Trigger
+emx_silk_road_trabzon_trigger = {
+	emx_silk_road_persia_trigger = yes
+	armenia_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	erzurum_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# 6. Aleppo / Levant Branch Trigger
+emx_silk_road_halep_sham_trigger = {
+	emx_silk_road_persia_trigger = yes
+	shahrizor_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	al_jazira_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	iraq_arabi_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	aleppo_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	syria_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# 7. Silk Road Capstone Trigger
+emx_silk_road_capstone_trigger = {
+	emx_silk_road_crimea_trigger = yes
+	emx_silk_road_trabzon_trigger = yes
+	emx_silk_road_halep_sham_trigger = yes
+}
+
+
+# =============================================================================
+# Maritime Spice Route Triggers
+# =============================================================================
+
+# 1. Malacca Trigger
+emx_spice_route_malacca_trigger = {
+	1361 = {
+		trade_share = {
+			country = ROOT
+			share = 50
+		}
+	}
+}
+
+# 2. Bengal Trigger
+emx_spice_route_bengal_trigger = {
+	emx_spice_route_malacca_trigger = yes
+	1343 = {
+		trade_share = {
+			country = ROOT
+			share = 50
+		}
+	}
+}
+
+# 3. Coromandel Trigger
+emx_spice_route_coromandel_trigger = {
+	emx_spice_route_bengal_trigger = yes
+	1340 = {
+		trade_share = {
+			country = ROOT
+			share = 50
+		}
+	}
+}
+
+# 4. Gujarat Trigger
+emx_spice_route_gujarat_trigger = {
+	emx_spice_route_coromandel_trigger = yes
+	504 = {
+		trade_share = {
+			country = ROOT
+			share = 50
+		}
+	}
+}
+
+# 5. Hormuz Trigger
+emx_spice_route_hormuz_trigger = {
+	emx_spice_route_gujarat_trigger = yes
+	1334 = {
+		trade_share = {
+			country = ROOT
+			share = 50
+		}
+	}
+}
+
+# 6. Aden Trigger
+emx_spice_route_aden_trigger = {
+	emx_spice_route_coromandel_trigger = yes
+	4346 = {
+		trade_share = {
+			country = ROOT
+			share = 50
+		}
+	}
+}
+
+# 7. Alexandria / Suez Trigger
+emx_spice_route_alexandria_trigger = {
+	emx_spice_route_aden_trigger = yes
+	358 = {
+		trade_share = {
+			country = ROOT
+			share = 50
+		}
+	}
+}
+
+# 8. Spice Route Capstone Trigger
+emx_spice_route_capstone_trigger = {
+	emx_spice_route_hormuz_trigger = yes
+	emx_spice_route_alexandria_trigger = yes
+}

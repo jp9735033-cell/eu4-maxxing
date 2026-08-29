@@ -1,13 +1,11 @@
-# eu4-maxxing: Shared Silk Road and Spice Route Missions for other Chinese Warlords
+# eu4-maxxing: Qing Silk Road and Spice Route Missions
 
 emx_silk_road_s1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	potential = {
-		emx_any_chinese_warlord_trigger = yes
-		NOT = { emx_chinese_player_trigger = yes }
-		NOT = { tag = QNG }
+		tag = QNG
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -15,7 +13,7 @@ emx_silk_road_s1 = {
 	emx_silk_road_1 = {
 		icon = mission_asian_trader
 		required_missions = { }
-		position = 7
+		position = 16
 		provinces_to_highlight = {
 			OR = {
 				area = west_gansu_area
@@ -34,7 +32,7 @@ emx_silk_road_s1 = {
 	emx_silk_road_2 = {
 		icon = mission_asian_trader
 		required_missions = { emx_silk_road_1 }
-		position = 8
+		position = 17
 		provinces_to_highlight = {
 			OR = {
 				area = west_gansu_area
@@ -57,7 +55,7 @@ emx_silk_road_s1 = {
 	emx_silk_road_crimea = {
 		icon = mission_dominate_persian_gulf
 		required_missions = { emx_silk_road_2 }
-		position = 10
+		position = 19
 		provinces_to_highlight = {
 			OR = {
 				area = west_gansu_area
@@ -90,9 +88,7 @@ emx_silk_road_s2 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_any_chinese_warlord_trigger = yes
-		NOT = { emx_chinese_player_trigger = yes }
-		NOT = { tag = QNG }
+		tag = QNG
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -100,7 +96,7 @@ emx_silk_road_s2 = {
 	emx_silk_road_persia = {
 		icon = mission_into_persia_1
 		required_missions = { emx_silk_road_2 }
-		position = 9
+		position = 18
 		provinces_to_highlight = {
 			OR = {
 				area = west_gansu_area
@@ -129,7 +125,7 @@ emx_silk_road_s2 = {
 	emx_silk_road_trabzon = {
 		icon = mission_dominate_persian_gulf
 		required_missions = { emx_silk_road_persia }
-		position = 10
+		position = 19
 		provinces_to_highlight = {
 			OR = {
 				area = west_gansu_area
@@ -160,7 +156,7 @@ emx_silk_road_s2 = {
 	emx_silk_road_capstone = {
 		icon = mission_asian_trader
 		required_missions = { emx_silk_road_crimea emx_silk_road_trabzon emx_silk_road_halep_sham }
-		position = 11
+		position = 20
 		provinces_to_highlight = {
 			OR = {
 				area = al_jazira_area
@@ -206,43 +202,15 @@ emx_silk_road_s3 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_any_chinese_warlord_trigger = yes
-		NOT = { emx_chinese_player_trigger = yes }
-		NOT = { tag = QNG }
+		tag = QNG
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-	emx_unify_china = {
-		icon = mission_cornerstone_empire
-		required_missions = { }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1816
-				province_id = 684
-				province_id = 679
-				province_id = 667
-				province_id = 726
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 1816
-			owns_core_province = 684
-			owns_core_province = 679
-			owns_core_province = 667
-			owns_core_province = 726
-		}
-		effect = {
-			emx_unify_china_effect = yes
-		}
-	}
-
 	emx_silk_road_halep_sham = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { emx_silk_road_persia }
-		position = 10
+		position = 19
 		provinces_to_highlight = {
 			OR = {
 				area = west_gansu_area
@@ -280,9 +248,7 @@ emx_spice_route_s4 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_any_chinese_warlord_trigger = yes
-		NOT = { emx_chinese_player_trigger = yes }
-		NOT = { tag = QNG }
+		tag = QNG
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -290,7 +256,7 @@ emx_spice_route_s4 = {
 	emx_spice_route_gujarat = {
 		icon = mission_dominate_gujarati_trade
 		required_missions = { emx_spice_route_coromandel }
-		position = 10
+		position = 19
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361
@@ -311,7 +277,7 @@ emx_spice_route_s4 = {
 	emx_spice_route_hormuz = {
 		icon = mission_dominate_persian_gulf
 		required_missions = { emx_spice_route_gujarat }
-		position = 11
+		position = 20
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361
@@ -337,9 +303,7 @@ emx_spice_route_s5 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_any_chinese_warlord_trigger = yes
-		NOT = { emx_chinese_player_trigger = yes }
-		NOT = { tag = QNG }
+		tag = QNG
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -347,7 +311,7 @@ emx_spice_route_s5 = {
 	emx_spice_route_malacca = {
 		icon = mission_asian_trader
 		required_missions = { }
-		position = 7
+		position = 16
 		provinces_to_highlight = {
 			province_id = 1361
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -363,7 +327,7 @@ emx_spice_route_s5 = {
 	emx_spice_route_bengal = {
 		icon = mission_coromandel_trade
 		required_missions = { emx_spice_route_malacca }
-		position = 8
+		position = 17
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361
@@ -382,7 +346,7 @@ emx_spice_route_s5 = {
 	emx_spice_route_coromandel = {
 		icon = mission_coromandel_trade
 		required_missions = { emx_spice_route_bengal }
-		position = 9
+		position = 18
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361
@@ -402,7 +366,7 @@ emx_spice_route_s5 = {
 	emx_spice_route_aden = {
 		icon = mission_galleys_in_port
 		required_missions = { emx_spice_route_coromandel }
-		position = 10
+		position = 19
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361
@@ -423,7 +387,7 @@ emx_spice_route_s5 = {
 	emx_spice_route_alexandria = {
 		icon = mission_restore_trade_superiority
 		required_missions = { emx_spice_route_aden }
-		position = 11
+		position = 20
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361
@@ -445,7 +409,7 @@ emx_spice_route_s5 = {
 	emx_spice_route_capstone = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { emx_spice_route_hormuz emx_spice_route_alexandria }
-		position = 12
+		position = 21
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361

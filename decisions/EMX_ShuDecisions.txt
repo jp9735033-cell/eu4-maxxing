@@ -10,12 +10,9 @@
 # leaves the list for good once its province has been woven. Ownership is
 # checked in allow so it reads as an ordinary requirement line.
 #
-# Cost: one fifth of a year's total income, charged with add_years_of_income.
-# The price is the same for every province and grows with the realm rather
-# than with the tile.
-#
-# Requirement: a flat 400 ducats in the treasury. Rendered natively by the
-# game, so no custom tooltip is needed.
+# Cost: a flat 400 ducats. The decision requires 400 in the treasury and takes
+# exactly that 400 when it is passed, so it can never put us into debt. The
+# game renders the requirement itself, so no custom tooltip is needed.
 
 country_decisions = {
 
@@ -35,7 +32,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			2133 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -59,7 +56,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			705 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -83,7 +80,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4519 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -107,7 +104,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4516 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -131,7 +128,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4520 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -155,7 +152,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4693 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -179,7 +176,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			2124 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -203,7 +200,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4210 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -227,7 +224,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4209 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -251,7 +248,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			739 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -275,7 +272,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			719 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -299,7 +296,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			2074 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -323,7 +320,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4521 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -347,7 +344,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			2073 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -371,7 +368,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4481 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -395,7 +392,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			565 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -419,7 +416,7 @@ country_decisions = {
 			treasury = 400
 		}
 		effect = {
-			add_years_of_income = -0.2
+			add_treasury = -400
 			4482 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {

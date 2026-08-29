@@ -68,47 +68,15 @@ emx_start_of_the_great_wall = {
 	supply_limit_modifier = 0.25
 }
 
-emx_yan_frontier_garrison = {
-	local_development_cost = -0.05
-	province_trade_power_value = 2
-	local_defensiveness = 0.15
-}
 
 # One per garrison, so the wall accumulates: five of these is +5% land
 # morale and +5% infantry combat ability. A single shared name would only
 # refresh itself instead of stacking.
-emx_yan_garrison_xuanhua = { land_morale = 0.01 infantry_power = 0.01 }
-emx_yan_garrison_datong = { land_morale = 0.01 infantry_power = 0.01 }
-emx_yan_garrison_shanhaiguan = { land_morale = 0.01 infantry_power = 0.01 }
-emx_yan_garrison_ningyuan = { land_morale = 0.01 infantry_power = 0.01 }
-emx_yan_garrison_shenyang = { land_morale = 0.01 infantry_power = 0.01 }
 
-emx_yan_nine_garrisons = {
-	defensiveness = 0.10
-	land_forcelimit_modifier = 0.05
-}
 
-emx_yan_steppe_tribute = {
-	cavalry_power = 0.10
-	global_manpower_modifier = 0.10
-}
 
-emx_yan_grand_canal = {
-	trade_efficiency = 0.10
-	global_trade_goods_size_modifier = 0.05
-}
 
-emx_yan_yongle_dadian = {
-	global_institution_spread = 0.15
-	advisor_cost = -0.10
-	prestige = 1
-}
 
-emx_yan_northern_wall = {
-	defensiveness = 0.15
-	manpower_recovery_speed = 0.15
-	land_attrition = -0.10
-}
 
 ##################################################
 # 4. Wu
@@ -437,32 +405,91 @@ emx_tatar_dune = {
 }
 
 
-emx_lord_of_the_silk_road = {
-	trade_steering = 0.25
-	trade_efficiency = 0.25
-	caravan_power = 2.0
+##################################################
+# Yan (Qing) Unique Narrative Modifiers
+##################################################
+
+
+
+emx_yan_eight_banners_modifier = {
+	has_banners = yes
+	amount_of_banners = 1.0
+	shock_damage_received = -0.10
+	infantry_power = 0.05
 }
 
-emx_silk_road_gansu_caravan = {
-	caravan_power = 0.25
+
+
+
+
+
+
+
+
+
+
+##################################################
+# Yan Court & Consort Choice Modifiers
+##################################################
+
+# 1444 Starting Divided Court
+emx_yan_divided_court = {
+	all_power_cost = 0.05
+	advisor_cost = -0.25
+	leader_land_shock = 1
+	leader_land_manuever = 1
 }
 
-emx_silk_road_samarkand_caravan = {
-	caravan_power = 0.50
+# Path A: Manchu Chosen (Keeps only Manchu +1 shock & +1 maneuver)
+emx_yan_manchu_consort_modifier = {
+	leader_land_shock = 1
+	leader_land_manuever = 1
 }
 
-emx_silk_road_persia_caravan = {
-	caravan_power = 0.75
+# Path B: Korea Chosen (Keeps only Korean -25% advisor cost)
+emx_yan_korean_consort_modifier = {
+	advisor_cost = -0.25
 }
 
-emx_silk_road_crimea_caravan = {
-	caravan_power = 1.00
+# Path C: Harmonized Court (Keeps BOTH Korean advisor cost and Manchu shock/maneuver)
+emx_yan_harmonized_court = {
+	advisor_cost = -0.25
+	leader_land_shock = 1
+	leader_land_manuever = 1
 }
 
-emx_silk_road_trabzon_caravan = {
-	caravan_power = 1.00
+# Manchurian Conquest Capstone (when conquering Manchuria)
+emx_yan_manchurian_hegemony = {
+	administrative_efficiency = 0.05
+	shock_damage_received = -0.10
 }
 
-emx_silk_road_levant_caravan = {
-	caravan_power = 1.00
+emx_yan_mandate_of_the_steppes = {
+	imperial_mandate = 0.2
+}
+
+# Korean Emperor of China & Joseon Renaissance Legacy
+
+# Unlocked Korean Missions Modifiers
+
+
+
+emx_yan_korean_betrayal_fallout = {
+	advisor_cost = 0.25
+	all_power_cost = 0.05
+}
+
+emx_yan_harmony_navy = {
+	ship_durability = 0.10
+	morale_fleet = 0.10
+}
+
+emx_yan_pacific_colonization = {
+	colonists = 2
+	may_explore = yes
+	global_colonial_growth = 50
+	infantry_power = 0.10
+}
+emx_yan_northern_fortress = {
+	defensiveness = 0.25
 }

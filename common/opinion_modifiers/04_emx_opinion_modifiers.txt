@@ -1,0 +1,6 @@
+# eu4-maxxing: Custom opinion modifiers
+
+emx_yan_chosen_dynasty_opinion = {
+	opinion = 200
+	yearly_decay = 2
+}

@@ -1,0 +1,618 @@
+# eu4-maxxing: Yan Kingdom specific scripted effects
+
+# =============================================================================
+# Yan Overland Silk Road Scripted Effects
+# =============================================================================
+
+# 1. Gansu Mission Effect
+emx_yan_silk_road_gansu_effect = {
+	add_country_modifier = {
+		name = emx_silk_road_gansu_caravan
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			OR = {
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 2. Samarkand Mission Effect -> Claims on Persia + Crimea branches
+emx_yan_silk_road_samarkand_effect = {
+	add_country_modifier = {
+		name = emx_silk_road_samarkand_caravan
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			OR = {
+				# Persia branch
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				# Crimea branch
+				area = khiva_area
+				area = nogai_area
+				area = lower_yik_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 3. Persia / Tabriz Mission Effect -> Claims on Trabzon & Aleppo/Levant
+emx_yan_silk_road_persia_effect = {
+	add_country_modifier = {
+		name = emx_silk_road_persia_caravan
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			OR = {
+				# Trabzon branch
+				area = armenia_area
+				area = erzurum_area
+				# Aleppo/Levant branch
+				area = shahrizor_area
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = aleppo_area
+				area = syria_area
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 4. Crimea Mission Effect -> Price Rewards & Caravan Power
+emx_yan_silk_road_crimea_effect = {
+	add_country_modifier = {
+		name = emx_silk_road_crimea_caravan
+		duration = -1
+	}
+	change_price = {
+		trade_goods = silk
+		key = EMX_CRIMEA_SILK_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = chinaware
+		key = EMX_CRIMEA_CHINAWARE_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 5. Trabzon Mission Effect -> Price Rewards & Caravan Power
+emx_yan_silk_road_trabzon_effect = {
+	add_country_modifier = {
+		name = emx_silk_road_trabzon_caravan
+		duration = -1
+	}
+	change_price = {
+		trade_goods = silk
+		key = EMX_TRABZON_SILK_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = chinaware
+		key = EMX_TRABZON_CHINAWARE_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 6. Levant / Aleppo Mission Effect -> Price Rewards & Caravan Power
+emx_yan_silk_road_levant_effect = {
+	add_country_modifier = {
+		name = emx_silk_road_levant_caravan
+		duration = -1
+	}
+	change_price = {
+		trade_goods = silk
+		key = EMX_LEVANT_SILK_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = chinaware
+		key = EMX_LEVANT_CHINAWARE_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 7. Capstone Mission Effect -> Global Price Rewards (+50%) & Caravan Power
+emx_yan_silk_road_capstone_effect = {
+	add_country_modifier = {
+		name = emx_lord_of_the_silk_road
+		duration = -1
+	}
+	change_price = {
+		trade_goods = silk
+		key = EMX_SILK_ROAD_PRICE
+		value = 0.50
+		duration = -1
+	}
+	change_price = {
+		trade_goods = chinaware
+		key = EMX_SILK_ROAD_CHINAWARE_PRICE
+		value = 0.50
+		duration = -1
+	}
+}
+
+# =============================================================================
+# Yan Maritime Spice Route Scripted Effects
+# =============================================================================
+
+# 1. Malacca Mission -> Claims on Bengal coastal CoTs/Estuaries + Trade Steering
+emx_yan_spice_route_malacca_effect = {
+	add_country_modifier = {
+		name = emx_spice_route_malacca_steering
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			region = bengal_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 2. Bengal Mission -> Claims on Coromandel coastal CoTs/Estuaries + Trade Steering
+emx_yan_spice_route_bengal_effect = {
+	add_country_modifier = {
+		name = emx_spice_route_bengal_steering
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			region = coromandel_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 3. Coromandel Mission -> Claims on Gujarat & Aden (Arabia / Horn of Africa) coastal CoTs/Estuaries + Trade Steering
+emx_yan_spice_route_coromandel_effect = {
+	add_country_modifier = {
+		name = emx_spice_route_coromandel_steering
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			OR = {
+				region = gujarat_region
+				region = arabia_region
+				region = horn_of_africa_region
+			}
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 4. Gujarat Mission -> Claims on Hormuz (Persia / Persian Gulf) coastal CoTs/Estuaries + Trade Steering
+emx_yan_spice_route_gujarat_effect = {
+	add_country_modifier = {
+		name = emx_spice_route_gujarat_steering
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			region = persia_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 5. Hormuz Mission -> Persian Gulf Spice & Tea Price Rewards + Trade Steering
+emx_yan_spice_route_hormuz_effect = {
+	add_country_modifier = {
+		name = emx_spice_route_hormuz_steering
+		duration = -1
+	}
+	change_price = {
+		trade_goods = spices
+		key = EMX_HORMUZ_SPICES_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = tea
+		key = EMX_HORMUZ_TEA_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 6. Aden Mission -> Claims on Alexandria (Egypt) coastal CoTs/Estuaries + Trade Steering
+emx_yan_spice_route_aden_effect = {
+	add_country_modifier = {
+		name = emx_spice_route_aden_steering
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			region = egypt_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 7. Alexandria Mission -> Alexandria Spice & Tea Price Rewards + Trade Steering
+emx_yan_spice_route_alexandria_effect = {
+	add_country_modifier = {
+		name = emx_spice_route_alexandria_steering
+		duration = -1
+	}
+	change_price = {
+		trade_goods = spices
+		key = EMX_ALEXANDRIA_SPICES_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = tea
+		key = EMX_ALEXANDRIA_TEA_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 8. Capstone -> Global Spice & Tea Price Rewards (+50%) + Master of Spice Route
+emx_yan_spice_route_capstone_effect = {
+	add_country_modifier = {
+		name = emx_master_of_the_spice_route
+		duration = -1
+	}
+	change_price = {
+		trade_goods = spices
+		key = EMX_SPICE_ROUTE_PRICE
+		value = 0.50
+		duration = -1
+	}
+	change_price = {
+		trade_goods = tea
+		key = EMX_SPICE_ROUTE_TEA_PRICE
+		value = 0.50
+		duration = -1
+	}
+}
+
+
+emx_yan_silk_road_halep_sham_effect = {
+	emx_yan_silk_road_levant_effect = yes
+}
+# =============================================================================
+# Yan Dynamic Mission Scripted Effects
+# =============================================================================
+
+emx_yan_blood_pact_effect = {
+	add_prestige = 15
+	add_mil_power = 50
+	liaoning_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	jilin_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_unify_jurchen_effect = {
+	add_prestige = 15
+	add_dip_power = 50
+	manchuria_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_eight_banners_effect = {
+	add_prestige = 25
+	add_mil_power = 100
+	add_country_modifier = {
+		name = "emx_yan_eight_banners_modifier"
+		duration = -1
+	}
+}
+
+emx_yan_secure_yalu_effect = {
+	add_prestige = 10
+	add_army_tradition = 10
+	korea_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_jurchen_dowry_effect = {
+	add_prestige = 15
+	add_mil_power = 50
+	liaoning_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	jilin_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	ningguta_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	furdan_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_subdue_jianzhou_k_effect = {
+	add_prestige = 15
+	add_dip_power = 50
+	manchuria_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_subdue_jianzhou_h_effect = {
+	add_prestige = 15
+	add_dip_power = 50
+	manchuria_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_banish_steppe_nomads_k_effect = {
+	add_prestige = 25
+	add_adm_power = 100
+	add_country_modifier = {
+		name = "emx_yan_manchurian_hegemony"
+		duration = -1
+	}
+	mongolia_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_banish_steppe_nomads_h_effect = {
+	add_prestige = 25
+	add_adm_power = 100
+	add_country_modifier = {
+		name = "emx_yan_manchurian_hegemony"
+		duration = -1
+	}
+	mongolia_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_pacify_mongolia_k_effect = {
+	add_prestige = 25
+	add_mil_power = 100
+	add_country_modifier = {
+		name = "emx_yan_mandate_of_the_steppes"
+		duration = -1
+	}
+	north_china_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_pacify_mongolia_h_effect = {
+	add_prestige = 25
+	add_mil_power = 100
+	add_country_modifier = {
+		name = "emx_yan_mandate_of_the_steppes"
+		duration = -1
+	}
+	north_china_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_unify_north_china_k_effect = {
+	add_prestige = 25
+	add_mil_power = 100
+	add_country_modifier = {
+		name = "emx_yan_northern_fortress"
+		duration = -1
+	}
+	south_china_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	xinan_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_unify_north_china_h_effect = {
+	add_prestige = 25
+	add_mil_power = 100
+	add_country_modifier = {
+		name = "emx_yan_northern_fortress"
+		duration = -1
+	}
+	south_china_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	xinan_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_subjugate_joseon_effect = {
+	add_prestige = 25
+	add_dip_power = 100
+	custom_tooltip = emx_yan_subjugate_joseon_integrate_tt
+	if = {
+		limit = {
+			exists = KOR
+			OR = {
+				senior_union_with = KOR
+				KOR = { is_subject_of = ROOT }
+			}
+		}
+		inherit = KOR
+	}
+	set_country_flag = emx_yan_integrated_korea
+	swap_non_generic_missions = yes
+}
+
+emx_yan_subjugate_harmony_effect = {
+	add_prestige = 25
+	add_dip_power = 100
+	custom_tooltip = emx_yan_subjugate_joseon_integrate_tt
+	if = {
+		limit = {
+			exists = KOR
+			OR = {
+				senior_union_with = KOR
+				KOR = { is_subject_of = ROOT }
+			}
+		}
+		inherit = KOR
+	}
+	set_country_flag = emx_yan_integrated_korea
+	1816 = { change_religion = shinto }
+	add_harmonized_religion = shinto
+	japan_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	swap_non_generic_missions = yes
+}
+
+emx_yan_conquer_japan_effect = {
+	add_prestige = 50
+	add_mil_power = 150
+	add_adm_power = 150
+}
+
+emx_yan_unify_china_effect = {
+	emx_unify_china_effect = yes
+}

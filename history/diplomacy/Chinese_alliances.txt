@@ -1,3 +1,18 @@
+# Yan start alliances with Jianzhou and Joseon
+alliance = {
+	first = YAN
+	second = MJZ
+	start_date = 1444.11.11
+	end_date = 1821.1.1
+}
+
+alliance = {
+	first = YAN
+	second = KOR
+	start_date = 1444.11.11
+	end_date = 1821.1.1
+}
+
 # eu4-maxxing: Ming (MNG) owns no provinces at the 1444 start.
 # All Ming diplomatic entries below are commented out so no nation is
 # left as the tributary of a country that does not exist.

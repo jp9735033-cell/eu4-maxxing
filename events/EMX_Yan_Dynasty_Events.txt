@@ -1,0 +1,375 @@
+# eu4-maxxing: Yan - Queen Meiying Zhu's Childhood Education & Dynamic Marriage Fate
+
+namespace = emx_yan_flavor
+
+# =============================================================================
+# =============================================================================
+# 1. Game Start Event: The Fractured Court in Beijing
+# =============================================================================
+country_event = {
+	id = emx_yan_flavor.1
+	title = emx_yan_flavor.1.t
+	desc = emx_yan_flavor.1.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		NOT = { has_country_flag = emx_yan_divided_court_setup }
+	}
+
+	immediate = {
+		set_country_flag = emx_yan_divided_court_setup
+		set_country_flag = emx_origin_yan
+		set_country_flag = emx_yan_meiying_is_heir
+		if = { limit = { ai = no } enable_branching_mission_review_without_ai = { key = YAN } }
+		set_variable = { which = yan_korea_edu value = 0 }
+		set_variable = { which = yan_loyalist_edu value = 0 }
+		set_variable = { which = yan_manchu_edu value = 0 }
+		if = {
+			limit = {
+				NOT = { has_heir = yes }
+			}
+			define_heir = {
+				name = "Meiying"
+				dynasty = "Zhu"
+				female = yes
+				age = 5
+				adm = 2
+				dip = 2
+				mil = 3
+				claim = 100
+			}
+		}
+		if = {
+			limit = { exists = MJZ NOT = { alliance_with = MJZ } }
+			create_alliance = MJZ
+		}
+		if = {
+			limit = { exists = KOR NOT = { alliance_with = KOR } }
+			create_alliance = KOR
+		}
+	}
+
+	option = {
+		name = emx_yan_flavor.1.a
+		add_country_modifier = {
+			name = "emx_yan_divided_court"
+			duration = -1
+		}
+	}
+}
+
+# =============================================================================
+
+# =============================================================================
+# 2. Childhood Education Events (Player Choice Driven at Ages 7, 10, 13)
+# =============================================================================
+
+# Event 10: Early Childhood Mentorship (Age ~7, 1446)
+country_event = {
+	id = emx_yan_flavor.10
+	title = emx_yan_flavor.10.t
+	desc = emx_yan_flavor.10.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		has_heir = yes
+		has_country_flag = emx_yan_meiying_is_heir
+		NOT = { has_country_flag = emx_yan_meiying_died }
+		NOT = { has_country_flag = emx_yan_chose_consort }
+		is_year = 1446
+		NOT = { is_year = 1454 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	# Option A: Jurchen Martial Arts
+	option = {
+		name = emx_yan_flavor.10.a
+		change_heir_mil = 1
+		change_variable = { which = yan_manchu_edu value = 1 }
+		add_mil_power = 30
+	}
+
+	# Option B: Joseon Neo-Confucian Statecraft
+	option = {
+		name = emx_yan_flavor.10.b
+		change_heir_adm = 1
+		change_variable = { which = yan_korea_edu value = 1 }
+		add_adm_power = 30
+	}
+
+	# Option C: Imperial Court Diplomacy & Harmony
+	option = {
+		name = emx_yan_flavor.10.c
+		change_heir_dip = 1
+		change_variable = { which = yan_loyalist_edu value = 1 }
+		add_dip_power = 30
+	}
+}
+
+# Event 11: Youth Strategy & Studies (Age ~10, 1449)
+country_event = {
+	id = emx_yan_flavor.11
+	title = emx_yan_flavor.11.t
+	desc = emx_yan_flavor.11.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		has_heir = yes
+		has_country_flag = emx_yan_meiying_is_heir
+		NOT = { has_country_flag = emx_yan_meiying_died }
+		NOT = { has_country_flag = emx_yan_chose_consort }
+		is_year = 1449
+		NOT = { is_year = 1454 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	# Option A: Jurchen Horsemanship & Tactics
+	option = {
+		name = emx_yan_flavor.11.a
+		change_heir_mil = 1
+		change_variable = { which = yan_manchu_edu value = 1 }
+		add_mil_power = 30
+	}
+
+	# Option B: Joseon Bureaucracy & Philosophy
+	option = {
+		name = emx_yan_flavor.11.b
+		change_heir_adm = 1
+		change_variable = { which = yan_korea_edu value = 1 }
+		add_adm_power = 30
+	}
+
+	# Option C: Grand Imperial Diplomacy
+	option = {
+		name = emx_yan_flavor.11.c
+		change_heir_dip = 1
+		change_variable = { which = yan_loyalist_edu value = 1 }
+		add_dip_power = 30
+	}
+}
+
+# Event 12: Advanced Leadership & Ideology (Age ~13, 1452)
+country_event = {
+	id = emx_yan_flavor.12
+	title = emx_yan_flavor.12.t
+	desc = emx_yan_flavor.12.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		has_heir = yes
+		has_country_flag = emx_yan_meiying_is_heir
+		NOT = { has_country_flag = emx_yan_meiying_died }
+		NOT = { has_country_flag = emx_yan_chose_consort }
+		is_year = 1452
+		NOT = { is_year = 1454 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	# Option A: Steppe Warfare & Vanguard Training
+	option = {
+		name = emx_yan_flavor.12.a
+		change_heir_mil = 1
+		change_variable = { which = yan_manchu_edu value = 1 }
+		add_mil_power = 30
+	}
+
+	# Option B: Joseon Scholarly Administration
+	option = {
+		name = emx_yan_flavor.12.b
+		change_heir_adm = 1
+		change_variable = { which = yan_korea_edu value = 1 }
+		add_adm_power = 30
+	}
+
+	# Option C: Imperial Harmony & Balance
+	option = {
+		name = emx_yan_flavor.12.c
+		change_heir_dip = 1
+		change_variable = { which = yan_loyalist_edu value = 1 }
+		add_dip_power = 30
+	}
+}
+
+# =============================================================================
+# 3. Coming of Age Event: The Choice of Queen Meiying (At Age 15 in 1454)
+# ONLY the option corresponding to the highest education score is displayed!
+# =============================================================================
+
+# =============================================================================
+# 3. Coming of Age Event: The Coronation of Queen Meiying (At Age 15 in 1454)
+# Announces Meiying's coronation and directs player to the Mission Tree GUI!
+# =============================================================================
+country_event = {
+
+country_event = {
+
+country_event = {
+	id = emx_yan_flavor.2
+	title = emx_yan_flavor.2.t
+	desc = emx_yan_flavor.2.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		has_heir = yes
+		has_country_flag = emx_yan_meiying_is_heir
+		NOT = { has_country_flag = emx_yan_meiying_died }
+		is_year = 1454
+		NOT = { has_country_flag = emx_yan_meiying_crowned }
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = {
+		set_country_flag = emx_yan_meiying_crowned
+	}
+
+	# Option A: Jurchen Steppe Betrothal (Manchu Union)
+	option = {
+		name = emx_yan_flavor.2.a
+		trigger = {
+			check_variable = { which = yan_manchu_edu which = yan_korea_edu }
+			check_variable = { which = yan_manchu_edu which = yan_loyalist_edu }
+		}
+		set_country_flag = emx_yan_event_chose_manchu
+		remove_country_modifier = emx_yan_divided_court
+		add_country_modifier = {
+			name = "emx_yan_manchu_consort_modifier"
+			duration = -1
+		}
+		add_country_modifier = {
+			name = "emx_yan_korean_betrayal_fallout"
+			duration = 9125
+		}
+		if = {
+			limit = { exists = MJZ }
+			create_marriage = MJZ
+			create_union = MJZ
+			add_opinion = { who = MJZ modifier = opinion_royal_marriage }
+			reverse_add_opinion = { who = MJZ modifier = opinion_royal_marriage }
+			add_opinion = { who = MJZ modifier = emx_yan_chosen_dynasty_opinion }
+			reverse_add_opinion = { who = MJZ modifier = emx_yan_chosen_dynasty_opinion }
+		}
+		if = {
+			limit = { exists = KOR }
+			break_alliance = KOR
+			hidden_effect = {
+				remove_opinion = { who = KOR modifier = opinion_royal_marriage }
+				reverse_remove_opinion = { who = KOR modifier = opinion_royal_marriage }
+			}
+			add_opinion = { who = KOR modifier = opinion_insulted }
+			reverse_add_opinion = { who = KOR modifier = opinion_insulted }
+			KOR = { add_treasury = 500 }
+		}
+		add_treasury = -500
+		1816 = {
+			noble_rebels = 2
+		}
+		add_prestige = 15
+		add_legitimacy = 20
+	}
+
+	# Option B: Joseon Scholarly Marriage (Korean Union)
+	option = {
+		name = emx_yan_flavor.2.b
+		trigger = {
+			check_variable = { which = yan_korea_edu which = yan_manchu_edu }
+			check_variable = { which = yan_korea_edu which = yan_loyalist_edu }
+		}
+		set_country_flag = emx_yan_event_chose_korea
+		remove_country_modifier = emx_yan_divided_court
+		add_country_modifier = {
+			name = "emx_yan_korean_consort_modifier"
+			duration = -1
+		}
+		if = {
+			limit = { exists = KOR }
+			break_alliance = KOR
+			create_marriage = KOR
+			create_union = KOR
+			add_opinion = { who = KOR modifier = opinion_royal_marriage }
+			reverse_add_opinion = { who = KOR modifier = opinion_royal_marriage }
+			add_opinion = { who = KOR modifier = emx_yan_chosen_dynasty_opinion }
+			reverse_add_opinion = { who = KOR modifier = emx_yan_chosen_dynasty_opinion }
+		}
+		if = {
+			limit = { exists = MJZ }
+			break_alliance = MJZ
+			hidden_effect = {
+				remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+				reverse_remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+			}
+			add_opinion = { who = MJZ modifier = opinion_insulted }
+			reverse_add_opinion = { who = MJZ modifier = opinion_insulted }
+		}
+		liaoning_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		add_prestige = 15
+		add_legitimacy = 20
+	}
+
+	# Option C: Imperial Autonomy & Balance (Harmony Path)
+	option = {
+		name = emx_yan_flavor.2.c
+		trigger = {
+			check_variable = { which = yan_loyalist_edu which = yan_manchu_edu }
+			check_variable = { which = yan_loyalist_edu which = yan_korea_edu }
+		}
+		set_country_flag = emx_yan_event_chose_harmony
+		remove_country_modifier = emx_yan_divided_court
+		add_country_modifier = {
+			name = "emx_yan_harmonized_court"
+			duration = -1
+		}
+		if = {
+			limit = { exists = MJZ }
+			break_alliance = MJZ
+			hidden_effect = {
+				remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+				reverse_remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+			}
+		}
+		if = {
+			limit = { exists = KOR }
+			break_alliance = KOR
+			hidden_effect = {
+				remove_opinion = { who = KOR modifier = opinion_royal_marriage }
+				reverse_remove_opinion = { who = KOR modifier = opinion_royal_marriage }
+			}
+		}
+		add_prestige = 25
+		add_legitimacy = 25
+	}
+}
+}
+}

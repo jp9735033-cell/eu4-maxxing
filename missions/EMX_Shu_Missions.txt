@@ -110,14 +110,7 @@ emx_shu_s1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_silk_road_1_trigger = yes
 		}
 		effect = {
 			emx_silk_road_gansu_effect = yes
@@ -140,30 +133,7 @@ emx_shu_s1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shanshan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kashgaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ferghana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			transoxiana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_silk_road_2_trigger = yes
 		}
 		effect = {
 			emx_silk_road_samarkand_effect = yes
@@ -192,54 +162,7 @@ emx_shu_s1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shanshan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kashgaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ferghana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			transoxiana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			khiva_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			nogai_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			lower_yik_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			astrakhan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			azov_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			crimea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_silk_road_crimea_trigger = yes
 		}
 		effect = {
 			emx_silk_road_crimea_effect = yes
@@ -349,54 +272,7 @@ emx_shu_s2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shanshan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kashgaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ferghana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			transoxiana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			merv_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			herat_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mashhad_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabarestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shirvan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabriz_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_silk_road_persia_trigger = yes
 		}
 		effect = {
 			emx_silk_road_persia_effect = yes
@@ -427,62 +303,7 @@ emx_shu_s2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shanshan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kashgaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ferghana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			transoxiana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			merv_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			herat_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mashhad_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabarestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shirvan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabriz_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			armenia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			erzurum_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_silk_road_trabzon_trigger = yes
 		}
 		effect = {
 			emx_silk_road_trabzon_effect = yes
@@ -524,106 +345,7 @@ emx_shu_s2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			al_jazira_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			aleppo_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			armenia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			astrakhan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			azov_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			crimea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			erzurum_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ferghana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			herat_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			iraq_arabi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kashgaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			khiva_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			lower_yik_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mashhad_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			merv_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			nogai_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shahrizor_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shanshan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shirvan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			syria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabarestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabriz_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			transoxiana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			west_gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_silk_road_capstone_trigger = yes
 		}
 		effect = {
 			emx_silk_road_capstone_effect = yes
@@ -703,32 +425,7 @@ emx_shu_s3 = {
 		}
 	}
 
-	emx_shu_unify_china = {
-		icon = mission_cornerstone_empire
-		required_missions = { }
-		position = 6
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1816
-				province_id = 684
-				province_id = 679
-				province_id = 667
-				province_id = 726
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 1816
-			owns_core_province = 684
-			owns_core_province = 679
-			owns_core_province = 667
-			owns_core_province = 726
-		}
-		effect = {
-			emx_unify_china_effect = yes
-		}
-	}
-
+	
 	emx_shu_silk_road_halep_sham = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { emx_shu_silk_road_persia }
@@ -756,74 +453,7 @@ emx_shu_s3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			gansu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shanshan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kashgaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ferghana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			transoxiana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			merv_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			herat_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mashhad_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabarestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shirvan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabriz_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shahrizor_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			al_jazira_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			iraq_arabi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			aleppo_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			syria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_silk_road_halep_sham_trigger = yes
 		}
 		effect = {
 			emx_silk_road_levant_effect = yes
@@ -959,30 +589,7 @@ emx_shu_s4 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1343 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1340 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			504 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_gujarat_trigger = yes
 		}
 		effect = {
 			emx_spice_route_gujarat_effect = yes
@@ -1004,36 +611,7 @@ emx_shu_s4 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1343 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1340 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			504 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1334 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_hormuz_trigger = yes
 		}
 		effect = {
 			emx_spice_route_hormuz_effect = yes
@@ -1178,12 +756,7 @@ emx_shu_s5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_malacca_trigger = yes
 		}
 		effect = {
 			emx_spice_route_malacca_effect = yes
@@ -1202,18 +775,7 @@ emx_shu_s5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1343 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_bengal_trigger = yes
 		}
 		effect = {
 			emx_spice_route_bengal_effect = yes
@@ -1233,24 +795,7 @@ emx_shu_s5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1343 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1340 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_coromandel_trigger = yes
 		}
 		effect = {
 			emx_spice_route_coromandel_effect = yes
@@ -1271,30 +816,7 @@ emx_shu_s5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1343 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1340 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			4346 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_aden_trigger = yes
 		}
 		effect = {
 			emx_spice_route_aden_effect = yes
@@ -1316,36 +838,7 @@ emx_shu_s5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1343 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1340 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			4346 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			358 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_alexandria_trigger = yes
 		}
 		effect = {
 			emx_spice_route_alexandria_effect = yes
@@ -1369,48 +862,7 @@ emx_shu_s5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1361 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1343 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1340 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			504 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1334 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			4346 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			358 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
+			emx_spice_route_capstone_trigger = yes
 		}
 		effect = {
 			emx_spice_route_capstone_effect = yes

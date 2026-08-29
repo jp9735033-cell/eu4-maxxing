@@ -9,13 +9,7 @@
 # immediately before change_tag = QNG. Country flags survive change_tag.
 
 emx_is_yan_trigger = {
-	OR = {
-		tag = YAN
-		AND = {
-			tag = QNG
-			has_country_flag = emx_origin_yan
-		}
-	}
+	tag = YAN
 }
 
 emx_is_wu_trigger = {
@@ -96,4 +90,107 @@ emx_shu_has_wool_to_weave = {
 		565   = { owned_by = ROOT trade_goods = wool }	# Bhutan
 		4482  = { owned_by = ROOT trade_goods = wool }	# Sikkim
 	}
+}
+# =============================================================================
+# Yan Dynamic Mission Scripted Triggers
+# =============================================================================
+
+emx_yan_unify_jurchen_trigger = {
+	jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ningguta_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	furdan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_eight_banners_trigger = {
+	liaoning_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	central_jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ningguta_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	furdan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ilan_hala_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	central_heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	east_heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_pacify_mongolia_trigger = {
+	mongolia_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_unify_north_china_trigger = {
+	north_china_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_subjugate_joseon_trigger = {
+	OR = {
+		korea_region = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		AND = {
+			exists = KOR
+			OR = {
+				senior_union_with = KOR
+				KOR = { is_subject_of = ROOT }
+			}
+			has_opinion = { who = KOR value = 150 }
+		}
+	}
+}
+
+emx_yan_conquer_japan_trigger = {
+	japan_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_unify_china_trigger = {
+	owns_core_province = 1816
+	owns_core_province = 684
+	owns_core_province = 679
+	owns_core_province = 667
+	owns_core_province = 726
 }

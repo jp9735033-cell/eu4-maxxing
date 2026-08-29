@@ -1,0 +1,50 @@
+# eu4-maxxing: Yan on_actions for Princess Meiying life, regency, and branching missions
+
+on_startup = {
+	if = {
+		limit = {
+			tag = YAN
+			NOT = { has_country_flag = emx_yan_divided_court_setup }
+		}
+		country_event = { id = emx_yan_flavor.1 }
+	}
+}
+
+on_heir_death = {
+	if = {
+		limit = {
+			tag = YAN
+			NOT = { has_country_flag = emx_yan_chose_consort }
+		}
+		set_country_flag = emx_yan_meiying_died
+		clr_country_flag = emx_yan_meiying_is_heir
+	}
+}
+
+on_heir_disinherited = {
+	if = {
+		limit = {
+			tag = YAN
+			NOT = { has_country_flag = emx_yan_chose_consort }
+		}
+		set_country_flag = emx_yan_meiying_died
+		clr_country_flag = emx_yan_meiying_is_heir
+	}
+}
+
+on_new_monarch = {
+	# When Meiying turns 15 and ascends the throne in 1454
+	if = {
+		limit = {
+			tag = YAN
+			has_country_flag = emx_yan_meiying_is_heir
+			NOT = { has_country_flag = emx_yan_meiying_died }
+			is_female = yes
+			has_regency = no
+			has_consort_regency = no
+			is_year = 1454
+			NOT = { has_country_flag = emx_yan_chose_consort }
+		}
+		country_event = { id = emx_yan_flavor.2 }
+	}
+}

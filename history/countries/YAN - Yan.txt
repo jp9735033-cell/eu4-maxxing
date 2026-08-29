@@ -1,22 +1,35 @@
-# eu4-maxxing: Yan inherits the Mandate of Heaven from the destroyed Ming.
-# Revert add_government_reform to chinese_warlord and drop government_rank
-# if you move the throne elsewhere or leave it vacant.
+set_country_flag = emx_origin_yan
+# eu4-maxxing: Yan - The Northern Court & Consort Regency
+# The Emperor fell in the rebellion; Grand Dowager rules as Queen Regent
+# for 5-year-old Princess Zhu Meiying (heir, born 1439.5.15, stats 2/2/3).
+
 government = monarchy
 add_government_reform = celestial_empire
 government_rank = 3
 technology_group = chinese
 religion = confucianism
 primary_culture = chihan
-capital = 1816	#Beijing
+capital = 1816	# Beijing
 
-1444.11.11 = {
-    monarch = {
-        country_of_origin = YAN
-        name = "Sac"
-         dynasty = "Yan"
-         birth_date = 1420.1.1
-         adm = 4
-         dip = 4
-         mil = 4
-    }
+1444.1.1 = {
+	monarch = {
+		name = "Grand Dowager"
+		dynasty = "Zhu"
+		female = yes
+		birth_date = 1400.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+		regent = yes
+	}
+	heir = {
+		name = "Meiying"
+		dynasty = "Zhu"
+		female = yes
+		birth_date = 1439.5.15 # 5 years old on 1444.11.11
+		adm = 2
+		dip = 2
+		mil = 3
+		claim = 100
+	}
 }

@@ -219,26 +219,60 @@ country_decisions = {
 
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 704		# Liaoxi
-				province_id = 723		# Xilin Gol
-				province_id = 726		# Liaodong
-				province_id = 1816		# Beijing
-				province_id = 684		# Hangzhou, the Wu capital
-				province_id = 679		# Chengdu, the Shu capital
-				province_id = 667		# Guangzhou, the Yue capital
+			if = {
+				limit = { tag = YAN }
+				OR = {
+					province_id = 1816		# Beijing
+					province_id = 730		# Girin
+					province_id = 2108		# Huncun
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
-			NOT = { owned_by = ROOT }
+			else = {
+				OR = {
+					province_id = 704		# Liaoxi
+					province_id = 723		# Xilin Gol
+					province_id = 726		# Liaodong
+					province_id = 1816		# Beijing
+					province_id = 684		# Hangzhou, the Wu capital
+					province_id = 679		# Chengdu, the Shu capital
+					province_id = 667		# Guangzhou, the Yue capital
+				}
+				NOT = { owned_by = ROOT }
+			}
 		}
 		allow = {
-			owns = 704		# Liaoxi
-			owns = 723		# Xilin Gol
-			owns = 726		# Liaodong
-			owns = 1816		# Beijing
-			# eu4-maxxing: every player capital, not just the northern one.
-			owns = 684		# Hangzhou
-			owns = 679		# Chengdu
-			owns = 667		# Guangzhou
+			if = {
+				limit = { tag = YAN }
+				mission_completed = emx_yan_eight_banners_host
+				1816 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				OR = {
+					730 = { country_or_non_sovereign_subject_holds = ROOT }
+					2108 = { country_or_non_sovereign_subject_holds = ROOT }
+					MJZ = { is_subject_of = ROOT }
+					senior_union_with = MJZ
+				}
+			}
+			else = {
+				owns = 704		# Liaoxi
+				owns = 723		# Xilin Gol
+				owns = 726		# Liaodong
+				owns = 1816		# Beijing
+				owns = 684		# Hangzhou
+				owns = 679		# Chengdu
+				owns = 667		# Guangzhou
+				if = {
+					limit = {
+						has_dlc = "Common Sense"
+					}
+					government_rank = 3
+				}
+				else = {
+					total_development = 1000
+				}
+			}
 			1816 = {		# Beijing
 				is_state = yes
 			}
@@ -246,15 +280,6 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			NOT = {
 				has_ruler_modifier = tribal_succession_crisis
-			}
-			if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
-				government_rank = 3
-			}
-			else = {
-				total_development = 1000
 			}
 		}
 		effect = {
@@ -271,12 +296,28 @@ country_decisions = {
 			if = { limit = { tag = WUU } set_country_flag = emx_origin_wu }
 			if = { limit = { tag = YUE } set_country_flag = emx_origin_yue }
 			change_tag = QNG
+			# eu4-maxxing: Automatically integrate Jianzhou, Manchu, or Korea if they are in Personal Union / subject
+			if = {
+				limit = {
+					MJZ = { is_subject_of = ROOT }
+				}
+				inherit = MJZ
+			}
+			if = {
+				limit = {
+					MCH = { is_subject_of = ROOT }
+				}
+				inherit = MCH
+			}
+			if = {
+				limit = {
+					KOR = { is_subject_of = ROOT }
+				}
+				inherit = KOR
+			}
 			# Manchu and everyone else still swap to the Qing tree; the four
 			# Chinese players keep the tree they have been working on.
-			if = {
-				limit = { NOT = { emx_chinese_player_trigger = yes } }
-				swap_non_generic_missions = yes
-			}
+			swap_non_generic_missions = yes
 			on_change_tag_effect = yes
 			set_government_rank = 3
 			south_china_region = {

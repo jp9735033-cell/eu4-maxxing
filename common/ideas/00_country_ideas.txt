@@ -15723,7 +15723,7 @@ AUS_ideas = {
 	}
 	free = yes
 	AUS_outback_stations = {
-		colonists = 2
+		colonists = 1
 		effect = { remove_temporary_colonist = yes }
 	}
 	AUS_land_down_under = {
@@ -15739,12 +15739,10 @@ AUS_ideas = {
 		trade_efficiency = 0.1
 	}
 	AUS_royal_navy = {
-		ship_durability = 0.1
-		disengagement_chance = 0.05
+		infantry_power = 0.10
 	}
 	AUS_bushrangers = {
-		naval_morale_damage = 0.10
-                naval_forcelimit_modifier = 0.2
+                ship_durability = 0.1
 	}
 	AUS_waltzing_matilda = {
 		discipline = 0.05
@@ -15757,7 +15755,7 @@ NZL_ideas = {
 		army_tradition_decay = -0.01
 	}
 	bonus = {
-		colonists = 2
+		colonists = 1
 		effect = { remove_temporary_colonist = yes }
 	}
 	trigger = {
@@ -16838,7 +16836,7 @@ EOR_ideas = {
 
 KAU_ideas = {
 	start = {
-		colonists = 2
+		colonists = 1
 		range = 0.20
                 may_explore = yes
 	}

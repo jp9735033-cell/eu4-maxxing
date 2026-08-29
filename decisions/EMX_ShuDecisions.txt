@@ -14,12 +14,8 @@
 # The price is the same for every province and grows with the realm rather
 # than with the tile.
 #
-# The allow ladder exists because add_years_of_income will drive the treasury
-# negative and no trigger compares treasury against income. Each rung pairs a
-# monthly-income bracket with a treasury that covers the whole of it - 2.4x the
-# bracket's upper bound, the real cost being 2.4x monthly income - so the gate
-# is deliberately conservative and errs toward making us wait rather than
-# toward silent debt.
+# Requirement: a flat 400 ducats in the treasury. Rendered natively by the
+# game, so no custom tooltip is needed.
 
 country_decisions = {
 
@@ -36,23 +32,7 @@ country_decisions = {
 		}
 		allow = {
 			2133 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -76,23 +56,7 @@ country_decisions = {
 		}
 		allow = {
 			705 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -116,23 +80,7 @@ country_decisions = {
 		}
 		allow = {
 			4519 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -156,23 +104,7 @@ country_decisions = {
 		}
 		allow = {
 			4516 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -196,23 +128,7 @@ country_decisions = {
 		}
 		allow = {
 			4520 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -236,23 +152,7 @@ country_decisions = {
 		}
 		allow = {
 			4693 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -276,23 +176,7 @@ country_decisions = {
 		}
 		allow = {
 			2124 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -316,23 +200,7 @@ country_decisions = {
 		}
 		allow = {
 			4210 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -356,23 +224,7 @@ country_decisions = {
 		}
 		allow = {
 			4209 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -396,23 +248,7 @@ country_decisions = {
 		}
 		allow = {
 			739 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -436,23 +272,7 @@ country_decisions = {
 		}
 		allow = {
 			719 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -476,23 +296,7 @@ country_decisions = {
 		}
 		allow = {
 			2074 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -516,23 +320,7 @@ country_decisions = {
 		}
 		allow = {
 			4521 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -556,23 +344,7 @@ country_decisions = {
 		}
 		allow = {
 			2073 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -596,23 +368,7 @@ country_decisions = {
 		}
 		allow = {
 			4481 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -636,23 +392,7 @@ country_decisions = {
 		}
 		allow = {
 			565 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2
@@ -676,23 +416,7 @@ country_decisions = {
 		}
 		allow = {
 			4482 = { owned_by = ROOT }
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_loom_cost_tt
-				OR = {
-					AND = { monthly_income = 1200 treasury = 5000 }
-					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
-					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
-					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
-					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
-					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
-					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
-					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
-					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
-					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
-					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
-					AND = { NOT = { monthly_income = 25 } treasury = 60 }
-				}
-			}
+			treasury = 400
 		}
 		effect = {
 			add_years_of_income = -0.2

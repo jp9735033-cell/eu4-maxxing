@@ -10,10 +10,16 @@
 # leaves the list for good once its province has been woven. Ownership is
 # checked in allow so it reads as an ordinary requirement line.
 #
-# Cost scales with that province's development: under 10 costs 200, then 250,
-# 300, 350, and 400 ducats from development 25 upwards. Every one of them
-# starts in the 200 band, so weaving a province before developing it is the
-# cheaper order.
+# Cost: one fifth of a year's total income, charged with add_years_of_income.
+# The price is the same for every province and grows with the realm rather
+# than with the tile.
+#
+# The allow ladder exists because add_years_of_income will drive the treasury
+# negative and no trigger compares treasury against income. Each rung pairs a
+# monthly-income bracket with a treasury that covers the whole of it - 2.4x the
+# bracket's upper bound, the real cost being 2.4x monthly income - so the gate
+# is deliberately conservative and errs toward making us wait rather than
+# toward silent debt.
 
 country_decisions = {
 
@@ -33,34 +39,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 2133 = { development = 25 } treasury = 400 }
-					AND = { 2133 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 2133 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 2133 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 2133 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 2133 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 2133 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 2133 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 2133 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			2133 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -84,34 +79,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 705 = { development = 25 } treasury = 400 }
-					AND = { 705 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 705 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 705 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 705 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 705 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 705 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 705 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 705 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			705 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -135,34 +119,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4519 = { development = 25 } treasury = 400 }
-					AND = { 4519 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4519 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4519 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4519 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4519 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4519 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4519 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4519 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4519 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -186,34 +159,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4516 = { development = 25 } treasury = 400 }
-					AND = { 4516 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4516 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4516 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4516 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4516 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4516 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4516 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4516 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4516 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -237,34 +199,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4520 = { development = 25 } treasury = 400 }
-					AND = { 4520 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4520 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4520 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4520 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4520 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4520 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4520 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4520 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4520 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -288,34 +239,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4693 = { development = 25 } treasury = 400 }
-					AND = { 4693 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4693 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4693 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4693 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4693 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4693 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4693 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4693 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4693 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -339,34 +279,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 2124 = { development = 25 } treasury = 400 }
-					AND = { 2124 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 2124 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 2124 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 2124 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 2124 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 2124 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 2124 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 2124 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			2124 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -390,34 +319,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4210 = { development = 25 } treasury = 400 }
-					AND = { 4210 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4210 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4210 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4210 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4210 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4210 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4210 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4210 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4210 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -441,34 +359,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4209 = { development = 25 } treasury = 400 }
-					AND = { 4209 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4209 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4209 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4209 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4209 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4209 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4209 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4209 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4209 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -492,34 +399,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 739 = { development = 25 } treasury = 400 }
-					AND = { 739 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 739 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 739 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 739 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 739 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 739 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 739 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 739 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			739 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -543,34 +439,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 719 = { development = 25 } treasury = 400 }
-					AND = { 719 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 719 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 719 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 719 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 719 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 719 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 719 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 719 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			719 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -594,34 +479,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 2074 = { development = 25 } treasury = 400 }
-					AND = { 2074 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 2074 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 2074 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 2074 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 2074 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 2074 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 2074 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 2074 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			2074 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -645,34 +519,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4521 = { development = 25 } treasury = 400 }
-					AND = { 4521 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4521 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4521 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4521 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4521 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4521 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4521 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4521 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4521 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -696,34 +559,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 2073 = { development = 25 } treasury = 400 }
-					AND = { 2073 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 2073 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 2073 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 2073 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 2073 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 2073 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 2073 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 2073 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			2073 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -747,34 +599,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4481 = { development = 25 } treasury = 400 }
-					AND = { 4481 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4481 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4481 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4481 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4481 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4481 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4481 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4481 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4481 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -798,34 +639,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 565 = { development = 25 } treasury = 400 }
-					AND = { 565 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 565 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 565 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 565 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 565 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 565 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 565 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 565 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			565 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
@@ -849,34 +679,23 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = emx_shu_loom_cost_tt
 				OR = {
-					AND = { 4482 = { development = 25 } treasury = 400 }
-					AND = { 4482 = { development = 20 NOT = { development = 25 } } treasury = 350 }
-					AND = { 4482 = { development = 15 NOT = { development = 20 } } treasury = 300 }
-					AND = { 4482 = { development = 10 NOT = { development = 15 } } treasury = 250 }
-					AND = { 4482 = { NOT = { development = 10 } } treasury = 200 }
+					AND = { monthly_income = 1200 treasury = 5000 }
+					AND = { monthly_income = 800 NOT = { monthly_income = 1200 } treasury = 2880 }
+					AND = { monthly_income = 600 NOT = { monthly_income = 800 } treasury = 1920 }
+					AND = { monthly_income = 400 NOT = { monthly_income = 600 } treasury = 1440 }
+					AND = { monthly_income = 300 NOT = { monthly_income = 400 } treasury = 960 }
+					AND = { monthly_income = 200 NOT = { monthly_income = 300 } treasury = 720 }
+					AND = { monthly_income = 150 NOT = { monthly_income = 200 } treasury = 480 }
+					AND = { monthly_income = 100 NOT = { monthly_income = 150 } treasury = 360 }
+					AND = { monthly_income = 75 NOT = { monthly_income = 100 } treasury = 240 }
+					AND = { monthly_income = 50 NOT = { monthly_income = 75 } treasury = 180 }
+					AND = { monthly_income = 25 NOT = { monthly_income = 50 } treasury = 120 }
+					AND = { NOT = { monthly_income = 25 } treasury = 60 }
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { 4482 = { development = 25 } }
-				add_treasury = -400
-			}
-			else_if = {
-				limit = { 4482 = { development = 20 } }
-				add_treasury = -350
-			}
-			else_if = {
-				limit = { 4482 = { development = 15 } }
-				add_treasury = -300
-			}
-			else_if = {
-				limit = { 4482 = { development = 10 } }
-				add_treasury = -250
-			}
-			else = {
-				add_treasury = -200
-			}
+			add_years_of_income = -0.2
 			4482 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {

@@ -10530,6 +10530,7 @@ YUA_ideas = {
 	}
 	yua_keshik_and_weijun = {
 		shock_damage = 0.1
+                cav_to_inf_ratio = 0.25
 	}
 	yua_a_thousand_miles_as_if_at_home = {
 		movement_speed = 0.15

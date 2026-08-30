@@ -1,16 +1,19 @@
 # eu4-maxxing: Dynamic Branching Mission Tree for Yan (YAN)
-# Series layout:
-# Slot 1: Dynasty Choice Branching (Preview / Manchu / Korea / Harmony) + Silk Road (7, 8, 10)
-# Slot 2: Dynasty Secondary Branching + Silk Road (9, 10, 11)
-# Slot 3: Unify China (7) + Aleppo/Damascus (10)
-# Slot 4: Gujarat (10) + Hormuz (11)
-# Slot 5: Muster Host (1) + Spice Route (7, 8, 9, 10, 11, 12)
+# Paradox 1.35 Domination Standard (Mission-Based Branching Architecture)
+# Slot layout:
+# Slot 1: Dynamic Branch (Rows 1-4) + Unified Silk Road (Rows 7, 8, 10)
+# Slot 2: Dynamic Branch (Rows 1-4) + Unified Silk Road (Rows 9, 10, 11)
+# Slot 3: Unify China (Row 7) + Silk Road Levant/Halep (Row 10)
+# Slot 4: Spice Route Gulf & Gujarat (Rows 10, 11)
+# Slot 5: Muster Host (Row 1) + Spice Route Maritime Network (Rows 7, 8, 9, 10, 11, 12)
 
 # =============================================================================
-# INITIAL PREVIEW TREES (Displayed 1444-1454 Before Choosing Dynasty Path)
+# 1. DYNAMIC BRANCHES: ROWS 1 TO 4 (SLOTS 1 & 2)
 # =============================================================================
 
-emx_yan_initial_s1 = {
+# --- 1.0 Initial Preview (1444-1454 Before Meiying's Coronation / Decision) ---
+
+emx_yan_preview_s1 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -36,80 +39,9 @@ emx_yan_initial_s1 = {
 			add_prestige = 10
 		}
 	}
-
-	emx_yan_init_silk_road_1 = {
-		icon = mission_asian_trader
-		required_missions = { }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_1_trigger = yes
-		}
-		effect = {
-			emx_silk_road_gansu_effect = yes
-		}
-	}
-
-	emx_yan_init_silk_road_2 = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_init_silk_road_1 }
-		position = 8
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_2_trigger = yes
-		}
-		effect = {
-			emx_silk_road_samarkand_effect = yes
-		}
-	}
-
-	emx_yan_init_silk_road_crimea = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_init_silk_road_2 }
-		position = 10
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = khiva_area
-				area = nogai_area
-				area = lower_yik_area
-				area = astrakhan_area
-				area = azov_area
-				area = crimea_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_crimea_trigger = yes
-		}
-		effect = {
-			emx_silk_road_crimea_effect = yes
-		}
-	}
 }
 
-emx_yan_initial_s2 = {
+emx_yan_preview_s2 = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -135,113 +67,9 @@ emx_yan_initial_s2 = {
 			add_prestige = 10
 		}
 	}
-
-	emx_yan_init_silk_road_persia = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_init_silk_road_2 }
-		position = 9
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = merv_area
-				area = herat_area
-				area = mashhad_area
-				area = tabarestan_area
-				area = shirvan_area
-				area = tabriz_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_persia_trigger = yes
-		}
-		effect = {
-			emx_silk_road_persia_effect = yes
-		}
-	}
-
-	emx_yan_init_silk_road_trabzon = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_init_silk_road_persia }
-		position = 10
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = merv_area
-				area = herat_area
-				area = mashhad_area
-				area = tabarestan_area
-				area = shirvan_area
-				area = tabriz_area
-				area = armenia_area
-				area = erzurum_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_trabzon_trigger = yes
-		}
-		effect = {
-			emx_silk_road_trabzon_effect = yes
-		}
-	}
-
-	emx_yan_init_silk_road_capstone = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_init_silk_road_crimea emx_yan_init_silk_road_trabzon emx_yan_silk_road_halep_sham }
-		position = 11
-		provinces_to_highlight = {
-			OR = {
-				area = al_jazira_area
-				area = aleppo_area
-				area = armenia_area
-				area = astrakhan_area
-				area = azov_area
-				area = crimea_area
-				area = erzurum_area
-				area = ferghana_area
-				area = gansu_area
-				area = herat_area
-				area = iraq_arabi_area
-				area = kashgaria_area
-				area = khiva_area
-				area = lower_yik_area
-				area = mashhad_area
-				area = merv_area
-				area = nogai_area
-				area = shahrizor_area
-				area = shanshan_area
-				area = shirvan_area
-				area = syria_area
-				area = tabarestan_area
-				area = tabriz_area
-				area = transoxiana_area
-				area = west_gansu_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_capstone_trigger = yes
-		}
-		effect = {
-			emx_silk_road_capstone_effect = yes
-		}
-	}
 }
 
-# =============================================================================
-# PATH 1: MANCHU UNION BRANCH
-# =============================================================================
+# --- 1.1 Path 1: Manchu Path (Northern Banners & Southern Siege) ---
 
 emx_yan_manchu_s1 = {
 	slot = 1
@@ -303,77 +131,6 @@ emx_yan_manchu_s1 = {
 			emx_yan_eight_banners_effect = yes
 		}
 	}
-
-	emx_yan_manchu_silk_road_1 = {
-		icon = mission_asian_trader
-		required_missions = { }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_1_trigger = yes
-		}
-		effect = {
-			emx_silk_road_gansu_effect = yes
-		}
-	}
-
-	emx_yan_manchu_silk_road_2 = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_manchu_silk_road_1 }
-		position = 8
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_2_trigger = yes
-		}
-		effect = {
-			emx_silk_road_samarkand_effect = yes
-		}
-	}
-
-	emx_yan_manchu_silk_road_crimea = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_manchu_silk_road_2 }
-		position = 10
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = khiva_area
-				area = nogai_area
-				area = lower_yik_area
-				area = astrakhan_area
-				area = azov_area
-				area = crimea_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_crimea_trigger = yes
-		}
-		effect = {
-			emx_silk_road_crimea_effect = yes
-		}
-	}
 }
 
 emx_yan_manchu_s2 = {
@@ -418,113 +175,9 @@ emx_yan_manchu_s2 = {
 			emx_yan_subjugate_joseon_manchu_effect = yes
 		}
 	}
-
-	emx_yan_manchu_silk_road_persia = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_manchu_silk_road_2 }
-		position = 9
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = merv_area
-				area = herat_area
-				area = mashhad_area
-				area = tabarestan_area
-				area = shirvan_area
-				area = tabriz_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_persia_trigger = yes
-		}
-		effect = {
-			emx_silk_road_persia_effect = yes
-		}
-	}
-
-	emx_yan_manchu_silk_road_trabzon = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_manchu_silk_road_persia }
-		position = 10
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = merv_area
-				area = herat_area
-				area = mashhad_area
-				area = tabarestan_area
-				area = shirvan_area
-				area = tabriz_area
-				area = armenia_area
-				area = erzurum_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_trabzon_trigger = yes
-		}
-		effect = {
-			emx_silk_road_trabzon_effect = yes
-		}
-	}
-
-	emx_yan_manchu_silk_road_capstone = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_manchu_silk_road_crimea emx_yan_manchu_silk_road_trabzon emx_yan_silk_road_halep_sham }
-		position = 11
-		provinces_to_highlight = {
-			OR = {
-				area = al_jazira_area
-				area = aleppo_area
-				area = armenia_area
-				area = astrakhan_area
-				area = azov_area
-				area = crimea_area
-				area = erzurum_area
-				area = ferghana_area
-				area = gansu_area
-				area = herat_area
-				area = iraq_arabi_area
-				area = kashgaria_area
-				area = khiva_area
-				area = lower_yik_area
-				area = mashhad_area
-				area = merv_area
-				area = nogai_area
-				area = shahrizor_area
-				area = shanshan_area
-				area = shirvan_area
-				area = syria_area
-				area = tabarestan_area
-				area = tabriz_area
-				area = transoxiana_area
-				area = west_gansu_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_capstone_trigger = yes
-		}
-		effect = {
-			emx_silk_road_capstone_effect = yes
-		}
-	}
 }
 
-# =============================================================================
-# PATH 2: KOREAN ALLIANCE BRANCH
-# =============================================================================
+# --- 1.2 Path 2: Korea Path (Joseon Union & Integration) ---
 
 emx_yan_korea_s1 = {
 	slot = 1
@@ -593,78 +246,7 @@ emx_yan_korea_s1 = {
 			emx_yan_unify_north_china_trigger = yes
 		}
 		effect = {
-			emx_yan_unify_north_china_k_effect = yes
-		}
-	}
-
-	emx_yan_korea_silk_road_1 = {
-		icon = mission_asian_trader
-		required_missions = { }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_1_trigger = yes
-		}
-		effect = {
-			emx_silk_road_gansu_effect = yes
-		}
-	}
-
-	emx_yan_korea_silk_road_2 = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_korea_silk_road_1 }
-		position = 8
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_2_trigger = yes
-		}
-		effect = {
-			emx_silk_road_samarkand_effect = yes
-		}
-	}
-
-	emx_yan_korea_silk_road_crimea = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_korea_silk_road_2 }
-		position = 10
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = khiva_area
-				area = nogai_area
-				area = lower_yik_area
-				area = astrakhan_area
-				area = azov_area
-				area = crimea_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_crimea_trigger = yes
-		}
-		effect = {
-			emx_silk_road_crimea_effect = yes
+			emx_yan_unify_north_china_effect = yes
 		}
 	}
 }
@@ -709,113 +291,9 @@ emx_yan_korea_s2 = {
 			emx_yan_korea_loyal_effect = yes
 		}
 	}
-
-	emx_yan_korea_silk_road_persia = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_korea_silk_road_2 }
-		position = 9
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = merv_area
-				area = herat_area
-				area = mashhad_area
-				area = tabarestan_area
-				area = shirvan_area
-				area = tabriz_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_persia_trigger = yes
-		}
-		effect = {
-			emx_silk_road_persia_effect = yes
-		}
-	}
-
-	emx_yan_korea_silk_road_trabzon = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_korea_silk_road_persia }
-		position = 10
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = merv_area
-				area = herat_area
-				area = mashhad_area
-				area = tabarestan_area
-				area = shirvan_area
-				area = tabriz_area
-				area = armenia_area
-				area = erzurum_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_trabzon_trigger = yes
-		}
-		effect = {
-			emx_silk_road_trabzon_effect = yes
-		}
-	}
-
-	emx_yan_korea_silk_road_capstone = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_korea_silk_road_crimea emx_yan_korea_silk_road_trabzon emx_yan_silk_road_halep_sham }
-		position = 11
-		provinces_to_highlight = {
-			OR = {
-				area = al_jazira_area
-				area = aleppo_area
-				area = armenia_area
-				area = astrakhan_area
-				area = azov_area
-				area = crimea_area
-				area = erzurum_area
-				area = ferghana_area
-				area = gansu_area
-				area = herat_area
-				area = iraq_arabi_area
-				area = kashgaria_area
-				area = khiva_area
-				area = lower_yik_area
-				area = mashhad_area
-				area = merv_area
-				area = nogai_area
-				area = shahrizor_area
-				area = shanshan_area
-				area = shirvan_area
-				area = syria_area
-				area = tabarestan_area
-				area = tabriz_area
-				area = transoxiana_area
-				area = west_gansu_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_capstone_trigger = yes
-		}
-		effect = {
-			emx_silk_road_capstone_effect = yes
-		}
-	}
 }
 
-# =============================================================================
-# PATH 3: HARMONY OF HEAVEN (JAPAN & EAST ASIA)
-# =============================================================================
+# --- 1.3 Path 3: Imperial Harmony Path (Diplomatic Balance & Shinto Harmony) ---
 
 emx_yan_harmony_s1 = {
 	slot = 1
@@ -884,78 +362,7 @@ emx_yan_harmony_s1 = {
 			emx_yan_unify_north_china_trigger = yes
 		}
 		effect = {
-			emx_yan_unify_north_china_h_effect = yes
-		}
-	}
-
-	emx_yan_harmony_silk_road_1 = {
-		icon = mission_asian_trader
-		required_missions = { }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_1_trigger = yes
-		}
-		effect = {
-			emx_silk_road_gansu_effect = yes
-		}
-	}
-
-	emx_yan_harmony_silk_road_2 = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_harmony_silk_road_1 }
-		position = 8
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_2_trigger = yes
-		}
-		effect = {
-			emx_silk_road_samarkand_effect = yes
-		}
-	}
-
-	emx_yan_harmony_silk_road_crimea = {
-		icon = mission_asian_trader
-		required_missions = { emx_yan_harmony_silk_road_2 }
-		position = 10
-		provinces_to_highlight = {
-			OR = {
-				area = west_gansu_area
-				area = gansu_area
-				area = shanshan_area
-				area = kashgaria_area
-				area = ferghana_area
-				area = transoxiana_area
-				area = khiva_area
-				area = nogai_area
-				area = lower_yik_area
-				area = astrakhan_area
-				area = azov_area
-				area = crimea_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_silk_road_crimea_trigger = yes
-		}
-		effect = {
-			emx_silk_road_crimea_effect = yes
+			emx_yan_unify_north_china_effect = yes
 		}
 	}
 }
@@ -1002,25 +409,111 @@ emx_yan_harmony_s2 = {
 			emx_yan_subjugate_harmony_effect = yes
 		}
 	}
+}
 
-	emx_yan_conquer_japan_harmony = {
-		icon = mission_japanese_fort
-		required_missions = { emx_yan_subjugate_harmony }
-		position = 3
+# =============================================================================
+# 2. PERMANENT SHARED SLOTS 1 TO 5 (ALWAYS ACTIVE - ZERO DUPLICATION)
+# =============================================================================
+
+# --- Slot 1: Silk Road (Rows 7, 8, 10) ---
+
+emx_yan_s1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		emx_is_yan_trigger = yes
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_yan_silk_road_1 = {
+		icon = mission_asian_trader
+		required_missions = { }
+		position = 7
 		provinces_to_highlight = {
-			emx_conquer_japan_highlight = yes
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			emx_yan_conquer_japan_trigger = yes
+			emx_silk_road_1_trigger = yes
 		}
 		effect = {
-			emx_yan_conquer_japan_effect = yes
+			emx_silk_road_gansu_effect = yes
 		}
 	}
 
-	emx_yan_harmony_silk_road_persia = {
+	emx_yan_silk_road_2 = {
 		icon = mission_asian_trader
-		required_missions = { emx_yan_harmony_silk_road_2 }
+		required_missions = { emx_yan_silk_road_1 }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_2_trigger = yes
+		}
+		effect = {
+			emx_silk_road_samarkand_effect = yes
+		}
+	}
+
+	emx_yan_silk_road_crimea = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_silk_road_2 }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = khiva_area
+				area = nogai_area
+				area = lower_yik_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_crimea_trigger = yes
+		}
+		effect = {
+			emx_silk_road_crimea_effect = yes
+		}
+	}
+}
+
+# --- Slot 2: Silk Road (Rows 9, 10, 11) ---
+
+emx_yan_s2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		emx_is_yan_trigger = yes
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_yan_silk_road_persia = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_silk_road_2 }
 		position = 9
 		provinces_to_highlight = {
 			OR = {
@@ -1047,9 +540,9 @@ emx_yan_harmony_s2 = {
 		}
 	}
 
-	emx_yan_harmony_silk_road_trabzon = {
+	emx_yan_silk_road_trabzon = {
 		icon = mission_asian_trader
-		required_missions = { emx_yan_harmony_silk_road_persia }
+		required_missions = { emx_yan_silk_road_persia }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -1078,9 +571,9 @@ emx_yan_harmony_s2 = {
 		}
 	}
 
-	emx_yan_harmony_silk_road_capstone = {
+	emx_yan_silk_road_capstone = {
 		icon = mission_asian_trader
-		required_missions = { emx_yan_harmony_silk_road_crimea emx_yan_harmony_silk_road_trabzon emx_yan_silk_road_halep_sham }
+		required_missions = { emx_yan_silk_road_crimea emx_yan_silk_road_trabzon emx_yan_silk_road_halep_sham }
 		position = 11
 		provinces_to_highlight = {
 			OR = {
@@ -1121,11 +614,9 @@ emx_yan_harmony_s2 = {
 	}
 }
 
-# =============================================================================
-# SHARED COLUMNS 3, 4, 5 (ALWAYS ACTIVE FOR YAN)
-# =============================================================================
+# --- Slot 3: Unify China (Row 7) & Silk Road Levant/Aleppo (Row 10) ---
 
-emx_yan_trade_s3 = {
+emx_yan_s3 = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -1157,7 +648,7 @@ emx_yan_trade_s3 = {
 
 	emx_yan_silk_road_halep_sham = {
 		icon = mission_asian_trader
-		required_missions = { emx_yan_init_silk_road_persia emx_yan_manchu_silk_road_persia emx_yan_korea_silk_road_persia emx_yan_harmony_silk_road_persia }
+		required_missions = { emx_yan_silk_road_persia }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -1190,7 +681,9 @@ emx_yan_trade_s3 = {
 	}
 }
 
-emx_yan_trade_s4 = {
+# --- Slot 4: Spice Route Gulf & Gujarat (Rows 10, 11) ---
+
+emx_yan_s4 = {
 	slot = 4
 	generic = no
 	ai = yes
@@ -1244,7 +737,9 @@ emx_yan_trade_s4 = {
 	}
 }
 
-emx_yan_trade_s5 = {
+# --- Slot 5: Military Preparation (Row 1) & Maritime Spice Route (Rows 7-12) ---
+
+emx_yan_s5 = {
 	slot = 5
 	generic = no
 	ai = yes

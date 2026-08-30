@@ -217,13 +217,10 @@ country_event = {
 # =============================================================================
 
 # =============================================================================
-# 3. Coming of Age Event: The Coronation of Queen Meiying (At Age 15 in 1454)
-# Announces Meiying's coronation and directs player to the Mission Tree GUI!
 # =============================================================================
-country_event = {
-
-country_event = {
-
+# 3. Coming of Age Event: The Coronation of Queen Meiying (At Age 15 in 1454)
+# Announces Meiying's coronation and sets the dynastic path!
+# =============================================================================
 country_event = {
 	id = emx_yan_flavor.2
 	title = emx_yan_flavor.2.t
@@ -257,6 +254,9 @@ country_event = {
 			check_variable = { which = yan_manchu_edu which = yan_loyalist_edu }
 		}
 		set_country_flag = emx_yan_event_chose_manchu
+		set_country_flag = emx_yan_consort_manchu
+		set_country_flag = emx_yan_chose_manchu
+		set_country_flag = emx_yan_chose_consort
 		remove_country_modifier = emx_yan_divided_court
 		add_country_modifier = {
 			name = "emx_yan_manchu_consort_modifier"
@@ -292,6 +292,7 @@ country_event = {
 		}
 		add_prestige = 15
 		add_legitimacy = 20
+		swap_non_generic_missions = yes
 	}
 
 	# Option B: Joseon Scholarly Marriage (Korean Union)
@@ -302,6 +303,9 @@ country_event = {
 			check_variable = { which = yan_korea_edu which = yan_loyalist_edu }
 		}
 		set_country_flag = emx_yan_event_chose_korea
+		set_country_flag = emx_yan_consort_korea
+		set_country_flag = emx_yan_chose_korea
+		set_country_flag = emx_yan_chose_consort
 		remove_country_modifier = emx_yan_divided_court
 		add_country_modifier = {
 			name = "emx_yan_korean_consort_modifier"
@@ -336,6 +340,7 @@ country_event = {
 		}
 		add_prestige = 15
 		add_legitimacy = 20
+		swap_non_generic_missions = yes
 	}
 
 	# Option C: Imperial Autonomy & Balance (Harmony Path)
@@ -346,6 +351,9 @@ country_event = {
 			check_variable = { which = yan_loyalist_edu which = yan_korea_edu }
 		}
 		set_country_flag = emx_yan_event_chose_harmony
+		set_country_flag = emx_yan_consort_harmony
+		set_country_flag = emx_yan_chose_harmony
+		set_country_flag = emx_yan_chose_consort
 		remove_country_modifier = emx_yan_divided_court
 		add_country_modifier = {
 			name = "emx_yan_harmonized_court"
@@ -369,7 +377,6 @@ country_event = {
 		}
 		add_prestige = 25
 		add_legitimacy = 25
+		swap_non_generic_missions = yes
 	}
-}
-}
 }

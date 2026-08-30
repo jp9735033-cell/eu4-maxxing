@@ -47,7 +47,7 @@ SHU_ideas = {
 
 WUU_ideas = {
 	start = {
-		development_cost = -0.1
+		land_morale = 0.15
 		build_cost = -0.1
 	}
 	
@@ -69,7 +69,7 @@ WUU_ideas = {
 		centralize_state_cost = -0.1
 	}
 	pigtail_or_death1 = {
-        land_morale = 0.15
+        development_cost = -0.1
 	}
 	qng_bogda_khan1 = {
         reinforce_speed = 0.15

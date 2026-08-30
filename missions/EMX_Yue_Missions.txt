@@ -999,7 +999,7 @@ emx_yue_s4 = {
 		effect = {
 			add_country_modifier = {
 				name = settle_islands
-				duration = 3650
+				duration = 7300
 			}
 		}
 	}

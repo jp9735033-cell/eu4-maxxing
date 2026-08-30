@@ -47,7 +47,7 @@ SHU_ideas = {
 
 WUU_ideas = {
 	start = {
-		land_morale = 0.15
+		stability_cost_modifier = -0.20
 		build_cost = -0.1
 	}
 	

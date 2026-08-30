@@ -148,8 +148,6 @@
  emx_yan_unify_jurchen_manchu_desc:0 "Together with our Jianzhou brothers, the fractured tribes of Haixi, Yeren, and Solon are brought under a single banner, forging an invincible northern shield."
  emx_yan_eight_banners_host_title:0 "The Eight Banners"
  emx_yan_eight_banners_host_desc:0 "Organizing the Jurchen and Han garrisons into the legendary Eight Banners military structure unleashes a devastating cavalry force capable of trampling any foe."
- emx_yan_eight_banners_modifier:0 "The Eight Banners Force"
- desc_emx_yan_eight_banners_modifier:0 "Elite Manchu banner hosts provide devastating shock charges and vast regiments of specialized banner warriors."
 
 
 
@@ -239,19 +237,16 @@ emx_yan_conquer_japan_harmony_title:0 "Conquer the Japanese Isles"
  desc_emx_yan_pacific_colonization:0 "Having conquered the Japanese archipelago, imperial navigators and pioneers sail into the uncharted Pacific with state-sponsored colonial expeditions."
 
 emx_yan_flavor.10.t:0 "The Education of Princess Meiying: Early Tutelage"
- emx_yan_flavor.10.d:0 "As the young princess Meiying reaches her formative childhood years in the imperial palace of Beijing, the court deliberates upon the mentors who shall shape her worldview."
  emx_yan_flavor.10.a:0 "Appoint Jurchen steppe chieftains (+1 MIL, Manchu Focus)"
  emx_yan_flavor.10.b:0 "Invite Joseon Neo-Confucian scholars (+1 ADM, Korean Focus)"
  emx_yan_flavor.10.c:0 "Rely on Imperial Ming loyalist statesmen (+1 DIP, Harmony Focus)"
 
  emx_yan_flavor.11.t:0 "The Education of Princess Meiying: Youth Strategy"
- emx_yan_flavor.11.d:0 "Princess Meiying has grown into a sharp and observant youth. Her daily lessons now turn toward practical matters of statecraft, war, and diplomatic maneuvering."
  emx_yan_flavor.11.a:0 "Train in nomadic warfare and cavalry tactics (+1 MIL, Manchu Focus)"
  emx_yan_flavor.11.b:0 "Instruct in imperial bureaucracy and law (+1 ADM, Korean Focus)"
  emx_yan_flavor.11.c:0 "Master classical court diplomacy and balance (+1 DIP, Harmony Focus)"
 
  emx_yan_flavor.12.t:0 "The Education of Princess Meiying: Ideology & Rule"
- emx_yan_flavor.12.d:0 "Princess Meiying approaches the cusp of adulthood. Her final mentorship will definitively determine the philosophical foundation of her future reign."
  emx_yan_flavor.12.a:0 "Embrace the warrior ethos of the Northern Steppe (+1 MIL, Manchu Focus)"
  emx_yan_flavor.12.b:0 "Embrace scholarly Confucian governance (+1 ADM, Korean Focus)"
  emx_yan_flavor.12.c:0 "Embrace supreme imperial autonomy and balance (+1 DIP, Harmony Focus)"
@@ -284,9 +279,7 @@ emx_yan_jurchen_dowry_title:0 "The Northern Frontier Dowry"
  emx_yan_subdue_jianzhou_desc:0 "Bring the southern and central Jurchen clans of Jianzhou and Haixi beneath the Yan crown, securing stable garrisons across Jilin and the eastern passes."
  emx_yan_banish_steppe_nomads_title:0 "The Sino-Northern Concord"
  emx_yan_banish_steppe_nomads_desc:0 "Pacify the northern nomads across all nine areas of Manchuria. With the entire northeastern frontier unified and secured under our banner, the empire cements its Manchurian hegemony."
- emx_yan_pacify_mongolia_title:0 "Subjugate the Mongolian Steppes"
  emx_yan_pacify_mongolia_desc:0 "The nomadic horse lords of the Mongolian plateau have posed a constant menace to China for millennia. By pacifying the khans across the steppes, the Yan Dynasty cements its divine mandate over the northern world."
- emx_yan_unify_north_china_title:0 "Consolidate the Yellow River Basin"
  emx_yan_unify_north_china_desc:0 "The ancient heartlands of the Central Plains and the Yellow River valley bow to the Yan throne. Reinforcing our frontier fortresses, our armies prepare the grand southward campaign to unite all of China under Heaven."
  emx_yan_yalu_manchu_title:0 "Secure the Yalu Frontier"
  emx_yan_yalu_manchu_desc:0 "The Yalu River marks the ancient boundary between China and the Korean peninsula. Mobilizing our garrisons along the river allows our forces to project imperial authority southward into the Kingdom of Joseon."
@@ -408,19 +401,8 @@ emx_yan_eoc_mng_cornerstone_empire3_title:0 "Cornerstone of Empire"
 
  emx_yan_subjugate_joseon_manchu_title:0 "Confront Joseon"
  emx_yan_subjugate_joseon_manchu_desc:0 "With our union with the Jurchen tribes sealed, the court in Hanseong has turned hostile. We must march south across the Yalu and force Joseon to recognize our supremacy."
- emx_yan_yalu_manchu_title:0 "The Yalu Frontier"
- emx_yan_yalu_manchu_desc:0 "Prepare our northern garrisons and muster the banners along the Yalu River to defend against Korean incursions and prepare for offensive campaigns."
  emx_yan_korean_alliance_k_title:0 "Union with Joseon"
  emx_yan_korean_alliance_k_desc:0 "With our dynastic personal union with the kingdom of Joseon confirmed under Queen Meiying, we must secure the borderlands of southern Manchuria and lay claim to the Jurchen strongholds."
- emx_yan_jurchen_dowry_k_title:0 "Northern Frontier Vigil"
- emx_yan_jurchen_dowry_k_desc:0 "Having united with Joseon, the Jurchen clans beyond the wall harbor bitter resentment. Fortify the frontier watchtowers and seize control of the Jurchen lands."
- emx_yan_subdue_jianzhou_k_title:0 "Subdue the Jurchen Tribes"
- emx_yan_subdue_jianzhou_k_desc:0 "Lead a combined Yan-Joseon host beyond the Great Wall to pacify the rebellious Jurchen clans once and for all."
- emx_yan_jurchen_dowry_h_title:0 "Envoys to the Jurchen"
- emx_yan_jurchen_dowry_h_desc:0 "Dispatch seasoned imperial envoys and trade missions to the Jurchen chieftains, securing their respect and peaceful tribute through sovereign balance."
- emx_yan_yalu_harmony_title:0 "Envoys to Joseon"
- emx_yan_yalu_harmony_desc:0 "Send diplomatic legations to the Joseon court in Hanseong, preserving ancient bonds of Confucian friendship and maritime commerce without foreign entanglements."
- emx_yan_chosen_dynasty_opinion:0 "Dynastic Union & Harmony"
 
  emx_yan_manchu_korea_prep_trigger_tt:0 "§YJianzhou§! has less than §G50%§! Liberty Desire and §YYan§! has an army equal to or larger than §YJoseon (Korea)§!."
  emx_yan_siege_prep:0 "Invasion Preparations"
@@ -430,7 +412,6 @@ emx_yan_eoc_mng_cornerstone_empire3_title:0 "Cornerstone of Empire"
 
  emx_yan_meiying_crowned_title:0 "Coronation of Queen Meiying"
  emx_yan_meiying_crowned_desc:0 "Queen Meiying ascends the throne of Yan, ready to determine the diplomatic destiny and imperial path of our realm."
- yan_must_confirm_branch_first_tt:0 "§YYan§! must officially confirm and choose this dynastic path upon §YQueen Meiying's§! coronation (Cannot complete during preview mode)."
 
  emx_yan_harmony_start_title:0 "Muster the Imperial Banners"
  emx_yan_harmony_start_desc:0 "Queen Meiying holds sovereign command over the realm. Muster the armies of Yan to full capacity and prepare our forces to pacify the northern marchlands."
@@ -451,6 +432,17 @@ emx_yan_eoc_mng_cornerstone_empire3_title:0 "Cornerstone of Empire"
  emx_yan_korean_conquest_spoils:0 "Spoils of the Korean Realm"
  desc_emx_yan_korean_conquest_spoils:0 "Mastery over the Korean peninsula brings unmatched siege techniques and vast commercial expansion across foreign trade nodes."
  emx_yan_harmony_shock_reduction:0 "Frontier Shield Mastery"
+
+
+
+
+
+ # Dynamic Dynasty Branch Mission Titles & Tooltips
+
+
+
+
+
  desc_emx_yan_harmony_shock_reduction:0 "Hardened formations and fortress networks reduce the impact of enemy shock charges."
  emx_yan_harmony_movement_speed:0 "Steppe Cavalry Agility"
  desc_emx_yan_harmony_movement_speed:0 "Integration of Mongolian equestrian traditions grants unparalleled strategic movement speed to our imperial armies."
@@ -458,3 +450,12 @@ emx_yan_eoc_mng_cornerstone_empire3_title:0 "Cornerstone of Empire"
  desc_emx_yan_harmony_home_dice:0 "Deep familiarity with our home provinces grant tactical combat advantages in friendly territory."
  emx_yan_harmony_mandate_growth:0 "Divine Harmony of All Under Heaven"
  desc_emx_yan_harmony_mandate_growth:0 "Complete unification of the realm under Queen Meiying stabilizes and accelerates the accumulation of the Imperial Mandate."
+
+ emx_yan_harmony_fleet_prep_title:0 "Build the Great Armada"
+ emx_yan_harmony_fleet_prep_desc:0 "With the Korean coastline secured, construct a massive battle fleet of heavy warships to dominate the East China Sea and prepare for our voyage to Japan."
+ emx_yan_harmony_conquer_japan_title:0 "Conquest of the Rising Sun"
+ emx_yan_harmony_conquer_japan_desc:0 "Launch our grand armada across the Tsushima Strait and bring all of the Japanese islands under imperial dominion, mastering both land and naval combat."
+ emx_yan_harmony_fleet_prep:0 "Imperial Armada Preparations"
+ desc_emx_yan_harmony_fleet_prep:0 "Our newly constructed heavy warships inspire dread across the eastern seas, elevating fleet morale and hull durability."
+ emx_yan_harmony_japan_mastery:0 "Mastery over the Rising Sun"
+ desc_emx_yan_harmony_japan_mastery:0 "The subjugation of the samurai clans and control of the Japanese archipelago unites continental martial strength with supreme naval dominance."

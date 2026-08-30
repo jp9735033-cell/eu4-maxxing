@@ -553,6 +553,63 @@ emx_yan_harmony_s2 = {
 	}
 }
 
+emx_yan_harmony_s3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		emx_is_yan_trigger = yes
+		OR = {
+			has_country_flag = emx_yan_chose_harmony
+			AND = {
+				NOT = { has_country_flag = emx_yan_chose_consort }
+				has_country_flag = emx_yan_preview_harmony
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_yan_harmony_fleet_prep = {
+		icon = mission_galleys
+		required_missions = { emx_yan_harmony_korea }
+		position = 4
+		provinces_to_highlight = { }
+		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
+			num_of_heavy_ship = 20
+		}
+		effect = {
+			emx_yan_harmony_fleet_prep_effect = yes
+		}
+	}
+
+	emx_yan_harmony_conquer_japan = {
+		icon = mission_japanese_fort
+		required_missions = { emx_yan_harmony_fleet_prep }
+		position = 5
+		provinces_to_highlight = {
+			region = japan_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
+			emx_yan_harmony_japan_conquest_trigger = yes
+		}
+		effect = {
+			emx_yan_harmony_conquer_japan_effect = yes
+		}
+	}
+}
+
 # =============================================================================
 # 2. PERMANENT SHARED SLOTS 1 TO 5 (ALWAYS ACTIVE - ZERO DUPLICATION)
 # =============================================================================

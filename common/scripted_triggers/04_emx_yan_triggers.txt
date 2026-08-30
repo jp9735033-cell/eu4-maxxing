@@ -158,6 +158,13 @@ emx_yan_harmony_korea_conquest_trigger = {
 	}
 }
 
+emx_yan_harmony_japan_conquest_trigger = {
+	japan_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
 # Frontier Defense & Readiness Triggers (Zero Land Requirement for Slot 1/2 Counterpart)
 emx_yan_frontier_readiness_trigger = {
 	custom_trigger_tooltip = {

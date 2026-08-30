@@ -712,6 +712,25 @@ emx_yan_harmony_china_all_effect = {
 	}
 }
 
+emx_yan_harmony_fleet_prep_effect = {
+	add_prestige = 15
+	add_dip_power = 50
+	add_country_modifier = {
+		name = "emx_yan_harmony_fleet_prep"
+		duration = 14600
+	}
+}
+
+emx_yan_harmony_conquer_japan_effect = {
+	add_prestige = 25
+	add_mil_power = 100
+	remove_country_modifier = emx_yan_harmony_fleet_prep
+	add_country_modifier = {
+		name = "emx_yan_harmony_japan_mastery"
+		duration = -1
+	}
+}
+
 emx_yan_subdue_jianzhou_k_effect = {
 	add_prestige = 15
 	add_dip_power = 50

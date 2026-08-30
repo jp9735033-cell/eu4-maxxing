@@ -89,6 +89,17 @@ emx_yan_harmony_mandate_growth = {
 	imperial_mandate = 0.50
 }
 
+emx_yan_harmony_fleet_prep = {
+	naval_morale = 0.10
+	ship_durability = 0.10
+}
+
+emx_yan_harmony_japan_mastery = {
+	infantry_power = 0.10
+	naval_morale = 0.10
+	ship_durability = 0.10
+}
+
 # =============================================================================
 # Frontier Garrisons & Great Wall Network Modifiers
 # =============================================================================

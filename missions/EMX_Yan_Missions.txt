@@ -78,9 +78,11 @@ emx_yan_manchu_s1 = {
 	potential = {
 		emx_is_yan_trigger = yes
 		OR = {
-			has_country_flag = emx_yan_consort_manchu
 			has_country_flag = emx_yan_chose_manchu
-			has_country_flag = emx_yan_preview_manchu
+			AND = {
+				NOT = { has_country_flag = emx_yan_chose_consort }
+				has_country_flag = emx_yan_preview_manchu
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -149,9 +151,11 @@ emx_yan_manchu_s2 = {
 	potential = {
 		emx_is_yan_trigger = yes
 		OR = {
-			has_country_flag = emx_yan_consort_manchu
 			has_country_flag = emx_yan_chose_manchu
-			has_country_flag = emx_yan_preview_manchu
+			AND = {
+				NOT = { has_country_flag = emx_yan_chose_consort }
+				has_country_flag = emx_yan_preview_manchu
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -206,9 +210,14 @@ emx_yan_korea_s1 = {
 	potential = {
 		emx_is_yan_trigger = yes
 		OR = {
-			has_country_flag = emx_yan_consort_korea
-			has_country_flag = emx_yan_chose_korea
-			has_country_flag = emx_yan_preview_korea
+			AND = {
+				has_country_flag = emx_yan_chose_korea
+				NOT = { has_country_flag = emx_yan_integrated_korea }
+			}
+			AND = {
+				NOT = { has_country_flag = emx_yan_chose_consort }
+				has_country_flag = emx_yan_preview_korea
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -303,9 +312,14 @@ emx_yan_korea_s2 = {
 	potential = {
 		emx_is_yan_trigger = yes
 		OR = {
-			has_country_flag = emx_yan_consort_korea
-			has_country_flag = emx_yan_chose_korea
-			has_country_flag = emx_yan_preview_korea
+			AND = {
+				has_country_flag = emx_yan_chose_korea
+				NOT = { has_country_flag = emx_yan_integrated_korea }
+			}
+			AND = {
+				NOT = { has_country_flag = emx_yan_chose_consort }
+				has_country_flag = emx_yan_preview_korea
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -357,9 +371,11 @@ emx_yan_harmony_s1 = {
 	potential = {
 		emx_is_yan_trigger = yes
 		OR = {
-			has_country_flag = emx_yan_consort_harmony
 			has_country_flag = emx_yan_chose_harmony
-			has_country_flag = emx_yan_preview_harmony
+			AND = {
+				NOT = { has_country_flag = emx_yan_chose_consort }
+				has_country_flag = emx_yan_preview_harmony
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -454,9 +470,11 @@ emx_yan_harmony_s2 = {
 	potential = {
 		emx_is_yan_trigger = yes
 		OR = {
-			has_country_flag = emx_yan_consort_harmony
 			has_country_flag = emx_yan_chose_harmony
-			has_country_flag = emx_yan_preview_harmony
+			AND = {
+				NOT = { has_country_flag = emx_yan_chose_consort }
+				has_country_flag = emx_yan_preview_harmony
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}

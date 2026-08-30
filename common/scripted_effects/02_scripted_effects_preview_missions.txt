@@ -92,6 +92,7 @@ select_current_missions_YAN = {
 			has_country_flag = emx_yan_event_chose_manchu
 		}
 		set_country_flag = emx_yan_chose_manchu
+		set_country_flag = emx_yan_consort_manchu
 		set_country_flag = emx_yan_chose_consort
 		clr_country_flag = emx_yan_preview_manchu
 		clr_country_flag = emx_yan_preview_korea
@@ -104,6 +105,7 @@ select_current_missions_YAN = {
 			has_country_flag = emx_yan_event_chose_korea
 		}
 		set_country_flag = emx_yan_chose_korea
+		set_country_flag = emx_yan_consort_korea
 		set_country_flag = emx_yan_chose_consort
 		clr_country_flag = emx_yan_preview_manchu
 		clr_country_flag = emx_yan_preview_korea
@@ -116,6 +118,7 @@ select_current_missions_YAN = {
 			has_country_flag = emx_yan_event_chose_harmony
 		}
 		set_country_flag = emx_yan_chose_harmony
+		set_country_flag = emx_yan_consort_harmony
 		set_country_flag = emx_yan_chose_consort
 		clr_country_flag = emx_yan_preview_manchu
 		clr_country_flag = emx_yan_preview_korea

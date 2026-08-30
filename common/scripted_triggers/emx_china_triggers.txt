@@ -9,7 +9,13 @@
 # immediately before change_tag = QNG. Country flags survive change_tag.
 
 emx_is_yan_trigger = {
-	tag = YAN
+	OR = {
+		tag = YAN
+		AND = {
+			tag = QNG
+			has_country_flag = emx_origin_yan
+		}
+	}
 }
 
 emx_is_wu_trigger = {

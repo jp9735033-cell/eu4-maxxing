@@ -68,15 +68,47 @@ emx_start_of_the_great_wall = {
 	supply_limit_modifier = 0.25
 }
 
+emx_yan_frontier_garrison = {
+	local_development_cost = -0.05
+	province_trade_power_value = 2
+	local_defensiveness = 0.15
+}
 
 # One per garrison, so the wall accumulates: five of these is +5% land
 # morale and +5% infantry combat ability. A single shared name would only
 # refresh itself instead of stacking.
+emx_yan_garrison_xuanhua = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_datong = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_shanhaiguan = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_ningyuan = { land_morale = 0.01 infantry_power = 0.01 }
+emx_yan_garrison_shenyang = { land_morale = 0.01 infantry_power = 0.01 }
 
+emx_yan_nine_garrisons = {
+	defensiveness = 0.10
+	land_forcelimit_modifier = 0.05
+}
 
+emx_yan_steppe_tribute = {
+	cavalry_power = 0.10
+	global_manpower_modifier = 0.10
+}
 
+emx_yan_grand_canal = {
+	trade_efficiency = 0.10
+	global_trade_goods_size_modifier = 0.05
+}
 
+emx_yan_yongle_dadian = {
+	global_institution_spread = 0.15
+	advisor_cost = -0.10
+	prestige = 1
+}
 
+emx_yan_northern_wall = {
+	defensiveness = 0.15
+	manpower_recovery_speed = 0.15
+	land_attrition = -0.10
+}
 
 ##################################################
 # 4. Wu
@@ -406,6 +438,32 @@ emx_tatar_dune = {
 }
 
 
-##################################################
-# Yan (Qing) Unique Narrative Modifiers
-##################################################
+emx_lord_of_the_silk_road = {
+	trade_steering = 0.25
+	trade_efficiency = 0.25
+	caravan_power = 2.0
+}
+
+emx_silk_road_gansu_caravan = {
+	caravan_power = 0.25
+}
+
+emx_silk_road_samarkand_caravan = {
+	caravan_power = 0.50
+}
+
+emx_silk_road_persia_caravan = {
+	caravan_power = 0.75
+}
+
+emx_silk_road_crimea_caravan = {
+	caravan_power = 1.00
+}
+
+emx_silk_road_trabzon_caravan = {
+	caravan_power = 1.00
+}
+
+emx_silk_road_levant_caravan = {
+	caravan_power = 1.00
+}

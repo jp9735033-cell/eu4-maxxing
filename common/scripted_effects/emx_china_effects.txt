@@ -1,29 +1,10 @@
-# eu4-maxxing: shared effects for Chinese unification, Shu, and Yue mission trees.
+# eu4-maxxing: shared effects for the Yan / Wu / Shu / Yue mission trees.
 
 emx_unify_china_effect = {
 	add_prestige = 25
 	add_country_modifier = {
 		name = emx_unified_china
 		duration = -1
-	}
-	# Automatically integrate Jianzhou, Manchu, or Korea if they are subject / PU
-	if = {
-		limit = {
-			MJZ = { is_subject_of = ROOT }
-		}
-		inherit = MJZ
-	}
-	if = {
-		limit = {
-			MCH = { is_subject_of = ROOT }
-		}
-		inherit = MCH
-	}
-	if = {
-		limit = {
-			KOR = { is_subject_of = ROOT }
-		}
-		inherit = KOR
 	}
 	china_superregion = {
 		limit = {
@@ -34,229 +15,347 @@ emx_unify_china_effect = {
 	}
 }
 
-##################################################
-# Helpers
-##################################################
+# =============================================================================
+# Overland Silk Road Scripted Effects
+# =============================================================================
 
-emx_add_workshop_effect = {
-	if = {
-		limit = { NOT = { has_building = workshop } }
-		add_building = workshop
+# 1. Gansu Mission Effect
+emx_silk_road_gansu_effect = {
+	add_country_modifier = {
+		name = emx_silk_road_gansu_caravan
+		duration = -1
 	}
-	else = {
-		add_base_production = 2
-	}
-}
-
-##################################################
-# Shared industry missions
-##################################################
-
-emx_industry_porcelain_effect = {
-	670 = {
-		add_permanent_province_modifier = { name = emx_ind_porcelain duration = -1 }
-		add_base_production = 2
-	}
-	671 = {
-		add_permanent_province_modifier = { name = emx_ind_porcelain duration = -1 }
-		add_base_production = 2
-	}
-}
-
-emx_industry_jiangnan_looms_effect = {
-	1826 = {
-		add_permanent_province_modifier = { name = emx_ind_jiangnan_looms duration = -1 }
-		add_base_production = 1
-	}
-	682 = {
-		add_permanent_province_modifier = { name = emx_ind_jiangnan_looms duration = -1 }
-		add_base_production = 1
-	}
-	680 = {
-		add_permanent_province_modifier = { name = emx_ind_jiangnan_looms duration = -1 }
-		add_base_production = 1
-	}
-	1827 = {
-		add_permanent_province_modifier = { name = emx_ind_jiangnan_looms duration = -1 }
-		add_base_production = 1
-	}
-}
-
-emx_industry_ironworks_effect = {
-	667 = {
-		add_permanent_province_modifier = { name = emx_ind_guangdong_ironworks duration = -1 }
-		emx_add_workshop_effect = yes
-	}
-	668 = {
-		add_permanent_province_modifier = { name = emx_ind_guangdong_ironworks duration = -1 }
-		emx_add_workshop_effect = yes
-	}
-	665 = {
-		add_permanent_province_modifier = { name = emx_ind_guangdong_ironworks duration = -1 }
-		emx_add_workshop_effect = yes
-	}
-}
-
-emx_industry_salt_tea_effect = {
-	685 = {
-		add_permanent_province_modifier = { name = emx_ind_monopolies duration = -1 }
-		add_base_tax = 1
-	}
-	698 = {
-		add_permanent_province_modifier = { name = emx_ind_monopolies duration = -1 }
-		add_base_tax = 1
-	}
-	680 = {
-		add_permanent_province_modifier = { name = emx_ind_monopolies duration = -1 }
-		add_base_tax = 1
-	}
-}
-
-emx_industry_northern_workshops_effect = {
-	1816 = {
-		add_permanent_province_modifier = { name = emx_ind_northern_workshops duration = -1 }
-		emx_add_workshop_effect = yes
-	}
-	691 = {
-		add_permanent_province_modifier = { name = emx_ind_northern_workshops duration = -1 }
-		emx_add_workshop_effect = yes
-	}
-	688 = {
-		add_permanent_province_modifier = { name = emx_ind_northern_workshops duration = -1 }
-		emx_add_workshop_effect = yes
-	}
-	700 = {
-		add_permanent_province_modifier = { name = emx_ind_northern_workshops duration = -1 }
-		emx_add_workshop_effect = yes
-	}
-}
-
-##################################################
-# Shu: cancelling the terrain development penalty in the west.
-# Each block is applied to the whole area, not only to owned provinces, so the
-# roads and irrigation stay there permanently once Shu has paid for them.
-##################################################
-
-emx_shu_tibet_effect = {
-	utsang_area = { add_permanent_province_modifier = { name = emx_shu_tibetan_roads duration = -1 } }
-	tsang_area = { add_permanent_province_modifier = { name = emx_shu_tibetan_roads duration = -1 } }
-	ngari_area = { add_permanent_province_modifier = { name = emx_shu_tibetan_roads duration = -1 } }
-}
-
-emx_shu_kham_effect = {
-	kham_area = { add_permanent_province_modifier = { name = emx_shu_kham_roads duration = -1 } }
-	amdo_area = { add_permanent_province_modifier = { name = emx_shu_kham_roads duration = -1 } }
-}
-
-# The Lhasa trade node minus Nepal (557, 2070, 2071, 4483, 4485 are excluded).
-emx_shu_lhasa_node_effect = {
-	2129 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	2128 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	676 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	705 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	706 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	2134 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4204 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	677 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	2130 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4205 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	565 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4481 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4482 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4514 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4515 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4516 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4517 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4518 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4519 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-	4520 = { add_permanent_province_modifier = { name = emx_shu_tea_horse_road duration = -1 } }
-}
-
-emx_shu_hexi_effect = {
-	west_gansu_area = { add_permanent_province_modifier = { name = emx_shu_hexi_corridor duration = -1 } }
-}
-
-emx_shu_lopnor_effect = {
-	shanshan_area = { add_permanent_province_modifier = { name = emx_shu_lop_nor_oases duration = -1 } }
-	turpan_kumul_area = { add_permanent_province_modifier = { name = emx_shu_lop_nor_oases duration = -1 } }
-}
-
-emx_shu_altishahr_effect = {
-	tarim_basin_area = { add_permanent_province_modifier = { name = emx_shu_altishahr_oases duration = -1 } }
-	kashgaria_area = { add_permanent_province_modifier = { name = emx_shu_altishahr_oases duration = -1 } }
-}
-
-emx_shu_dzungaria_effect = {
-	zungaria_area = { add_permanent_province_modifier = { name = emx_shu_dzungarian_steppe duration = -1 } }
-}
-
-##################################################
-# Yue: coastal stations
-##################################################
-
-emx_yue_pearl_ports_effect = {
-	667 = { add_permanent_province_modifier = { name = emx_yue_pearl_river_ports duration = -1 } }
-	668 = { add_permanent_province_modifier = { name = emx_yue_pearl_river_ports duration = -1 } }
-	665 = { add_permanent_province_modifier = { name = emx_yue_pearl_river_ports duration = -1 } }
-}
-
-emx_yue_hainan_effect = {
-	666 = { add_permanent_province_modifier = { name = emx_yue_hainan_stations duration = -1 } }
-	2159 = { add_permanent_province_modifier = { name = emx_yue_hainan_stations duration = -1 } }
-	2161 = { add_permanent_province_modifier = { name = emx_yue_hainan_stations duration = -1 } }
-}
-
-emx_yue_western_coast_effect = {
-	2160 = { add_permanent_province_modifier = { name = emx_yue_western_coast duration = -1 } }
-	2162 = { add_permanent_province_modifier = { name = emx_yue_western_coast duration = -1 } }
-	2157 = { add_permanent_province_modifier = { name = emx_yue_western_coast duration = -1 } }
-	2158 = { add_permanent_province_modifier = { name = emx_yue_western_coast duration = -1 } }
-}
-
-emx_yue_chaozhou_effect = {
-	2156 = { add_permanent_province_modifier = { name = emx_yue_chaozhou_yards duration = -1 } }
-	1829 = { add_permanent_province_modifier = { name = emx_yue_chaozhou_yards duration = -1 } }
-	669 = { add_permanent_province_modifier = { name = emx_yue_chaozhou_yards duration = -1 } }
-}
-
-emx_yue_south_sea_effect = {
-	every_owned_province = {
+	every_province = {
 		limit = {
-			has_port = yes
-			superregion = china_superregion
-			NOT = { has_province_modifier = emx_yue_south_sea_stations }
+			OR = {
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
 		}
-		add_permanent_province_modifier = {
-			name = emx_yue_south_sea_stations
-			duration = -1
-		}
+		add_permanent_claim = ROOT
 	}
 }
 
-##################################################
-# Shu: the highland looms.
-# Every one of these seventeen provinces produces wool at game start. The
-# limit means only the ones Shu actually owns, and that have not been
-# converted already, change - so the decision can be taken again as Shu
-# expands west without re-converting anything.
-##################################################
+# 2. Samarkand Mission Effect
+emx_silk_road_samarkand_effect = {
+	if = {
+		limit = { has_country_modifier = emx_silk_road_gansu_caravan }
+		remove_country_modifier = emx_silk_road_gansu_caravan
+	}
+	add_country_modifier = {
+		name = emx_silk_road_samarkand_caravan
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			OR = {
+				# Persia Route
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				# Crimea Steppe Route
+				area = khiva_area
+				area = nogai_area
+				area = lower_yik_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
 
-emx_shu_weave_wool_effect = {
-	2133  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Dege
-	705   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Gyegu
-	4519  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Damxung
-	4516  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Purang
-	4520  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Rutog
-	4693  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Keriya
-	2124  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Yarkand
-	4210  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Yangi Hissar
-	4209  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Maralbexi
-	739   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Kashgar
-	719   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Uliastai
-	2074  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Ladakh
-	4521  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Skardu
-	2073  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Baltistan
-	4481  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Punakah
-	565   = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Bhutan
-	4482  = { limit = { owned_by = ROOT trade_goods = wool } change_trade_goods = cloth }	# Sikkim
+# 3. Persia Mission Effect
+emx_silk_road_persia_effect = {
+	if = {
+		limit = { has_country_modifier = emx_silk_road_samarkand_caravan }
+		remove_country_modifier = emx_silk_road_samarkand_caravan
+	}
+	if = {
+		limit = { has_country_modifier = emx_silk_road_gansu_caravan }
+		remove_country_modifier = emx_silk_road_gansu_caravan
+	}
+	add_country_modifier = {
+		name = emx_silk_road_persia_caravan
+		duration = -1
+	}
+	every_province = {
+		limit = {
+			OR = {
+				# Trabzon Route
+				area = armenia_area
+				area = erzurum_area
+				# Levant Route
+				area = shahrizor_area
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = aleppo_area
+				area = syria_area
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 4. Crimea Terminus Effect
+emx_silk_road_crimea_effect = {
+	if = {
+		limit = { has_country_modifier = emx_silk_road_persia_caravan }
+		remove_country_modifier = emx_silk_road_persia_caravan
+	}
+	if = {
+		limit = { has_country_modifier = emx_silk_road_samarkand_caravan }
+		remove_country_modifier = emx_silk_road_samarkand_caravan
+	}
+	if = {
+		limit = { has_country_modifier = emx_silk_road_gansu_caravan }
+		remove_country_modifier = emx_silk_road_gansu_caravan
+	}
+	add_country_modifier = {
+		name = emx_silk_road_crimea_caravan
+		duration = -1
+	}
+	change_price = {
+		trade_goods = chinaware
+		key = EMX_CRIMEA_CHINAWARE_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = silk
+		key = EMX_CRIMEA_SILK_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 5. Trabzon Terminus Effect
+emx_silk_road_trabzon_effect = {
+	if = {
+		limit = { has_country_modifier = emx_silk_road_persia_caravan }
+		remove_country_modifier = emx_silk_road_persia_caravan
+	}
+	if = {
+		limit = { has_country_modifier = emx_silk_road_samarkand_caravan }
+		remove_country_modifier = emx_silk_road_samarkand_caravan
+	}
+	if = {
+		limit = { has_country_modifier = emx_silk_road_gansu_caravan }
+		remove_country_modifier = emx_silk_road_gansu_caravan
+	}
+	add_country_modifier = {
+		name = emx_silk_road_trabzon_caravan
+		duration = -1
+	}
+	change_price = {
+		trade_goods = chinaware
+		key = EMX_TRABZON_CHINAWARE_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = silk
+		key = EMX_TRABZON_SILK_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 6. Levant Terminus Effect
+emx_silk_road_levant_effect = {
+	if = {
+		limit = { has_country_modifier = emx_silk_road_persia_caravan }
+		remove_country_modifier = emx_silk_road_persia_caravan
+	}
+	if = {
+		limit = { has_country_modifier = emx_silk_road_samarkand_caravan }
+		remove_country_modifier = emx_silk_road_samarkand_caravan
+	}
+	if = {
+		limit = { has_country_modifier = emx_silk_road_gansu_caravan }
+		remove_country_modifier = emx_silk_road_gansu_caravan
+	}
+	add_country_modifier = {
+		name = emx_silk_road_levant_caravan
+		duration = -1
+	}
+	change_price = {
+		trade_goods = chinaware
+		key = EMX_LEVANT_CHINAWARE_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = silk
+		key = EMX_LEVANT_SILK_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 7. Silk Road Capstone Effect
+emx_silk_road_capstone_effect = {
+	if = { limit = { has_country_modifier = emx_silk_road_crimea_caravan } remove_country_modifier = emx_silk_road_crimea_caravan }
+	if = { limit = { has_country_modifier = emx_silk_road_trabzon_caravan } remove_country_modifier = emx_silk_road_trabzon_caravan }
+	if = { limit = { has_country_modifier = emx_silk_road_levant_caravan } remove_country_modifier = emx_silk_road_levant_caravan }
+	if = { limit = { has_country_modifier = emx_silk_road_persia_caravan } remove_country_modifier = emx_silk_road_persia_caravan }
+	if = { limit = { has_country_modifier = emx_silk_road_samarkand_caravan } remove_country_modifier = emx_silk_road_samarkand_caravan }
+	if = { limit = { has_country_modifier = emx_silk_road_gansu_caravan } remove_country_modifier = emx_silk_road_gansu_caravan }
+	add_country_modifier = {
+		name = emx_lord_of_the_silk_road
+		duration = -1
+	}
+}
+
+# =============================================================================
+# Maritime Spice Route Scripted Effects
+# =============================================================================
+
+# 1. Malacca Mission -> Claims on Bengal coastal CoTs/Estuaries
+emx_spice_route_malacca_effect = {
+	every_province = {
+		limit = {
+			region = bengal_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 2. Bengal Mission -> Claims on Coromandel coastal CoTs/Estuaries
+emx_spice_route_bengal_effect = {
+	every_province = {
+		limit = {
+			region = coromandel_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 3. Coromandel Mission -> Claims on Gujarat & Aden
+emx_spice_route_coromandel_effect = {
+	every_province = {
+		limit = {
+			OR = {
+				region = west_india_region
+				region = horn_of_africa_region
+				region = arabia_region
+			}
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 4. Gujarat Mission -> Claims on Hormuz
+emx_spice_route_gujarat_effect = {
+	every_province = {
+		limit = {
+			region = persia_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 5. Hormuz Mission -> Price Rewards
+emx_spice_route_hormuz_effect = {
+	change_price = {
+		trade_goods = spices
+		key = EMX_HORMUZ_SPICES_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = tea
+		key = EMX_HORMUZ_TEA_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 6. Aden Mission -> Claims on Alexandria
+emx_spice_route_aden_effect = {
+	every_province = {
+		limit = {
+			region = egypt_region
+			has_port = yes
+			OR = {
+				province_has_center_of_trade_of_level = 1
+				has_river_estuary_trigger = yes
+			}
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# 7. Alexandria Mission -> Price Rewards
+emx_spice_route_alexandria_effect = {
+	change_price = {
+		trade_goods = spices
+		key = EMX_ALEXANDRIA_SPICES_PRICE
+		value = 0.25
+		duration = -1
+	}
+	change_price = {
+		trade_goods = tea
+		key = EMX_ALEXANDRIA_TEA_PRICE
+		value = 0.25
+		duration = -1
+	}
+}
+
+# 8. Capstone -> Global Spice & Tea Price Rewards (+50%)
+emx_spice_route_capstone_effect = {
+	change_price = {
+		trade_goods = spices
+		key = EMX_SPICE_ROUTE_PRICE
+		value = 0.50
+		duration = -1
+	}
+	change_price = {
+		trade_goods = tea
+		key = EMX_SPICE_ROUTE_TEA_PRICE
+		value = 0.50
+		duration = -1
+	}
 }

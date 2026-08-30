@@ -331,9 +331,11 @@ country_event = {
 			}
 			add_opinion = { who = MJZ modifier = opinion_insulted }
 			reverse_add_opinion = { who = MJZ modifier = opinion_insulted }
-			declare_war_with_cb = {
-				who = MJZ
-				casus_belli = cb_conquest
+			MJZ = {
+				declare_war_with_cb = {
+					who = ROOT
+					casus_belli = cb_insult
+				}
 			}
 		}
 		add_prestige = 15

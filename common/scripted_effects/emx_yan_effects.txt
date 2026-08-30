@@ -443,6 +443,9 @@ emx_yan_eight_banners_effect = {
 		name = "emx_yan_eight_banners_modifier"
 		duration = -1
 	}
+	update_entire_culture_foreign = {
+		culture = manchu
+	}
 	mongolia_region = {
 		limit = {
 			NOT = { is_core = ROOT }

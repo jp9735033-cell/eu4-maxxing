@@ -351,7 +351,7 @@ emx_yan_blood_pact_effect = {
 			MJZ = { is_subject_of = ROOT }
 		}
 		MJZ = {
-			add_liberty_desire = -20
+			add_liberty_desire = -50
 		}
 	}
 	if = {
@@ -360,7 +360,7 @@ emx_yan_blood_pact_effect = {
 			JNZ = { is_subject_of = ROOT }
 		}
 		JNZ = {
-			add_liberty_desire = -20
+			add_liberty_desire = -50
 		}
 	}
 	jilin_area = {
@@ -461,7 +461,7 @@ emx_yan_korea_union_effect = {
 			KOR = { is_subject_of = ROOT }
 		}
 		KOR = {
-			add_liberty_desire = -25
+			add_liberty_desire = -50
 			add_opinion = { who = ROOT modifier = emx_yan_chosen_dynasty_opinion }
 		}
 	}

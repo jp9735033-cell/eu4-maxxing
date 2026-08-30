@@ -142,50 +142,19 @@ emx_yan_korea_loyal_trigger = {
 	}
 }
 
-# Path 3: Harmony of Heaven Triggers
-emx_yan_harmony_manchu_trigger = {
+# Path 3: Imperial Harmony Triggers
+emx_yan_harmony_start_trigger = {
 	custom_trigger_tooltip = {
-		tooltip = emx_yan_harmony_manchu_trigger_tt
-		has_country_flag = emx_yan_meiying_crowned
-		OR = {
-			AND = {
-				exists = MJZ
-				OR = {
-					alliance_with = MJZ
-					MJZ = { is_subject_of = ROOT }
-					has_opinion = { who = MJZ value = 100 }
-				}
-			}
-			AND = {
-				exists = JNZ
-				OR = {
-					alliance_with = JNZ
-					JNZ = { is_subject_of = ROOT }
-					has_opinion = { who = JNZ value = 100 }
-				}
-			}
-			has_country_flag = emx_yan_consort_harmony
-			has_country_flag = emx_yan_chose_harmony
-		}
+		tooltip = emx_yan_harmony_start_trigger_tt
+		has_regency = no
+		army_size_percentage = 1.0
 	}
 }
 
-emx_yan_harmony_korea_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = emx_yan_harmony_korea_trigger_tt
-		has_country_flag = emx_yan_meiying_crowned
-		OR = {
-			AND = {
-				exists = KOR
-				OR = {
-					alliance_with = KOR
-					KOR = { is_subject_of = ROOT }
-					has_opinion = { who = KOR value = 100 }
-				}
-			}
-			has_country_flag = emx_yan_consort_harmony
-			has_country_flag = emx_yan_chose_harmony
-		}
+emx_yan_harmony_korea_conquest_trigger = {
+	korea_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
 	}
 }
 

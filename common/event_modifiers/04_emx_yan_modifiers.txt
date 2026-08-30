@@ -67,18 +67,26 @@ emx_yan_siege_mastery = {
 	siege_ability = 0.20
 }
 
-# Path 3: Imperial Harmony Grand Fleet
-emx_yan_harmony_navy = {
-	ship_durability = 0.10
-	morale_fleet = 0.10
+# Path 3 & Korea Conquest Modifiers
+emx_yan_korean_conquest_spoils = {
+	global_foreign_trade_power = 0.50
+	siege_ability = 0.20
 }
 
-# Path 3: Pacific Exploration & Trade
-emx_yan_pacific_colonization = {
-	colonists = 2
-	may_explore = yes
-	global_colonial_growth = 50
-	infantry_power = 0.10
+emx_yan_harmony_shock_reduction = {
+	shock_damage_received = -0.10
+}
+
+emx_yan_harmony_movement_speed = {
+	movement_speed = 0.50
+}
+
+emx_yan_harmony_home_dice = {
+	own_territory_dice_roll_bonus = 1
+}
+
+emx_yan_harmony_mandate_growth = {
+	imperial_mandate = 0.50
 }
 
 # =============================================================================

@@ -684,7 +684,7 @@ emx_yan_harmony_north_china_effect = {
 	add_prestige = 25
 	add_adm_power = 100
 	add_country_modifier = {
-		name = "emx_yan_harmony_home_dice"
+		name = "emx_yan_harmony_north_china_mandate"
 		duration = -1
 	}
 	south_china_region = {
@@ -706,6 +706,7 @@ emx_yan_harmony_north_china_effect = {
 emx_yan_harmony_china_all_effect = {
 	add_prestige = 50
 	add_adm_power = 200
+	remove_country_modifier = emx_yan_harmony_north_china_mandate
 	add_country_modifier = {
 		name = "emx_yan_harmony_mandate_growth"
 		duration = -1

@@ -81,8 +81,8 @@ emx_yan_harmony_movement_speed = {
 	movement_speed = 0.50
 }
 
-emx_yan_harmony_home_dice = {
-	own_territory_dice_roll_bonus = 1
+emx_yan_harmony_north_china_mandate = {
+	imperial_mandate = 0.20
 }
 
 emx_yan_harmony_mandate_growth = {

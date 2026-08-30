@@ -376,7 +376,6 @@ country_event = {
 	trigger = {
 		tag = YAN
 		NOT = { has_country_flag = emx_yan_meiying_died }
-		is_year = 1450
 		NOT = { has_country_flag = emx_yan_chose_consort }
 		NOT = { has_country_flag = emx_yan_meiying_crowned }
 	}
@@ -517,5 +516,51 @@ country_event = {
 		}
 		add_prestige = 25
 		add_legitimacy = 25
+	}
+}
+
+# =============================================================================
+# 4. Tragic Death of Princess Meiying: The Court Unites (Unlocks Path 3)
+# =============================================================================
+country_event = {
+	id = emx_yan_flavor.3
+	title = emx_yan_flavor.3.t
+	desc = emx_yan_flavor.3.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = emx_yan_meiying_died
+		clr_country_flag = emx_yan_meiying_is_heir
+	}
+
+	option = {
+		name = emx_yan_flavor.3.a
+		set_country_flag = emx_yan_chose_consort
+		set_country_flag = emx_yan_event_chose_harmony
+		remove_country_modifier = emx_yan_divided_court
+		add_country_modifier = {
+			name = "emx_yan_harmonized_court"
+			duration = -1
+		}
+		if = {
+			limit = { exists = MJZ }
+			break_alliance = MJZ
+			hidden_effect = {
+				remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+				reverse_remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+			}
+		}
+		if = {
+			limit = { exists = KOR }
+			break_alliance = KOR
+			hidden_effect = {
+				remove_opinion = { who = KOR modifier = opinion_royal_marriage }
+				reverse_remove_opinion = { who = KOR modifier = opinion_royal_marriage }
+			}
+		}
+		add_stability_or_adm_power = yes
+		add_prestige = 25
 	}
 }

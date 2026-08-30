@@ -15,9 +15,11 @@ on_heir_death = {
 		limit = {
 			tag = YAN
 			NOT = { has_country_flag = emx_yan_chose_consort }
+			NOT = { has_country_flag = emx_yan_event_chose_harmony }
 		}
 		set_country_flag = emx_yan_meiying_died
 		clr_country_flag = emx_yan_meiying_is_heir
+		country_event = { id = emx_yan_flavor.3 }
 	}
 }
 
@@ -26,14 +28,16 @@ on_heir_disinherited = {
 		limit = {
 			tag = YAN
 			NOT = { has_country_flag = emx_yan_chose_consort }
+			NOT = { has_country_flag = emx_yan_event_chose_harmony }
 		}
 		set_country_flag = emx_yan_meiying_died
 		clr_country_flag = emx_yan_meiying_is_heir
+		country_event = { id = emx_yan_flavor.3 }
 	}
 }
 
 on_new_monarch = {
-	# When Meiying turns 15 and ascends the throne in 1450
+	# When Meiying turns 15 and ascends the throne
 	if = {
 		limit = {
 			tag = YAN
@@ -41,8 +45,8 @@ on_new_monarch = {
 			is_female = yes
 			has_regency = no
 			has_consort_regency = no
-			is_year = 1450
 			NOT = { has_country_flag = emx_yan_chose_consort }
+			NOT = { has_country_flag = emx_yan_meiying_crowned }
 		}
 		country_event = { id = emx_yan_flavor.2 }
 	}
@@ -52,9 +56,9 @@ on_bi_yearly_pulse_2 = {
 	if = {
 		limit = {
 			tag = YAN
-			is_year = 1450
 			NOT = { has_country_flag = emx_yan_meiying_died }
 			NOT = { has_country_flag = emx_yan_chose_consort }
+			NOT = { has_country_flag = emx_yan_meiying_crowned }
 			has_regency = no
 			has_consort_regency = no
 		}

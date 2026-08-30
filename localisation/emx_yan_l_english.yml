@@ -267,18 +267,20 @@ emx_yan_flavor.10.t:0 "The Education of Princess Meiying: Early Tutelage"
  emx_yan_flavor.15.a:0 "Demonstrate lethal horse archery and martial leadership (+1 MIL, Manchu Focus)"
  emx_yan_flavor.15.b:0 "Deliver a brilliant treatise on Confucian statecraft (+1 ADM, Korean Focus)"
  emx_yan_flavor.15.c:0 "Articulate an indivisible vision for East Asian harmony (+1 DIP, Harmony Focus)"
-
-
  emx_yan_chosen_dynasty_opinion:0 "Imperial Dynasty Union"
 
-emx_yan_flavor.2.t:0 "The Coronation of Queen Meiying"
+ emx_yan_flavor.2.t:0 "The Coronation of Queen Meiying"
  emx_yan_flavor.2.d:0 "Having reached her fifteenth year, the regency council of Beijing dissolves as Princess Meiying is formally crowned Queen of Yan. Educated in statecraft, warfare, and imperial philosophy, Her Majesty now turns her gaze toward the grand strategic crossroads of East Asia.\n\nOpen the §YMission Tree§! to review the prospective Dynasty Branches and confirm the destiny of the realm."
  emx_yan_flavor.2.a:0 "Long live Queen Meiying!"
  yan_meiying_coronation_guidance_tt:0 "§YQueen Meiying has taken the throne!§!\nOpen the §YMission Tree§! and click the §Y[✓] (Select Current Mission Branch)§! button to choose your dynasty path."
 
-yan_manchu_branch_req_tt:0 "Queen Meiying must have come of age and chosen the Jurchen Steppe Betrothal in her Coronation Event."
+ emx_yan_flavor.3.t:0 "The Tragic Passing of Princess Meiying"
+ emx_yan_flavor.3.d:0 "Grief falls upon the Forbidden City. With the untimely passing of Princess Meiying, the bitter court disputes over foreign betrothals and royal unions dissolve into sorrow. Standing united in sovereign mourning, the ministers, generals, and scholars of Beijing agree to reject all foreign entanglements, dedicating the Yan throne to sovereign autonomy and the Great Harmonization of East Asia."
+ emx_yan_flavor.3.a:0 "The realm stands united in sovereign harmony."
+
+ yan_manchu_branch_req_tt:0 "Queen Meiying must have come of age and chosen the Jurchen Steppe Betrothal in her Coronation Event."
  yan_korea_branch_req_tt:0 "Queen Meiying must have come of age and chosen the Joseon Scholarly Marriage in her Coronation Event."
- yan_harmony_branch_req_tt:0 "Queen Meiying must have come of age and chosen Imperial Autonomy in her Coronation Event."
+ yan_harmony_branch_req_tt:0 "The Imperial Court must have chosen Imperial Autonomy (or united following the death of Princess Meiying)."
 
 emx_yan_pacify_mongolia_title:0 "Subjugate the Mongolian Steppes"
  emx_yan_mandate_of_the_steppes:0 "Mandate of the Northern Steppes"

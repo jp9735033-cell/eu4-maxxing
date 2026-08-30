@@ -1,0 +1,324 @@
+# eu4-maxxing: Yan (YAN) Scripted Triggers
+
+# =============================================================================
+# Country Identity Trigger
+# =============================================================================
+
+emx_is_yan_trigger = {
+	OR = {
+		tag = YAN
+		has_country_flag = emx_origin_yan
+	}
+}
+
+# =============================================================================
+# Dynamic Dynasty Path Triggers (No Province Requirement for Initial Tiers)
+# =============================================================================
+
+# Path 1: Manchu Union Triggers
+emx_yan_manchu_union_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_manchu_union_trigger_tt
+		has_country_flag = emx_yan_meiying_crowned
+		OR = {
+			junior_union_with = MJZ
+			junior_union_with = JNZ
+			AND = {
+				exists = MJZ
+				MJZ = { is_subject_of = ROOT }
+			}
+			AND = {
+				exists = JNZ
+				JNZ = { is_subject_of = ROOT }
+			}
+			has_country_flag = emx_yan_consort_manchu
+			has_country_flag = emx_yan_chose_manchu
+		}
+	}
+}
+
+emx_yan_manchu_loyal_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_manchu_loyal_trigger_tt
+		OR = {
+			AND = {
+				exists = MJZ
+				MJZ = {
+					is_subject_of = ROOT
+					NOT = { liberty_desire = 50 }
+				}
+			}
+			AND = {
+				exists = JNZ
+				JNZ = {
+					is_subject_of = ROOT
+					NOT = { liberty_desire = 50 }
+				}
+			}
+			has_country_flag = emx_yan_consort_manchu
+			has_country_flag = emx_yan_chose_manchu
+		}
+		army_size_percentage = 0.80
+	}
+}
+
+emx_yan_jianzhou_surroundings_trigger = {
+	central_jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	liaoning_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_manchu_korea_prep_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_manchu_korea_prep_trigger_tt
+		OR = {
+			AND = {
+				exists = MJZ
+				MJZ = {
+					is_subject_of = ROOT
+					NOT = { liberty_desire = 50 }
+				}
+			}
+			AND = {
+				exists = JNZ
+				JNZ = {
+					is_subject_of = ROOT
+					NOT = { liberty_desire = 50 }
+				}
+			}
+		}
+		if = {
+			limit = { exists = KOR }
+			army_size = KOR
+		}
+	}
+}
+
+# Path 2: Korean Union Triggers
+emx_yan_korea_union_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_korea_union_trigger_tt
+		has_country_flag = emx_yan_meiying_crowned
+		OR = {
+			junior_union_with = KOR
+			AND = {
+				exists = KOR
+				KOR = { is_subject_of = ROOT }
+			}
+			has_country_flag = emx_yan_consort_korea
+			has_country_flag = emx_yan_chose_korea
+		}
+	}
+}
+
+emx_yan_korea_loyal_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_korea_loyal_trigger_tt
+		OR = {
+			AND = {
+				exists = KOR
+				KOR = {
+					is_subject_of = ROOT
+					NOT = { liberty_desire = 50 }
+				}
+			}
+			has_country_flag = emx_yan_consort_korea
+			has_country_flag = emx_yan_chose_korea
+		}
+		legitimacy_or_horde_unity = 70
+	}
+}
+
+# Path 3: Harmony of Heaven Triggers
+emx_yan_harmony_manchu_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_harmony_manchu_trigger_tt
+		has_country_flag = emx_yan_meiying_crowned
+		OR = {
+			AND = {
+				exists = MJZ
+				OR = {
+					alliance_with = MJZ
+					MJZ = { is_subject_of = ROOT }
+					has_opinion = { who = MJZ value = 100 }
+				}
+			}
+			AND = {
+				exists = JNZ
+				OR = {
+					alliance_with = JNZ
+					JNZ = { is_subject_of = ROOT }
+					has_opinion = { who = JNZ value = 100 }
+				}
+			}
+			has_country_flag = emx_yan_consort_harmony
+			has_country_flag = emx_yan_chose_harmony
+		}
+	}
+}
+
+emx_yan_harmony_korea_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_harmony_korea_trigger_tt
+		has_country_flag = emx_yan_meiying_crowned
+		OR = {
+			AND = {
+				exists = KOR
+				OR = {
+					alliance_with = KOR
+					KOR = { is_subject_of = ROOT }
+					has_opinion = { who = KOR value = 100 }
+				}
+			}
+			has_country_flag = emx_yan_consort_harmony
+			has_country_flag = emx_yan_chose_harmony
+		}
+	}
+}
+
+# Frontier Defense & Readiness Triggers (Zero Land Requirement for Slot 1/2 Counterpart)
+emx_yan_frontier_readiness_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = emx_yan_frontier_readiness_trigger_tt
+		has_country_flag = emx_yan_meiying_crowned
+		army_size_percentage = 0.80
+		manpower_percentage = 0.50
+	}
+}
+
+# =============================================================================
+# Yan Regional Conquest & Hegemony Triggers
+# =============================================================================
+
+emx_yan_unify_jurchen_trigger = {
+	central_jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ningguta_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	furdan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ilan_hala_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	liaoning_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	central_heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	east_heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_eight_banners_trigger = {
+	liaoning_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	central_jilin_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ningguta_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	furdan_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ilan_hala_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	central_heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	east_heilongjiang_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_pacify_mongolia_trigger = {
+	mongolia_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_unify_north_china_trigger = {
+	north_china_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_subjugate_joseon_trigger = {
+	OR = {
+		korea_region = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		AND = {
+			exists = KOR
+			OR = {
+				senior_union_with = KOR
+				KOR = { is_subject_of = ROOT }
+			}
+			has_opinion = { who = KOR value = 150 }
+		}
+	}
+}
+
+emx_yan_conquer_japan_trigger = {
+	japan_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+emx_yan_unify_china_trigger = {
+	owns_core_province = 1816
+	owns_core_province = 684
+	owns_core_province = 679
+	owns_core_province = 667
+	owns_core_province = 726
+}

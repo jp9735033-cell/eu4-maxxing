@@ -343,17 +343,30 @@ emx_yan_silk_road_halep_sham_effect = {
 # Yan Dynamic Mission Scripted Effects
 # =============================================================================
 
+# Path 1: Manchu Union Effects
 emx_yan_blood_pact_effect = {
-	add_prestige = 15
-	add_mil_power = 50
-	liaoning_area = {
+	if = {
 		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
+			exists = MJZ
+			MJZ = { is_subject_of = ROOT }
 		}
-		add_permanent_claim = ROOT
+		MJZ = {
+			add_liberty_desire = -20
+		}
 	}
-	jilin_area = {
+	if = {
+		limit = {
+			exists = JNZ
+			JNZ = { is_subject_of = ROOT }
+		}
+		JNZ = {
+			add_liberty_desire = -20
+		}
+	}
+}
+
+emx_yan_unify_jurchen_manchu_effect = {
+	manchuria_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -375,18 +388,93 @@ emx_yan_unify_jurchen_effect = {
 }
 
 emx_yan_eight_banners_effect = {
-	add_prestige = 25
-	add_mil_power = 100
 	add_country_modifier = {
 		name = "emx_yan_eight_banners_modifier"
 		duration = -1
 	}
+	mongolia_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	north_china_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
 }
 
-emx_yan_secure_yalu_effect = {
-	add_prestige = 10
-	add_army_tradition = 10
+emx_yan_yalu_manchu_effect = {
+	add_country_modifier = {
+		name = "emx_yan_siege_prep"
+		duration = 7300
+	}
 	korea_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# Path 2: Korean Union Effects
+emx_yan_korea_union_effect = {
+	add_prestige = 20
+	add_legitimacy = 15
+	add_dip_power = 50
+	if = {
+		limit = {
+			exists = KOR
+			KOR = { is_subject_of = ROOT }
+		}
+		KOR = {
+			add_liberty_desire = -25
+			add_opinion = { who = ROOT modifier = emx_yan_chosen_dynasty_opinion }
+		}
+	}
+	liaoning_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_korea_loyal_effect = {
+	add_prestige = 25
+	add_adm_power = 100
+	add_country_modifier = {
+		name = "emx_yan_korean_consort_modifier"
+		duration = -1
+	}
+	if = {
+		limit = {
+			exists = KOR
+			KOR = { is_subject_of = ROOT }
+		}
+		KOR = {
+			add_liberty_desire = -20
+		}
+	}
+	manchuria_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_jurchen_dowry_k_effect = {
+	add_prestige = 15
+	add_army_tradition = 15
+	manchuria_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -420,6 +508,60 @@ emx_yan_jurchen_dowry_effect = {
 		add_permanent_claim = ROOT
 	}
 	furdan_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_secure_yalu_effect = {
+	add_prestige = 10
+	add_army_tradition = 10
+	korea_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+# Path 3: Harmony of Heaven Effects
+emx_yan_harmony_manchu_effect = {
+	add_prestige = 15
+	add_dip_power = 50
+	add_mil_power = 50
+	if = {
+		limit = { exists = MJZ }
+		add_opinion = { who = MJZ modifier = emx_yan_chosen_dynasty_opinion }
+		reverse_add_opinion = { who = MJZ modifier = emx_yan_chosen_dynasty_opinion }
+	}
+	if = {
+		limit = { exists = JNZ }
+		add_opinion = { who = JNZ modifier = emx_yan_chosen_dynasty_opinion }
+		reverse_add_opinion = { who = JNZ modifier = emx_yan_chosen_dynasty_opinion }
+	}
+	manchuria_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+emx_yan_harmony_korea_effect = {
+	add_prestige = 15
+	add_dip_power = 50
+	add_adm_power = 50
+	if = {
+		limit = { exists = KOR }
+		add_opinion = { who = KOR modifier = emx_yan_chosen_dynasty_opinion }
+		reverse_add_opinion = { who = KOR modifier = emx_yan_chosen_dynasty_opinion }
+	}
+	korea_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -562,6 +704,13 @@ emx_yan_unify_north_china_h_effect = {
 	}
 }
 
+emx_yan_subjugate_joseon_manchu_effect = {
+	add_country_modifier = {
+		name = "emx_yan_siege_mastery"
+		duration = -1
+	}
+}
+
 emx_yan_subjugate_joseon_effect = {
 	add_prestige = 25
 	add_dip_power = 100
@@ -583,18 +732,6 @@ emx_yan_subjugate_joseon_effect = {
 emx_yan_subjugate_harmony_effect = {
 	add_prestige = 25
 	add_dip_power = 100
-	custom_tooltip = emx_yan_subjugate_joseon_integrate_tt
-	if = {
-		limit = {
-			exists = KOR
-			OR = {
-				senior_union_with = KOR
-				KOR = { is_subject_of = ROOT }
-			}
-		}
-		inherit = KOR
-	}
-	set_country_flag = emx_yan_integrated_korea
 	1816 = { change_religion = shinto }
 	add_harmonized_religion = shinto
 	japan_region = {
@@ -604,7 +741,6 @@ emx_yan_subjugate_harmony_effect = {
 		}
 		add_permanent_claim = ROOT
 	}
-	swap_non_generic_missions = yes
 }
 
 emx_yan_conquer_japan_effect = {

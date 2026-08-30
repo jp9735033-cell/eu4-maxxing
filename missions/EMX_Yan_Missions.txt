@@ -262,26 +262,9 @@ emx_yan_manchu_s1 = {
 		icon = mission_alliances
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = {
-			OR = {
-				owned_by = JNZ
-				owned_by = HRK
-				owned_by = UDE
-			}
-		}
+		provinces_to_highlight = { }
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			has_country_flag = emx_yan_meiying_crowned
-			OR = {
-				alliance_with = JNZ
-				alliance_with = HRK
-				alliance_with = UDE
-				has_country_flag = emx_yan_consort_manchu
-			has_country_flag = emx_yan_chose_manchu
-			}
+			emx_yan_manchu_union_trigger = yes
 		}
 		effect = {
 			emx_yan_blood_pact_effect = yes
@@ -296,21 +279,15 @@ emx_yan_manchu_s1 = {
 			OR = {
 				area = central_jilin_area
 				area = jilin_area
-				area = ningguta_area
-				area = furdan_area
-				area = ilan_hala_area
 				area = liaoning_area
-				area = heilongjiang_area
-				area = central_heilongjiang_area
-				area = east_heilongjiang_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			emx_yan_unify_jurchen_trigger = yes
+			emx_yan_jianzhou_surroundings_trigger = yes
 		}
 		effect = {
-			emx_yan_unify_jurchen_effect = yes
+			emx_yan_unify_jurchen_manchu_effect = yes
 		}
 	}
 
@@ -416,23 +393,29 @@ emx_yan_manchu_s2 = {
 
 	emx_yan_yalu_manchu = {
 		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = {
-			province_id = 730
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+		required_missions = { emx_yan_unify_jurchen_manchu }
+		position = 3
+		provinces_to_highlight = { }
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			730 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_yan_manchu_korea_prep_trigger = yes
 		}
 		effect = {
-			emx_yan_secure_yalu_effect = yes
+			emx_yan_yalu_manchu_effect = yes
+		}
+	}
+
+	emx_yan_subjugate_joseon_manchu = {
+		icon = mission_kowtow
+		required_missions = { emx_yan_yalu_manchu }
+		position = 4
+		provinces_to_highlight = {
+			emx_subjugate_joseon_highlight = yes
+		}
+		trigger = {
+			emx_yan_subjugate_joseon_trigger = yes
+		}
+		effect = {
+			emx_yan_subjugate_joseon_manchu_effect = yes
 		}
 	}
 
@@ -559,58 +542,22 @@ emx_yan_korea_s1 = {
 	has_country_shield = yes
 
 	emx_yan_jurchen_dowry_k = {
-		icon = mission_alliances
+		icon = mission_great_wall
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = {
-			province_id = 730
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+		provinces_to_highlight = { }
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			has_country_flag = emx_yan_meiying_crowned
-			730 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_yan_frontier_readiness_trigger = yes
 		}
 		effect = {
-			emx_yan_jurchen_dowry_effect = yes
-		}
-	}
-
-	emx_yan_subdue_jianzhou_k = {
-		icon = mission_steppe_warriors
-		required_missions = { emx_yan_jurchen_dowry_k }
-		position = 2
-		provinces_to_highlight = {
-			OR = {
-				area = central_jilin_area
-				area = jilin_area
-				area = ningguta_area
-				area = furdan_area
-				area = ilan_hala_area
-				area = liaoning_area
-				area = heilongjiang_area
-				area = central_heilongjiang_area
-				area = east_heilongjiang_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_yan_unify_jurchen_trigger = yes
-		}
-		effect = {
-			emx_yan_subdue_jianzhou_k_effect = yes
+			emx_yan_jurchen_dowry_k_effect = yes
 		}
 	}
 
 	emx_yan_banish_steppe_nomads_k = {
 		icon = mission_great_wall
-		required_missions = { emx_yan_subdue_jianzhou_k }
-		position = 3
+		required_missions = { emx_yan_jurchen_dowry_k }
+		position = 2
 		provinces_to_highlight = { }
 		trigger = {
 			emx_yan_eight_banners_trigger = yes
@@ -623,7 +570,7 @@ emx_yan_korea_s1 = {
 	emx_yan_pacify_mongolia_k = {
 		icon = mission_steppe_warriors
 		required_missions = { emx_yan_banish_steppe_nomads_k }
-		position = 4
+		position = 3
 		provinces_to_highlight = {
 			emx_pacify_mongolia_highlight = yes
 		}
@@ -638,7 +585,7 @@ emx_yan_korea_s1 = {
 	emx_yan_unify_north_china_k = {
 		icon = mission_unite_home_region
 		required_missions = { emx_yan_pacify_mongolia_k }
-		position = 5
+		position = 4
 		provinces_to_highlight = {
 			emx_unify_north_china_highlight = yes
 		}
@@ -738,24 +685,15 @@ emx_yan_korea_s2 = {
 	has_country_shield = yes
 
 	emx_yan_secure_yalu = {
-		icon = mission_conquer_50_development
+		icon = mission_alliances
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = {
-			province_id = 730
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+		provinces_to_highlight = { }
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			730 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_yan_korea_union_trigger = yes
 		}
 		effect = {
-			emx_yan_secure_yalu_effect = yes
+			emx_yan_korea_union_effect = yes
 		}
 	}
 
@@ -763,14 +701,12 @@ emx_yan_korea_s2 = {
 		icon = mission_kowtow
 		required_missions = { emx_yan_secure_yalu }
 		position = 2
-		provinces_to_highlight = {
-			emx_subjugate_joseon_highlight = yes
-		}
+		provinces_to_highlight = { }
 		trigger = {
-			emx_yan_subjugate_joseon_trigger = yes
+			emx_yan_korea_loyal_trigger = yes
 		}
 		effect = {
-			emx_yan_subjugate_joseon_effect = yes
+			emx_yan_korea_loyal_effect = yes
 		}
 	}
 
@@ -900,55 +836,19 @@ emx_yan_harmony_s1 = {
 		icon = mission_alliances
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = {
-			province_id = 730
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+		provinces_to_highlight = { }
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			has_country_flag = emx_yan_meiying_crowned
-			730 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_yan_harmony_manchu_trigger = yes
 		}
 		effect = {
-			emx_yan_jurchen_dowry_effect = yes
-		}
-	}
-
-	emx_yan_subdue_jianzhou_h = {
-		icon = mission_steppe_warriors
-		required_missions = { emx_yan_jurchen_dowry_h }
-		position = 2
-		provinces_to_highlight = {
-			OR = {
-				area = central_jilin_area
-				area = jilin_area
-				area = ningguta_area
-				area = furdan_area
-				area = ilan_hala_area
-				area = liaoning_area
-				area = heilongjiang_area
-				area = central_heilongjiang_area
-				area = east_heilongjiang_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_yan_unify_jurchen_trigger = yes
-		}
-		effect = {
-			emx_yan_subdue_jianzhou_h_effect = yes
+			emx_yan_harmony_manchu_effect = yes
 		}
 	}
 
 	emx_yan_banish_steppe_nomads_h = {
 		icon = mission_great_wall
-		required_missions = { emx_yan_subdue_jianzhou_h }
-		position = 3
+		required_missions = { emx_yan_jurchen_dowry_h }
+		position = 2
 		provinces_to_highlight = { }
 		trigger = {
 			emx_yan_eight_banners_trigger = yes
@@ -961,7 +861,7 @@ emx_yan_harmony_s1 = {
 	emx_yan_pacify_mongolia_h = {
 		icon = mission_steppe_warriors
 		required_missions = { emx_yan_banish_steppe_nomads_h }
-		position = 4
+		position = 3
 		provinces_to_highlight = {
 			emx_pacify_mongolia_highlight = yes
 		}
@@ -976,7 +876,7 @@ emx_yan_harmony_s1 = {
 	emx_yan_unify_north_china_h = {
 		icon = mission_unite_home_region
 		required_missions = { emx_yan_pacify_mongolia_h }
-		position = 5
+		position = 4
 		provinces_to_highlight = {
 			emx_unify_north_china_highlight = yes
 		}
@@ -1076,24 +976,15 @@ emx_yan_harmony_s2 = {
 	has_country_shield = yes
 
 	emx_yan_yalu_harmony = {
-		icon = mission_conquer_50_development
+		icon = mission_alliances
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = {
-			province_id = 730
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+		provinces_to_highlight = { }
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			730 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			emx_yan_harmony_korea_trigger = yes
 		}
 		effect = {
-			emx_yan_secure_yalu_effect = yes
+			emx_yan_harmony_korea_effect = yes
 		}
 	}
 
@@ -1266,7 +1157,7 @@ emx_yan_trade_s3 = {
 
 	emx_yan_silk_road_halep_sham = {
 		icon = mission_asian_trader
-		required_missions = { emx_yan_unify_china }
+		required_missions = { emx_yan_init_silk_road_persia emx_yan_manchu_silk_road_persia emx_yan_korea_silk_road_persia emx_yan_harmony_silk_road_persia }
 		position = 10
 		provinces_to_highlight = {
 			OR = {

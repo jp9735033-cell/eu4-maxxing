@@ -1,0 +1,148 @@
+# eu4-maxxing: Yan (YAN) Event & Mission Modifiers
+
+# =============================================================================
+# Starting Divided Court & Consort Choices (1444 - 1454)
+# =============================================================================
+
+# 1444 Starting Divided Court
+emx_yan_divided_court = {
+	all_power_cost = 0.05
+	advisor_cost = -0.25
+	leader_land_shock = 1
+	leader_land_manuever = 1
+}
+
+# Path 1: Manchu Union Consort (Keeps Manchu martial leadership)
+emx_yan_manchu_consort_modifier = {
+	leader_land_shock = 1
+	leader_land_manuever = 1
+}
+
+# Path 2: Korean Union Consort (Keeps Joseon scholarly administrative prowess)
+emx_yan_korean_consort_modifier = {
+	advisor_cost = -0.25
+}
+
+# Path 3: Harmonized Imperial Court (Keeps both advantages)
+emx_yan_harmonized_court = {
+	advisor_cost = -0.25
+	leader_land_shock = 1
+	leader_land_manuever = 1
+}
+
+# Diplomatic fallout for betrayed faction
+emx_yan_korean_betrayal_fallout = {
+	advisor_cost = 0.25
+	all_power_cost = 0.05
+}
+
+# =============================================================================
+# Path-Specific Mission Modifiers
+# =============================================================================
+
+# Path 1: Eight Banners of the North
+emx_yan_eight_banners_modifier = {
+	has_banners = yes
+	amount_of_banners = 1.0
+	shock_damage = 0.10
+}
+
+# Path 1: Manchurian Hegemony Capstone
+emx_yan_manchurian_hegemony = {
+	administrative_efficiency = 0.05
+	shock_damage_received = -0.10
+}
+
+# Path 1: Steppe Mandate
+emx_yan_mandate_of_the_steppes = {
+	imperial_mandate = 0.2
+}
+
+# Path 1: Korean Incursion & Siege Mastery
+emx_yan_siege_prep = {
+	siege_ability = 0.20
+}
+
+emx_yan_siege_mastery = {
+	siege_ability = 0.20
+}
+
+# Path 3: Imperial Harmony Grand Fleet
+emx_yan_harmony_navy = {
+	ship_durability = 0.10
+	morale_fleet = 0.10
+}
+
+# Path 3: Pacific Exploration & Trade
+emx_yan_pacific_colonization = {
+	colonists = 2
+	may_explore = yes
+	global_colonial_growth = 50
+	infantry_power = 0.10
+}
+
+# =============================================================================
+# Frontier Garrisons & Great Wall Network Modifiers
+# =============================================================================
+
+emx_yan_northern_fortress = {
+	defensiveness = 0.25
+}
+
+emx_yan_frontier_garrison = {
+	defensiveness = 0.20
+	local_manpower_modifier = 0.25
+	local_hostile_attrition = 1
+}
+
+emx_yan_garrison_xuanhua = {
+	defensiveness = 0.05
+	land_attrition = -0.05
+}
+
+emx_yan_garrison_datong = {
+	defensiveness = 0.05
+	fort_maintenance_modifier = -0.10
+}
+
+emx_yan_garrison_shanhaiguan = {
+	defensiveness = 0.10
+	shock_damage_received = -0.05
+}
+
+emx_yan_garrison_ningyuan = {
+	defensiveness = 0.05
+	manpower_recovery_speed = 0.10
+}
+
+emx_yan_garrison_shenyang = {
+	defensiveness = 0.05
+	infantry_power = 0.05
+}
+
+emx_yan_nine_garrisons = {
+	army_tradition = 0.5
+	defensiveness = 0.15
+}
+
+emx_yan_northern_wall = {
+	shock_damage_received = -0.10
+	defensiveness = 0.20
+}
+
+emx_yan_yongle_dadian = {
+	idea_cost = -0.05
+	technology_cost = -0.05
+	adm_tech_cost_modifier = -0.05
+}
+
+emx_yan_steppe_tribute = {
+	vassal_income = 0.25
+	manpower_recovery_speed = 0.15
+}
+
+# Spoils of Conquest
+emx_spoils_of_yan = {
+	core_creation = -0.10
+	monthly_splendor = 1
+}

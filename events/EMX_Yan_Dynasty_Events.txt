@@ -35,7 +35,7 @@ country_event = {
 				name = "Meiying"
 				dynasty = "Zhu"
 				female = yes
-				age = 5
+				age = 9
 				adm = 2
 				dip = 2
 				mil = 2
@@ -82,12 +82,12 @@ country_event = {
 		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		NOT = { has_country_flag = emx_yan_chose_consort }
-		is_year = 1446
-		NOT = { is_year = 1454 }
+		is_year = 1445
+		NOT = { is_year = 1450 }
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 2
 	}
 
 	# Option A: Jurchen Martial Arts
@@ -130,12 +130,12 @@ country_event = {
 		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		NOT = { has_country_flag = emx_yan_chose_consort }
-		is_year = 1447
-		NOT = { is_year = 1454 }
+		is_year = 1446
+		NOT = { is_year = 1450 }
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 2
 	}
 
 	# Option A: Steppe Riding & Hunting Exercises
@@ -178,12 +178,12 @@ country_event = {
 		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		NOT = { has_country_flag = emx_yan_chose_consort }
-		is_year = 1449
-		NOT = { is_year = 1454 }
+		is_year = 1447
+		NOT = { is_year = 1450 }
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 2
 	}
 
 	# Option A: Jurchen Horsemanship & Tactics
@@ -226,12 +226,12 @@ country_event = {
 		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		NOT = { has_country_flag = emx_yan_chose_consort }
-		is_year = 1450
-		NOT = { is_year = 1454 }
+		is_year = 1448
+		NOT = { is_year = 1450 }
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 2
 	}
 
 	# Option A: Champion the Demands of the Northern Warriors
@@ -274,12 +274,12 @@ country_event = {
 		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		NOT = { has_country_flag = emx_yan_chose_consort }
-		is_year = 1452
-		NOT = { is_year = 1454 }
+		is_year = 1449
+		NOT = { is_year = 1450 }
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 2
 	}
 
 	# Option A: Steppe Warfare & Vanguard Command
@@ -322,12 +322,12 @@ country_event = {
 		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		NOT = { has_country_flag = emx_yan_chose_consort }
-		is_year = 1453
-		NOT = { is_year = 1454 }
+		is_year = 1450
+		NOT = { has_country_flag = emx_yan_chose_consort }
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 2
 	}
 
 	# Option A: Demonstrate Lethal Horse Archery & Martial Dominance
@@ -376,7 +376,7 @@ country_event = {
 	trigger = {
 		tag = YAN
 		NOT = { has_country_flag = emx_yan_meiying_died }
-		is_year = 1454
+		is_year = 1450
 		NOT = { has_country_flag = emx_yan_chose_consort }
 		NOT = { has_country_flag = emx_yan_meiying_crowned }
 	}

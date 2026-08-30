@@ -124,8 +124,16 @@ emx_yan_manchu_s1 = {
 		icon = mission_steppe_warriors
 		required_missions = { emx_yan_unify_jurchen_manchu }
 		position = 3
-		provinces_to_highlight = { }
+		provinces_to_highlight = {
+			region = manchuria_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_eight_banners_trigger = yes
 		}
 		effect = {
@@ -155,6 +163,11 @@ emx_yan_manchu_s2 = {
 		position = 3
 		provinces_to_highlight = { }
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_manchu_korea_prep_trigger = yes
 		}
 		effect = {
@@ -167,9 +180,15 @@ emx_yan_manchu_s2 = {
 		required_missions = { emx_yan_yalu_manchu }
 		position = 4
 		provinces_to_highlight = {
-			emx_subjugate_joseon_highlight = yes
+			region = korea_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_subjugate_joseon_trigger = yes
 		}
 		effect = {
@@ -201,6 +220,11 @@ emx_yan_korea_s1 = {
 		position = 1
 		provinces_to_highlight = { }
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_frontier_readiness_trigger = yes
 		}
 		effect = {
@@ -212,8 +236,16 @@ emx_yan_korea_s1 = {
 		icon = mission_great_wall
 		required_missions = { emx_yan_jurchen_dowry_k }
 		position = 2
-		provinces_to_highlight = { }
+		provinces_to_highlight = {
+			region = manchuria_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_eight_banners_trigger = yes
 		}
 		effect = {
@@ -226,9 +258,15 @@ emx_yan_korea_s1 = {
 		required_missions = { emx_yan_banish_steppe_nomads_k }
 		position = 3
 		provinces_to_highlight = {
-			emx_pacify_mongolia_highlight = yes
+			region = mongolia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_pacify_mongolia_trigger = yes
 		}
 		effect = {
@@ -241,9 +279,15 @@ emx_yan_korea_s1 = {
 		required_missions = { emx_yan_pacify_mongolia_k }
 		position = 4
 		provinces_to_highlight = {
-			emx_unify_north_china_highlight = yes
+			region = north_china_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_unify_north_china_trigger = yes
 		}
 		effect = {
@@ -273,6 +317,11 @@ emx_yan_korea_s2 = {
 		position = 1
 		provinces_to_highlight = { }
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_korea_union_trigger = yes
 		}
 		effect = {
@@ -286,6 +335,11 @@ emx_yan_korea_s2 = {
 		position = 2
 		provinces_to_highlight = { }
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_korea_loyal_trigger = yes
 		}
 		effect = {
@@ -317,6 +371,11 @@ emx_yan_harmony_s1 = {
 		position = 1
 		provinces_to_highlight = { }
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_harmony_manchu_trigger = yes
 		}
 		effect = {
@@ -328,8 +387,16 @@ emx_yan_harmony_s1 = {
 		icon = mission_great_wall
 		required_missions = { emx_yan_jurchen_dowry_h }
 		position = 2
-		provinces_to_highlight = { }
+		provinces_to_highlight = {
+			region = manchuria_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_eight_banners_trigger = yes
 		}
 		effect = {
@@ -342,9 +409,15 @@ emx_yan_harmony_s1 = {
 		required_missions = { emx_yan_banish_steppe_nomads_h }
 		position = 3
 		provinces_to_highlight = {
-			emx_pacify_mongolia_highlight = yes
+			region = mongolia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_pacify_mongolia_trigger = yes
 		}
 		effect = {
@@ -357,9 +430,15 @@ emx_yan_harmony_s1 = {
 		required_missions = { emx_yan_pacify_mongolia_h }
 		position = 4
 		provinces_to_highlight = {
-			emx_unify_north_china_highlight = yes
+			region = north_china_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_unify_north_china_trigger = yes
 		}
 		effect = {
@@ -389,6 +468,11 @@ emx_yan_harmony_s2 = {
 		position = 1
 		provinces_to_highlight = { }
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_harmony_korea_trigger = yes
 		}
 		effect = {
@@ -401,9 +485,15 @@ emx_yan_harmony_s2 = {
 		required_missions = { emx_yan_yalu_harmony }
 		position = 2
 		provinces_to_highlight = {
-			emx_subjugate_joseon_highlight = yes
+			region = korea_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_subjugate_joseon_trigger = yes
 		}
 		effect = {

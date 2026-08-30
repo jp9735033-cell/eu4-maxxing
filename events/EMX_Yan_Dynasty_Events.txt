@@ -313,22 +313,28 @@ country_event = {
 			add_opinion = { who = KOR modifier = emx_yan_chosen_dynasty_opinion }
 			reverse_add_opinion = { who = KOR modifier = emx_yan_chosen_dynasty_opinion }
 		}
-		if = {
-			limit = { exists = MJZ }
-			break_alliance = MJZ
-			hidden_effect = {
-				remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
-				reverse_remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
-			}
-			add_opinion = { who = MJZ modifier = opinion_insulted }
-			reverse_add_opinion = { who = MJZ modifier = opinion_insulted }
-		}
 		liaoning_area = {
 			limit = {
 				NOT = { is_core = ROOT }
 				NOT = { is_permanent_claim = ROOT }
 			}
 			add_permanent_claim = ROOT
+		}
+		if = {
+			limit = { exists = MJZ }
+			break_alliance = MJZ
+			hidden_effect = {
+				remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+				reverse_remove_opinion = { who = MJZ modifier = opinion_royal_marriage }
+				remove_truce = MJZ
+				MJZ = { remove_truce = ROOT }
+			}
+			add_opinion = { who = MJZ modifier = opinion_insulted }
+			reverse_add_opinion = { who = MJZ modifier = opinion_insulted }
+			declare_war_with_cb = {
+				who = MJZ
+				casus_belli = cb_conquest
+			}
 		}
 		add_prestige = 15
 		add_legitimacy = 20

@@ -110,7 +110,7 @@ YUE_ideas = {
                 discipline = 0.05
 	}
 	pigtail_or_death2 = {
-        free_dip_policy = 1
+        naval_morale = 0.1
 	}
 	qng_bogda_khan2 = {
         idea_cost = -0.05
@@ -119,7 +119,7 @@ YUE_ideas = {
 		trade_efficiency = 0.1
 	}
 	qing_viceroyalties2 = {
-        global_unrest = -2
+        free_dip_policy = 1
 	}
 	the_ten_great_campaigns2 = {
 		artillery_fire = 1
@@ -10530,6 +10530,7 @@ YUA_ideas = {
 	}
 	yua_keshik_and_weijun = {
 		shock_damage = 0.1
+                cav_to_inf_ratio = 0.25
 	}
 	yua_a_thousand_miles_as_if_at_home = {
 		movement_speed = 0.15
@@ -15723,7 +15724,7 @@ AUS_ideas = {
 	}
 	free = yes
 	AUS_outback_stations = {
-		colonists = 2
+		colonists = 1
 		effect = { remove_temporary_colonist = yes }
 	}
 	AUS_land_down_under = {
@@ -15739,12 +15740,10 @@ AUS_ideas = {
 		trade_efficiency = 0.1
 	}
 	AUS_royal_navy = {
-		ship_durability = 0.1
-		disengagement_chance = 0.05
+		infantry_power = 0.10
 	}
 	AUS_bushrangers = {
-		naval_morale_damage = 0.10
-                naval_forcelimit_modifier = 0.2
+                ship_durability = 0.1
 	}
 	AUS_waltzing_matilda = {
 		discipline = 0.05
@@ -15757,7 +15756,7 @@ NZL_ideas = {
 		army_tradition_decay = -0.01
 	}
 	bonus = {
-		colonists = 2
+		colonists = 1
 		effect = { remove_temporary_colonist = yes }
 	}
 	trigger = {
@@ -16838,7 +16837,7 @@ EOR_ideas = {
 
 KAU_ideas = {
 	start = {
-		colonists = 2
+		colonists = 1
 		range = 0.20
                 may_explore = yes
 	}

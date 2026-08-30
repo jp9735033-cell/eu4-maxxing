@@ -281,9 +281,10 @@ emx_yue_nanyang_trade = {
 ##################################################
 
 emx_unified_china = {
-	land_forcelimit_modifier = 0.30
-	global_manpower_modifier = 0.50
-	land_maintenance_modifier = 0.10
+	country_admin_power = 1
+	governing_capacity_modifier = 0.1
+	max_absolutism = 10
+	reform_progress_growth = 0.1
 }
 
 emx_silk_road_station = {

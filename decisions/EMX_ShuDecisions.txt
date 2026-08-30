@@ -1,61 +1,423 @@
 # eu4-maxxing: Shu decisions.
 #
-# The Highland Looms turns raw wool into cloth across the Tibetan plateau,
-# the Tarim oases and the Himalayan foothills - the seventeen provinces that
-# ship wool at game start and that Shu's western mission branch reaches.
+# The Highland Looms, one decision per province. Each of the seventeen highland
+# wool provinces - the Tibetan plateau, the Tarim oases and the Himalayan
+# foothills - gets its own decision that converts that one province to cloth.
 #
-# Repeatable by design: the decision stays available while Shu still owns an
-# unconverted wool province from the list, so pushing further west and taking
-# it again converts only the newly acquired ones. Each pass costs 200 ducats.
+# Visibility: potential asks only that Shu exists and that the province still
+# ships wool, which is true from 1444 whoever owns it. So all seventeen are
+# listed from the first day, greyed until we own the province, and each one
+# leaves the list for good once its province has been woven. Ownership is
+# checked in allow so it reads as an ordinary requirement line.
 #
-# Province list and the conversion itself live in:
-#   common/scripted_triggers/emx_china_triggers.txt  (emx_shu_has_wool_to_weave)
-#   common/scripted_effects/emx_china_effects.txt    (emx_shu_weave_wool_effect)
+# Cost: a flat 200 ducats. The decision requires 200 in the treasury and takes
+# exactly that 200 when it is passed, so it can never put us into debt. The
+# game renders the requirement itself, so no custom tooltip is needed.
 
 country_decisions = {
 
-	emx_shu_highland_looms = {
+	# Dege
+	emx_shu_looms_2133 = {
 		major = no
-		# Visible to Shu from the first day. Shu owns none of the seventeen wool
-		# provinces at game start, so gating visibility on owning one would hide
-		# the decision until it had already conquered the plateau. The ownership
-		# check belongs in allow, where it greys the decision out instead.
 		potential = {
 			tag = SHU
+			2133 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
-			trade_goods = wool
-			OR = {
-				province_id = 2133
-				province_id = 705
-				province_id = 4519
-				province_id = 4516
-				province_id = 4520
-				province_id = 4693
-				province_id = 2124
-				province_id = 4210
-				province_id = 4209
-				province_id = 739
-				province_id = 719
-				province_id = 2074
-				province_id = 4521
-				province_id = 2073
-				province_id = 4481
-				province_id = 565
-				province_id = 4482
-			}
+			province_id = 2133
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			custom_trigger_tooltip = {
-				tooltip = emx_shu_has_wool_to_weave_tt
-				emx_shu_has_wool_to_weave = yes
-			}
+			2133 = { owned_by = ROOT }
 			treasury = 200
 		}
 		effect = {
 			add_treasury = -200
-			emx_shu_weave_wool_effect = yes
+			2133 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Gyegu
+	emx_shu_looms_705 = {
+		major = no
+		potential = {
+			tag = SHU
+			705 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 705
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			705 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			705 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Damxung
+	emx_shu_looms_4519 = {
+		major = no
+		potential = {
+			tag = SHU
+			4519 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4519
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4519 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4519 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Purang
+	emx_shu_looms_4516 = {
+		major = no
+		potential = {
+			tag = SHU
+			4516 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4516
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4516 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4516 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Rutog
+	emx_shu_looms_4520 = {
+		major = no
+		potential = {
+			tag = SHU
+			4520 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4520
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4520 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4520 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Keriya
+	emx_shu_looms_4693 = {
+		major = no
+		potential = {
+			tag = SHU
+			4693 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4693
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4693 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4693 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Yarkand
+	emx_shu_looms_2124 = {
+		major = no
+		potential = {
+			tag = SHU
+			2124 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 2124
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			2124 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			2124 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Yangi Hissar
+	emx_shu_looms_4210 = {
+		major = no
+		potential = {
+			tag = SHU
+			4210 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4210
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4210 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4210 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Maralbexi
+	emx_shu_looms_4209 = {
+		major = no
+		potential = {
+			tag = SHU
+			4209 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4209
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4209 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4209 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Kashgar
+	emx_shu_looms_739 = {
+		major = no
+		potential = {
+			tag = SHU
+			739 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 739
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			739 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			739 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Uliastai
+	emx_shu_looms_719 = {
+		major = no
+		potential = {
+			tag = SHU
+			719 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 719
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			719 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			719 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Ladakh
+	emx_shu_looms_2074 = {
+		major = no
+		potential = {
+			tag = SHU
+			2074 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 2074
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			2074 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			2074 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Skardu
+	emx_shu_looms_4521 = {
+		major = no
+		potential = {
+			tag = SHU
+			4521 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4521
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4521 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4521 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Baltistan
+	emx_shu_looms_2073 = {
+		major = no
+		potential = {
+			tag = SHU
+			2073 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 2073
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			2073 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			2073 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Punakah
+	emx_shu_looms_4481 = {
+		major = no
+		potential = {
+			tag = SHU
+			4481 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4481
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4481 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4481 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Bhutan
+	emx_shu_looms_565 = {
+		major = no
+		potential = {
+			tag = SHU
+			565 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 565
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			565 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			565 = { change_trade_goods = cloth }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Sikkim
+	emx_shu_looms_4482 = {
+		major = no
+		potential = {
+			tag = SHU
+			4482 = { trade_goods = wool }
+		}
+		provinces_to_highlight = {
+			province_id = 4482
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			4482 = { owned_by = ROOT }
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			4482 = { change_trade_goods = cloth }
 		}
 		ai_will_do = {
 			factor = 1

@@ -1,0 +1,22 @@
+spa_two_front_war_buff = {
+    icon = being_in_debt
+
+    potential = {
+        tag = CAS
+		NOT  = { is_year = 1490}
+    }
+
+    trigger = {
+        war_with = FRA
+        war_with = MOR
+    }
+
+    
+    discipline = 0.05
+   mercenary_cost = -0.15
+   	war_taxes_cost_modifier = -1
+	interest = -0.5
+	manpower_recovery_speed = 0.2
+	defensiveness = 0.20
+	global_autonomy = -0.1
+}

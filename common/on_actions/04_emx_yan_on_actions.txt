@@ -37,13 +37,26 @@ on_new_monarch = {
 	if = {
 		limit = {
 			tag = YAN
-			has_country_flag = emx_yan_meiying_is_heir
 			NOT = { has_country_flag = emx_yan_meiying_died }
 			is_female = yes
 			has_regency = no
 			has_consort_regency = no
 			is_year = 1454
 			NOT = { has_country_flag = emx_yan_chose_consort }
+		}
+		country_event = { id = emx_yan_flavor.2 }
+	}
+}
+
+on_bi_yearly_pulse_2 = {
+	if = {
+		limit = {
+			tag = YAN
+			is_year = 1454
+			NOT = { has_country_flag = emx_yan_meiying_died }
+			NOT = { has_country_flag = emx_yan_chose_consort }
+			has_regency = no
+			has_consort_regency = no
 		}
 		country_event = { id = emx_yan_flavor.2 }
 	}

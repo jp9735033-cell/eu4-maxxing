@@ -231,15 +231,14 @@ country_event = {
 
 	trigger = {
 		tag = YAN
-		has_heir = yes
-		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		is_year = 1454
+		NOT = { has_country_flag = emx_yan_chose_consort }
 		NOT = { has_country_flag = emx_yan_meiying_crowned }
 	}
 
 	mean_time_to_happen = {
-		days = 10
+		days = 1
 	}
 
 	immediate = {
@@ -249,10 +248,6 @@ country_event = {
 	# Option A: Jurchen Steppe Betrothal (Manchu Union)
 	option = {
 		name = emx_yan_flavor.2.a
-		trigger = {
-			check_variable = { which = yan_manchu_edu which = yan_korea_edu }
-			check_variable = { which = yan_manchu_edu which = yan_loyalist_edu }
-		}
 		set_country_flag = emx_yan_event_chose_manchu
 		set_country_flag = emx_yan_consort_manchu
 		set_country_flag = emx_yan_chose_manchu
@@ -298,10 +293,6 @@ country_event = {
 	# Option B: Joseon Scholarly Marriage (Korean Union)
 	option = {
 		name = emx_yan_flavor.2.b
-		trigger = {
-			check_variable = { which = yan_korea_edu which = yan_manchu_edu }
-			check_variable = { which = yan_korea_edu which = yan_loyalist_edu }
-		}
 		set_country_flag = emx_yan_event_chose_korea
 		set_country_flag = emx_yan_consort_korea
 		set_country_flag = emx_yan_chose_korea
@@ -346,10 +337,6 @@ country_event = {
 	# Option C: Imperial Autonomy & Balance (Harmony Path)
 	option = {
 		name = emx_yan_flavor.2.c
-		trigger = {
-			check_variable = { which = yan_loyalist_edu which = yan_manchu_edu }
-			check_variable = { which = yan_loyalist_edu which = yan_korea_edu }
-		}
 		set_country_flag = emx_yan_event_chose_harmony
 		set_country_flag = emx_yan_consort_harmony
 		set_country_flag = emx_yan_chose_harmony

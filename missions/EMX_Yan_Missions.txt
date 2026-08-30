@@ -325,27 +325,9 @@ emx_yan_korea_s2 = {
 	}
 	has_country_shield = yes
 
-	emx_yan_secure_yalu = {
-		icon = mission_alliances
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = { }
-		trigger = {
-			not_in_mission_preview_mode = { key = YAN }
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			emx_yan_korea_union_trigger = yes
-		}
-		effect = {
-			emx_yan_korea_union_effect = yes
-		}
-	}
-
 	emx_yan_subjugate_joseon = {
 		icon = mission_kowtow
-		required_missions = { emx_yan_secure_yalu }
+		required_missions = { emx_yan_jurchen_dowry_k }
 		position = 2
 		provinces_to_highlight = { }
 		trigger = {

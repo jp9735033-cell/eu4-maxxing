@@ -194,8 +194,10 @@ emx_yan_frontier_readiness_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = emx_yan_frontier_readiness_trigger_tt
 		has_country_flag = emx_yan_meiying_crowned
-		army_size_percentage = 0.80
-		manpower_percentage = 0.50
+		OR = {
+			senior_union_with = KOR
+			KOR = { is_subject_of = ROOT }
+		}
 	}
 }
 

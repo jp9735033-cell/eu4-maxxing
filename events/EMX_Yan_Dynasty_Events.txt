@@ -87,7 +87,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 3
 	}
 
 	# Option A: Jurchen Martial Arts
@@ -115,7 +115,7 @@ country_event = {
 	}
 }
 
-# Event 11: Youth Strategy & Studies (Age ~10, 1449)
+# Event 11: Imperial Academies & Tutors (Age ~8, 1447)
 country_event = {
 	id = emx_yan_flavor.11
 	title = emx_yan_flavor.11.t
@@ -130,15 +130,15 @@ country_event = {
 		has_country_flag = emx_yan_meiying_is_heir
 		NOT = { has_country_flag = emx_yan_meiying_died }
 		NOT = { has_country_flag = emx_yan_chose_consort }
-		is_year = 1449
+		is_year = 1447
 		NOT = { is_year = 1454 }
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 3
 	}
 
-	# Option A: Jurchen Horsemanship & Tactics
+	# Option A: Steppe Riding & Hunting Exercises
 	option = {
 		name = emx_yan_flavor.11.a
 		change_heir_mil = 1
@@ -146,7 +146,7 @@ country_event = {
 		add_mil_power = 30
 	}
 
-	# Option B: Joseon Bureaucracy & Philosophy
+	# Option B: Neo-Confucian Philosophy & Governance
 	option = {
 		name = emx_yan_flavor.11.b
 		change_heir_adm = 1
@@ -154,7 +154,7 @@ country_event = {
 		add_adm_power = 30
 	}
 
-	# Option C: Grand Imperial Diplomacy
+	# Option C: Classical Poetry & Imperial Protocols
 	option = {
 		name = emx_yan_flavor.11.c
 		change_heir_dip = 1
@@ -163,11 +163,107 @@ country_event = {
 	}
 }
 
-# Event 12: Advanced Leadership & Ideology (Age ~13, 1452)
+# Event 12: Youth Strategy & Frontier Lore (Age ~10, 1449)
 country_event = {
 	id = emx_yan_flavor.12
 	title = emx_yan_flavor.12.t
 	desc = emx_yan_flavor.12.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		has_heir = yes
+		has_country_flag = emx_yan_meiying_is_heir
+		NOT = { has_country_flag = emx_yan_meiying_died }
+		NOT = { has_country_flag = emx_yan_chose_consort }
+		is_year = 1449
+		NOT = { is_year = 1454 }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Jurchen Horsemanship & Tactics
+	option = {
+		name = emx_yan_flavor.12.a
+		change_heir_mil = 1
+		change_variable = { which = yan_manchu_edu value = 1 }
+		add_mil_power = 30
+	}
+
+	# Option B: Joseon Bureaucracy & Law
+	option = {
+		name = emx_yan_flavor.12.b
+		change_heir_adm = 1
+		change_variable = { which = yan_korea_edu value = 1 }
+		add_adm_power = 30
+	}
+
+	# Option C: Grand Imperial Diplomacy & Balance
+	option = {
+		name = emx_yan_flavor.12.c
+		change_heir_dip = 1
+		change_variable = { which = yan_loyalist_edu value = 1 }
+		add_dip_power = 30
+	}
+}
+
+# Event 13: Court Debates in the Forbidden City (Age ~11, 1450)
+country_event = {
+	id = emx_yan_flavor.13
+	title = emx_yan_flavor.13.t
+	desc = emx_yan_flavor.13.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		has_heir = yes
+		has_country_flag = emx_yan_meiying_is_heir
+		NOT = { has_country_flag = emx_yan_meiying_died }
+		NOT = { has_country_flag = emx_yan_chose_consort }
+		is_year = 1450
+		NOT = { is_year = 1454 }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Champion the Demands of the Northern Warriors
+	option = {
+		name = emx_yan_flavor.13.a
+		change_heir_mil = 1
+		change_variable = { which = yan_manchu_edu value = 1 }
+		add_mil_power = 30
+	}
+
+	# Option B: Support Joseon Fiscal & Legal Codification
+	option = {
+		name = emx_yan_flavor.13.b
+		change_heir_adm = 1
+		change_variable = { which = yan_korea_edu value = 1 }
+		add_adm_power = 30
+	}
+
+	# Option C: Mediate Between the Factions with Regal Equanimity
+	option = {
+		name = emx_yan_flavor.13.c
+		change_heir_dip = 1
+		change_variable = { which = yan_loyalist_edu value = 1 }
+		add_dip_power = 30
+	}
+}
+
+# Event 14: Grand Strategy & Ideology (Age ~13, 1452)
+country_event = {
+	id = emx_yan_flavor.14
+	title = emx_yan_flavor.14.t
+	desc = emx_yan_flavor.14.d
 	picture = HORDE_ON_HORSEBACK_eventPicture
 
 	fire_only_once = yes
@@ -183,28 +279,76 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 3
 	}
 
-	# Option A: Steppe Warfare & Vanguard Training
+	# Option A: Steppe Warfare & Vanguard Command
 	option = {
-		name = emx_yan_flavor.12.a
+		name = emx_yan_flavor.14.a
 		change_heir_mil = 1
 		change_variable = { which = yan_manchu_edu value = 1 }
 		add_mil_power = 30
 	}
 
-	# Option B: Joseon Scholarly Administration
+	# Option B: Joseon Scholarly Administration & Statecraft
 	option = {
-		name = emx_yan_flavor.12.b
+		name = emx_yan_flavor.14.b
 		change_heir_adm = 1
 		change_variable = { which = yan_korea_edu value = 1 }
 		add_adm_power = 30
 	}
 
-	# Option C: Imperial Harmony & Balance
+	# Option C: Imperial Harmony & Balance of the Realm
 	option = {
-		name = emx_yan_flavor.12.c
+		name = emx_yan_flavor.14.c
+		change_heir_dip = 1
+		change_variable = { which = yan_loyalist_edu value = 1 }
+		add_dip_power = 30
+	}
+}
+
+# Event 15: The Eve of Majority: Final Trials (Age ~14, 1453)
+country_event = {
+	id = emx_yan_flavor.15
+	title = emx_yan_flavor.15.t
+	desc = emx_yan_flavor.15.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YAN
+		has_heir = yes
+		has_country_flag = emx_yan_meiying_is_heir
+		NOT = { has_country_flag = emx_yan_meiying_died }
+		NOT = { has_country_flag = emx_yan_chose_consort }
+		is_year = 1453
+		NOT = { is_year = 1454 }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Demonstrate Lethal Horse Archery & Martial Dominance
+	option = {
+		name = emx_yan_flavor.15.a
+		change_heir_mil = 1
+		change_variable = { which = yan_manchu_edu value = 1 }
+		add_mil_power = 30
+	}
+
+	# Option B: Deliver a Masterpiece on Confucian Governance & Law
+	option = {
+		name = emx_yan_flavor.15.b
+		change_heir_adm = 1
+		change_variable = { which = yan_korea_edu value = 1 }
+		add_adm_power = 30
+	}
+
+	# Option C: Proclaim an Indivisible Vision for Imperial Harmony
+	option = {
+		name = emx_yan_flavor.15.c
 		change_heir_dip = 1
 		change_variable = { which = yan_loyalist_edu value = 1 }
 		add_dip_power = 30

@@ -107,11 +107,12 @@
  desc_emx_yan_korean_consort_modifier:0 "Enlightened Joseon scholars and administrators elevate imperial statecraft."
 
  # Childhood Education Events (Ages 5 to 15)
- emx_yan_flavor.10.d:0 "The scholarly Joseon ministers in Beijing instruct the young Princess Meiying in Confucian administration, civil law, and state finance. Her administrative intellect blossoms under their careful tutelage."
-
- emx_yan_flavor.11.d:0 "Veteran diplomats and ministers of the late Emperor educate Princess Meiying in dynastic statecraft, courtly eloquence, and the balance of power among the Middle Kingdom's factions."
-
- emx_yan_flavor.12.d:0 "Fierce Jurchen banner captains take Princess Meiying beyond the Great Wall to the northern hunting forests, training her in mounted archery, tactical maneuver, and ruthless battlefield command."
+ emx_yan_flavor.10.d:0 "As Princess Meiying begins her formal studies in the Forbidden City, envoys from Joseon and chieftains from Jianzhou offer their premier scholars and weapon-masters to guide her early mind."
+ emx_yan_flavor.11.d:0 "The young Princess demonstrates an eager intellect. The Grand Dowager asks which discipline her tutors should emphasize for her elementary education."
+ emx_yan_flavor.12.d:0 "Approaching her tenth year, Princess Meiying begins studying the turbulent history of the Northern Marches. Which teachers shall shape her strategic worldview?"
+ emx_yan_flavor.13.d:0 "Princess Meiying is permitted to observe the Regent's daily audience with ministers and foreign ambassadors. Her personal intervention draws praise across Beijing."
+ emx_yan_flavor.14.d:0 "Entering her teens, the Princess begins reviewing actual military dispatches and state expenditures alongside her mentors."
+ emx_yan_flavor.15.d:0 "On the eve of her coming of age, Princess Meiying undergoes her final trials before the Grand Dowager and the assembled nobility of the realm."
 
  emx_yan_flavor.2.c:0 "The Sovereign Path: Reconcile the Court (Keep Both Bonuses, No War, No PU!)"
  emx_yan_harmonized_court:0 "Harmonized Imperial Court"
@@ -242,15 +243,30 @@ emx_yan_flavor.10.t:0 "The Education of Princess Meiying: Early Tutelage"
  emx_yan_flavor.10.b:0 "Invite Joseon Neo-Confucian scholars (+1 ADM, Korean Focus)"
  emx_yan_flavor.10.c:0 "Rely on Imperial Ming loyalist statesmen (+1 DIP, Harmony Focus)"
 
- emx_yan_flavor.11.t:0 "The Education of Princess Meiying: Youth Strategy"
- emx_yan_flavor.11.a:0 "Train in nomadic warfare and cavalry tactics (+1 MIL, Manchu Focus)"
- emx_yan_flavor.11.b:0 "Instruct in imperial bureaucracy and law (+1 ADM, Korean Focus)"
- emx_yan_flavor.11.c:0 "Master classical court diplomacy and balance (+1 DIP, Harmony Focus)"
+ emx_yan_flavor.11.t:0 "The Education of Princess Meiying: Imperial Academies"
+ emx_yan_flavor.11.a:0 "Train in nomadic warfare and hunting drills (+1 MIL, Manchu Focus)"
+ emx_yan_flavor.11.b:0 "Instruct in Neo-Confucian governance and philosophy (+1 ADM, Korean Focus)"
+ emx_yan_flavor.11.c:0 "Master classical poetry and imperial protocols (+1 DIP, Harmony Focus)"
 
- emx_yan_flavor.12.t:0 "The Education of Princess Meiying: Ideology & Rule"
- emx_yan_flavor.12.a:0 "Embrace the warrior ethos of the Northern Steppe (+1 MIL, Manchu Focus)"
- emx_yan_flavor.12.b:0 "Embrace scholarly Confucian governance (+1 ADM, Korean Focus)"
- emx_yan_flavor.12.c:0 "Embrace supreme imperial autonomy and balance (+1 DIP, Harmony Focus)"
+ emx_yan_flavor.12.t:0 "The Education of Princess Meiying: Youth Strategy"
+ emx_yan_flavor.12.a:0 "Study Jurchen cavalry tactics and maneuver (+1 MIL, Manchu Focus)"
+ emx_yan_flavor.12.b:0 "Study Joseon bureaucracy and fiscal law (+1 ADM, Korean Focus)"
+ emx_yan_flavor.12.c:0 "Study grand diplomacy and imperial balance (+1 DIP, Harmony Focus)"
+
+ emx_yan_flavor.13.t:0 "The Education of Princess Meiying: Forbidden City Audiences"
+ emx_yan_flavor.13.a:0 "Champion the martial demands of northern banner warlords (+1 MIL, Manchu Focus)"
+ emx_yan_flavor.13.b:0 "Support Joseon legal reform and agrarian codification (+1 ADM, Korean Focus)"
+ emx_yan_flavor.13.c:0 "Mediate between court factions with regal equanimity (+1 DIP, Harmony Focus)"
+
+ emx_yan_flavor.14.t:0 "The Education of Princess Meiying: Grand Strategy"
+ emx_yan_flavor.14.a:0 "Master vanguard command and siege warfare (+1 MIL, Manchu Focus)"
+ emx_yan_flavor.14.b:0 "Master statecraft and institutional administration (+1 ADM, Korean Focus)"
+ emx_yan_flavor.14.c:0 "Master imperial mandate doctrines and realm harmony (+1 DIP, Harmony Focus)"
+
+ emx_yan_flavor.15.t:0 "The Education of Princess Meiying: The Final Trials"
+ emx_yan_flavor.15.a:0 "Demonstrate lethal horse archery and martial leadership (+1 MIL, Manchu Focus)"
+ emx_yan_flavor.15.b:0 "Deliver a brilliant treatise on Confucian statecraft (+1 ADM, Korean Focus)"
+ emx_yan_flavor.15.c:0 "Articulate an indivisible vision for East Asian harmony (+1 DIP, Harmony Focus)"
 
 
  emx_yan_chosen_dynasty_opinion:0 "Imperial Dynasty Union"

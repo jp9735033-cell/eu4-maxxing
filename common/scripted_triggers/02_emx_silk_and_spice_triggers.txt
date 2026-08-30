@@ -12,6 +12,7 @@ emx_valid_chinese_silk_spice_nation_trigger = {
 		}
 	}
 	NOT = { tag = SHU }
+	NOT = { tag = YUA }
 	NOT = { emx_is_shu_trigger = yes }
 }
 

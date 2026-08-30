@@ -17,8 +17,8 @@ capital = 1816	# Beijing
 		dynasty = "Zhu"
 		female = yes
 		birth_date = 1400.1.1
-		adm = 2
-		dip = 2
+		adm = 3
+		dip = 3
 		mil = 3
 		regent = yes
 	}
@@ -29,7 +29,7 @@ capital = 1816	# Beijing
 		birth_date = 1439.5.15 # 5 years old on 1444.11.11
 		adm = 2
 		dip = 2
-		mil = 3
+		mil = 2
 		claim = 100
 	}
 }

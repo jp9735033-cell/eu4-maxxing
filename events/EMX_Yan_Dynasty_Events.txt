@@ -38,7 +38,7 @@ country_event = {
 				age = 5
 				adm = 2
 				dip = 2
-				mil = 3
+				mil = 2
 				claim = 100
 			}
 		}

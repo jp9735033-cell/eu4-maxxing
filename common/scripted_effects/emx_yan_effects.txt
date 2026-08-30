@@ -345,6 +345,8 @@ emx_yan_silk_road_halep_sham_effect = {
 
 # Path 1: Manchu Union Effects
 emx_yan_blood_pact_effect = {
+	add_prestige = 15
+	add_mil_power = 50
 	if = {
 		limit = {
 			exists = MJZ
@@ -362,6 +364,34 @@ emx_yan_blood_pact_effect = {
 		JNZ = {
 			add_liberty_desire = -50
 		}
+	}
+	jilin_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	liaoning_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	ningguta_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	furdan_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
 	}
 }
 

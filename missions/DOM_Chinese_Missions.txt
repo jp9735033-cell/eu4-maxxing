@@ -280,7 +280,6 @@ DOM_Qing_Related_Missions_1 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -428,7 +427,6 @@ chinese_kingdoms_1 = {
 	potential = {
 		has_dlc = "Domination"
 		OR = {
-			tag = YAN
 			tag = JIN
 			tag = QIN
 			tag = QIC
@@ -437,11 +435,9 @@ chinese_kingdoms_1 = {
 			tag = TNG
 			tag = CXI
 			tag = CHC
-			tag = WUU
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
@@ -449,7 +445,6 @@ chinese_kingdoms_1 = {
 			tag = SHU 
 			tag = FRM
 		}
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -639,44 +634,16 @@ ming_missions_1_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
-		#OR = { 
-		#	culture_group = east_asian
-		#	has_country_flag = enable_emperor_of_china_missions_flag
-		#}
-		capital_scope = { continent = asia }
 		OR = {
 			tag = MNG
-			tag = QNG 
-			tag = MCH 
-			tag = YAN
-			tag = JIN
-			tag = QIN
-			tag = QIC
-			tag = CSH
-			tag = LNG
-			tag = TNG
-			tag = CXI
-			tag = CHC
-			tag = WUU
-			tag = NNG
-			tag = MIN
-			tag = HUA
-			tag = YUE
-			tag = CMI
-			tag = CYI
-			tag = CDL
-			tag = CGS
-			tag = SHU 
-			tag = FRM
-			tag = MJZ
-			tag = MYR
-			tag = EJZ
-			tag = NHX
-			tag = MHX
+			is_emperor_of_china = yes
 		}
+		NOT = { tag = YAN }
+		NOT = { tag = SHU }
+		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes 
 
@@ -912,7 +879,6 @@ DOM_Qing_Missions_1_b_formable = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -1355,7 +1321,6 @@ DOM_Qing_Missions_2 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -1663,7 +1628,6 @@ chinese_kingdoms_2 = {
 	potential = {
 		has_dlc = "Domination"
 		OR = {
-			tag = YAN
 			tag = JIN
 			tag = QIN
 			tag = QIC
@@ -1672,11 +1636,9 @@ chinese_kingdoms_2 = {
 			tag = TNG
 			tag = CXI
 			tag = CHC
-			tag = WUU
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
@@ -1684,7 +1646,6 @@ chinese_kingdoms_2 = {
 			tag = SHU 
 			tag = FRM
 		}
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -1848,44 +1809,16 @@ ming_missions_2_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
-		#OR = {
-		#	culture_group = east_asian
-		#	has_country_flag = enable_emperor_of_china_missions_flag
-		#}
-		capital_scope = { continent = asia }
 		OR = {
 			tag = MNG
-			tag = QNG 
-			tag = MCH 
-			tag = YAN
-			tag = JIN
-			tag = QIN
-			tag = QIC
-			tag = CSH
-			tag = LNG
-			tag = TNG
-			tag = CXI
-			tag = CHC
-			tag = WUU
-			tag = NNG
-			tag = MIN
-			tag = HUA
-			tag = YUE
-			tag = CMI
-			tag = CYI
-			tag = CDL
-			tag = CGS
-			tag = SHU 
-			tag = FRM
-			tag = MJZ
-			tag = MYR
-			tag = EJZ
-			tag = NHX
-			tag = MHX
+			is_emperor_of_china = yes
 		}
+		NOT = { tag = YAN }
+		NOT = { tag = SHU }
+		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes 
 	
@@ -2279,7 +2212,6 @@ DOM_Qing_Missions_2_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -2483,10 +2415,8 @@ chinese_kingdoms_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
-			tag = YAN
 			tag = JIN
 			tag = QIN
 			tag = QIC
@@ -2495,11 +2425,9 @@ chinese_kingdoms_3 = {
 			tag = TNG
 			tag = CXI
 			tag = CHC
-			tag = WUU
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
@@ -3426,7 +3354,6 @@ DOM_Qing_Missions_3 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -3809,44 +3736,16 @@ ming_missions_3_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
-		#OR = {
-		#	culture_group = east_asian
-		#	has_country_flag = enable_emperor_of_china_missions_flag
-		#}
-		capital_scope = { continent = asia }
 		OR = {
 			tag = MNG
-			tag = QNG 
-			tag = MCH 
-			tag = YAN
-			tag = JIN
-			tag = QIN
-			tag = QIC
-			tag = CSH
-			tag = LNG
-			tag = TNG
-			tag = CXI
-			tag = CHC
-			tag = WUU
-			tag = NNG
-			tag = MIN
-			tag = HUA
-			tag = YUE
-			tag = CMI
-			tag = CYI
-			tag = CDL
-			tag = CGS
-			tag = SHU 
-			tag = FRM
-			tag = MJZ
-			tag = MYR
-			tag = EJZ
-			tag = NHX
-			tag = MHX
+			is_emperor_of_china = yes
 		}
+		NOT = { tag = YAN }
+		NOT = { tag = SHU }
+		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes 
 	
@@ -4150,7 +4049,6 @@ DOM_Qing_Missions_3_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -4457,10 +4355,8 @@ chinese_kingdoms_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
-			tag = YAN
 			tag = JIN
 			tag = QIN
 			tag = QIC
@@ -4469,11 +4365,9 @@ chinese_kingdoms_4 = {
 			tag = TNG
 			tag = CXI
 			tag = CHC
-			tag = WUU
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
@@ -5019,7 +4913,6 @@ DOM_Qing_Missions_4 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -5112,44 +5005,16 @@ ming_missions_4_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
-		#OR = {
-		#	culture_group = east_asian
-		#	has_country_flag = enable_emperor_of_china_missions_flag
-		#}
-		capital_scope = { continent = asia }
 		OR = {
 			tag = MNG
-			tag = QNG 
-			tag = MCH 
-			tag = YAN
-			tag = JIN
-			tag = QIN
-			tag = QIC
-			tag = CSH
-			tag = LNG
-			tag = TNG
-			tag = CXI
-			tag = CHC
-			tag = WUU
-			tag = NNG
-			tag = MIN
-			tag = HUA
-			tag = YUE
-			tag = CMI
-			tag = CYI
-			tag = CDL
-			tag = CGS
-			tag = SHU 
-			tag = FRM
-			tag = MJZ
-			tag = MYR
-			tag = EJZ
-			tag = NHX
-			tag = MHX
+			is_emperor_of_china = yes
 		}
+		NOT = { tag = YAN }
+		NOT = { tag = SHU }
+		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes 	
 	
@@ -5436,45 +5301,16 @@ ming_missions_4_moh = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
-		has_dlc = "Mandate of Heaven"
-		is_emperor_of_china = yes 
-		#OR = {
-		#	culture_group = east_asian
-		#	has_country_flag = enable_emperor_of_china_missions_flag
-		#}
-		capital_scope = { continent = asia }
 		OR = {
 			tag = MNG
-			tag = QNG 
-			tag = MCH 
-			tag = YAN
-			tag = JIN
-			tag = QIN
-			tag = QIC
-			tag = CSH
-			tag = LNG
-			tag = TNG
-			tag = CXI
-			tag = CHC
-			tag = WUU
-			tag = NNG
-			tag = MIN
-			tag = HUA
-			tag = YUE
-			tag = CMI
-			tag = CYI
-			tag = CDL
-			tag = CGS
-			tag = SHU 
-			tag = FRM
-			tag = MJZ
-			tag = MYR
-			tag = EJZ
-			tag = NHX
-			tag = MHX
-		} 
+			is_emperor_of_china = yes
+		}
+		NOT = { tag = YAN }
+		NOT = { tag = SHU }
+		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes 
 
@@ -5509,7 +5345,6 @@ DOM_Qing_Missions_4_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -5627,10 +5462,8 @@ chinese_kingdoms_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
-			tag = YAN
 			tag = JIN
 			tag = QIN
 			tag = QIC
@@ -5639,11 +5472,9 @@ chinese_kingdoms_5 = {
 			tag = TNG
 			tag = CXI
 			tag = CHC
-			tag = WUU
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
@@ -6202,7 +6033,6 @@ DOM_Qing_Missions_5 = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		OR = {
 			tag = MJZ
@@ -6378,44 +6208,16 @@ ming_missions_5_b = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
-		#OR = {  
-		#	culture_group = east_asian
-		#	has_country_flag = enable_emperor_of_china_missions_flag
-		#}
-		capital_scope = { continent = asia }
 		OR = {
-			tag = MNG 
-			tag = QNG 
-			tag = MCH 
-			tag = YAN
-			tag = JIN
-			tag = QIN
-			tag = QIC
-			tag = CSH
-			tag = LNG
-			tag = TNG
-			tag = CXI
-			tag = CHC
-			tag = WUU
-			tag = NNG
-			tag = MIN
-			tag = HUA
-			tag = YUE
-			tag = CMI
-			tag = CYI
-			tag = CDL
-			tag = CGS
-			tag = SHU 
-			tag = FRM
-			tag = MJZ
-			tag = MYR
-			tag = EJZ
-			tag = NHX
-			tag = MHX
+			tag = MNG
+			is_emperor_of_china = yes
 		}
+		NOT = { tag = YAN }
+		NOT = { tag = SHU }
+		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes 
 	
@@ -6673,7 +6475,6 @@ DOM_Qing_Missions_5_dynamic_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -6779,7 +6580,6 @@ DOM_Qing_Missions_5_intial = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -6905,7 +6705,6 @@ DOM_Qing_Missions_5_a = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }
@@ -6996,7 +6795,6 @@ DOM_Qing_Missions_5_b = {
 	ai = yes
 	#potential_on_load = { has_dlc = "Mandate of Heaven" }
 	potential = {
-		NOT = { emx_chinese_player_trigger = yes } # eu4-maxxing: the four Chinese players keep their EMX tree, before and after forming Qing
 		has_dlc = "Domination"
 		tag = QNG
 		NOT = { map_setup = map_setup_random }

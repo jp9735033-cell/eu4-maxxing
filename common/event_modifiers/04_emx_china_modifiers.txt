@@ -112,54 +112,67 @@ emx_yan_northern_wall = {
 
 ##################################################
 # 4. Wu
-# Wu fortifies everything it touches: 25% local fort defence on every province
-# it develops, and a force limit that climbs 3% for each of the five delta
-# cities raised to 40 development, plus 5% for breaking the wokou - +20% all in.
-# Development cost is the standard -5%; only Beijing, Chengdu, Canton and
-# Shu's western roads go beyond that.
 ##################################################
 
-emx_wu_capital_works = {
-	local_development_cost = -0.05
-	province_trade_power_value = 5
-	local_defensiveness = 0.25
-	local_institution_spread = 0.20
+emx_wu_shattered_state = {
+	army_tradition = -1
+	trade_efficiency = -0.15
+	global_trade_goods_size_modifier = -0.15
 }
 
-emx_wu_delta_town = {
-	local_development_cost = -0.05
-	province_trade_power_value = 3
-	local_defensiveness = 0.25
+# 4 Capital Modifiers (-4% Tech & -4% Idea Cost each)
+emx_wu_nanjing_center = {
+	technology_cost = -0.04
+	idea_cost = -0.04
 }
 
-emx_wu_fort_hangzhou = { land_forcelimit_modifier = 0.03 }
-emx_wu_fort_shanghai = { land_forcelimit_modifier = 0.03 }
-emx_wu_fort_ningbo = { land_forcelimit_modifier = 0.03 }
-emx_wu_fort_zhenjiang = { land_forcelimit_modifier = 0.03 }
-emx_wu_fort_wenzhou = { land_forcelimit_modifier = 0.03 }
-
-emx_wu_grand_levy = {
-	manpower_recovery_speed = 0.10
+emx_wu_canton_center = {
+	technology_cost = -0.04
+	idea_cost = -0.04
 }
 
-emx_wu_lower_yangtze = {
-	production_efficiency = 0.10
-	global_trade_goods_size_modifier = 0.05
+emx_wu_chengdu_center = {
+	technology_cost = -0.04
+	idea_cost = -0.04
 }
 
-# With the raids over, the coastal levies are free to march inland.
-emx_wu_break_the_wokou = {
-	land_forcelimit_modifier = 0.05
+emx_wu_beijing_center = {
+	technology_cost = -0.04
+	idea_cost = -0.04
 }
 
-emx_wu_suzhou_looms = {
-	trade_efficiency = 0.10
-	global_trade_goods_size_modifier = 0.05
+# Campaign & Expansion Modifiers
+emx_wu_river_bastion = {
+	defensiveness = 0.20
+	siege_ability = 0.10
 }
 
-emx_wu_jiangnan_army = {
-	discipline = 0.025
-	manpower_recovery_speed = 0.10
+emx_wu_lingnan_march = {
+	movement_speed = 0.10
+	land_attrition = -0.10
+}
+
+emx_wu_gorges_dominance = {
+	infantry_power = 0.10
+	supply_limit_modifier = 0.15
+}
+
+emx_wu_hebei_assault = {
+	cavalry_power = 0.15
+	siege_ability = 0.10
+}
+
+emx_wu_ming_reborn = {
+	land_morale = 0.10
+	yearly_legitimacy = 1
+	imperial_mandate = 1
+	ae_impact = -0.15
+}
+
+emx_wu_celestial_harmony = {
+	administrative_efficiency = 0.05
+	governing_capacity_modifier = 0.20
+	imperial_mandate = 0.10
 }
 
 ##################################################

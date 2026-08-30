@@ -1,0 +1,737 @@
+# eu4-maxxing: Dynamic Scaling Triggered Modifiers for Wu (WUU) and Restored Ming
+# Exclusive (Non-Cumulative) Tiers: exactly one tier is active at any time, giving full N-multiplied values.
+
+##################################################
+# 1. Tolerance of True Faith Scaling (1 to 15)
+# Gated by Clergy Land Share: 1-5 (>=20% land), 6-10 (>=35% land), 11-15 (>=50% land)
+##################################################
+
+emx_wu_totf_1 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 1
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 2
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.10
+	army_tradition = 0.10
+	global_tax_modifier = 0.10
+	land_morale = 0.010
+	land_forcelimit_modifier = 0.020
+	technology_cost = 0.020
+	idea_cost = 0.020
+	tolerance_heretic = -1
+	tolerance_heathen = -1
+}
+
+emx_wu_totf_2 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 2
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 3
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.20
+	army_tradition = 0.20
+	global_tax_modifier = 0.20
+	land_morale = 0.020
+	land_forcelimit_modifier = 0.040
+	technology_cost = 0.040
+	idea_cost = 0.040
+	tolerance_heretic = -2
+	tolerance_heathen = -2
+}
+
+emx_wu_totf_3 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 3
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 4
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.30
+	army_tradition = 0.30
+	global_tax_modifier = 0.30
+	land_morale = 0.030
+	land_forcelimit_modifier = 0.060
+	technology_cost = 0.060
+	idea_cost = 0.060
+	tolerance_heretic = -3
+	tolerance_heathen = -3
+}
+
+emx_wu_totf_4 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 4
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 5
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.40
+	army_tradition = 0.40
+	global_tax_modifier = 0.40
+	land_morale = 0.040
+	land_forcelimit_modifier = 0.080
+	technology_cost = 0.080
+	idea_cost = 0.080
+	tolerance_heretic = -4
+	tolerance_heathen = -4
+}
+
+emx_wu_totf_5 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 5
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 6
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.50
+	army_tradition = 0.50
+	global_tax_modifier = 0.50
+	land_morale = 0.050
+	land_forcelimit_modifier = 0.100
+	technology_cost = 0.100
+	idea_cost = 0.100
+	tolerance_heretic = -5
+	tolerance_heathen = -5
+}
+
+emx_wu_totf_6 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 6
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 7
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.60
+	army_tradition = 0.60
+	global_tax_modifier = 0.60
+	land_morale = 0.060
+	land_forcelimit_modifier = 0.120
+	technology_cost = 0.120
+	idea_cost = 0.120
+	tolerance_heretic = -6
+	tolerance_heathen = -6
+}
+
+emx_wu_totf_7 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 7
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 8
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.70
+	army_tradition = 0.70
+	global_tax_modifier = 0.70
+	land_morale = 0.070
+	land_forcelimit_modifier = 0.140
+	technology_cost = 0.140
+	idea_cost = 0.140
+	tolerance_heretic = -7
+	tolerance_heathen = -7
+}
+
+emx_wu_totf_8 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 8
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 9
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.80
+	army_tradition = 0.80
+	global_tax_modifier = 0.80
+	land_morale = 0.080
+	land_forcelimit_modifier = 0.160
+	technology_cost = 0.160
+	idea_cost = 0.160
+	tolerance_heretic = -8
+	tolerance_heathen = -8
+}
+
+emx_wu_totf_9 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 9
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 10
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 0.90
+	army_tradition = 0.90
+	global_tax_modifier = 0.90
+	land_morale = 0.090
+	land_forcelimit_modifier = 0.180
+	technology_cost = 0.180
+	idea_cost = 0.180
+	tolerance_heretic = -9
+	tolerance_heathen = -9
+}
+
+emx_wu_totf_10 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 10
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 11
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 1.00
+	army_tradition = 1.00
+	global_tax_modifier = 1.00
+	land_morale = 0.100
+	land_forcelimit_modifier = 0.200
+	technology_cost = 0.200
+	idea_cost = 0.200
+	tolerance_heretic = -10
+	tolerance_heathen = -10
+}
+
+emx_wu_totf_11 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 11
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 12
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 1.10
+	army_tradition = 1.10
+	global_tax_modifier = 1.10
+	land_morale = 0.110
+	land_forcelimit_modifier = 0.220
+	technology_cost = 0.220
+	idea_cost = 0.220
+	tolerance_heretic = -11
+	tolerance_heathen = -11
+}
+
+emx_wu_totf_12 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 12
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 13
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 1.20
+	army_tradition = 1.20
+	global_tax_modifier = 1.20
+	land_morale = 0.120
+	land_forcelimit_modifier = 0.240
+	technology_cost = 0.240
+	idea_cost = 0.240
+	tolerance_heretic = -12
+	tolerance_heathen = -12
+}
+
+emx_wu_totf_13 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 13
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 14
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 1.30
+	army_tradition = 1.30
+	global_tax_modifier = 1.30
+	land_morale = 0.130
+	land_forcelimit_modifier = 0.260
+	technology_cost = 0.260
+	idea_cost = 0.260
+	tolerance_heretic = -13
+	tolerance_heathen = -13
+}
+
+emx_wu_totf_14 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 14
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 15
+			}
+		}
+	}
+	manpower_in_true_faith_provinces = 1.40
+	army_tradition = 1.40
+	global_tax_modifier = 1.40
+	land_morale = 0.140
+	land_forcelimit_modifier = 0.280
+	technology_cost = 0.280
+	idea_cost = 0.280
+	tolerance_heretic = -14
+	tolerance_heathen = -14
+}
+
+emx_wu_totf_15 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = tolerance_own
+			value = 15
+		}
+	}
+	manpower_in_true_faith_provinces = 1.50
+	army_tradition = 1.50
+	global_tax_modifier = 1.50
+	land_morale = 0.150
+	land_forcelimit_modifier = 0.300
+	technology_cost = 0.300
+	idea_cost = 0.300
+	tolerance_heretic = -15
+	tolerance_heathen = -15
+}
+
+
+##################################################
+# 2. Missionary Strength Scaling (1% to 15%)
+# Exclusive (Non-Cumulative) Tiers: exactly one tier is active at any time, giving full N-multiplied values.
+# Gated by Clergy Land Share: 1-5 (>=20% land), 6-10 (>=35% land), 11-15 (>=50% land)
+##################################################
+
+emx_wu_ms_1 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.01
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.02
+			}
+		}
+	}
+	province_warscore_cost = -0.10
+	core_creation = -0.05
+}
+
+emx_wu_ms_2 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.02
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.03
+			}
+		}
+	}
+	province_warscore_cost = -0.20
+	core_creation = -0.10
+}
+
+emx_wu_ms_3 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.03
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.04
+			}
+		}
+	}
+	province_warscore_cost = -0.30
+	core_creation = -0.15
+}
+
+emx_wu_ms_4 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.04
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.05
+			}
+		}
+	}
+	province_warscore_cost = -0.40
+	core_creation = -0.20
+}
+
+emx_wu_ms_5 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 80 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.05
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.06
+			}
+		}
+	}
+	province_warscore_cost = -0.50
+	core_creation = -0.25
+}
+
+emx_wu_ms_6 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.06
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.07
+			}
+		}
+	}
+	province_warscore_cost = -0.60
+	core_creation = -0.30
+}
+
+emx_wu_ms_7 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.07
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.08
+			}
+		}
+	}
+	province_warscore_cost = -0.70
+	core_creation = -0.35
+}
+
+emx_wu_ms_8 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.08
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.09
+			}
+		}
+	}
+	province_warscore_cost = -0.80
+	core_creation = -0.40
+}
+
+emx_wu_ms_9 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.09
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.10
+			}
+		}
+	}
+	province_warscore_cost = -0.90
+	core_creation = -0.45
+}
+
+emx_wu_ms_10 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 65 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.10
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.11
+			}
+		}
+	}
+	province_warscore_cost = -1.00
+	core_creation = -0.50
+}
+
+emx_wu_ms_11 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.11
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.12
+			}
+		}
+	}
+	province_warscore_cost = -1.10
+	core_creation = -0.55
+}
+
+emx_wu_ms_12 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.12
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.13
+			}
+		}
+	}
+	province_warscore_cost = -1.20
+	core_creation = -0.60
+}
+
+emx_wu_ms_13 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.13
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.14
+			}
+		}
+	}
+	province_warscore_cost = -1.30
+	core_creation = -0.65
+}
+
+emx_wu_ms_14 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.14
+		}
+		NOT = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.15
+			}
+		}
+	}
+	province_warscore_cost = -1.40
+	core_creation = -0.70
+}
+
+emx_wu_ms_15 = {
+	potential = {
+		emx_is_wu_trigger = yes
+	}
+	trigger = {
+		NOT = { crownland_share = 50 }
+		has_global_modifier_value = {
+			which = global_missionary_strength
+			value = 0.15
+		}
+	}
+	province_warscore_cost = -1.50
+	core_creation = -0.75
+}

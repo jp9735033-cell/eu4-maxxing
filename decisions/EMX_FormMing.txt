@@ -22,28 +22,36 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 684		# Hangzhou
-				province_id = 1821		# Nanjing
-				province_id = 667		# Guangzhou
-				province_id = 1816		# Beijing
+			if = {
+				limit = { NOT = { tag = WUU } }
+				OR = {
+					province_id = 684		# Hangzhou
+					province_id = 1821		# Nanjing
+					province_id = 667		# Guangzhou
+				}
+				NOT = { owned_by = ROOT }
 			}
-			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns = 684		# Hangzhou
-			owns = 1821		# Nanjing
-			owns = 667		# Guangzhou
-			owns = 1816		# Beijing
-			1821 = { is_state = yes }
-			total_development = 500
+			if = {
+				limit = { tag = WUU }
+				mission_completed = emx_wu_four_pillars_united
+			}
+			else = {
+				owns = 684		# Hangzhou
+				owns = 1821		# Nanjing
+				owns = 667		# Guangzhou
+				1821 = { is_state = yes }
+				total_development = 500
+			}
 		}
 		effect = {
 			if = { limit = { tag = WUU } set_country_flag = emx_origin_wu }
 			if = { limit = { tag = YUE } set_country_flag = emx_origin_yue }
 			change_tag = MNG
+			swap_non_generic_missions = yes
 			on_change_tag_effect = yes
 			set_government_rank = 3
 			set_country_flag = emx_ming_restored
@@ -57,8 +65,16 @@ country_decisions = {
 			}
 			add_prestige = 25
 			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_country_modifier = {
 				name = "emx_unified_china"
 				duration = -1
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
 			}
 		}
 		ai_will_do = {

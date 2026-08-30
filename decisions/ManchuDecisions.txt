@@ -190,10 +190,6 @@ country_decisions = {
 		potential = {
 			OR = {
 				tag = MCH
-				# eu4-maxxing: Yan, Wu and Yue form Qing, and it demands every
-				# rival capital. Shu forms Yuan instead - see YuanNation.txt.
-				tag = YUE
-				tag = WUU
 				tag = YAN
 			}
 			was_never_end_game_tag_trigger = yes
@@ -234,9 +230,6 @@ country_decisions = {
 					province_id = 723		# Xilin Gol
 					province_id = 726		# Liaodong
 					province_id = 1816		# Beijing
-					province_id = 684		# Hangzhou, the Wu capital
-					province_id = 679		# Chengdu, the Shu capital
-					province_id = 667		# Guangzhou, the Yue capital
 				}
 				NOT = { owned_by = ROOT }
 			}
@@ -260,9 +253,6 @@ country_decisions = {
 				owns = 723		# Xilin Gol
 				owns = 726		# Liaodong
 				owns = 1816		# Beijing
-				owns = 684		# Hangzhou
-				owns = 679		# Chengdu
-				owns = 667		# Guangzhou
 				if = {
 					limit = {
 						has_dlc = "Common Sense"
@@ -293,8 +283,6 @@ country_decisions = {
 			# recognising the country afterwards and the tree is not swapped out.
 			# See common/scripted_triggers/emx_china_triggers.txt.
 			if = { limit = { tag = YAN } set_country_flag = emx_origin_yan }
-			if = { limit = { tag = WUU } set_country_flag = emx_origin_wu }
-			if = { limit = { tag = YUE } set_country_flag = emx_origin_yue }
 			change_tag = QNG
 			# eu4-maxxing: Automatically integrate Jianzhou, Manchu, or Korea if they are in Personal Union / subject
 			if = {

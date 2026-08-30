@@ -16,7 +16,7 @@ emx_is_wu_trigger = {
 	OR = {
 		tag = WUU
 		AND = {
-			tag = QNG
+			tag = MNG
 			has_country_flag = emx_origin_wu
 		}
 	}
@@ -29,13 +29,7 @@ emx_is_shu_trigger = {
 }
 
 emx_is_yue_trigger = {
-	OR = {
-		tag = YUE
-		AND = {
-			tag = QNG
-			has_country_flag = emx_origin_yue
-		}
-	}
+	tag = YUE
 }
 
 # Any of the four, before or after forming Qing. Used to keep the vanilla

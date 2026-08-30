@@ -1,90 +1,47 @@
-# eu4-maxxing: the Wu warring-states mission tree.
-# Same five-slot layout as Yan, Shu and Yue. See EMX_Yan_Missions.txt for the map.
-#
-# Wu is the builder. Every province it develops gains 25% fort defence on top
-# of the standard -5% development cost, and its force limit climbs 3% for each
-# delta city raised to 40 development, reaching +20% when the tree is done.
+# eu4-maxxing: Kingdom of Wu (WUU) & Restored Ming Mission Tree
+# Dynamic 2-Tier Architecture:
+# - When Wu (tag = WUU): Compact Rows 1-6 (Conquest) + Rows 7-12 (Silk & Spice) without any empty gaps!
+# - When Restored Ming (tag = MNG + emx_origin_wu): Rows 1-9 (Domination Ming) + Rows 11-16 (Silk & Spice)!
 
-emx_wu_s1 = {
+# =============================================================================
+# TIER 1: WU WARLORD CONQUEST (ROWS 1-6, tag = WUU)
+# =============================================================================
+
+emx_wu_a_s1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_wu_trigger = yes
+		tag = WUU
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-	emx_wu_seize_beijing = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 1
+	emx_wu_cross_lingnan_mountains = {
+		icon = mission_asian_trader
+		required_missions = { emx_wu_grand_mobilization }
+		position = 4
 		provinces_to_highlight = {
-			province_id = 1816
+			OR = {
+				area = fujian_area
+				area = jiangxi_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_core_province = 1816
+			fujian_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jiangxi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			add_prestige = 10
 			add_country_modifier = {
-				name = emx_spoils_of_yan
-				duration = -1
-			}
-			hebei_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	emx_wu_seize_chengdu = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 2
-		provinces_to_highlight = {
-			province_id = 679
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 679
-		}
-		effect = {
-			add_prestige = 10
-			add_country_modifier = {
-				name = emx_spoils_of_shu
-				duration = -1
-			}
-			sichuan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	emx_wu_seize_canton = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		position = 3
-		provinces_to_highlight = {
-			province_id = 667
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 667
-		}
-		effect = {
-			add_prestige = 10
-			add_country_modifier = {
-				name = emx_spoils_of_yue
-				duration = -1
+				name = emx_wu_lingnan_march
+				duration = 7300
 			}
 			guangdong_area = {
 				limit = {
@@ -93,10 +50,433 @@ emx_wu_s1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			west_guangdong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guangxi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
-	emx_wu_silk_road_1 = {
+	emx_wu_conquer_canton = {
+		icon = mission_junk_boat
+		required_missions = { emx_wu_cross_lingnan_mountains }
+		position = 5
+		provinces_to_highlight = {
+			area = guangdong_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			guangdong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = emx_wu_enabled_burghers
+			custom_tooltip = emx_wu_unlock_burghers_tt
+			add_prestige = 25
+			add_dip_power = 100
+			667 = {
+				add_permanent_province_modifier = {
+					name = emx_wu_canton_center
+					duration = -1
+				}
+			}
+			south_china_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+emx_wu_a_s2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = WUU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_wu_breach_three_gorges = {
+		icon = mng_tame_china_sorrow
+		required_missions = { emx_wu_grand_mobilization }
+		position = 4
+		provinces_to_highlight = {
+			area = huguang_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			huguang_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_wu_gorges_dominance
+				duration = 7300
+			}
+			sichuan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			chuannan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			chuanbei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_wu_conquer_chengdu = {
+		icon = qng_ten_grand_campaigns
+		required_missions = { emx_wu_breach_three_gorges }
+		position = 5
+		provinces_to_highlight = {
+			area = sichuan_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			sichuan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = emx_wu_enabled_nobles
+			custom_tooltip = emx_wu_unlock_nobles_tt
+			add_prestige = 25
+			add_mil_power = 100
+			679 = {
+				add_permanent_province_modifier = {
+					name = emx_wu_chengdu_center
+					duration = -1
+				}
+			}
+			xinan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+emx_wu_a_s3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = WUU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_wu_call_of_nanjing = {
+		icon = mission_chinese_general_riding
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = { }
+		trigger = {
+			army_size_percentage = 1.0
+		}
+		effect = {
+			add_army_tradition = 10
+			south_jiangsu_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_anhui_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_wu_liberate_nanjing = {
+		icon = mission_conquer_50_development
+		required_missions = { emx_wu_call_of_nanjing }
+		position = 2
+		provinces_to_highlight = {
+			area = south_jiangsu_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1821
+			south_jiangsu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = emx_wu_enabled_eunuchs
+			custom_tooltip = emx_wu_unlock_eunuchs_tt
+			add_prestige = 25
+			add_dip_power = 100
+			1821 = {
+				add_permanent_province_modifier = {
+					name = emx_wu_nanjing_center
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = emx_wu_river_bastion
+				duration = 7300
+			}
+			jiangsu_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			anhui_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_wu_grand_mobilization = {
+		icon = mng_shengshi_zhishi
+		required_missions = { emx_wu_liberate_nanjing }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 1821
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1821
+			south_jiangsu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			army_size = 30
+		}
+		effect = {
+			add_army_tradition = 10
+			fujian_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			jiangxi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			huguang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			henan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_henan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shandong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_wu_four_pillars_united = {
+		icon = mission_cornerstone_empire
+		required_missions = { emx_wu_liberate_nanjing emx_wu_conquer_canton emx_wu_conquer_chengdu emx_wu_conquer_beijing }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1821
+				province_id = 667
+				province_id = 679
+				province_id = 1816
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1821
+			owns_core_province = 667
+			owns_core_province = 679
+			owns_core_province = 1816
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige = 25
+		}
+	}
+}
+
+emx_wu_a_s4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = WUU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_wu_hebei_offensive = {
+		icon = mission_great_wall
+		required_missions = { emx_wu_grand_mobilization }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = henan_area
+				area = north_henan_area
+				area = shandong_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			henan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_henan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shandong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_wu_hebei_assault
+				duration = 7300
+			}
+			hebei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_hebei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	emx_wu_conquer_beijing = {
+		icon = mng_outer_city_beijing
+		required_missions = { emx_wu_hebei_offensive }
+		position = 5
+		provinces_to_highlight = {
+			area = hebei_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hebei_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = { exists = YAN }
+		}
+		effect = {
+			set_country_flag = emx_wu_enabled_nomadic_tribes
+			custom_tooltip = emx_wu_unlock_nomads_tt
+			add_prestige = 25
+			add_mil_power = 100
+			1816 = {
+				add_permanent_province_modifier = {
+					name = emx_wu_beijing_center
+					duration = -1
+				}
+			}
+			north_china_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+# =============================================================================
+# TIER 2A: WU COMPACT SILK & SPICE ROUTES (ROWS 7-12, tag = WUU)
+# =============================================================================
+
+emx_wu_b_s1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = WUU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_silk_road_1 = {
 		icon = mission_asian_trader
 		required_missions = { }
 		position = 7
@@ -115,9 +495,9 @@ emx_wu_s1 = {
 		}
 	}
 
-	emx_wu_silk_road_2 = {
+	emx_silk_road_2 = {
 		icon = mission_asian_trader
-		required_missions = { emx_wu_silk_road_1 }
+		required_missions = { emx_silk_road_1 }
 		position = 8
 		provinces_to_highlight = {
 			OR = {
@@ -138,9 +518,9 @@ emx_wu_s1 = {
 		}
 	}
 
-	emx_wu_silk_road_crimea = {
+	emx_silk_road_crimea = {
 		icon = mission_dominate_persian_gulf
-		required_missions = { emx_wu_silk_road_2 }
+		required_missions = { emx_silk_road_2 }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -166,95 +546,21 @@ emx_wu_s1 = {
 			emx_silk_road_crimea_effect = yes
 		}
 	}
-
 }
 
-
-emx_wu_s2 = {
+emx_wu_b_s2 = {
 	slot = 2
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_wu_trigger = yes
+		tag = WUU
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-	emx_wu_home_1 = {
-		icon = mission_rice_field
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = { province_id = 684 }
-		trigger = {
-			684 = { development = 30 }
-		}
-		effect = {
-			684 = { add_permanent_province_modifier = { name = emx_wu_capital_works duration = -1 } }
-		}
-	}
-
-	emx_wu_home_2 = {
-		icon = mission_asian_trader
-		required_missions = { emx_wu_home_1 }
-		position = 2
-		provinces_to_highlight = { province_id = 1822 }
-		trigger = { 1822 = { development = 30 } }
-		effect = {
-			1822 = { add_permanent_province_modifier = { name = emx_wu_delta_town duration = -1 } }
-		}
-	}
-
-	emx_wu_home_3 = {
-		icon = mng_form_depots
-		required_missions = { emx_wu_home_2 }
-		position = 3
-		provinces_to_highlight = { province_id = 2145 }
-		trigger = { 2145 = { development = 30 } }
-		effect = {
-			2145 = { add_permanent_province_modifier = { name = emx_wu_delta_town duration = -1 } }
-		}
-	}
-
-	emx_wu_home_4 = {
-		icon = mission_junk_boat
-		required_missions = { emx_wu_home_3 }
-		position = 4
-		provinces_to_highlight = { province_id = 2149 }
-		trigger = { 2149 = { development = 30 } }
-		effect = {
-			2149 = { add_permanent_province_modifier = { name = emx_wu_delta_town duration = -1 } }
-		}
-	}
-
-	emx_wu_the_wu_fleet = {
-		icon = mission_junk_boat
-		required_missions = { emx_wu_home_4 }
-		position = 5
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2149
-				province_id = 1824
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns = 2149
-			owns = 1824
-			navy_size = 30
-			2149 = { has_building = shipyard }
-		}
-		effect = {
-			add_navy_tradition = 10
-			add_country_modifier = {
-				name = emx_wu_break_the_wokou
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_silk_road_persia = {
+	emx_silk_road_persia = {
 		icon = mission_into_persia_1
-		required_missions = { emx_wu_silk_road_2 }
+		required_missions = { emx_silk_road_2 }
 		position = 9
 		provinces_to_highlight = {
 			OR = {
@@ -281,9 +587,9 @@ emx_wu_s2 = {
 		}
 	}
 
-	emx_wu_silk_road_trabzon = {
+	emx_silk_road_trabzon = {
 		icon = mission_dominate_persian_gulf
-		required_missions = { emx_wu_silk_road_persia }
+		required_missions = { emx_silk_road_persia }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -312,9 +618,9 @@ emx_wu_s2 = {
 		}
 	}
 
-	emx_wu_silk_road_capstone = {
+	emx_silk_road_capstone = {
 		icon = mission_asian_trader
-		required_missions = { emx_wu_silk_road_crimea emx_wu_silk_road_trabzon emx_wu_silk_road_halep_sham }
+		required_missions = { emx_silk_road_crimea emx_silk_road_trabzon emx_silk_road_halep_sham }
 		position = 11
 		provinces_to_highlight = {
 			OR = {
@@ -353,89 +659,21 @@ emx_wu_s2 = {
 			emx_silk_road_capstone_effect = yes
 		}
 	}
-
 }
 
-emx_wu_s3 = {
+emx_wu_b_s3 = {
 	slot = 3
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_wu_trigger = yes
+		tag = WUU
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-	emx_wu_home_5 = {
-		icon = mission_rice_field
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = { province_id = 2148 }
-		trigger = { 2148 = { development = 30 } }
-		effect = {
-			2148 = { add_permanent_province_modifier = { name = emx_wu_delta_town duration = -1 } }
-		}
-	}
-
-	emx_wu_home_6 = {
-		icon = mission_rice_field
-		required_missions = { emx_wu_home_5 }
-		position = 2
-		provinces_to_highlight = { province_id = 2146 }
-		trigger = { 2146 = { development = 30 } }
-		effect = {
-			2146 = { add_permanent_province_modifier = { name = emx_wu_delta_town duration = -1 } }
-		}
-	}
-
-	emx_wu_home_7 = {
-		icon = mission_junk_boat
-		required_missions = { emx_wu_home_6 }
-		position = 3
-		provinces_to_highlight = { province_id = 1824 }
-		trigger = { 1824 = { development = 30 } }
-		effect = {
-			1824 = { add_permanent_province_modifier = { name = emx_wu_delta_town duration = -1 } }
-			add_country_modifier = {
-				name = emx_wu_grand_levy
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_suzhou_looms = {
-		icon = mission_state_manufactories
-		required_missions = { emx_wu_home_4 }
-		position = 5
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1822
-				province_id = 684
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			1822 = {
-				development = 38
-				has_building = workshop
-			}
-			684 = {
-				development = 40
-				has_building = workshop
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_wu_suzhou_looms
-				duration = -1
-			}
-		}
-	}
-
-	
-	emx_wu_silk_road_halep_sham = {
+	emx_silk_road_halep_sham = {
 		icon = mission_egyptian_mamluk_soldier
-		required_missions = { emx_wu_silk_road_persia }
+		required_missions = { emx_silk_road_persia }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -466,98 +704,21 @@ emx_wu_s3 = {
 			emx_silk_road_levant_effect = yes
 		}
 	}
-
 }
 
-emx_wu_s4 = {
+emx_wu_b_s4 = {
 	slot = 4
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_wu_trigger = yes
+		tag = WUU
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-	emx_wu_fort_1 = {
-		icon = mission_cornerstone_empire
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = { province_id = 684 }
-		trigger = {
-			684 = { development = 40 }
-		}
-		effect = {
-			add_mil_power = 50
-			add_country_modifier = {
-				name = emx_wu_fort_hangzhou
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_fort_2 = {
-		icon = mission_cornerstone_empire
-		required_missions = { emx_wu_fort_1 }
-		position = 2
-		provinces_to_highlight = { province_id = 1822 }
-		trigger = {
-			1822 = { development = 40 }
-		}
-		effect = {
-			add_mil_power = 50
-			add_country_modifier = {
-				name = emx_wu_fort_shanghai
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_fort_3 = {
-		icon = mission_cornerstone_empire
-		required_missions = { emx_wu_fort_2 }
-		position = 3
-		provinces_to_highlight = { province_id = 2149 }
-		trigger = {
-			2149 = { development = 40 }
-		}
-		effect = {
-			add_mil_power = 50
-			add_country_modifier = {
-				name = emx_wu_fort_ningbo
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_jiangxi_and_fujian = {
-		icon = mission_unite_home_region
-		required_missions = { emx_wu_home_4 }
-		position = 5
-		provinces_to_highlight = {
-			OR = {
-				province_id = 683
-				province_id = 669
-				province_id = 1829
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 683
-			owns_core_province = 669
-			owns_core_province = 1829
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_wu_lower_yangtze
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_spice_route_gujarat = {
+	emx_spice_route_gujarat = {
 		icon = mission_dominate_gujarati_trade
-		required_missions = { emx_wu_spice_route_coromandel }
+		required_missions = { emx_spice_route_coromandel }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -576,9 +737,9 @@ emx_wu_s4 = {
 		}
 	}
 
-	emx_wu_spice_route_hormuz = {
+	emx_spice_route_hormuz = {
 		icon = mission_dominate_persian_gulf
-		required_missions = { emx_wu_spice_route_gujarat }
+		required_missions = { emx_spice_route_gujarat }
 		position = 11
 		provinces_to_highlight = {
 			OR = {
@@ -597,70 +758,19 @@ emx_wu_s4 = {
 			emx_spice_route_hormuz_effect = yes
 		}
 	}
-
 }
 
-emx_wu_s5 = {
+emx_wu_b_s5 = {
 	slot = 5
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_wu_trigger = yes
+		tag = WUU
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-	emx_wu_fort_4 = {
-		icon = mission_cornerstone_empire
-		required_missions = { }
-		position = 1
-		provinces_to_highlight = { province_id = 2145 }
-		trigger = {
-			2145 = { development = 40 }
-		}
-		effect = {
-			add_mil_power = 50
-			add_country_modifier = {
-				name = emx_wu_fort_zhenjiang
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_fort_5 = {
-		icon = mission_cornerstone_empire
-		required_missions = { emx_wu_fort_4 }
-		position = 2
-		provinces_to_highlight = { province_id = 1824 }
-		trigger = {
-			1824 = { development = 40 }
-		}
-		effect = {
-			add_army_tradition = 10
-			add_country_modifier = {
-				name = emx_wu_fort_wenzhou
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_jiangnan_levy = {
-		icon = mission_chinese_general_riding
-		required_missions = { emx_wu_home_4 }
-		position = 5
-		trigger = {
-			army_size = 60
-			army_professionalism = 0.4
-		}
-		effect = {
-			add_country_modifier = {
-				name = emx_wu_jiangnan_army
-				duration = -1
-			}
-		}
-	}
-
-	emx_wu_spice_route_malacca = {
+	emx_spice_route_malacca = {
 		icon = mission_asian_trader
 		required_missions = { }
 		position = 7
@@ -676,9 +786,9 @@ emx_wu_s5 = {
 		}
 	}
 
-	emx_wu_spice_route_bengal = {
+	emx_spice_route_bengal = {
 		icon = mission_coromandel_trade
-		required_missions = { emx_wu_spice_route_malacca }
+		required_missions = { emx_spice_route_malacca }
 		position = 8
 		provinces_to_highlight = {
 			OR = {
@@ -695,9 +805,9 @@ emx_wu_s5 = {
 		}
 	}
 
-	emx_wu_spice_route_coromandel = {
+	emx_spice_route_coromandel = {
 		icon = mission_coromandel_trade
-		required_missions = { emx_wu_spice_route_bengal }
+		required_missions = { emx_spice_route_bengal }
 		position = 9
 		provinces_to_highlight = {
 			OR = {
@@ -715,9 +825,9 @@ emx_wu_s5 = {
 		}
 	}
 
-	emx_wu_spice_route_aden = {
+	emx_spice_route_aden = {
 		icon = mission_galleys_in_port
-		required_missions = { emx_wu_spice_route_coromandel }
+		required_missions = { emx_spice_route_coromandel }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -736,9 +846,9 @@ emx_wu_s5 = {
 		}
 	}
 
-	emx_wu_spice_route_alexandria = {
+	emx_spice_route_alexandria = {
 		icon = mission_restore_trade_superiority
-		required_missions = { emx_wu_spice_route_aden }
+		required_missions = { emx_spice_route_aden }
 		position = 11
 		provinces_to_highlight = {
 			OR = {
@@ -758,9 +868,9 @@ emx_wu_s5 = {
 		}
 	}
 
-	emx_wu_spice_route_capstone = {
-		icon = mission_dominate_home_trade_node
-		required_missions = { emx_wu_spice_route_hormuz emx_wu_spice_route_alexandria }
+	emx_spice_route_capstone = {
+		icon = mission_junk_boat
+		required_missions = { emx_spice_route_hormuz emx_spice_route_alexandria }
 		position = 12
 		provinces_to_highlight = {
 			OR = {
@@ -781,7 +891,440 @@ emx_wu_s5 = {
 			emx_spice_route_capstone_effect = yes
 		}
 	}
-
 }
 
+# =============================================================================
+# TIER 2B: MING (WU ORIGIN) SILK & SPICE ROUTES (ROWS 11-16, tag = MNG)
+# =============================================================================
 
+emx_ming_wu_silk_s1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+		has_country_flag = emx_origin_wu
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_silk_road_1 = {
+		icon = mission_asian_trader
+		required_missions = { }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_1_trigger = yes
+		}
+		effect = {
+			emx_silk_road_gansu_effect = yes
+		}
+	}
+
+	emx_silk_road_2 = {
+		icon = mission_asian_trader
+		required_missions = { emx_silk_road_1 }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_2_trigger = yes
+		}
+		effect = {
+			emx_silk_road_samarkand_effect = yes
+		}
+	}
+
+	emx_silk_road_crimea = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_silk_road_2 }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = khiva_area
+				area = nogai_area
+				area = lower_yik_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_crimea_trigger = yes
+		}
+		effect = {
+			emx_silk_road_crimea_effect = yes
+		}
+	}
+}
+
+emx_ming_wu_silk_s2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+		has_country_flag = emx_origin_wu
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_silk_road_persia = {
+		icon = mission_into_persia_1
+		required_missions = { emx_silk_road_2 }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_persia_trigger = yes
+		}
+		effect = {
+			emx_silk_road_persia_effect = yes
+		}
+	}
+
+	emx_silk_road_trabzon = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_silk_road_persia }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				area = armenia_area
+				area = erzurum_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_trabzon_trigger = yes
+		}
+		effect = {
+			emx_silk_road_trabzon_effect = yes
+		}
+	}
+
+	emx_silk_road_capstone = {
+		icon = mission_asian_trader
+		required_missions = { emx_silk_road_crimea emx_silk_road_trabzon emx_silk_road_halep_sham }
+		position = 15
+		provinces_to_highlight = {
+			OR = {
+				area = al_jazira_area
+				area = aleppo_area
+				area = armenia_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+				area = erzurum_area
+				area = ferghana_area
+				area = gansu_area
+				area = herat_area
+				area = iraq_arabi_area
+				area = kashgaria_area
+				area = khiva_area
+				area = lower_yik_area
+				area = mashhad_area
+				area = merv_area
+				area = nogai_area
+				area = shahrizor_area
+				area = shanshan_area
+				area = shirvan_area
+				area = syria_area
+				area = tabarestan_area
+				area = tabriz_area
+				area = transoxiana_area
+				area = west_gansu_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_capstone_trigger = yes
+		}
+		effect = {
+			emx_silk_road_capstone_effect = yes
+		}
+	}
+}
+
+emx_ming_wu_silk_s3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+		has_country_flag = emx_origin_wu
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_silk_road_halep_sham = {
+		icon = mission_egyptian_mamluk_soldier
+		required_missions = { emx_silk_road_persia }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				area = shahrizor_area
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = aleppo_area
+				area = syria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_halep_sham_trigger = yes
+		}
+		effect = {
+			emx_silk_road_levant_effect = yes
+		}
+	}
+}
+
+emx_ming_wu_spice_s4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+		has_country_flag = emx_origin_wu
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_spice_route_gujarat = {
+		icon = mission_dominate_gujarati_trade
+		required_missions = { emx_spice_route_coromandel }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_gujarat_trigger = yes
+		}
+		effect = {
+			emx_spice_route_gujarat_effect = yes
+		}
+	}
+
+	emx_spice_route_hormuz = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_spice_route_gujarat }
+		position = 15
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+				province_id = 1334
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_hormuz_trigger = yes
+		}
+		effect = {
+			emx_spice_route_hormuz_effect = yes
+		}
+	}
+}
+
+emx_ming_wu_spice_s5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+		has_country_flag = emx_origin_wu
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	emx_spice_route_malacca = {
+		icon = mission_asian_trader
+		required_missions = { }
+		position = 11
+		provinces_to_highlight = {
+			province_id = 1361
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_malacca_trigger = yes
+		}
+		effect = {
+			emx_spice_route_malacca_effect = yes
+		}
+	}
+
+	emx_spice_route_bengal = {
+		icon = mission_coromandel_trade
+		required_missions = { emx_spice_route_malacca }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_bengal_trigger = yes
+		}
+		effect = {
+			emx_spice_route_bengal_effect = yes
+		}
+	}
+
+	emx_spice_route_coromandel = {
+		icon = mission_coromandel_trade
+		required_missions = { emx_spice_route_bengal }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_coromandel_trigger = yes
+		}
+		effect = {
+			emx_spice_route_coromandel_effect = yes
+		}
+	}
+
+	emx_spice_route_aden = {
+		icon = mission_galleys_in_port
+		required_missions = { emx_spice_route_coromandel }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 4346
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_aden_trigger = yes
+		}
+		effect = {
+			emx_spice_route_aden_effect = yes
+		}
+	}
+
+	emx_spice_route_alexandria = {
+		icon = mission_restore_trade_superiority
+		required_missions = { emx_spice_route_aden }
+		position = 15
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 4346
+				province_id = 358
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_alexandria_trigger = yes
+		}
+		effect = {
+			emx_spice_route_alexandria_effect = yes
+		}
+	}
+
+	emx_spice_route_capstone = {
+		icon = mission_junk_boat
+		required_missions = { emx_spice_route_hormuz emx_spice_route_alexandria }
+		position = 16
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+				province_id = 1334
+				province_id = 4346
+				province_id = 358
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_capstone_trigger = yes
+		}
+		effect = {
+			emx_spice_route_capstone_effect = yes
+		}
+	}
+}

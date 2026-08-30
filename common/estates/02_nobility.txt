@@ -3,9 +3,12 @@ estate_nobles = {
 
 	# If true, country will get estate
 	trigger = {
-		#NOT = { has_government_attribute = is_merchant_republic }
-		#NOT = { has_reform = veche_republic }
-		#NOT = { has_reform = trading_city }
+		NOT = {
+			AND = {
+				tag = WUU
+				NOT = { has_country_flag = emx_wu_enabled_nobles }
+			}
+		}
 		NOT = { has_government_attribute = disables_estate_nobles }
 		NOT = { has_disabled_estate = { estate = estate_nobles } }
 		OR = {

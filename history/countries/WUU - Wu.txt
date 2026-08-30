@@ -1,11 +1,20 @@
-government = monarchy
-add_government_reform = chinese_warlord
+government = theocracy
+add_government_reform = tibetan_dual_government_reform
 technology_group = chinese
 religion = confucianism
 primary_culture = wu
 capital = 684	#Hangzhou
+change_estate_land_share = {
+	estate = estate_church
+	share = -40
+}
 
 1444.11.11 = {
+	set_estate_privilege = estate_church_inwards_perfection
+	add_country_modifier = {
+		name = emx_wu_shattered_state
+		duration = -1
+	}
     monarch = {
         country_of_origin = WUU
         name = "Of"

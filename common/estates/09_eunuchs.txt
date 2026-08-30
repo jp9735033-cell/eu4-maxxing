@@ -6,9 +6,16 @@ estate_eunuchs = {
 	# If true, country will get estate
 	trigger = {
 		has_dlc = "Domination"
+		NOT = {
+			AND = {
+				tag = WUU
+				NOT = { has_country_flag = emx_wu_enabled_eunuchs }
+			}
+		}
 		NOT = { has_disabled_estate = { estate = estate_eunuchs } }
 		OR = {
 			has_enabled_estate = { estate = estate_eunuchs }
+			has_country_flag = emx_wu_enabled_eunuchs
 			is_emperor_of_china = yes 
 			AND = {
 				has_unlocked_estate = { estate = estate_eunuchs }

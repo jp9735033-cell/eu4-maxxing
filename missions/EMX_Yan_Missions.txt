@@ -19,6 +19,7 @@ emx_yan_preview_s1 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		NOT = { has_country_flag = emx_yan_chose_consort }
 		NOT = { has_country_flag = emx_yan_preview_manchu }
 		NOT = { has_country_flag = emx_yan_preview_korea }
@@ -47,6 +48,7 @@ emx_yan_preview_s2 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		NOT = { has_country_flag = emx_yan_chose_consort }
 		NOT = { has_country_flag = emx_yan_preview_manchu }
 		NOT = { has_country_flag = emx_yan_preview_korea }
@@ -77,6 +79,7 @@ emx_yan_manchu_s1 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		OR = {
 			has_country_flag = emx_yan_chose_manchu
 			AND = {
@@ -168,6 +171,7 @@ emx_yan_manchu_s2 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		OR = {
 			has_country_flag = emx_yan_chose_manchu
 			AND = {
@@ -227,6 +231,7 @@ emx_yan_korea_s1 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		OR = {
 			AND = {
 				has_country_flag = emx_yan_chose_korea
@@ -321,6 +326,7 @@ emx_yan_korea_s2 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		OR = {
 			AND = {
 				has_country_flag = emx_yan_chose_korea
@@ -362,6 +368,7 @@ emx_yan_harmony_s1 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		OR = {
 			has_country_flag = emx_yan_chose_harmony
 			AND = {
@@ -499,6 +506,7 @@ emx_yan_harmony_s2 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		OR = {
 			has_country_flag = emx_yan_chose_harmony
 			AND = {
@@ -559,6 +567,7 @@ emx_yan_harmony_s3 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		OR = {
 			has_country_flag = emx_yan_chose_harmony
 			AND = {
@@ -622,6 +631,7 @@ emx_yan_s1 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -706,6 +716,7 @@ emx_yan_s2 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -821,6 +832,7 @@ emx_yan_s3 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -868,6 +880,7 @@ emx_yan_s4 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -924,6 +937,7 @@ emx_yan_s5 = {
 	ai = yes
 	potential = {
 		emx_is_yan_trigger = yes
+		NOT = { has_country_flag = emx_yan_integrated_korea }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

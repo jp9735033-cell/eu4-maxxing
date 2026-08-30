@@ -641,13 +641,7 @@ emx_spice_route_tier_1_malacca = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -665,24 +659,12 @@ emx_spice_route_tier_2_bengal = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1343 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -700,35 +682,17 @@ emx_spice_route_tier_3_coromandel = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1343 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1340 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -746,46 +710,22 @@ emx_spice_route_tier_4_gujarat = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1343 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1340 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		504 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -803,46 +743,22 @@ emx_spice_route_tier_4_aden = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1343 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1340 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		4346 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -860,57 +776,27 @@ emx_spice_route_tier_5_hormuz = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1343 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1340 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		504 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1334 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -928,57 +814,27 @@ emx_spice_route_tier_5_alexandria = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1343 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1340 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		4346 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		358 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -996,79 +852,37 @@ emx_spice_route_tier_6_master = {
 	trigger = {
 		1361 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1343 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1340 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		504 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		1334 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		4346 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		358 = {
 			strongest_trade_power = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}

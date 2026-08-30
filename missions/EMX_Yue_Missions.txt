@@ -798,14 +798,14 @@ emx_yue_s5 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 657
-				province_id = 438
+				province_id = 4348
 				province_id = 658
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_core_province = 657
-			owns_core_province = 438
+			owns_core_province = 4348
 			owns_core_province = 658
 		}
 		effect = {

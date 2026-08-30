@@ -162,8 +162,79 @@ emx_yan_korean_eoc_s1 = {
 			set_country_flag = mng_enable_3_grand_coordinators_offices_flag 
 		}
 	}
-}
 
+	emx_yan_silk_road_1 = {
+		icon = mission_asian_trader
+		required_missions = { }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_1_trigger = yes
+		}
+		effect = {
+			emx_silk_road_gansu_effect = yes
+		}
+	}
+
+	emx_yan_silk_road_2 = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_silk_road_1 }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_2_trigger = yes
+		}
+		effect = {
+			emx_silk_road_samarkand_effect = yes
+		}
+	}
+
+	emx_yan_silk_road_crimea = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_yan_silk_road_2 }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = khiva_area
+				area = nogai_area
+				area = lower_yik_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_crimea_trigger = yes
+		}
+		effect = {
+			emx_silk_road_crimea_effect = yes
+		}
+	}
+
+}
 emx_yan_korean_eoc_s2 = {
 	slot = 2
 	generic = no
@@ -542,8 +613,114 @@ emx_yan_korean_eoc_s2 = {
 			}
 		}
 	}
-}
 
+	emx_yan_silk_road_persia = {
+		icon = mission_into_persia_1
+		required_missions = { emx_yan_silk_road_2 }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_persia_trigger = yes
+		}
+		effect = {
+			emx_silk_road_persia_effect = yes
+		}
+	}
+
+	emx_yan_silk_road_trabzon = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_silk_road_persia }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				area = armenia_area
+				area = erzurum_area
+				area = trabzon_area
+				area = kastamonu_area
+				area = hudavendigar_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_trabzon_trigger = yes
+		}
+		effect = {
+			emx_silk_road_trabzon_effect = yes
+		}
+	}
+
+	emx_yan_silk_road_capstone = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_yan_silk_road_crimea emx_yan_silk_road_trabzon emx_yan_silk_road_halep_sham }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = armenia_area
+				area = astrakhan_area
+				area = azov_area
+				area = crimea_area
+				area = erzurum_area
+				area = ferghana_area
+				area = gansu_area
+				area = herat_area
+				area = hudavendigar_area
+				area = iraq_arabi_area
+				area = kashgaria_area
+				area = kastamonu_area
+				area = khiva_area
+				area = lower_yik_area
+				area = mashhad_area
+				area = merv_area
+				area = nogai_area
+				area = shahrizor_area
+				area = shanshan_area
+				area = shirvan_area
+				area = syria_area
+				area = tabarestan_area
+				area = tabriz_area
+				area = transoxiana_area
+				area = west_gansu_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_capstone_trigger = yes
+		}
+		effect = {
+			emx_silk_road_capstone_effect = yes
+		}
+	}
+
+}
 emx_yan_korean_eoc_s3 = {
 	slot = 3
 	generic = no
@@ -843,8 +1020,42 @@ emx_yan_korean_eoc_s3 = {
 			}
 		}
 	}	
-}
 
+	emx_yan_silk_road_halep_sham = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_silk_road_persia }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = west_gansu_area
+				area = gansu_area
+				area = shanshan_area
+				area = kashgaria_area
+				area = ferghana_area
+				area = transoxiana_area
+				area = merv_area
+				area = herat_area
+				area = mashhad_area
+				area = tabarestan_area
+				area = shirvan_area
+				area = tabriz_area
+				area = shahrizor_area
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = aleppo_area
+				area = syria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_silk_road_halep_sham_trigger = yes
+		}
+		effect = {
+			emx_yan_silk_road_halep_sham_effect = yes
+		}
+	}
+
+}
 emx_yan_korean_eoc_s4 = {
 	slot = 4
 	generic = no
@@ -1146,8 +1357,51 @@ emx_yan_korean_eoc_s4 = {
 			}
 		}
 	}
-}
 
+	emx_yan_spice_route_gujarat = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_spice_route_coromandel }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_gujarat_trigger = yes
+		}
+		effect = {
+			emx_spice_route_gujarat_effect = yes
+		}
+	}
+
+	emx_yan_spice_route_hormuz = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_spice_route_gujarat }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 504
+				province_id = 1334
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_hormuz_trigger = yes
+		}
+		effect = {
+			emx_spice_route_hormuz_effect = yes
+		}
+	}
+
+}
 emx_yan_korean_eoc_s5 = {
 	slot = 5
 	generic = no
@@ -1393,4 +1647,127 @@ emx_yan_korean_eoc_s5 = {
 			}
 		}
 	}
+
+	emx_yan_spice_route_malacca = {
+		icon = mission_asian_trader
+		required_missions = { }
+		position = 7
+		provinces_to_highlight = {
+			province_id = 1361
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_malacca_trigger = yes
+		}
+		effect = {
+			emx_spice_route_malacca_effect = yes
+		}
+	}
+
+	emx_yan_spice_route_bengal = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_spice_route_malacca }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_bengal_trigger = yes
+		}
+		effect = {
+			emx_spice_route_bengal_effect = yes
+		}
+	}
+
+	emx_yan_spice_route_coromandel = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_spice_route_bengal }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_coromandel_trigger = yes
+		}
+		effect = {
+			emx_spice_route_coromandel_effect = yes
+		}
+	}
+
+	emx_yan_spice_route_aden = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_spice_route_coromandel }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 388
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_aden_trigger = yes
+		}
+		effect = {
+			emx_spice_route_aden_effect = yes
+		}
+	}
+
+	emx_yan_spice_route_alexandria = {
+		icon = mission_asian_trader
+		required_missions = { emx_yan_spice_route_aden }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+				province_id = 1343
+				province_id = 1340
+				province_id = 388
+				province_id = 358
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_alexandria_trigger = yes
+		}
+		effect = {
+			emx_spice_route_alexandria_effect = yes
+		}
+	}
+
+	emx_yan_spice_route_capstone = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { emx_yan_spice_route_hormuz emx_yan_spice_route_alexandria }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 358
+				province_id = 388
+				province_id = 504
+				province_id = 1334
+				province_id = 1340
+				province_id = 1343
+				province_id = 1361
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			emx_spice_route_capstone_trigger = yes
+		}
+		effect = {
+			emx_spice_route_capstone_effect = yes
+		}
+	}
+
 }

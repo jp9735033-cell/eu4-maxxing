@@ -540,6 +540,29 @@ emx_yan_jurchen_dowry_k_effect = {
 	}
 }
 
+emx_yan_banish_steppe_nomads_k_effect = {
+	add_prestige = 25
+	add_adm_power = 100
+	add_country_modifier = {
+		name = "emx_yan_manchurian_hegemony"
+		duration = -1
+	}
+	mongolia_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	north_china_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
 emx_yan_jurchen_dowry_effect = {
 	add_prestige = 15
 	add_mil_power = 50

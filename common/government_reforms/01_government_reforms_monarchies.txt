@@ -639,9 +639,8 @@ chinese_warlord = {
 	}
 
 	modifiers = {
-		manpower_recovery_speed = 0.25
-		governing_capacity = 500
-		liberty_desire = 50
+		manpower_recovery_speed = 0.10
+		governing_capacity = 250
 	}
 	
 	ai = {

@@ -45,6 +45,7 @@ emx_yan_eight_banners_modifier = {
 	has_banners = yes
 	amount_of_banners = 1.0
 	shock_damage = 0.10
+	infantry_power = 0.05
 }
 
 # Path 1: Manchurian Hegemony Capstone

@@ -10,38 +10,20 @@
 # Stage 1: Gansu Corridor Areas
 emx_silk_road_tier_1_gansu = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
 		west_gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -53,86 +35,44 @@ emx_silk_road_tier_1_gansu = {
 # Stage 2: Tarim Basin & Samarkand Areas
 emx_silk_road_tier_2_samarkand = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
 		west_gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shanshan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		kashgaria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		ferghana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		transoxiana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -144,158 +84,80 @@ emx_silk_road_tier_2_samarkand = {
 # Stage 3A: Silk Road Crimea Branch Areas
 emx_silk_road_tier_3_crimea = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
 		west_gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shanshan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		kashgaria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		ferghana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		transoxiana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		khiva_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		nogai_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		lower_yik_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		astrakhan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		azov_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		crimea_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -307,158 +169,80 @@ emx_silk_road_tier_3_crimea = {
 # Stage 3B: Silk Road Persia Branch Areas
 emx_silk_road_tier_3_persia = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
 		west_gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shanshan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		kashgaria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		ferghana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		transoxiana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		merv_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		herat_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		mashhad_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabarestan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shirvan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabriz_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -470,182 +254,92 @@ emx_silk_road_tier_3_persia = {
 # Stage 4A: Silk Road Trabzon Branch Areas
 emx_silk_road_tier_4_trabzon = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
 		west_gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shanshan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		kashgaria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		ferghana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		transoxiana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		merv_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		herat_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		mashhad_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabarestan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shirvan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabriz_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		armenia_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		erzurum_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -657,218 +351,110 @@ emx_silk_road_tier_4_trabzon = {
 # Stage 4B: Silk Road Aleppo & Damascus Branch Areas
 emx_silk_road_tier_4_halep_sham = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
 		west_gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shanshan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		kashgaria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		ferghana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		transoxiana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		merv_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		herat_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		mashhad_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabarestan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shirvan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabriz_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shahrizor_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		al_jazira_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		iraq_arabi_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		aleppo_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		syria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -880,314 +466,158 @@ emx_silk_road_tier_4_halep_sham = {
 # Stage 5: Lord of the Silk Road (Capstone - Requires All 25 Silk Road Areas)
 emx_silk_road_tier_5_capstone = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
 		west_gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		gansu_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shanshan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		kashgaria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		ferghana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		transoxiana_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		khiva_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		nogai_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		lower_yik_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		astrakhan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		azov_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		crimea_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		merv_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		herat_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		mashhad_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabarestan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shirvan_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		tabriz_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		armenia_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		erzurum_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		shahrizor_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		al_jazira_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		iraq_arabi_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		aleppo_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 		syria_area = {
 			type = all
 			owner = {
-				capital_scope = {
-					OR = {
-						region = north_china_region
-						region = south_china_region
-						region = xinan_region
-					}
-				}
+				emx_valid_chinese_silk_spice_nation_trigger = yes
 			}
 		}
 	}
@@ -1205,13 +635,7 @@ emx_silk_road_tier_5_capstone = {
 # Stage 1: Malacca (Node 1361)
 emx_spice_route_tier_1_malacca = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
@@ -1235,13 +659,7 @@ emx_spice_route_tier_1_malacca = {
 # Stage 2: Bengal (Node 1343)
 emx_spice_route_tier_2_bengal = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
@@ -1276,13 +694,7 @@ emx_spice_route_tier_2_bengal = {
 # Stage 3: Coromandel (Node 1340)
 emx_spice_route_tier_3_coromandel = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
@@ -1328,13 +740,7 @@ emx_spice_route_tier_3_coromandel = {
 # Stage 4A: Gujarat (Node 504)
 emx_spice_route_tier_4_gujarat = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
@@ -1391,13 +797,7 @@ emx_spice_route_tier_4_gujarat = {
 # Stage 4B: Gulf of Aden (Node 4346)
 emx_spice_route_tier_4_aden = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
@@ -1454,13 +854,7 @@ emx_spice_route_tier_4_aden = {
 # Stage 5A: Spice Route End: Hormuz (Node 1334)
 emx_spice_route_tier_5_hormuz = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
@@ -1528,13 +922,7 @@ emx_spice_route_tier_5_hormuz = {
 # Stage 5B: Spice Route End: Alexandria (Node 358)
 emx_spice_route_tier_5_alexandria = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {
@@ -1602,13 +990,7 @@ emx_spice_route_tier_5_alexandria = {
 # Final Capstone: Master of the Spice Routes (Requires All 7 Spice Route Nodes)
 emx_spice_route_tier_6_master = {
 	potential = {
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-		}
+		emx_valid_chinese_silk_spice_nation_trigger = yes
 	}
 
 	trigger = {

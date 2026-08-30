@@ -443,6 +443,7 @@ emx_yan_eight_banners_effect = {
 		name = "emx_yan_eight_banners_modifier"
 		duration = -1
 	}
+	custom_tooltip = emx_yan_eight_banners_sinicize_tt
 	update_entire_culture_foreign = {
 		culture = manchu
 	}

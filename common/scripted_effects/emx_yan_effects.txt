@@ -489,13 +489,6 @@ emx_yan_korea_loyal_effect = {
 		}
 		inherit = KOR
 	}
-	manchuria_region = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
 	set_country_flag = emx_yan_integrated_korea
 	swap_non_generic_missions = yes
 }

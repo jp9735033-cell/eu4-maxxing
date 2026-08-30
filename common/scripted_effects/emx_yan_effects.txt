@@ -512,6 +512,9 @@ emx_yan_korea_loyal_effect = {
 		}
 		inherit = KOR
 	}
+	update_entire_culture_foreign = {
+		culture = korean
+	}
 	set_country_flag = emx_yan_integrated_korea
 	swap_non_generic_missions = yes
 }

@@ -63,15 +63,19 @@ emx_yan_manchu_loyal_trigger = {
 }
 
 emx_yan_jianzhou_surroundings_trigger = {
-	central_jilin_area = {
-		type = all
-		country_or_non_sovereign_subject_holds = ROOT
-	}
 	jilin_area = {
 		type = all
 		country_or_non_sovereign_subject_holds = ROOT
 	}
 	liaoning_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	ningguta_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+	furdan_area = {
 		type = all
 		country_or_non_sovereign_subject_holds = ROOT
 	}

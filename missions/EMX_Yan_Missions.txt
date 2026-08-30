@@ -105,9 +105,10 @@ emx_yan_manchu_s1 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				area = central_jilin_area
 				area = jilin_area
 				area = liaoning_area
+				area = ningguta_area
+				area = furdan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}

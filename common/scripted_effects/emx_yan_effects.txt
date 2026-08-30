@@ -472,6 +472,39 @@ emx_yan_korea_loyal_effect = {
 	swap_non_generic_missions = yes
 }
 
+emx_yan_korean_alliance_k_effect = {
+	add_prestige = 15
+	add_mil_power = 50
+	jilin_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	liaoning_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	ningguta_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	furdan_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
 emx_yan_jurchen_dowry_k_effect = {
 	add_prestige = 15
 	add_army_tradition = 15

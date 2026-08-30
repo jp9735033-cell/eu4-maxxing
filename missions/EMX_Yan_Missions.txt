@@ -223,11 +223,19 @@ emx_yan_korea_s1 = {
 	}
 	has_country_shield = yes
 
-	emx_yan_jurchen_dowry_k = {
-		icon = mission_great_wall
+	emx_yan_korean_alliance_k = {
+		icon = mission_alliances
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = { }
+		provinces_to_highlight = {
+			OR = {
+				area = jilin_area
+				area = liaoning_area
+				area = ningguta_area
+				area = furdan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
 			not_in_mission_preview_mode = { key = YAN }
 			custom_trigger_tooltip = {
@@ -237,6 +245,32 @@ emx_yan_korea_s1 = {
 			emx_yan_frontier_readiness_trigger = yes
 		}
 		effect = {
+			emx_yan_korean_alliance_k_effect = yes
+		}
+	}
+
+	emx_yan_jurchen_dowry_k = {
+		icon = mission_great_wall
+		required_missions = { emx_yan_korean_alliance_k }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = jilin_area
+				area = liaoning_area
+				area = ningguta_area
+				area = furdan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
+			emx_yan_jianzhou_surroundings_trigger = yes
+		}
+		effect = {
 			emx_yan_jurchen_dowry_k_effect = yes
 		}
 	}
@@ -244,7 +278,7 @@ emx_yan_korea_s1 = {
 	emx_yan_banish_steppe_nomads_k = {
 		icon = mission_great_wall
 		required_missions = { emx_yan_jurchen_dowry_k }
-		position = 2
+		position = 3
 		provinces_to_highlight = {
 			region = manchuria_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -265,7 +299,7 @@ emx_yan_korea_s1 = {
 	emx_yan_pacify_mongolia_k = {
 		icon = mission_steppe_warriors
 		required_missions = { emx_yan_banish_steppe_nomads_k }
-		position = 3
+		position = 4
 		provinces_to_highlight = {
 			region = mongolia_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -286,7 +320,7 @@ emx_yan_korea_s1 = {
 	emx_yan_unify_north_china_k = {
 		icon = mission_unite_home_region
 		required_missions = { emx_yan_pacify_mongolia_k }
-		position = 4
+		position = 5
 		provinces_to_highlight = {
 			region = north_china_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -328,7 +362,7 @@ emx_yan_korea_s2 = {
 	emx_yan_subjugate_joseon = {
 		icon = mission_kowtow
 		required_missions = { emx_yan_banish_steppe_nomads_k }
-		position = 3
+		position = 4
 		provinces_to_highlight = { }
 		trigger = {
 			not_in_mission_preview_mode = { key = YAN }

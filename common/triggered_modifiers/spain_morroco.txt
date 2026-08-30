@@ -3,12 +3,12 @@ spa_two_front_war_buff = {
 
     potential = {
         tag = CAS
-		NOT  = { is_year = 1490}
     }
 
     trigger = {
         war_with = FRA
         war_with = MOR
+		NOT  = { is_year = 1490}
     }
 
     

@@ -44,6 +44,7 @@ emx_chinese_player_trigger = {
 }
 
 emx_any_chinese_warlord_trigger = {
+	NOT = { tag = YUA }
 	OR = {
 		emx_chinese_player_trigger = yes
 		has_reform = chinese_warlord

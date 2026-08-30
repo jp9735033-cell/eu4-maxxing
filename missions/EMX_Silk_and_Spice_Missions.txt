@@ -8,6 +8,8 @@ emx_silk_road_s1 = {
 		emx_any_chinese_warlord_trigger = yes
 		NOT = { emx_chinese_player_trigger = yes }
 		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { tag = SHU }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -93,6 +95,8 @@ emx_silk_road_s2 = {
 		emx_any_chinese_warlord_trigger = yes
 		NOT = { emx_chinese_player_trigger = yes }
 		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { tag = SHU }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -209,6 +213,8 @@ emx_silk_road_s3 = {
 		emx_any_chinese_warlord_trigger = yes
 		NOT = { emx_chinese_player_trigger = yes }
 		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { tag = SHU }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -257,6 +263,8 @@ emx_spice_route_s4 = {
 		emx_any_chinese_warlord_trigger = yes
 		NOT = { emx_chinese_player_trigger = yes }
 		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { tag = SHU }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -314,6 +322,8 @@ emx_spice_route_s5 = {
 		emx_any_chinese_warlord_trigger = yes
 		NOT = { emx_chinese_player_trigger = yes }
 		NOT = { tag = QNG }
+		NOT = { tag = YUA }
+		NOT = { tag = SHU }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

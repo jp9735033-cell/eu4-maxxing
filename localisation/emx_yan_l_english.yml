@@ -428,6 +428,8 @@ emx_yan_eoc_mng_cornerstone_empire3_title:0 "Cornerstone of Empire"
 
  emx_yan_meiying_crowned_title:0 "Coronation of Queen Meiying"
  emx_yan_meiying_crowned_desc:0 "Queen Meiying ascends the throne of Yan, ready to determine the diplomatic destiny and imperial path of our realm."
+ yan_must_confirm_branch_first_tt:0 "§YYan§! must officially confirm and choose this dynastic path upon §YQueen Meiying's§! coronation (Cannot complete during preview mode)."
+
 
 
 

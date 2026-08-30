@@ -92,8 +92,21 @@ emx_yan_manchu_s1 = {
 		icon = mission_alliances
 		required_missions = { }
 		position = 1
-		provinces_to_highlight = { }
+		provinces_to_highlight = {
+			OR = {
+				area = jilin_area
+				area = liaoning_area
+				area = ningguta_area
+				area = furdan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_manchu_union_trigger = yes
 		}
 		effect = {
@@ -115,6 +128,11 @@ emx_yan_manchu_s1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = YAN }
+			custom_trigger_tooltip = {
+				tooltip = yan_must_confirm_branch_first_tt
+				has_country_flag = emx_yan_chose_consort
+			}
 			emx_yan_jianzhou_surroundings_trigger = yes
 		}
 		effect = {

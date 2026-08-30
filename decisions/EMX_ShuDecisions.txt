@@ -20,8 +20,10 @@ country_decisions = {
 	emx_shu_looms_2133 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			2133 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -45,8 +47,10 @@ country_decisions = {
 	emx_shu_looms_705 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			705 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -70,8 +74,10 @@ country_decisions = {
 	emx_shu_looms_4519 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4519 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -95,8 +101,10 @@ country_decisions = {
 	emx_shu_looms_4516 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4516 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -120,8 +128,10 @@ country_decisions = {
 	emx_shu_looms_4520 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4520 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -145,8 +155,10 @@ country_decisions = {
 	emx_shu_looms_4693 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4693 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -170,8 +182,10 @@ country_decisions = {
 	emx_shu_looms_2124 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			2124 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -195,8 +209,10 @@ country_decisions = {
 	emx_shu_looms_4210 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4210 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -220,8 +236,10 @@ country_decisions = {
 	emx_shu_looms_4209 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4209 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -245,8 +263,10 @@ country_decisions = {
 	emx_shu_looms_739 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			739 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -270,8 +290,10 @@ country_decisions = {
 	emx_shu_looms_719 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			719 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -295,8 +317,10 @@ country_decisions = {
 	emx_shu_looms_2074 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			2074 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -320,8 +344,10 @@ country_decisions = {
 	emx_shu_looms_4521 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4521 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -345,8 +371,10 @@ country_decisions = {
 	emx_shu_looms_2073 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			2073 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -370,8 +398,10 @@ country_decisions = {
 	emx_shu_looms_4481 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4481 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -395,8 +425,10 @@ country_decisions = {
 	emx_shu_looms_565 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			565 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {
@@ -420,8 +452,10 @@ country_decisions = {
 	emx_shu_looms_4482 = {
 		major = no
 		potential = {
-			tag = SHU
-			tag = YUA
+			OR = {
+				tag = SHU
+				tag = YUA
+			}
 			4482 = { trade_goods = wool }
 		}
 		provinces_to_highlight = {

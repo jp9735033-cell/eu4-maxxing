@@ -449,18 +449,17 @@ emx_yan_korea_union_effect = {
 emx_yan_korea_loyal_effect = {
 	add_prestige = 25
 	add_adm_power = 100
-	add_country_modifier = {
-		name = "emx_yan_korean_consort_modifier"
-		duration = -1
-	}
+	add_dip_power = 100
+	custom_tooltip = emx_yan_subjugate_joseon_integrate_tt
 	if = {
 		limit = {
 			exists = KOR
-			KOR = { is_subject_of = ROOT }
+			OR = {
+				senior_union_with = KOR
+				KOR = { is_subject_of = ROOT }
+			}
 		}
-		KOR = {
-			add_liberty_desire = -20
-		}
+		inherit = KOR
 	}
 	manchuria_region = {
 		limit = {
@@ -469,6 +468,8 @@ emx_yan_korea_loyal_effect = {
 		}
 		add_permanent_claim = ROOT
 	}
+	set_country_flag = emx_yan_integrated_korea
+	swap_non_generic_missions = yes
 }
 
 emx_yan_jurchen_dowry_k_effect = {
@@ -711,23 +712,6 @@ emx_yan_subjugate_joseon_manchu_effect = {
 	}
 }
 
-emx_yan_subjugate_joseon_effect = {
-	add_prestige = 25
-	add_dip_power = 100
-	custom_tooltip = emx_yan_subjugate_joseon_integrate_tt
-	if = {
-		limit = {
-			exists = KOR
-			OR = {
-				senior_union_with = KOR
-				KOR = { is_subject_of = ROOT }
-			}
-		}
-		inherit = KOR
-	}
-	set_country_flag = emx_yan_integrated_korea
-	swap_non_generic_missions = yes
-}
 
 emx_yan_subjugate_harmony_effect = {
 	add_prestige = 25

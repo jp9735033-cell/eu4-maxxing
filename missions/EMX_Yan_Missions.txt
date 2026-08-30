@@ -56,7 +56,7 @@ emx_yan_preview_s2 = {
 	has_country_shield = yes
 
 	emx_yan_meiying_crowned = {
-		icon = mission_emperor_of_china
+		icon = mng_heavens_will
 		required_missions = { }
 		position = 1
 		provinces_to_highlight = { }
@@ -468,7 +468,7 @@ emx_yan_harmony_s1 = {
 	}
 
 	emx_yan_harmony_china_all = {
-		icon = mission_emperor_of_china
+		icon = mng_heavens_will
 		required_missions = { emx_yan_harmony_north_china }
 		position = 5
 		provinces_to_highlight = {
@@ -571,7 +571,7 @@ emx_yan_harmony_s3 = {
 	has_country_shield = yes
 
 	emx_yan_harmony_fleet_prep = {
-		icon = mission_galleys
+		icon = mission_galleys_in_port
 		required_missions = { emx_yan_harmony_korea }
 		position = 4
 		provinces_to_highlight = { }
@@ -589,7 +589,7 @@ emx_yan_harmony_s3 = {
 	}
 
 	emx_yan_harmony_conquer_japan = {
-		icon = mission_japanese_fort
+		icon = mission_japanese_samurai
 		required_missions = { emx_yan_harmony_fleet_prep }
 		position = 5
 		provinces_to_highlight = {

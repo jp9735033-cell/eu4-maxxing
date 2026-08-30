@@ -16,15 +16,11 @@ emx_silk_road_tier_1_gansu = {
 	trigger = {
 		west_gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -41,39 +37,27 @@ emx_silk_road_tier_2_samarkand = {
 	trigger = {
 		west_gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shanshan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		kashgaria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		ferghana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		transoxiana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -90,75 +74,51 @@ emx_silk_road_tier_3_crimea = {
 	trigger = {
 		west_gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shanshan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		kashgaria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		ferghana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		transoxiana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		khiva_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		nogai_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		lower_yik_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		astrakhan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		azov_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		crimea_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -175,75 +135,51 @@ emx_silk_road_tier_3_persia = {
 	trigger = {
 		west_gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shanshan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		kashgaria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		ferghana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		transoxiana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		merv_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		herat_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		mashhad_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabarestan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shirvan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabriz_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -260,87 +196,59 @@ emx_silk_road_tier_4_trabzon = {
 	trigger = {
 		west_gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shanshan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		kashgaria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		ferghana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		transoxiana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		merv_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		herat_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		mashhad_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabarestan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shirvan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabriz_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		armenia_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		erzurum_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -357,105 +265,71 @@ emx_silk_road_tier_4_halep_sham = {
 	trigger = {
 		west_gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shanshan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		kashgaria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		ferghana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		transoxiana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		merv_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		herat_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		mashhad_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabarestan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shirvan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabriz_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shahrizor_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		al_jazira_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		iraq_arabi_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		aleppo_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		syria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -472,153 +346,103 @@ emx_silk_road_tier_5_capstone = {
 	trigger = {
 		west_gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		gansu_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shanshan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		kashgaria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		ferghana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		transoxiana_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		khiva_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		nogai_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		lower_yik_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		astrakhan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		azov_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		crimea_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		merv_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		herat_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		mashhad_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabarestan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shirvan_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		tabriz_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		armenia_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		erzurum_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		shahrizor_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		al_jazira_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		iraq_arabi_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		aleppo_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		syria_area = {
 			type = all
-			owner = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 
@@ -640,9 +464,7 @@ emx_spice_route_tier_1_malacca = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 
@@ -658,14 +480,10 @@ emx_spice_route_tier_2_bengal = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1343 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 
@@ -681,19 +499,13 @@ emx_spice_route_tier_3_coromandel = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1343 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1340 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 
@@ -709,24 +521,16 @@ emx_spice_route_tier_4_gujarat = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1343 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1340 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		504 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 
@@ -742,24 +546,16 @@ emx_spice_route_tier_4_aden = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1343 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1340 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		4346 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 
@@ -775,29 +571,19 @@ emx_spice_route_tier_5_hormuz = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1343 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1340 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		504 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1334 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 
@@ -813,29 +599,19 @@ emx_spice_route_tier_5_alexandria = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1343 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1340 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		4346 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		358 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 
@@ -851,39 +627,25 @@ emx_spice_route_tier_6_master = {
 
 	trigger = {
 		1361 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1343 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1340 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		504 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		1334 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		4346 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 		358 = {
-			strongest_trade_power = {
-				emx_valid_chinese_silk_spice_nation_trigger = yes
-			}
+			is_strongest_trade_power = ROOT
 		}
 	}
 

@@ -426,11 +426,6 @@ emx_fertile_soil = {
 	province_trade_power_value = 3
 }
 
-emx_river_delta = {
-	local_manpower_modifier = 0.10
-	local_development_cost = -0.02
-	province_trade_power_value = 3
-}
 
 # Ganggye, one of the Four Forts on the upper Yalu, facing the Jurchens.
 emx_tatar_dune = {

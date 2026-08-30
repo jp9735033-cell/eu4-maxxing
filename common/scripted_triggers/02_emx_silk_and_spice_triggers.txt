@@ -1,7 +1,7 @@
 # eu4-maxxing: Centralized Scripted Triggers for Silk Road and Spice Route Missions
 
 # Valid Chinese nation trigger for Silk Road and Spice Route triggered modifiers
-# Must have capital in China and must have primary culture in Chinese culture group (east_asian).
+# Must have capital in China, primary culture in Chinese group (east_asian), and NOT be Shu.
 emx_valid_chinese_silk_spice_nation_trigger = {
 	culture_group = east_asian
 	capital_scope = {
@@ -11,6 +11,8 @@ emx_valid_chinese_silk_spice_nation_trigger = {
 			region = xinan_region
 		}
 	}
+	NOT = { tag = SHU }
+	NOT = { emx_is_shu_trigger = yes }
 }
 
 # =============================================================================

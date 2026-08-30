@@ -343,28 +343,8 @@ emx_yan_silk_road_halep_sham_effect = {
 # Yan Dynamic Mission Scripted Effects
 # =============================================================================
 
-# Path 1: Manchu Union Effects
-emx_yan_blood_pact_effect = {
-	add_prestige = 15
-	add_mil_power = 50
-	if = {
-		limit = {
-			exists = MJZ
-			MJZ = { is_subject_of = ROOT }
-		}
-		MJZ = {
-			add_liberty_desire = -50
-		}
-	}
-	if = {
-		limit = {
-			exists = JNZ
-			JNZ = { is_subject_of = ROOT }
-		}
-		JNZ = {
-			add_liberty_desire = -50
-		}
-	}
+# Shared 4-Area Claims & Liberty Desire Effects
+emx_yan_claim_four_manchu_areas_effect = {
 	jilin_area = {
 		limit = {
 			NOT = { is_core = ROOT }
@@ -393,6 +373,47 @@ emx_yan_blood_pact_effect = {
 		}
 		add_permanent_claim = ROOT
 	}
+}
+
+emx_yan_manchu_liberty_desire_effect = {
+	if = {
+		limit = {
+			exists = MJZ
+			MJZ = { is_subject_of = ROOT }
+		}
+		MJZ = {
+			add_liberty_desire = -50
+		}
+	}
+	if = {
+		limit = {
+			exists = JNZ
+			JNZ = { is_subject_of = ROOT }
+		}
+		JNZ = {
+			add_liberty_desire = -50
+		}
+	}
+}
+
+emx_yan_korea_liberty_desire_effect = {
+	if = {
+		limit = {
+			exists = KOR
+			KOR = { is_subject_of = ROOT }
+		}
+		KOR = {
+			add_liberty_desire = -50
+		}
+	}
+}
+
+# Path 1: Manchu Union Effects
+emx_yan_blood_pact_effect = {
+	add_prestige = 15
+	add_mil_power = 50
+	emx_yan_claim_four_manchu_areas_effect = yes
+	emx_yan_manchu_liberty_desire_effect = yes
 }
 
 emx_yan_unify_jurchen_manchu_effect = {
@@ -498,34 +519,8 @@ emx_yan_korea_loyal_effect = {
 emx_yan_korean_alliance_k_effect = {
 	add_prestige = 15
 	add_mil_power = 50
-	jilin_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	liaoning_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	ningguta_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	furdan_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
+	emx_yan_claim_four_manchu_areas_effect = yes
+	emx_yan_korea_liberty_desire_effect = yes
 }
 
 emx_yan_jurchen_dowry_k_effect = {
@@ -612,34 +607,7 @@ emx_yan_secure_yalu_effect = {
 emx_yan_harmony_start_effect = {
 	add_prestige = 15
 	add_mil_power = 50
-	jilin_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	liaoning_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	ningguta_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	furdan_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
+	emx_yan_claim_four_manchu_areas_effect = yes
 }
 
 emx_yan_harmony_jianzhou_effect = {

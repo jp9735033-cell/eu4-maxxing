@@ -813,7 +813,7 @@ emx_yan_s2 = {
 	}
 }
 
-# --- Slot 3: Unify China (Row 7) & Silk Road Levant/Aleppo (Row 10) ---
+# --- Slot 3: Silk Road Levant/Aleppo (Row 10) ---
 
 emx_yan_s3 = {
 	slot = 3
@@ -824,26 +824,6 @@ emx_yan_s3 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-
-	emx_yan_unify_china = {
-		icon = mission_cornerstone_empire
-		required_missions = { }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			emx_yan_unify_china_trigger = yes
-		}
-		effect = {
-			emx_yan_unify_china_effect = yes
-		}
-	}
 
 	emx_yan_silk_road_halep_sham = {
 		icon = mission_asian_trader

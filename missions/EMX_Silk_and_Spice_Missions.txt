@@ -213,32 +213,6 @@ emx_silk_road_s3 = {
 	}
 	has_country_shield = yes
 
-	emx_unify_china = {
-		icon = mission_cornerstone_empire
-		required_missions = { }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1816
-				province_id = 684
-				province_id = 679
-				province_id = 667
-				province_id = 726
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			owns_core_province = 1816
-			owns_core_province = 684
-			owns_core_province = 679
-			owns_core_province = 667
-			owns_core_province = 726
-		}
-		effect = {
-			emx_unify_china_effect = yes
-		}
-	}
-
 	emx_silk_road_halep_sham = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { emx_silk_road_persia }

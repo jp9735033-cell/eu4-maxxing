@@ -642,6 +642,13 @@ emx_yan_banish_steppe_nomads_k_effect = {
 		}
 		add_permanent_claim = ROOT
 	}
+	north_china_region = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
 }
 
 emx_yan_banish_steppe_nomads_h_effect = {

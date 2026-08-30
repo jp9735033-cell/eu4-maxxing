@@ -295,48 +295,6 @@ emx_yan_korea_s1 = {
 			emx_yan_banish_steppe_nomads_k_effect = yes
 		}
 	}
-
-	emx_yan_pacify_mongolia_k = {
-		icon = mission_steppe_warriors
-		required_missions = { emx_yan_banish_steppe_nomads_k }
-		position = 4
-		provinces_to_highlight = {
-			region = mongolia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			not_in_mission_preview_mode = { key = YAN }
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			emx_yan_pacify_mongolia_trigger = yes
-		}
-		effect = {
-			emx_yan_pacify_mongolia_k_effect = yes
-		}
-	}
-
-	emx_yan_unify_north_china_k = {
-		icon = mission_unite_home_region
-		required_missions = { emx_yan_pacify_mongolia_k }
-		position = 5
-		provinces_to_highlight = {
-			region = north_china_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			not_in_mission_preview_mode = { key = YAN }
-			custom_trigger_tooltip = {
-				tooltip = yan_must_confirm_branch_first_tt
-				has_country_flag = emx_yan_chose_consort
-			}
-			emx_yan_unify_north_china_trigger = yes
-		}
-		effect = {
-			emx_yan_unify_north_china_effect = yes
-		}
-	}
 }
 
 emx_yan_korea_s2 = {

@@ -116,8 +116,8 @@ emx_yan_northern_wall = {
 
 emx_wu_shattered_state = {
 	army_tradition = -1
-	trade_efficiency = -0.15
-	global_trade_goods_size_modifier = -0.15
+	trade_efficiency = -0.20
+	global_trade_goods_size_modifier = -0.20
 }
 
 # 4 Capital Modifiers (-4% Tech & -4% Idea Cost each)

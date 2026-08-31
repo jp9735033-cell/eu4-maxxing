@@ -442,7 +442,6 @@ chinese_kingdoms_1 = {
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
 			tag = FRM
 		}
 		NOT = { map_setup = map_setup_random }
@@ -1643,7 +1642,6 @@ chinese_kingdoms_2 = {
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
 			tag = FRM
 		}
 		NOT = { map_setup = map_setup_random }
@@ -2432,7 +2430,6 @@ chinese_kingdoms_3 = {
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
 			tag = FRM
 		}
 		NOT = { map_setup = map_setup_random }
@@ -4372,7 +4369,6 @@ chinese_kingdoms_4 = {
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
 			tag = FRM
 		}
 		NOT = { map_setup = map_setup_random }
@@ -5479,7 +5475,6 @@ chinese_kingdoms_5 = {
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
 			tag = FRM
 		}
 		NOT = { map_setup = map_setup_random }

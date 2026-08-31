@@ -1,0 +1,32 @@
+# eu4-maxxing: Wu Starting Flavor & Lore Introduction Event
+
+namespace = emx_wu_flavor
+
+# =============================================================================
+# 1. Game Start Event: The Sacred Monasteries of Jiangnan
+# =============================================================================
+country_event = {
+	id = emx_wu_flavor.1
+	title = emx_wu_flavor.1.t
+	desc = emx_wu_flavor.1.d
+	picture = BUDDHA_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = WUU
+		NOT = { has_country_flag = emx_wu_intro_event_fired }
+	}
+
+	immediate = {
+		set_country_flag = emx_wu_intro_event_fired
+	}
+
+	option = {
+		name = emx_wu_flavor.1.a
+		add_country_modifier = {
+			name = "emx_wu_shattered_state"
+			duration = -1
+		}
+	}
+}

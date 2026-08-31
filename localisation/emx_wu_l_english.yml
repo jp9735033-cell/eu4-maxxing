@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  ### eu4-maxxing: Wu Kingdom Localisation ###
 
  ### Starting Modifiers ###
@@ -131,5 +131,11 @@
  emx_wu_ms_14_desc:0 "The missionary zeal of our monastic orders drives our righteous expansion, rapidly integrating conquered lands."
  emx_wu_ms_15:0 "Righteous Crusade XV"
  emx_wu_ms_15_desc:0 "The missionary zeal of our monastic orders drives our righteous expansion, rapidly integrating conquered lands."
+
+ ### Wu Opening Event & Lore ###
+ emx_wu_flavor.1.t:0 "The Sacred Realm of Wu: Ashes and Faith"
+ emx_wu_flavor.1.d:0 "The empire has collapsed into anarchy and blood. From the ashes of the ruined dynasty, the prosperous delta of Jiangnan has withdrawn under the spiritual stewardship of the monastic orders and the sacred temples of Hangzhou.\\n\\n§RThe Shattered Realm:§!\\nDecimated by the civil war, our commerce is paralyzed, our military traditions are shattered, and our foreign trade lies in ruin (§R-1.00 Army Tradition Decay, -15% Trade Efficiency, -15% Goods Produced§!).\\n\\n§Y=== HOW TO PLAY WU & PATH TO RESTORATION ===§!\\n\\n§Y1. The Faith Engine (TotF & Missionary Scaling):§!\\nAs a sacred monastic theocracy, Wu harnesses divine faith into immense earthly power. Empower the §YClergy (Monastic Orders)§! and maximize §YTolerance of the True Faith§! and §YMissionary Strength§! to activate dynamic scaling tiers, granting massive manpower pools, relentless army tradition, land morale, and reduced development costs.\\n\\n§Y2. The Four Imperial Pillars:§!\\nMarch forth from Hangzhou to conquer the four historic metropolises of China:\\n- §YNanjing (Center)§!: Reinstates the Eunuchs & grants §G-4% Tech / Idea Cost§!\\n- §YCanton (South)§!: Reinstates the Burghers & grants §G-4% Tech / Idea Cost§!\\n- §YChengdu (West)§!: Reinstates the Nobility & grants §G-4% Tech / Idea Cost§!\\n- §YBeijing (North)§!: Reinstates the Nomads & grants §G-4% Tech / Idea Cost§!\\nTogether, these four pillars grant a permanent §G-16% Technology & Idea Cost§! reduction.\\n\\n§Y3. Reclaiming the Mandate:§!\\nWith the realm reunited, restore the §YGreat Ming Dynasty§! and dominate both the overland §YSilk Road§! and the maritime §YSpice Routes§! across all of Asia!"
+ emx_wu_flavor.1.a:0 "Through faith and iron, we shall resurrect the Empire!"
+
 
 

@@ -1,13 +1,17 @@
 # eu4-maxxing: Centralized Scripted Triggers for Silk Road and Spice Route Missions
 
 # Valid Chinese nation trigger for Silk Road and Spice Route triggered modifiers
-# Must strictly be Yan, Wu, or Yue (or their formed Qing/Ming).
+# Must strictly be Yan, Wu, Yue, Qing, or Ming.
 emx_valid_chinese_silk_spice_nation_trigger = {
 	OR = {
-		emx_is_yan_trigger = yes
-		emx_is_wu_trigger = yes
-		emx_is_yue_trigger = yes
+		tag = YAN
+		tag = WUU
+		tag = YUE
+		tag = QNG
+		tag = MNG
 	}
+	NOT = { tag = SHU }
+	NOT = { tag = YUA }
 }
 
 # =============================================================================

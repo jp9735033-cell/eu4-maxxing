@@ -6,6 +6,7 @@ emx_silk_road_s1 = {
 	ai = yes
 	potential = {
 		tag = QNG
+		has_country_flag = emx_origin_yan
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -89,6 +90,7 @@ emx_silk_road_s2 = {
 	ai = yes
 	potential = {
 		tag = QNG
+		has_country_flag = emx_origin_yan
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -203,6 +205,7 @@ emx_silk_road_s3 = {
 	ai = yes
 	potential = {
 		tag = QNG
+		has_country_flag = emx_origin_yan
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -249,6 +252,7 @@ emx_spice_route_s4 = {
 	ai = yes
 	potential = {
 		tag = QNG
+		has_country_flag = emx_origin_yan
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -304,6 +308,7 @@ emx_spice_route_s5 = {
 	ai = yes
 	potential = {
 		tag = QNG
+		has_country_flag = emx_origin_yan
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

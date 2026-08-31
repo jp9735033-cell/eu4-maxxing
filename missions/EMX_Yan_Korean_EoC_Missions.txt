@@ -3,7 +3,7 @@ emx_yan_korean_eoc_s1 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_yan_trigger = yes
+		tag = YAN
 		has_country_flag = emx_yan_integrated_korea
 		NOT = { map_setup = map_setup_random }
 	}
@@ -240,7 +240,7 @@ emx_yan_korean_eoc_s2 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_yan_trigger = yes
+		tag = YAN
 		has_country_flag = emx_yan_integrated_korea
 		NOT = { map_setup = map_setup_random }
 	}
@@ -726,7 +726,7 @@ emx_yan_korean_eoc_s3 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_yan_trigger = yes
+		tag = YAN
 		has_country_flag = emx_yan_integrated_korea
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1061,7 +1061,7 @@ emx_yan_korean_eoc_s4 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_yan_trigger = yes
+		tag = YAN
 		has_country_flag = emx_yan_integrated_korea
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1407,7 +1407,7 @@ emx_yan_korean_eoc_s5 = {
 	generic = no
 	ai = yes
 	potential = {
-		emx_is_yan_trigger = yes
+		tag = YAN
 		has_country_flag = emx_yan_integrated_korea
 		NOT = { map_setup = map_setup_random }
 	}

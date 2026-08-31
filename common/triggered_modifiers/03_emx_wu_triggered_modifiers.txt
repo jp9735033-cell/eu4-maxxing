@@ -23,9 +23,9 @@ emx_wu_totf_1 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.10
+	manpower_in_true_faith_provinces = 0.050
 	army_tradition = 0.10
-	global_tax_modifier = 0.10
+	global_tax_modifier = 0.050
 	land_morale = 0.010
 	land_forcelimit_modifier = 0.020
 	technology_cost = 0.020
@@ -50,9 +50,9 @@ emx_wu_totf_2 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.20
+	manpower_in_true_faith_provinces = 0.100
 	army_tradition = 0.20
-	global_tax_modifier = 0.20
+	global_tax_modifier = 0.100
 	land_morale = 0.020
 	land_forcelimit_modifier = 0.040
 	technology_cost = 0.040
@@ -85,9 +85,9 @@ emx_wu_totf_3 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.30
+	manpower_in_true_faith_provinces = 0.150
 	army_tradition = 0.30
-	global_tax_modifier = 0.30
+	global_tax_modifier = 0.150
 	land_morale = 0.030
 	land_forcelimit_modifier = 0.060
 	technology_cost = 0.060
@@ -116,9 +116,9 @@ emx_wu_totf_4 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.40
+	manpower_in_true_faith_provinces = 0.200
 	army_tradition = 0.40
-	global_tax_modifier = 0.40
+	global_tax_modifier = 0.200
 	land_morale = 0.040
 	land_forcelimit_modifier = 0.080
 	technology_cost = 0.080
@@ -147,9 +147,9 @@ emx_wu_totf_5 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.50
+	manpower_in_true_faith_provinces = 0.250
 	army_tradition = 0.50
-	global_tax_modifier = 0.50
+	global_tax_modifier = 0.250
 	land_morale = 0.050
 	land_forcelimit_modifier = 0.100
 	technology_cost = 0.100
@@ -186,9 +186,9 @@ emx_wu_totf_6 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.60
+	manpower_in_true_faith_provinces = 0.300
 	army_tradition = 0.60
-	global_tax_modifier = 0.60
+	global_tax_modifier = 0.300
 	land_morale = 0.060
 	land_forcelimit_modifier = 0.120
 	technology_cost = 0.120
@@ -217,9 +217,9 @@ emx_wu_totf_7 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.70
+	manpower_in_true_faith_provinces = 0.350
 	army_tradition = 0.70
-	global_tax_modifier = 0.70
+	global_tax_modifier = 0.350
 	land_morale = 0.070
 	land_forcelimit_modifier = 0.140
 	technology_cost = 0.140
@@ -248,9 +248,9 @@ emx_wu_totf_8 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.80
+	manpower_in_true_faith_provinces = 0.400
 	army_tradition = 0.80
-	global_tax_modifier = 0.80
+	global_tax_modifier = 0.400
 	land_morale = 0.080
 	land_forcelimit_modifier = 0.160
 	technology_cost = 0.160
@@ -287,9 +287,9 @@ emx_wu_totf_9 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 0.90
+	manpower_in_true_faith_provinces = 0.450
 	army_tradition = 0.90
-	global_tax_modifier = 0.90
+	global_tax_modifier = 0.450
 	land_morale = 0.090
 	land_forcelimit_modifier = 0.180
 	technology_cost = 0.180
@@ -318,9 +318,9 @@ emx_wu_totf_10 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 1.00
+	manpower_in_true_faith_provinces = 0.500
 	army_tradition = 1.00
-	global_tax_modifier = 1.00
+	global_tax_modifier = 0.500
 	land_morale = 0.100
 	land_forcelimit_modifier = 0.200
 	technology_cost = 0.200
@@ -349,9 +349,9 @@ emx_wu_totf_11 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 1.10
+	manpower_in_true_faith_provinces = 0.550
 	army_tradition = 1.10
-	global_tax_modifier = 1.10
+	global_tax_modifier = 0.550
 	land_morale = 0.110
 	land_forcelimit_modifier = 0.220
 	technology_cost = 0.220
@@ -388,9 +388,9 @@ emx_wu_totf_12 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 1.20
+	manpower_in_true_faith_provinces = 0.600
 	army_tradition = 1.20
-	global_tax_modifier = 1.20
+	global_tax_modifier = 0.600
 	land_morale = 0.120
 	land_forcelimit_modifier = 0.240
 	technology_cost = 0.240
@@ -419,9 +419,9 @@ emx_wu_totf_13 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 1.30
+	manpower_in_true_faith_provinces = 0.650
 	army_tradition = 1.30
-	global_tax_modifier = 1.30
+	global_tax_modifier = 0.650
 	land_morale = 0.130
 	land_forcelimit_modifier = 0.260
 	technology_cost = 0.260
@@ -450,9 +450,9 @@ emx_wu_totf_14 = {
 			}
 		}
 	}
-	manpower_in_true_faith_provinces = 1.40
+	manpower_in_true_faith_provinces = 0.700
 	army_tradition = 1.40
-	global_tax_modifier = 1.40
+	global_tax_modifier = 0.700
 	land_morale = 0.140
 	land_forcelimit_modifier = 0.280
 	technology_cost = 0.280
@@ -475,9 +475,9 @@ emx_wu_totf_15 = {
 			value = 15
 		}
 	}
-	manpower_in_true_faith_provinces = 1.50
+	manpower_in_true_faith_provinces = 0.750
 	army_tradition = 1.50
-	global_tax_modifier = 1.50
+	global_tax_modifier = 0.750
 	land_morale = 0.150
 	land_forcelimit_modifier = 0.300
 	technology_cost = 0.300

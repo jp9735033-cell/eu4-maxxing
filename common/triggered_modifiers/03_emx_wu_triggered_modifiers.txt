@@ -3,7 +3,7 @@
 
 ##################################################
 # 1. Tolerance of True Faith Scaling (1 to 15)
-# Gated by Clergy Land Share: 1-5 (>=20% land), 6-10 (>=35% land), 11-15 (>=50% land)
+# Gated by Clergy Land Share (estate_territory): 1-5 (>=20% land), 6-10 (>=35% land), 11-15 (>=50% land)
 ##################################################
 
 emx_wu_totf_1 = {
@@ -11,7 +11,10 @@ emx_wu_totf_1 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 1
@@ -39,7 +42,10 @@ emx_wu_totf_2 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 2
@@ -67,7 +73,10 @@ emx_wu_totf_3 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 3
@@ -95,7 +104,10 @@ emx_wu_totf_4 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 4
@@ -123,7 +135,10 @@ emx_wu_totf_5 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 5
@@ -151,7 +166,10 @@ emx_wu_totf_6 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 6
@@ -179,7 +197,10 @@ emx_wu_totf_7 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 7
@@ -207,7 +228,10 @@ emx_wu_totf_8 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 8
@@ -235,7 +259,10 @@ emx_wu_totf_9 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 9
@@ -263,7 +290,10 @@ emx_wu_totf_10 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 10
@@ -291,7 +321,10 @@ emx_wu_totf_11 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 11
@@ -319,7 +352,10 @@ emx_wu_totf_12 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 12
@@ -347,7 +383,10 @@ emx_wu_totf_13 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 13
@@ -375,7 +414,10 @@ emx_wu_totf_14 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 14
@@ -403,7 +445,10 @@ emx_wu_totf_15 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = tolerance_own
 			value = 15
@@ -424,7 +469,7 @@ emx_wu_totf_15 = {
 ##################################################
 # 2. Missionary Strength Scaling (1% to 15%)
 # Exclusive (Non-Cumulative) Tiers: exactly one tier is active at any time, giving full N-multiplied values.
-# Gated by Clergy Land Share: 1-5 (>=20% land), 6-10 (>=35% land), 11-15 (>=50% land)
+# Gated by Clergy Land Share (estate_territory): 1-5 (>=20% land), 6-10 (>=35% land), 11-15 (>=50% land)
 ##################################################
 
 emx_wu_ms_1 = {
@@ -432,7 +477,10 @@ emx_wu_ms_1 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.01
@@ -453,7 +501,10 @@ emx_wu_ms_2 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.02
@@ -474,7 +525,10 @@ emx_wu_ms_3 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.03
@@ -495,7 +549,10 @@ emx_wu_ms_4 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.04
@@ -516,7 +573,10 @@ emx_wu_ms_5 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 80 }
+		estate_territory = {
+			estate = estate_church
+			territory = 20
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.05
@@ -537,7 +597,10 @@ emx_wu_ms_6 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.06
@@ -558,7 +621,10 @@ emx_wu_ms_7 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.07
@@ -579,7 +645,10 @@ emx_wu_ms_8 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.08
@@ -600,7 +669,10 @@ emx_wu_ms_9 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.09
@@ -621,7 +693,10 @@ emx_wu_ms_10 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 65 }
+		estate_territory = {
+			estate = estate_church
+			territory = 35
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.10
@@ -642,7 +717,10 @@ emx_wu_ms_11 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.11
@@ -663,7 +741,10 @@ emx_wu_ms_12 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.12
@@ -684,7 +765,10 @@ emx_wu_ms_13 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.13
@@ -705,7 +789,10 @@ emx_wu_ms_14 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.14
@@ -726,7 +813,10 @@ emx_wu_ms_15 = {
 		emx_is_wu_trigger = yes
 	}
 	trigger = {
-		NOT = { crownland_share = 50 }
+		estate_territory = {
+			estate = estate_church
+			territory = 50
+		}
 		has_global_modifier_value = {
 			which = global_missionary_strength
 			value = 0.15

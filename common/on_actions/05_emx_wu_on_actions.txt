@@ -1,0 +1,11 @@
+# eu4-maxxing: Wu on_actions for day-1 game startup intro event
+
+on_startup = {
+	if = {
+		limit = {
+			tag = WUU
+			NOT = { has_country_flag = emx_wu_intro_event_fired }
+		}
+		country_event = { id = emx_wu_flavor.1 }
+	}
+}

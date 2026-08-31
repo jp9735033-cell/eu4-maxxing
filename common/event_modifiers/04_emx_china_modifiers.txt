@@ -120,25 +120,25 @@ emx_wu_shattered_state = {
 	global_trade_goods_size_modifier = -0.20
 }
 
-# 4 Capital Modifiers (-4% Tech & -4% Idea Cost each)
+# 4 Capital Modifiers (-5% Tech & -5% Idea Cost each, -20% Total)
 emx_wu_nanjing_center = {
-	technology_cost = -0.04
-	idea_cost = -0.04
+	technology_cost = -0.05
+	idea_cost = -0.05
 }
 
 emx_wu_canton_center = {
-	technology_cost = -0.04
-	idea_cost = -0.04
+	technology_cost = -0.05
+	idea_cost = -0.05
 }
 
 emx_wu_chengdu_center = {
-	technology_cost = -0.04
-	idea_cost = -0.04
+	technology_cost = -0.05
+	idea_cost = -0.05
 }
 
 emx_wu_beijing_center = {
-	technology_cost = -0.04
-	idea_cost = -0.04
+	technology_cost = -0.05
+	idea_cost = -0.05
 }
 
 # Campaign & Expansion Modifiers

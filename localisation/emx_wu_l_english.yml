@@ -64,9 +64,6 @@
  emx_wu_unlock_nobles_tt:0 "§GReinstates the §YNobility§! Estate into the realm.§!"
  emx_wu_unlock_nomads_tt:0 "§GReinstates the §YNomadic Tribes§! Estate into the realm.§!"
 
- ### Wu Decisions ###
- emx_wu_grant_land_to_clergy_title:0 "Endow Monastic Lands"
- emx_wu_grant_land_to_clergy_desc:0 "Transfer 5% Crownland to the monastic orders to expand their spiritual dominion and strengthen our zeal, provided their total land holding remains below 50%."
 
  ### Triggered Modifiers: Tolerance of True Faith Scaling ###
  emx_wu_totf_1:0 "Zeal of the True Faith I"

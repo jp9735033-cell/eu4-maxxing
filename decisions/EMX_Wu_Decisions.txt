@@ -2,34 +2,4 @@
 
 country_decisions = {
 
-	emx_wu_grant_land_to_clergy = {
-		major = no
-		potential = {
-			emx_is_wu_trigger = yes
-			has_estate = estate_church
-		}
-		allow = {
-			crown_land_share = 5
-			NOT = {
-				estate_territory = {
-					estate = estate_church
-					territory = 50
-				}
-			}
-		}
-		effect = {
-			change_estate_land_share = {
-				estate = estate_church
-				share = 5
-			}
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 10
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
 }

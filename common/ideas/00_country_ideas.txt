@@ -16048,8 +16048,7 @@ ADU_ideas = {
 		core_creation = -0.15
 	}
 	adu_expeditionary_sentiment = {
-		colonists = 1
-		effect = { remove_temporary_colonist = yes }
+                discipline = 0.05
 	}
 	adu_al_awasim = {
 		defensiveness = 0.1

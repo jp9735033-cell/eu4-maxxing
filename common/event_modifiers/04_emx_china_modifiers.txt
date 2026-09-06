@@ -475,3 +475,8 @@ emx_silk_road_trabzon_caravan = {
 emx_silk_road_levant_caravan = {
 	caravan_power = 1.00
 }
+
+emx_wu_celestial_mandate_faith = {
+	tolerance_own = 2
+	global_missionary_strength = 0.02
+}

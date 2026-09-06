@@ -640,6 +640,8 @@ ming_missions_1_b = {
 		}
 		NOT = { tag = YAN }
 		NOT = { tag = SHU }
+		NOT = { tag = WUU }
+		NOT = { tag = YUE }
 		NOT = { tag = YUA }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1813,6 +1815,8 @@ ming_missions_2_b = {
 		}
 		NOT = { tag = YAN }
 		NOT = { tag = SHU }
+		NOT = { tag = WUU }
+		NOT = { tag = YUE }
 		NOT = { tag = YUA }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -3738,6 +3742,8 @@ ming_missions_3_b = {
 		}
 		NOT = { tag = YAN }
 		NOT = { tag = SHU }
+		NOT = { tag = WUU }
+		NOT = { tag = YUE }
 		NOT = { tag = YUA }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -5005,6 +5011,8 @@ ming_missions_4_b = {
 		}
 		NOT = { tag = YAN }
 		NOT = { tag = SHU }
+		NOT = { tag = WUU }
+		NOT = { tag = YUE }
 		NOT = { tag = YUA }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -5300,6 +5308,8 @@ ming_missions_4_moh = {
 		}
 		NOT = { tag = YAN }
 		NOT = { tag = SHU }
+		NOT = { tag = WUU }
+		NOT = { tag = YUE }
 		NOT = { tag = YUA }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -6205,6 +6215,8 @@ ming_missions_5_b = {
 		}
 		NOT = { tag = YAN }
 		NOT = { tag = SHU }
+		NOT = { tag = WUU }
+		NOT = { tag = YUE }
 		NOT = { tag = YUA }
 		NOT = { map_setup = map_setup_random }
 	}

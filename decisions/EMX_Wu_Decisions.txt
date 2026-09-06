@@ -2,4 +2,25 @@
 
 country_decisions = {
 
+	emx_wu_sanctify_celestial_empire = {
+		major = yes
+		potential = {
+			emx_is_wu_trigger = yes
+			NOT = { has_country_modifier = emx_wu_celestial_mandate_faith }
+		}
+		allow = {
+			is_emperor_of_china = yes
+			has_reform = celestial_empire
+		}
+		effect = {
+			add_country_modifier = {
+				name = emx_wu_celestial_mandate_faith
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }

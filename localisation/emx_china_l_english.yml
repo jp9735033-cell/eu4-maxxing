@@ -483,3 +483,7 @@
  emx_spice_route_tier_8_master:0 "Spice Route Master: All Sea Lanes"
  desc_emx_spice_route_tier_8_master:0 "A Chinese realm commands ≥50% trade power across all 7 maritime spice nodes simultaneously."
 
+ ### Restoration of Ming Decision ###
+ emx_restore_ming_dynasty_title:0 "Restore the Great Ming Dynasty"
+ emx_restore_ming_dynasty_desc:0 "The Middle Kingdom has splintered into warring factions, but the rightful succession must be restored. By securing the historical imperial capitals, we can proclaim the restoration of the Great Ming Dynasty and reunify China under a single celestial banner."
+

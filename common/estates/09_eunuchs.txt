@@ -9,6 +9,7 @@ estate_eunuchs = {
 		NOT = {
 			AND = {
 				tag = WUU
+				is_emperor_of_china = no
 				NOT = { has_country_flag = emx_wu_enabled_eunuchs }
 			}
 		}

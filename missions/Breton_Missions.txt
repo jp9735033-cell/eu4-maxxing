@@ -1,5 +1,5 @@
 
-genoa_missions_africa = {
+Brittany_missions_africa = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -101,7 +101,7 @@ genoa_missions_africa = {
 	}
 }
 
-genoa_africa_slot_2 = {
+Brittany_africa_slot_2 = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -138,7 +138,7 @@ genoa_africa_slot_2 = {
 	}
 }
 
-genoa_europe_slot = {
+brittany_europe_slot = {
 	slot = 5
 	generic = no
 	ai = yes

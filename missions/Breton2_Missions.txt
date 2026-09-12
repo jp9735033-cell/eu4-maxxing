@@ -1,5 +1,5 @@
 
-emp_gen_missions_general = {
+emp_bri_missions_general = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -50,7 +50,7 @@ emp_gen_missions_general = {
 	}
 }
 	
-emp_gen_missions_general_2 = {
+emp_bri_missions_general_2 = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -163,7 +163,7 @@ emp_gen_missions_general_2 = {
 }
 
 
-emp_gen_missions_western_med = {
+emp_bri_missions_western_med = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -339,7 +339,7 @@ emp_gen_missions_western_med = {
 	}
 }
 
-emp_gen_missions_western_med_2 = {
+emp_bri_missions_western_med_2 = {
 	slot = 4
 	generic = no
 	ai = yes

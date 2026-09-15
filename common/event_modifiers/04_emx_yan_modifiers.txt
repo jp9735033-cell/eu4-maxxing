@@ -166,3 +166,7 @@ emx_spoils_of_yan = {
 	core_creation = -0.10
 	monthly_splendor = 1
 }
+
+emx_yan_siege = {
+		siege_ability = 0.20
+}

@@ -1462,7 +1462,7 @@ DOM_Qing_Missions_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = { 
-			is_or_was_tag = { tag = MCH }
+			is_or_was_tag = { tag = YAN }
 			army_size = 25 
 			OR = { 
 				power_projection = 50 
@@ -1530,7 +1530,9 @@ DOM_Qing_Missions_2 = {
 		}
 		
 		effect = { 
-			country_event = { id = flavor_mch.10 }
+			add_country_modifier = {
+						name = emx_yan_siege  
+						duration = 10950
 			custom_tooltip = mch_event_insight_10_tt
 			if = { 
 				limit = { has_country_modifier = mjz_dominance_of_the_horselords_modifier } 

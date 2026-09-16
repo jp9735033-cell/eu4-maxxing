@@ -1622,6 +1622,7 @@ DOM_Qing_Missions_2 = {
 		}
 	}			
 }
+}
 
 chinese_kingdoms_2 = {
 	slot = 2
@@ -3637,6 +3638,7 @@ DOM_Qing_Missions_3 = {
 				}
 			}
 		}
+	}
 	}
 	
 	mch_bypass_great_wall = { 

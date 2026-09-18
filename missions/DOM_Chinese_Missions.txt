@@ -3639,7 +3639,6 @@ DOM_Qing_Missions_3 = {
 			}
 		}
 	}
-	}
 	
 	mch_bypass_great_wall = { 
 		icon = mch_bypass_great_wall

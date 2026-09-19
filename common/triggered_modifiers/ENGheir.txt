@@ -181,28 +181,3 @@ potential = {
 	}
 	all_estate_loyalty_equilibrium = 0.1
 	}
-	lei_estate2 = {
-potential = {
-	OR = {
-	tag = IRE
-	tag = LEI
-	}
-		}
-		
-		trigger = {
-		OR = {
-		tag = IRE
-	    tag = LEI
-	}
-		OR = {
-		has_opinion = {
-	who = ENG
-	value = 50
-}
-		marriage_with = GBR
-		is_revolutionary = yes
-	
-	}
-	}
-	all_estate_loyalty_equilibrium = 0.1
-	}

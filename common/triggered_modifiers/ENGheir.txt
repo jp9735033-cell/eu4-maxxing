@@ -105,3 +105,104 @@ has_opinion = {
 	}
 	all_estate_loyalty_equilibrium = 0.1
 	}
+	
+	eng_estate = {
+potential = {
+	OR = {
+	tag = GBR
+	tag = ENG
+	}
+		}
+		
+		trigger = {
+		OR = {
+		tag = GBR
+	    tag = ENG
+	}
+		OR = {
+		has_opinion = {
+	who = LEI
+	value = 50
+}
+		marriage_with = LEI
+		is_revolutionary = yes
+	
+	}
+	}
+	all_estate_loyalty_equilibrium = 0.1
+	}
+	eng_estate2 = {
+potential = {
+	OR = {
+	tag = GBR
+	tag = ENG
+	}
+		}
+		
+		trigger = {
+		OR = {
+		tag = GBR
+	    tag = ENG
+	}
+		OR = {
+		has_opinion = {
+	who = IRE
+	value = 50
+}
+		marriage_with = LEI
+		is_revolutionary = yes
+	
+	}
+	}
+	all_estate_loyalty_equilibrium = 0.1
+	}
+		lei_estate = {
+potential = {
+	OR = {
+	tag = IRE
+	tag = LEI
+	}
+		}
+		
+		trigger = {
+		OR = {
+		tag = ING
+	    tag = LEI
+	}
+		OR = {
+		has_opinion = {
+	who = GBR
+	value = 50
+}
+		marriage_with = LEI
+		is_revolutionary = yes
+	
+	}
+	}
+	all_estate_loyalty_equilibrium = 0.1
+	}
+	lei_estate2 = {
+potential = {
+	OR = {
+	tag = IRE
+	tag = LEI
+	}
+		}
+		
+		trigger = {
+		OR = {
+		tag = ING
+	    tag = LEI
+	}
+		OR = {
+		has_opinion = {
+	who = ENG
+	value = 50
+}
+		marriage_with = LEI
+		is_revolutionary = yes
+	
+	}
+	}
+	all_estate_loyalty_equilibrium = 0.1
+	}
